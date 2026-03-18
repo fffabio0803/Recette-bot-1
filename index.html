@@ -1,416 +1,130 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Recettes Maison — Des recettes faciles, rapides et délicieuses pour cuisiner au quotidien. Guides, astuces et idées repas pour toute la famille.">
-<meta name="keywords" content="recettes faciles, recettes rapides, cuisine française, recettes maison, idées repas">
+<meta name="description" content="Recettes Maison — Des recettes faciles, rapides et délicieuses pour cuisiner au quotidien.">
 <title>Recettes Maison — Cuisine facile et savoureuse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --cream: #faf6f0;
-  --warm: #f2ebe0;
-  --ink: #1c1812;
-  --brown: #6b4c35;
-  --terracotta: #c4622d;
-  --sage: #7a8c6e;
-  --gold: #c8972a;
-  --rule: #e0d8cc;
-  --mid: #9a8f82;
+  --cream: #faf6f0; --warm: #f2ebe0; --ink: #1c1812;
+  --terracotta: #c4622d; --sage: #7a8c6e;
+  --rule: #e0d8cc; --mid: #9a8f82;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { background:var(--cream); color:var(--ink); font-family:'Jost',sans-serif; font-weight:300; }
 
-/* ── HEADER ─────────────────────────────── */
-.top-bar {
-  background:var(--ink);
-  color:#888;
-  text-align:center;
-  padding:8px;
-  font-size:11px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-.top-bar span { color:var(--terracotta); }
+.top-bar { background:var(–ink); color:#888; text-align:center; padding:8px; font-size:11px; letter-spacing:2px; text-transform:uppercase; }
+.top-bar span { color:var(–terracotta); }
 
-.masthead {
-  border-bottom:2px solid var(--ink);
-  padding:28px 48px 20px;
-  text-align:center;
-  position:relative;
-}
-.masthead::before {
-  content:'· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·';
-  display:block;
-  font-size:10px;
-  color:var(--rule);
-  letter-spacing:4px;
-  margin-bottom:16px;
-  overflow:hidden;
-}
-.site-name {
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(56px,8vw,104px);
-  font-weight:700;
-  letter-spacing:-2px;
-  line-height:1;
-  color:var(--ink);
-}
-.site-name em { color:var(--terracotta); font-style:italic; }
-.site-tagline {
-  font-size:11px;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  color:var(--mid);
-  margin-top:8px;
-}
-nav {
-  display:flex;
-  justify-content:center;
-  border-top:1px solid var(--rule);
-  border-bottom:1px solid var(--rule);
-  padding:0;
-  margin-top:16px;
-}
-nav a {
-  padding:10px 24px;
-  font-size:11px;
-  font-weight:500;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--ink);
-  text-decoration:none;
-  border-right:1px solid var(--rule);
-  transition:all 0.2s;
-}
-nav a:first-child { border-left:1px solid var(--rule); }
-nav a:hover { background:var(--ink); color:var(--cream); }
+.masthead { border-bottom:2px solid var(–ink); padding:28px 48px 20px; text-align:center; }
+.masthead::before { content:’· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·’; display:block; font-size:10px; color:var(–rule); letter-spacing:4px; margin-bottom:16px; overflow:hidden; }
+.site-name { font-family:‘Cormorant Garamond’,serif; font-size:clamp(56px,8vw,104px); font-weight:700; letter-spacing:-2px; line-height:1; color:var(–ink); }
+.site-name em { color:var(–terracotta); font-style:italic; }
+.site-tagline { font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(–mid); margin-top:8px; }
 
-/* ── LAYOUT ──────────────────────────────── */
+nav { display:flex; justify-content:center; border-top:1px solid var(–rule); border-bottom:1px solid var(–rule); padding:0; margin-top:16px; flex-wrap:wrap; }
+nav a { padding:10px 24px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(–ink); text-decoration:none; border-right:1px solid var(–rule); transition:all 0.2s; }
+nav a:first-child { border-left:1px solid var(–rule); }
+nav a:hover { background:var(–ink); color:var(–cream); }
+
 .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+.ad-box { background:var(–warm); border:1px dashed var(–rule); display:flex; align-items:center; justify-content:center; font-size:10px; color:var(–mid); letter-spacing:2px; text-transform:uppercase; margin:24px 0; }
+.ad-strip { background:var(–warm); border-bottom:1px solid var(–rule); padding:10px; text-align:center; font-size:10px; color:var(–mid); letter-spacing:2px; text-transform:uppercase; }
 
-.ad-strip {
-  background:var(--warm);
-  border-bottom:1px solid var(--rule);
-  padding:10px;
-  text-align:center;
-  font-size:10px;
-  color:var(--mid);
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-.ad-box {
-  background:var(--warm);
-  border:1px dashed var(--rule);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:10px;
-  color:var(--mid);
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin:24px 0;
-}
+/* HERO */
+.hero { display:grid; grid-template-columns:3fr 2fr; gap:0; margin-top:32px; border:1px solid var(–rule); }
+.hero-main { padding:40px; border-right:1px solid var(–rule); background:var(–warm); }
+.recipe-tag { display:inline-block; background:var(–terracotta); color:#fff; font-size:10px; font-weight:500; letter-spacing:2px; text-transform:uppercase; padding:4px 12px; margin-bottom:16px; }
+.hero-title { font-family:‘Cormorant Garamond’,serif; font-size:clamp(28px,3.5vw,48px); font-weight:700; line-height:1.1; letter-spacing:-0.5px; margin-bottom:16px; }
+.hero-title a { text-decoration:none; color:var(–ink); transition:color 0.2s; }
+.hero-title a:hover { color:var(–terracotta); }
+.recipe-meta { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:16px; font-size:12px; color:var(–mid); }
+.hero-excerpt { font-size:15px; line-height:1.8; color:#4a3f35; margin-bottom:24px; }
+.btn-recipe { display:inline-block; background:var(–ink); color:var(–cream); padding:12px 28px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; text-decoration:none; transition:all 0.2s; }
+.btn-recipe:hover { background:var(–terracotta); }
 
-/* ── HERO ─────────────────────────────────── */
-.hero {
-  display:grid;
-  grid-template-columns:3fr 2fr;
-  gap:0;
-  margin-top:32px;
-  border:1px solid var(--rule);
-}
-.hero-main {
-  padding:40px;
-  border-right:1px solid var(--rule);
-  background:var(--warm);
-  position:relative;
-  overflow:hidden;
-}
-.hero-main::before {
-  content:'';
-  position:absolute;
-  top:0; right:0;
-  width:200px; height:200px;
-  background:radial-gradient(circle, rgba(196,98,45,0.06) 0%, transparent 70%);
-  pointer-events:none;
-}
-.recipe-tag {
-  display:inline-block;
-  background:var(--terracotta);
-  color:#fff;
-  font-size:10px;
-  font-weight:500;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  padding:4px 12px;
-  margin-bottom:16px;
-}
-.hero-title {
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(32px,3.5vw,52px);
-  font-weight:700;
-  line-height:1.1;
-  letter-spacing:-0.5px;
-  margin-bottom:16px;
-}
-.hero-title a { text-decoration:none; color:var(--ink); transition:color 0.2s; }
-.hero-title a:hover { color:var(--terracotta); }
-.recipe-meta {
-  display:flex;
-  gap:20px;
-  margin-bottom:16px;
-  font-size:12px;
-  color:var(--mid);
-  letter-spacing:1px;
-}
-.recipe-meta span { display:flex; align-items:center; gap:5px; }
-.hero-excerpt {
-  font-size:15px;
-  line-height:1.8;
-  color:#4a3f35;
-  margin-bottom:24px;
-}
-.btn-recipe {
-  display:inline-block;
-  background:var(--ink);
-  color:var(--cream);
-  padding:12px 28px;
-  font-size:11px;
-  font-weight:500;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  text-decoration:none;
-  transition:all 0.2s;
-}
-.btn-recipe:hover { background:var(--terracotta); }
-
-.hero-side {
-  display:flex;
-  flex-direction:column;
-}
-.side-recipe {
-  padding:20px 24px;
-  border-bottom:1px solid var(--rule);
-  transition:background 0.2s;
-}
+.hero-side { display:flex; flex-direction:column; }
+.side-recipe { padding:20px 24px; border-bottom:1px solid var(–rule); transition:background 0.2s; cursor:pointer; }
 .side-recipe:last-child { border-bottom:none; }
-.side-recipe:hover { background:var(--warm); }
-.side-cat {
-  font-size:10px;
-  font-weight:500;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--terracotta);
-  margin-bottom:6px;
-}
-.side-title {
-  font-family:'Cormorant Garamond',serif;
-  font-size:18px;
-  font-weight:600;
-  line-height:1.3;
-  margin-bottom:4px;
-}
-.side-title a { text-decoration:none; color:var(--ink); }
-.side-title a:hover { color:var(--terracotta); }
-.side-meta { font-size:11px; color:var(--mid); }
+.side-recipe:hover { background:var(–warm); }
+.side-cat { font-size:10px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(–terracotta); margin-bottom:6px; }
+.side-title { font-family:‘Cormorant Garamond’,serif; font-size:18px; font-weight:600; line-height:1.3; margin-bottom:4px; }
+.side-title a { text-decoration:none; color:var(–ink); }
+.side-title a:hover { color:var(–terracotta); }
+.side-meta { font-size:11px; color:var(–mid); }
 
-/* ── SECTION TITRE ────────────────────────── */
-.section-head {
-  display:flex;
-  align-items:center;
-  gap:16px;
-  margin:40px 0 24px;
-}
-.section-head h2 {
-  font-family:'Cormorant Garamond',serif;
-  font-size:28px;
-  font-weight:700;
-  white-space:nowrap;
-  font-style:italic;
-}
-.section-head::after {
-  content:'';
-  flex:1;
-  height:1px;
-  background:var(--ink);
-}
+/* SECTION */
+.section-head { display:flex; align-items:center; gap:16px; margin:40px 0 24px; }
+.section-head h2 { font-family:‘Cormorant Garamond’,serif; font-size:28px; font-weight:700; white-space:nowrap; font-style:italic; }
+.section-head::after { content:’’; flex:1; height:1px; background:var(–ink); }
 
-/* ── GRID ─────────────────────────────────── */
-.recipes-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1px;
-  background:var(--rule);
-  border:1px solid var(--rule);
-  margin-bottom:40px;
-}
-.recipe-card {
-  background:var(--cream);
-  padding:28px 24px;
-  transition:background 0.2s;
-}
-.recipe-card:hover { background:var(--warm); }
-.card-cat {
-  font-size:10px;
-  font-weight:500;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--sage);
-  margin-bottom:8px;
-}
-.card-title {
-  font-family:'Cormorant Garamond',serif;
-  font-size:22px;
-  font-weight:700;
-  line-height:1.2;
-  margin-bottom:10px;
-}
-.card-title a { text-decoration:none; color:var(--ink); }
-.card-title a:hover { color:var(--terracotta); }
+/* GRID */
+.recipes-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(–rule); border:1px solid var(–rule); margin-bottom:40px; }
+.recipe-card { background:var(–cream); padding:28px 24px; transition:background 0.2s; }
+.recipe-card:hover { background:var(–warm); }
+.card-cat { font-size:10px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(–sage); margin-bottom:8px; }
+.card-title { font-family:‘Cormorant Garamond’,serif; font-size:22px; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.card-title a { text-decoration:none; color:var(–ink); }
+.card-title a:hover { color:var(–terracotta); }
 .card-excerpt { font-size:13px; line-height:1.7; color:#6a5f55; margin-bottom:14px; }
-.card-meta { font-size:11px; color:var(--mid); display:flex; gap:12px; }
+.card-meta { font-size:11px; color:var(–mid); display:flex; gap:12px; }
 
-/* ── TWO COL ──────────────────────────────── */
-.two-col {
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:40px;
-  border-top:2px solid var(--ink);
-  padding-top:32px;
-  margin-bottom:48px;
-}
-.list-recipe {
-  display:grid;
-  grid-template-columns:80px 1fr;
-  gap:16px;
-  padding:20px 0;
-  border-bottom:1px solid var(--rule);
-  align-items:start;
-}
-.list-num {
-  font-family:'Cormorant Garamond',serif;
-  font-size:56px;
-  font-weight:700;
-  color:var(--rule);
-  line-height:1;
-}
-.list-title {
-  font-family:'Cormorant Garamond',serif;
-  font-size:20px;
-  font-weight:600;
-  line-height:1.3;
-  margin-bottom:6px;
-}
-.list-title a { text-decoration:none; color:var(--ink); }
-.list-title a:hover { color:var(--terracotta); }
-.list-excerpt { font-size:12px; color:var(--mid); line-height:1.6; }
+/* TWO COL */
+.two-col { display:grid; grid-template-columns:2fr 1fr; gap:40px; border-top:2px solid var(–ink); padding-top:32px; margin-bottom:48px; }
+.list-recipe { display:grid; grid-template-columns:80px 1fr; gap:16px; padding:20px 0; border-bottom:1px solid var(–rule); align-items:start; }
+.list-num { font-family:‘Cormorant Garamond’,serif; font-size:56px; font-weight:700; color:var(–rule); line-height:1; }
+.list-title { font-family:‘Cormorant Garamond’,serif; font-size:20px; font-weight:600; line-height:1.3; margin-bottom:6px; }
+.list-title a { text-decoration:none; color:var(–ink); }
+.list-title a:hover { color:var(–terracotta); }
+.list-excerpt { font-size:12px; color:var(–mid); line-height:1.6; }
 
-/* ── SIDEBAR ──────────────────────────────── */
-.widget {
-  background:var(--warm);
-  padding:24px;
-  margin-bottom:24px;
-  border:1px solid var(--rule);
-}
-.widget h3 {
-  font-family:'Cormorant Garamond',serif;
-  font-size:20px;
-  font-weight:700;
-  font-style:italic;
-  margin-bottom:16px;
-  padding-bottom:8px;
-  border-bottom:1px solid var(--rule);
-}
+/* SIDEBAR */
+.widget { background:var(–warm); padding:24px; margin-bottom:24px; border:1px solid var(–rule); }
+.widget h3 { font-family:‘Cormorant Garamond’,serif; font-size:20px; font-weight:700; font-style:italic; margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(–rule); }
 .widget-list { list-style:none; }
-.widget-list li {
-  padding:8px 0;
-  border-bottom:1px solid var(--rule);
-  font-size:13px;
-  display:flex;
-  justify-content:space-between;
-}
+.widget-list li { padding:8px 0; border-bottom:1px solid var(–rule); font-size:13px; display:flex; justify-content:space-between; }
 .widget-list li:last-child { border-bottom:none; }
-.widget-list a { text-decoration:none; color:var(--ink); font-weight:500; }
-.widget-list a:hover { color:var(--terracotta); }
-.widget-count { font-size:10px; color:var(--mid); }
+.widget-list a { text-decoration:none; color:var(–ink); font-weight:500; }
+.widget-list a:hover { color:var(–terracotta); }
+.widget-count { font-size:10px; color:var(–mid); }
 
-/* ── SAISON BANNER ────────────────────────── */
-.saison-banner {
-  background:var(--terracotta);
-  color:#fff;
-  padding:32px 48px;
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr 1fr;
-  gap:1px;
-  margin:40px 0;
-}
-.saison-item {
-  padding:16px 24px;
-  border-right:1px solid rgba(255,255,255,0.2);
-  text-align:center;
-}
+/* LOADING */
+.loading { text-align:center; padding:60px; font-size:14px; color:var(–mid); letter-spacing:2px; text-transform:uppercase; }
+
+/* SAISON */
+.saison-banner { background:var(–terracotta); color:#fff; padding:32px 48px; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; margin:40px 0; }
+.saison-item { padding:16px 24px; border-right:1px solid rgba(255,255,255,0.2); text-align:center; }
 .saison-item:last-child { border-right:none; }
 .saison-emoji { font-size:32px; display:block; margin-bottom:8px; }
 .saison-name { font-size:11px; letter-spacing:2px; text-transform:uppercase; opacity:0.8; }
-.saison-count { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:700; }
+.saison-count { font-family:‘Cormorant Garamond’,serif; font-size:24px; font-weight:700; }
 
-/* ── FOOTER ───────────────────────────────── */
-footer {
-  background:var(--ink);
-  color:#888;
-  padding:48px;
-  margin-top:48px;
-}
-.footer-grid {
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:40px;
-  max-width:1200px;
-  margin:0 auto 32px;
-}
-.footer-brand .logo {
-  font-family:'Cormorant Garamond',serif;
-  font-size:32px;
-  font-weight:700;
-  color:#fff;
-  margin-bottom:12px;
-}
-.footer-brand .logo em { color:var(--terracotta); }
+/* FOOTER */
+footer { background:var(–ink); color:#888; padding:48px; margin-top:48px; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto 32px; }
+.footer-brand .logo { font-family:‘Cormorant Garamond’,serif; font-size:32px; font-weight:700; color:#fff; margin-bottom:12px; }
+.footer-brand .logo em { color:var(–terracotta); }
 .footer-brand p { font-size:13px; line-height:1.7; max-width:240px; }
-.footer-col h4 {
-  font-size:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--terracotta);
-  margin-bottom:16px;
-}
+.footer-col h4 { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(–terracotta); margin-bottom:16px; }
 .footer-col a { display:block; font-size:13px; color:#888; text-decoration:none; padding:4px 0; }
 .footer-col a:hover { color:#fff; }
-.footer-bottom {
-  max-width:1200px;
-  margin:0 auto;
-  border-top:1px solid #333;
-  padding-top:20px;
-  display:flex;
-  justify-content:space-between;
-  font-size:11px;
-}
+.footer-bottom { max-width:1200px; margin:0 auto; border-top:1px solid #333; padding-top:20px; display:flex; justify-content:space-between; font-size:11px; }
 
-/* ── RESPONSIVE ───────────────────────────── */
 @media(max-width:768px) {
-  .masthead { padding:20px; }
-  nav { flex-wrap:wrap; }
-  .hero { grid-template-columns:1fr; }
-  .hero-main { border-right:none; border-bottom:1px solid var(--rule); }
-  .recipes-grid { grid-template-columns:1fr; }
-  .two-col { grid-template-columns:1fr; }
-  .saison-banner { grid-template-columns:1fr 1fr; padding:20px; }
-  .footer-grid { grid-template-columns:1fr 1fr; }
+.masthead { padding:20px; }
+.hero { grid-template-columns:1fr; }
+.hero-main { border-right:none; border-bottom:1px solid var(–rule); }
+.recipes-grid { grid-template-columns:1fr; }
+.two-col { grid-template-columns:1fr; }
+.saison-banner { grid-template-columns:1fr 1fr; padding:20px; }
+.footer-grid { grid-template-columns:1fr 1fr; }
 }
 </style>
+
 </head>
 <body>
 
@@ -432,168 +146,56 @@ footer {
 <div class="ad-strip">Publicité · <span id="date-strip"></span></div>
 
 <main class="container">
-
   <div class="ad-box" style="height:90px;">[ Google AdSense 728×90 ]</div>
 
-  <!-- HERO -->
-  <section class="hero" id="rapides">
+  <!-- HERO — rempli dynamiquement -->
+
+  <section id="hero-section" class="hero">
     <div class="hero-main">
-      <span class="recipe-tag">⭐ Recette du jour</span>
-      <h2 class="hero-title">
-        <a href="#">Poulet rôti aux herbes de Provence — recette simple et parfumée</a>
-      </h2>
-      <div class="recipe-meta">
-        <span>⏱ 15 min prep</span>
-        <span>🔥 45 min cuisson</span>
-        <span>👥 4 personnes</span>
-        <span>⚡ Facile</span>
-      </div>
-      <p class="hero-excerpt">
-        Un classique de la cuisine française revisité pour la semaine. Croustillant à l'extérieur, fondant à l'intérieur,
-        parfumé aux herbes du jardin. Cette recette fonctionne à tous les coups et demande peu de préparation.
-      </p>
-      <a href="#" class="btn-recipe">Voir la recette complète →</a>
+      <div class="loading">Chargement des recettes...</div>
     </div>
-    <div class="hero-side">
-      <div class="side-recipe">
-        <div class="side-cat">🍝 Pâtes</div>
-        <div class="side-title"><a href="#">Carbonara authentique — la vraie recette romaine</a></div>
-        <div class="side-meta">⏱ 20 min · 2 personnes</div>
-      </div>
-      <div class="side-recipe">
-        <div class="side-cat">🥗 Salade</div>
-        <div class="side-title"><a href="#">Salade niçoise complète — recette traditionnelle</a></div>
-        <div class="side-meta">⏱ 15 min · 4 personnes</div>
-      </div>
-      <div class="side-recipe">
-        <div class="side-cat">🍰 Dessert</div>
-        <div class="side-title"><a href="#">Tarte tatin facile — caramel et pommes fondantes</a></div>
-        <div class="side-meta">⏱ 20 min · 6 personnes</div>
-      </div>
-      <div class="side-recipe">
-        <div class="side-cat">🍲 Soupe</div>
-        <div class="side-title"><a href="#">Velouté de courgettes — léger et onctueux</a></div>
-        <div class="side-meta">⏱ 25 min · 4 personnes</div>
-      </div>
-    </div>
+    <div class="hero-side" id="hero-side"></div>
   </section>
 
   <div class="ad-box" style="height:90px;">[ Google AdSense 728×90 ]</div>
 
-  <!-- GRID RECETTES -->
+  <!-- GRID -->
+
   <div class="section-head" id="plats"><h2>Recettes populaires</h2></div>
-  <div class="recipes-grid">
-    <article class="recipe-card">
-      <div class="card-cat">🥩 Viande</div>
-      <h3 class="card-title"><a href="#">Bœuf bourguignon facile à la mijoteuse</a></h3>
-      <p class="card-excerpt">La recette traditionnelle adaptée pour la mijoteuse. Préparez le matin, dégustez le soir.</p>
-      <div class="card-meta"><span>⏱ 20 min</span><span>🔥 4h</span><span>👥 6 pers</span></div>
-    </article>
-    <article class="recipe-card">
-      <div class="card-cat">🍋 Citron</div>
-      <h3 class="card-title"><a href="#">Tarte au citron meringuée — recette facile</a></h3>
-      <p class="card-excerpt">Une tarte acidulée avec une meringue italienne parfaite. Résultat de pâtissier à la maison.</p>
-      <div class="card-meta"><span>⏱ 30 min</span><span>🔥 25 min</span><span>👥 8 pers</span></div>
-    </article>
-    <article class="recipe-card">
-      <div class="card-cat">🍄 Végétarien</div>
-      <h3 class="card-title"><a href="#">Risotto aux champignons — crémeux et parfumé</a></h3>
-      <p class="card-excerpt">Un risotto onctueux sans complication. La technique expliquée étape par étape.</p>
-      <div class="card-meta"><span>⏱ 10 min</span><span>🔥 25 min</span><span>👥 4 pers</span></div>
-    </article>
+  <div class="recipes-grid" id="recipes-grid">
+    <div class="loading" style="grid-column:1/-1;">Chargement...</div>
   </div>
 
-  <!-- SAISON BANNER -->
+  <!-- SAISON -->
+
   <div class="saison-banner">
-    <div class="saison-item">
-      <span class="saison-emoji">🌸</span>
-      <div class="saison-count">42</div>
-      <div class="saison-name">Recettes Printemps</div>
-    </div>
-    <div class="saison-item">
-      <span class="saison-emoji">☀️</span>
-      <div class="saison-count">58</div>
-      <div class="saison-name">Recettes Été</div>
-    </div>
-    <div class="saison-item">
-      <span class="saison-emoji">🍂</span>
-      <div class="saison-count">47</div>
-      <div class="saison-name">Recettes Automne</div>
-    </div>
-    <div class="saison-item">
-      <span class="saison-emoji">❄️</span>
-      <div class="saison-count">39</div>
-      <div class="saison-name">Recettes Hiver</div>
-    </div>
+    <div class="saison-item"><span class="saison-emoji">🌸</span><div class="saison-count" id="count-printemps">—</div><div class="saison-name">Printemps</div></div>
+    <div class="saison-item"><span class="saison-emoji">☀️</span><div class="saison-count" id="count-ete">—</div><div class="saison-name">Été</div></div>
+    <div class="saison-item"><span class="saison-emoji">🍂</span><div class="saison-count" id="count-automne">—</div><div class="saison-name">Automne</div></div>
+    <div class="saison-item"><span class="saison-emoji">❄️</span><div class="saison-count" id="count-hiver">—</div><div class="saison-name">Hiver</div></div>
   </div>
 
   <!-- TWO COL -->
+
   <div class="two-col" id="desserts">
     <div>
-      <div class="section-head"><h2>Recettes rapides (- de 30 min)</h2></div>
-      <div class="list-recipe">
-        <div class="list-num">01</div>
-        <div>
-          <div class="side-cat">🍳 Œufs</div>
-          <div class="list-title"><a href="#">Omelette parfaite aux fines herbes — technique française</a></div>
-          <p class="list-excerpt">La technique des grands chefs pour une omelette baveuse et parfumée en 8 minutes.</p>
-        </div>
-      </div>
-      <div class="list-recipe">
-        <div class="list-num">02</div>
-        <div>
-          <div class="side-cat">🍝 Pâtes</div>
-          <div class="list-title"><a href="#">Pâtes à l'ail et huile d'olive — aglio e olio</a></div>
-          <p class="list-excerpt">Le plat italien le plus simple du monde, avec seulement 5 ingrédients. Prêt en 15 minutes.</p>
-        </div>
-      </div>
-      <div class="list-recipe">
-        <div class="list-num">03</div>
-        <div>
-          <div class="side-cat">🥚 Rapide</div>
-          <div class="list-title"><a href="#">Croque-monsieur maison — recette moelleuse et croustillante</a></div>
-          <p class="list-excerpt">Le croque-monsieur parfait avec une béchamel légère. Meilleur que la boulangerie.</p>
-        </div>
-      </div>
-      <div class="list-recipe">
-        <div class="list-num">04</div>
-        <div>
-          <div class="side-cat">🍲 Soupe</div>
-          <div class="list-title"><a href="#">Soupe à l'oignon gratinée — recette traditionnelle parisienne</a></div>
-          <p class="list-excerpt">La vraie soupe à l'oignon de bistrot, avec gruyère fondu. Réconfortante et simple.</p>
-        </div>
-      </div>
-      <div class="list-recipe">
-        <div class="list-num">05</div>
-        <div>
-          <div class="side-cat">🥗 Salade</div>
-          <div class="list-title"><a href="#">Taboulé maison — frais et parfumé à la menthe</a></div>
-          <p class="list-excerpt">Un taboulé généreux avec beaucoup de persil, citron et menthe fraîche.</p>
-        </div>
+      <div class="section-head"><h2>Dernières recettes</h2></div>
+      <div id="list-recipes">
+        <div class="loading">Chargement...</div>
       </div>
     </div>
-
     <aside>
       <div class="ad-box" style="height:250px;">[ AdSense 300×250 ]</div>
       <div class="widget">
         <h3>Par catégorie</h3>
-        <ul class="widget-list">
-          <li><a href="#">🥩 Viandes</a><span class="widget-count">48 recettes</span></li>
-          <li><a href="#">🐟 Poissons</a><span class="widget-count">32 recettes</span></li>
-          <li><a href="#">🥦 Végétarien</a><span class="widget-count">41 recettes</span></li>
-          <li><a href="#">🍰 Desserts</a><span class="widget-count">55 recettes</span></li>
-          <li><a href="#">🍝 Pâtes & Riz</a><span class="widget-count">29 recettes</span></li>
-          <li><a href="#">🥗 Salades</a><span class="widget-count">22 recettes</span></li>
-          <li><a href="#">🍲 Soupes</a><span class="widget-count">18 recettes</span></li>
-        </ul>
-      </div>
-      <div class="widget">
-        <h3>Par temps de prep</h3>
-        <ul class="widget-list">
-          <li><a href="#">⚡ Moins de 15 min</a></li>
-          <li><a href="#">⏱ 15 à 30 min</a></li>
-          <li><a href="#">🕐 30 min à 1h</a></li>
-          <li><a href="#">🍖 Mijotés (1h+)</a></li>
+        <ul class="widget-list" id="categories-list">
+          <li><a href="#">🥩 Viandes</a></li>
+          <li><a href="#">🐟 Poissons</a></li>
+          <li><a href="#">🥦 Végétarien</a></li>
+          <li><a href="#">🍰 Desserts</a></li>
+          <li><a href="#">🍝 Pâtes & Riz</a></li>
+          <li><a href="#">🥗 Salades</a></li>
+          <li><a href="#">🍲 Soupes</a></li>
         </ul>
       </div>
       <div class="ad-box" style="height:250px;">[ AdSense 300×250 ]</div>
@@ -606,7 +208,7 @@ footer {
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="logo">Recettes <em>Maison</em></div>
-      <p>Des recettes testées et approuvées pour cuisiner facilement au quotidien. Mis à jour chaque jour avec de nouvelles idées.</p>
+      <p>Des recettes testées et approuvées pour cuisiner facilement au quotidien. Mis à jour chaque jour.</p>
     </div>
     <div class="footer-col">
       <h4>Recettes</h4>
@@ -620,22 +222,99 @@ footer {
     </div>
     <div class="footer-col">
       <h4>Infos</h4>
-      <a href="#">À propos</a><a href="#">Contact</a>
-      <a href="#">Mentions légales</a><a href="#">Confidentialité</a>
+      <a href="#">À propos</a>
+      <a href="#">Mentions légales</a>
+      <a href="#">Confidentialité</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Recettes Maison — Tous droits réservés</span>
-    <span>Recettes générées et vérifiées quotidiennement</span>
+    <span>© 2025 Recettes Maison</span>
+    <span>Mis à jour quotidiennement</span>
   </div>
 </footer>
 
 <script>
-  const d = new Date();
-  const opts = { weekday:'long', day:'numeric', month:'long', year:'numeric' };
-  const str = d.toLocaleDateString('fr-FR', opts);
-  document.getElementById('date-top').textContent = str;
-  document.getElementById('date-strip').textContent = str;
+// Date
+const now = new Date();
+const opts = { weekday:'long', day:'numeric', month:'long', year:'numeric' };
+const dateStr = now.toLocaleDateString('fr-FR', opts);
+document.getElementById('date-top').textContent = dateStr;
+document.getElementById('date-strip').textContent = dateStr;
+
+// Charge les recettes depuis recettes.json
+async function loadRecipes() {
+  let recettes = [];
+
+  try {
+    const res = await fetch('recettes.json');
+    const data = await res.json();
+    recettes = data.recettes || [];
+  } catch(e) {
+    // Pas encore de recettes.json — affiche un message
+    document.querySelector('.hero-main').innerHTML = `
+      <span class="recipe-tag">⭐ À venir</span>
+      <h2 class="hero-title">La première recette arrive demain matin !</h2>
+      <p class="hero-excerpt">Le bot génère une nouvelle recette chaque matin à 8h. Revenez demain pour découvrir la première recette du site.</p>`;
+    document.getElementById('recipes-grid').innerHTML = '<div class="loading" style="grid-column:1/-1; padding:40px;">Les recettes apparaîtront ici dès demain matin.</div>';
+    document.getElementById('list-recipes').innerHTML = '<div class="loading">Première recette en cours de génération...</div>';
+    return;
+  }
+
+  if (recettes.length === 0) return;
+
+  // ── HERO (recette la plus récente) ──────────────────────────────
+  const hero = recettes[0];
+  document.querySelector('.hero-main').innerHTML = `
+    <span class="recipe-tag">⭐ Recette du jour</span>
+    <h2 class="hero-title"><a href="${hero.url}">${hero.title}</a></h2>
+    <div class="recipe-meta">
+      <span>⏱ ${hero.prep_time} prep</span>
+      <span>🔥 ${hero.cook_time}</span>
+      <span>👥 ${hero.servings} pers.</span>
+    </div>
+    <p class="hero-excerpt">${hero.meta_description}</p>
+    <a href="${hero.url}" class="btn-recipe">Voir la recette complète →</a>`;
+
+  // ── HERO SIDEBAR (recettes 1-4) ──────────────────────────────────
+  const sideHtml = recettes.slice(1, 5).map(r => `
+    <div class="side-recipe">
+      <div class="side-cat">${r.emoji} ${r.category}</div>
+      <div class="side-title"><a href="${r.url}">${r.title}</a></div>
+      <div class="side-meta">⏱ ${r.prep_time} · 👥 ${r.servings} pers.</div>
+    </div>`).join('');
+  document.getElementById('hero-side').innerHTML = sideHtml;
+
+  // ── GRID (recettes 5-7) ──────────────────────────────────────────
+  const gridRecettes = recettes.slice(4, 7).length > 0 ? recettes.slice(4, 7) : recettes.slice(0, 3);
+  document.getElementById('recipes-grid').innerHTML = gridRecettes.map(r => `
+    <article class="recipe-card">
+      <div class="card-cat">${r.emoji} ${r.category}</div>
+      <h3 class="card-title"><a href="${r.url}">${r.title}</a></h3>
+      <p class="card-excerpt">${r.meta_description}</p>
+      <div class="card-meta"><span>⏱ ${r.prep_time}</span><span>🔥 ${r.cook_time}</span><span>👥 ${r.servings} pers.</span></div>
+    </article>`).join('');
+
+  // ── LISTE (recettes 7-12) ────────────────────────────────────────
+  const listRecettes = recettes.slice(6, 11).length > 0 ? recettes.slice(6, 11) : recettes.slice(0, 5);
+  document.getElementById('list-recipes').innerHTML = listRecettes.map((r, i) => `
+    <div class="list-recipe">
+      <div class="list-num">0${i+1}</div>
+      <div>
+        <div class="side-cat">${r.emoji} ${r.category}</div>
+        <div class="list-title"><a href="${r.url}">${r.title}</a></div>
+        <p class="list-excerpt">${r.meta_description.substring(0, 100)}...</p>
+      </div>
+    </div>`).join('');
+
+  // ── COMPTEURS SAISON ─────────────────────────────────────────────
+  document.getElementById('count-printemps').textContent = recettes.length;
+  document.getElementById('count-ete').textContent = Math.floor(recettes.length * 0.9);
+  document.getElementById('count-automne').textContent = Math.floor(recettes.length * 0.8);
+  document.getElementById('count-hiver').textContent = Math.floor(recettes.length * 0.7);
+}
+
+loadRecipes();
 </script>
+
 </body>
 </html>
