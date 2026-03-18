@@ -1,0 +1,18 @@
+{
+  "recettes": [
+    {
+      "slug": "financiers-amandes-moelleux-recette",
+      "title": "Financiers aux amandes moelleux : recette traditionnelle facile",
+      "meta_description": "Découvrez la recette authentique des financiers aux amandes moelleux. Petits gâteaux fondants à la poudre d'amande et beurre noisette.",
+      "category": "Gâteaux",
+      "emoji": "🧁",
+      "cook_time": "15 min",
+      "prep_time": "12 min",
+      "servings": 12,
+      "date_iso": "2026-03-18",
+      "date_display": "18 March 2026",
+      "url": "recettes/financiers-amandes-moelleux-recette.html"
+    }
+  ],
+  "last_updated": "2026-03-18"
+}
