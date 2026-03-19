@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "soupe-de-tomates-fra-ches-basilic",
+      "title": "Soupe de tomates fraîches au basilic maison réconfortante",
+      "meta_description": "Découvrez cette délicieuse soupe de tomates fraîches au basilic, simple à préparer avec des ingrédients de saison pour un repas savoureux.",
+      "category": "Soupes",
+      "emoji": "🍅",
+      "cook_time": "20 min",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-03-19",
+      "date_display": "19 March 2026",
+      "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
+    },
+    {
       "slug": "financiers-amandes-moelleux-recette",
       "title": "Financiers aux amandes moelleux - Recette traditionnelle",
       "meta_description": "Découvrez la recette authentique des financiers aux amandes moelleux. Petits gâteaux dorés et fondants, parfaits pour le goûter ou accompagner le thé.",
@@ -14,5 +27,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-03-18"
+  "last_updated": "2026-03-19"
 }
