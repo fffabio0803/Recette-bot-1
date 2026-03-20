@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "p-te-cr-pes-recette-de-base",
+      "title": "Pâte à crêpes recette de base facile et rapide - Guide complet",
+      "meta_description": "Recette de pâte à crêpes traditionnelle en 10 minutes. Ingrédients simples, technique infaillible pour des crêpes parfaites à tous les coups.",
+      "category": "Crêpes",
+      "emoji": "🥞",
+      "cook_time": "1h repos",
+      "prep_time": "15 min",
+      "servings": 4,
+      "date_iso": "2026-03-20",
+      "date_display": "20 March 2026",
+      "url": "recettes/p-te-cr-pes-recette-de-base.html"
+    },
+    {
       "slug": "soupe-de-tomates-fra-ches-basilic",
       "title": "Soupe de tomates fraîches au basilic maison réconfortante",
       "meta_description": "Découvrez cette délicieuse soupe de tomates fraîches au basilic, simple à préparer avec des ingrédients de saison pour un repas savoureux.",
@@ -27,5 +40,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-03-19"
+  "last_updated": "2026-03-20"
 }

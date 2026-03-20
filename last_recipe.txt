@@ -1,3 +1,3 @@
-slug=soupe-de-tomates-fra-ches-basilic
-title=Soupe de tomates fraîches au basilic maison réconfortante
-date=2026-03-19
+slug=p-te-cr-pes-recette-de-base
+title=Pâte à crêpes recette de base facile et rapide - Guide complet
+date=2026-03-20
