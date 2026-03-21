@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "magret-de-canard-sauce-miel-soja",
+      "title": "Magret de canard sauce miel soja - Recette facile et savoureuse",
+      "meta_description": "Découvrez notre recette de magret de canard sauce miel soja, un plat raffiné aux saveurs asiatiques. Cuisson parfaite et sauce onctueuse garanties.",
+      "category": "Volaille",
+      "emoji": "🦆",
+      "cook_time": "15 min",
+      "prep_time": "10 min",
+      "servings": 2,
+      "date_iso": "2026-03-21",
+      "date_display": "21 March 2026",
+      "url": "recettes/magret-de-canard-sauce-miel-soja.html"
+    },
+    {
       "slug": "p-te-cr-pes-recette-de-base",
       "title": "Pâte à crêpes recette de base facile et rapide - Guide complet",
       "meta_description": "Recette de pâte à crêpes traditionnelle en 10 minutes. Ingrédients simples, technique infaillible pour des crêpes parfaites à tous les coups.",
@@ -40,5 +53,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-03-20"
+  "last_updated": "2026-03-21"
 }
