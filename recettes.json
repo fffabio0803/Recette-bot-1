@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "vichyssoise-froide-poireaux-pommes-de-terre",
+      "title": "Vichyssoise froide aux poireaux et pommes de terre classique",
+      "meta_description": "Recette authentique de vichyssoise froide, velouté glacé aux poireaux et pommes de terre. Texture veloutée, saveur délicate, parfait pour l'été.",
+      "category": "Soupes",
+      "emoji": "🥣",
+      "cook_time": "2h frigo",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-03-23",
+      "date_display": "23 March 2026",
+      "url": "recettes/vichyssoise-froide-poireaux-pommes-de-terre.html"
+    },
+    {
       "slug": "clafoutis-cerises-recette-classique",
       "title": "Clafoutis aux cerises : la recette classique traditionnelle",
       "meta_description": "Découvrez la vraie recette du clafoutis aux cerises traditionnel du Limousin. Simple, moelleux et délicieux avec nos conseils de chef.",
@@ -66,5 +79,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-03-22"
+  "last_updated": "2026-03-23"
 }
