@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "croque-monsieur-b-chamel-maison",
+      "title": "Croque-monsieur béchamel maison classique et gourmand",
+      "meta_description": "Découvrez la recette authentique du croque-monsieur avec sa béchamel maison crémeuse. Un plat réconfortant parfait pour un déjeuner savoureux.",
+      "category": "Sandwichs",
+      "emoji": "🥪",
+      "cook_time": "15 min",
+      "prep_time": "10 min",
+      "servings": 2,
+      "date_iso": "2026-03-24",
+      "date_display": "24 March 2026",
+      "url": "recettes/croque-monsieur-b-chamel-maison.html"
+    },
+    {
       "slug": "vichyssoise-froide-poireaux-pommes-de-terre",
       "title": "Vichyssoise froide aux poireaux et pommes de terre classique",
       "meta_description": "Recette authentique de vichyssoise froide, velouté glacé aux poireaux et pommes de terre. Texture veloutée, saveur délicate, parfait pour l'été.",
@@ -79,5 +92,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-03-23"
+  "last_updated": "2026-03-24"
 }
