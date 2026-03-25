@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "taboul-maison-menthe-citron",
+      "title": "Taboulé maison menthe citron : recette authentique et fraîche",
+      "meta_description": "Découvrez notre recette de taboulé maison à la menthe et au citron. Frais, parfumé et facile à préparer, ce plat libanais authentique ravira vos papilles.",
+      "category": "Salades",
+      "emoji": "🫙",
+      "cook_time": "1h frigo",
+      "prep_time": "20 min",
+      "servings": 4,
+      "date_iso": "2026-03-25",
+      "date_display": "25 March 2026",
+      "url": "recettes/taboul-maison-menthe-citron.html"
+    },
+    {
       "slug": "croque-monsieur-b-chamel-maison",
       "title": "Croque-monsieur béchamel maison classique et gourmand",
       "meta_description": "Découvrez la recette authentique du croque-monsieur avec sa béchamel maison crémeuse. Un plat réconfortant parfait pour un déjeuner savoureux.",
@@ -92,5 +105,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-03-24"
+  "last_updated": "2026-03-25"
 }
