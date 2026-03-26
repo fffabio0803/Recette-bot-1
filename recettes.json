@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tiramisu-recette-italienne-originale",
+      "title": "Tiramisu Italien Authentique - Recette Originale Traditionnelle",
+      "meta_description": "Découvrez la vraie recette du tiramisu italien avec mascarpone, café et biscuits à la cuillère. Simple, authentique et irrésistible !",
+      "category": "Desserts",
+      "emoji": "☕",
+      "cook_time": "4h frigo",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-03-26",
+      "date_display": "26 March 2026",
+      "url": "recettes/tiramisu-recette-italienne-originale.html"
+    },
+    {
       "slug": "taboul-maison-menthe-citron",
       "title": "Taboulé maison menthe citron : recette authentique et fraîche",
       "meta_description": "Découvrez notre recette de taboulé maison à la menthe et au citron. Frais, parfumé et facile à préparer, ce plat libanais authentique ravira vos papilles.",
@@ -105,5 +118,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-03-25"
+  "last_updated": "2026-03-26"
 }
