@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tarte-flamb-e-alsacienne-recette",
+      "title": "Tarte flambée alsacienne recette traditionnelle authentique",
+      "meta_description": "Découvrez la vraie recette de tarte flambée alsacienne avec pâte fine, crème fraîche, lardons et oignons. Recette traditionnelle facile à réaliser.",
+      "category": "Tartes",
+      "emoji": "🧅",
+      "cook_time": "20 min",
+      "prep_time": "15 min",
+      "servings": 4,
+      "date_iso": "2026-03-28",
+      "date_display": "28 March 2026",
+      "url": "recettes/tarte-flamb-e-alsacienne-recette.html"
+    },
+    {
       "slug": "moules-marini-res-vin-blanc-facile",
       "title": "Moules marinières au vin blanc facile - Recette traditionnelle",
       "meta_description": "Découvrez la vraie recette des moules marinières au vin blanc. Simple, rapide et savoureuse, cette recette traditionnelle ravira toute la famille.",
@@ -131,5 +144,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-03-27"
+  "last_updated": "2026-03-28"
 }
