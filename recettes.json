@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "velout-butternut-courge-gingembre",
+      "title": "Velouté butternut courge gingembre : recette onctueuse",
+      "meta_description": "Découvrez cette recette de velouté butternut courge gingembre, une soupe onctueuse et parfumée. Facile à réaliser, parfaite pour l'automne.",
+      "category": "Soupes",
+      "emoji": "🎃",
+      "cook_time": "30 min",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-03-31",
+      "date_display": "31 March 2026",
+      "url": "recettes/velout-butternut-courge-gingembre.html"
+    },
+    {
       "slug": "osso-buco-milanaise-recette-italienne",
       "title": "Osso Buco alla Milanese - Authentique Recette Italienne",
       "meta_description": "Découvrez la vraie recette de l'osso buco milanaise avec jarret de veau braisé, gremolata et risotto. Plat traditionnel lombard facile à réaliser.",
@@ -170,5 +183,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-03-30"
+  "last_updated": "2026-03-31"
 }
