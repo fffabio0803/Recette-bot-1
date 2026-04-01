@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "cake-citron-moelleux-facile-rapide",
+      "title": "Cake au citron moelleux facile et rapide - Recette simple",
+      "meta_description": "Découvrez cette recette de cake au citron moelleux, facile et rapide à réaliser en 15 minutes de préparation. Un dessert fondant et parfumé !",
+      "category": "Gâteaux",
+      "emoji": "🍋",
+      "cook_time": "40 min",
+      "prep_time": "10 min",
+      "servings": 8,
+      "date_iso": "2026-04-01",
+      "date_display": "1 April 2026",
+      "url": "recettes/cake-citron-moelleux-facile-rapide.html"
+    },
+    {
       "slug": "velout-butternut-courge-gingembre",
       "title": "Velouté butternut courge gingembre : recette onctueuse",
       "meta_description": "Découvrez cette recette de velouté butternut courge gingembre, une soupe onctueuse et parfumée. Facile à réaliser, parfaite pour l'automne.",
@@ -183,5 +196,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-03-31"
+  "last_updated": "2026-04-01"
 }
