@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "rillettes-de-saumon-fum-maison",
+      "title": "Rillettes de saumon fumé maison - Recette facile et raffinée",
+      "meta_description": "Découvrez notre recette de rillettes de saumon fumé maison crémeuses et savoureuses. Parfaites pour l'apéritif, faciles à réaliser en 15 minutes.",
+      "category": "Entrées",
+      "emoji": "🐟",
+      "cook_time": "1h frigo",
+      "prep_time": "10 min",
+      "servings": 6,
+      "date_iso": "2026-04-02",
+      "date_display": "2 April 2026",
+      "url": "recettes/rillettes-de-saumon-fum-maison.html"
+    },
+    {
       "slug": "cake-citron-moelleux-facile-rapide",
       "title": "Cake au citron moelleux facile et rapide - Recette simple",
       "meta_description": "Découvrez cette recette de cake au citron moelleux, facile et rapide à réaliser en 15 minutes de préparation. Un dessert fondant et parfumé !",
@@ -196,5 +209,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-01"
+  "last_updated": "2026-04-02"
 }
