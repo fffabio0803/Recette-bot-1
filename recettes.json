@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "pissaladi-re-ni-oise-oignons-anchois",
+      "title": "Pissaladière niçoise traditionnelle aux oignons et anchois",
+      "meta_description": "Découvrez la vraie recette de pissaladière niçoise avec oignons confits et anchois. Une spécialité provençale authentique et savoureuse à réaliser facilement.",
+      "category": "Tartes",
+      "emoji": "🧅",
+      "cook_time": "45 min",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-04-03",
+      "date_display": "3 April 2026",
+      "url": "recettes/pissaladi-re-ni-oise-oignons-anchois.html"
+    },
+    {
       "slug": "rillettes-de-saumon-fum-maison",
       "title": "Rillettes de saumon fumé maison - Recette facile et raffinée",
       "meta_description": "Découvrez notre recette de rillettes de saumon fumé maison crémeuses et savoureuses. Parfaites pour l'apéritif, faciles à réaliser en 15 minutes.",
@@ -209,5 +222,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-02"
+  "last_updated": "2026-04-03"
 }
