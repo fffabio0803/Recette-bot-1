@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "far-breton-pruneaux-recette-bretonne",
+      "title": "Far breton aux pruneaux - Recette traditionnelle bretonne",
+      "meta_description": "Découvrez le vrai far breton aux pruneaux, dessert traditionnel de Bretagne. Recette authentique facile avec des pruneaux moelleux et une pâte onctueuse.",
+      "category": "Desserts",
+      "emoji": "🍮",
+      "cook_time": "45 min",
+      "prep_time": "10 min",
+      "servings": 8,
+      "date_iso": "2026-04-04",
+      "date_display": "4 April 2026",
+      "url": "recettes/far-breton-pruneaux-recette-bretonne.html"
+    },
+    {
       "slug": "pissaladi-re-ni-oise-oignons-anchois",
       "title": "Pissaladière niçoise traditionnelle aux oignons et anchois",
       "meta_description": "Découvrez la vraie recette de pissaladière niçoise avec oignons confits et anchois. Une spécialité provençale authentique et savoureuse à réaliser facilement.",
@@ -222,5 +235,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-03"
+  "last_updated": "2026-04-04"
 }
