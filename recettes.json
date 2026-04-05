@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "gnocchis-pommes-de-terre-maison",
+      "title": "Gnocchis de pommes de terre maison : recette traditionnelle",
+      "meta_description": "Découvrez comment préparer des gnocchis de pommes de terre maison moelleux et savoureux. Recette traditionnelle italienne facile avec conseils de chef.",
+      "category": "Pâtes",
+      "emoji": "🥔",
+      "cook_time": "30 min",
+      "prep_time": "30 min",
+      "servings": 4,
+      "date_iso": "2026-04-05",
+      "date_display": "5 April 2026",
+      "url": "recettes/gnocchis-pommes-de-terre-maison.html"
+    },
+    {
       "slug": "far-breton-pruneaux-recette-bretonne",
       "title": "Far breton aux pruneaux - Recette traditionnelle bretonne",
       "meta_description": "Découvrez le vrai far breton aux pruneaux, dessert traditionnel de Bretagne. Recette authentique facile avec des pruneaux moelleux et une pâte onctueuse.",
@@ -235,5 +248,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-04"
+  "last_updated": "2026-04-05"
 }
