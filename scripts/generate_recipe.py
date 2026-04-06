@@ -84,31 +84,44 @@ def generate_recipe(recipe_data):
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     slug = re.sub(r'[^a-z0-9]+', '-', topic.lower()).strip('-')[:60]
 
-    prompt = f"""Génère une recette complète pour : "{topic}"
+        prompt = f"""Génère une recette complète et UNIQUE pour : "{topic}"
+
+La recette doit être rédigée comme par un vrai chef cuisinier français passionné.
+Elle doit contenir des éléments qu'on ne trouve pas sur les autres sites.
 
 Réponds UNIQUEMENT avec ce JSON valide :
 {{
-  "title": "Titre recette SEO 55-65 caractères avec le mot-clé",
-  "meta_description": "Description meta 145-155 caractères naturelle et appétissante",
-  "intro": "Introduction 100 mots qui donne envie de cuisiner, histoire du plat ou conseil",
+  "title": "Titre recette SEO 55-65 caractères avec le mot-clé principal",
+  "meta_description": "Description meta 145-155 caractères naturelle et appétissante avec mot-clé",
+  "intro": "Introduction de 150 mots minimum : raconte l'histoire ou l'origine du plat, une anecdote personnelle ou régionale, pourquoi cette recette est spéciale. Ton chaleureux et authentique.",
   "ingredients": [
-    {{"amount": "200", "unit": "g", "name": "ingrédient principal"}},
-    {{"amount": "2", "unit": "", "name": "oeufs"}},
-    {{"amount": "1", "unit": "c.à.s", "name": "huile d'olive"}}
+    {{"amount": "200", "unit": "g", "name": "ingrédient avec précision (ex: beurre demi-sel de Bretagne)"}},
+    {{"amount": "2", "unit": "", "name": "oeufs fermiers à température ambiante"}},
+    {{"amount": "1", "unit": "c.à.s", "name": "huile d'olive extra vierge"}}
   ],
   "steps": [
-    {{"num": 1, "title": "Titre de l'étape", "text": "Instruction détaillée et précise de 40-60 mots"}},
-    {{"num": 2, "title": "Titre étape 2", "text": "Instruction 40-60 mots"}}
+    {{"num": 1, "title": "Titre étape précis", "text": "Instruction très détaillée de 60-80 mots avec la technique exacte, les gestes précis, les erreurs à éviter et pourquoi on fait ça ainsi."}},
+    {{"num": 2, "title": "Titre étape 2", "text": "Instruction 60-80 mots avec astuces de chef."}}
   ],
-  "tips": ["Conseil pratique 1", "Conseil pratique 2", "Conseil variation ou substitution"],
+  "tips": [
+    "Astuce de chef avec explication du pourquoi",
+    "Variante régionale ou saisonnière concrète",
+    "Comment conserver et réchauffer sans perdre la texture",
+    "Accord mets-vins ou boisson recommandée avec justification"
+  ],
   "faq": [
-    {{"q": "Peut-on préparer ce plat à l'avance ?", "a": "Réponse pratique 40 mots"}},
-    {{"q": "Comment conserver les restes ?", "a": "Réponse pratique 40 mots"}},
-    {{"q": "Quelle variante peut-on faire ?", "a": "Réponse créative 40 mots"}}
+    {{"q": "Question très spécifique à cette recette ?", "a": "Réponse experte de 60 mots avec détails techniques"}},
+    {{"q": "Peut-on adapter pour les intolérants/végétariens ?", "a": "Réponse pratique 60 mots"}},
+    {{"q": "Quelle est l'erreur la plus commune dans cette recette ?", "a": "Réponse honnête 60 mots avec solution"}}
   ]
 }}
 
-Exigences : 8-10 ingrédients, 5-7 étapes, instructions très précises et reproductibles, français naturel."""
+Exigences absolues :
+- 10-12 ingrédients avec précisions (marque, région, température, qualité)
+- 6-7 étapes très détaillées
+- Intro unique avec histoire/anecdote réelle
+- Zéro phrase générique type "cette délicieuse recette"
+- Français naturel, ton de chef passionné"""
 
     msg = client.messages.create(
         model="claude-sonnet-4-20250514",
