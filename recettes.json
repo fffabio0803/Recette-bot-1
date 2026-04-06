@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "pavlova-fruits-rouges-meringue",
+      "title": "Pavlova aux fruits rouges - Meringue croustillante et fondante",
+      "meta_description": "Découvrez la recette authentique de la pavlova aux fruits rouges : meringue parfaite, chantilly vanillée et fruits frais pour un dessert spectaculaire.",
+      "category": "Desserts",
+      "emoji": "🍓",
+      "cook_time": "1h30",
+      "prep_time": "20 min",
+      "servings": 8,
+      "date_iso": "2026-04-06",
+      "date_display": "6 April 2026",
+      "url": "recettes/pavlova-fruits-rouges-meringue.html"
+    },
+    {
       "slug": "gnocchis-pommes-de-terre-maison",
       "title": "Gnocchis de pommes de terre maison : recette traditionnelle",
       "meta_description": "Découvrez comment préparer des gnocchis de pommes de terre maison moelleux et savoureux. Recette traditionnelle italienne facile avec conseils de chef.",
@@ -248,5 +261,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-05"
+  "last_updated": "2026-04-06"
 }
