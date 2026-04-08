@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "gaspacho-andalou-recette-fraiche",
+      "title": "Gazpacho Andalou Authentique : Recette Fraîche d'Été",
+      "meta_description": "Découvrez le véritable gazpacho andalou avec cette recette traditionnelle. Soupe froide rafraîchissante aux tomates mûres et légumes frais.",
+      "category": "Soupes",
+      "emoji": "Soupes",
+      "cook_time": "2h frigo",
+      "prep_time": "15 min",
+      "servings": 6,
+      "date_iso": "2026-04-08",
+      "date_display": "08 April 2026",
+      "url": "recettes/gaspacho-andalou-recette-fraiche.html"
+    },
+    {
       "slug": "tajine-poulet-citron-confit-olives",
       "title": "Tajine de Poulet aux Citrons Confits et Olives Violettes",
       "meta_description": "Découvrez ma recette authentique de tajine marocain au poulet, citrons confits maison et olives violettes. Saveurs méditerranéennes garanties en 90 minutes.",
@@ -274,5 +287,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-07"
+  "last_updated": "2026-04-08"
 }

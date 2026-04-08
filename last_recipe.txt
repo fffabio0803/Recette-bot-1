@@ -1,3 +1,3 @@
-slug=tajine-poulet-citron-confit-olives
-title=Tajine de Poulet aux Citrons Confits et Olives Violettes
-date=2026-04-07
+slug=gaspacho-andalou-recette-fraiche
+title=Gazpacho Andalou Authentique : Recette Fraîche d'Été
+date=2026-04-08
