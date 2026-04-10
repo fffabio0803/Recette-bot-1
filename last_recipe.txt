@@ -1,3 +1,3 @@
-slug=gaspacho-andalou-recette-fraiche
-title=Gazpacho Andalou Authentique : Recette Fraîche d'Été
-date=2026-04-08
+slug=saumon-gravlax-maison-aneth-citron
+title=Gravlax de saumon maison à l'aneth et citron nordique
+date=2026-04-10

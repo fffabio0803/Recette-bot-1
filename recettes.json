@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "saumon-gravlax-maison-aneth-citron",
+      "title": "Gravlax de saumon maison à l'aneth et citron nordique",
+      "meta_description": "Découvrez ma recette authentique de gravlax, cette spécialité scandinave qui sublime le saumon frais. Technique traditionnelle et saveurs incomparables.",
+      "category": "Poisson",
+      "emoji": "Poisson",
+      "cook_time": "48h",
+      "prep_time": "20 min",
+      "servings": 8,
+      "date_iso": "2026-04-10",
+      "date_display": "10 April 2026",
+      "url": "recettes/saumon-gravlax-maison-aneth-citron.html"
+    },
+    {
       "slug": "gaspacho-andalou-recette-fraiche",
       "title": "Gazpacho Andalou Authentique : Recette Fraîche d'Été",
       "meta_description": "Découvrez le véritable gazpacho andalou avec cette recette traditionnelle. Soupe froide rafraîchissante aux tomates mûres et légumes frais.",
@@ -287,5 +300,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-08"
+  "last_updated": "2026-04-10"
 }
