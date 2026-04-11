@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tartiflette-reblochon-pommes-de-terre",
+      "title": "Tartiflette au Reblochon Fermier - Recette Savoyarde Authentique",
+      "meta_description": "Découvrez la véritable tartiflette savoyarde avec reblochon fermier, pommes de terre Charlotte et lardons fumés. Recette traditionnelle de chef.",
+      "category": "Plats",
+      "emoji": "Plats",
+      "cook_time": "50 min",
+      "prep_time": "15 min",
+      "servings": 4,
+      "date_iso": "2026-04-11",
+      "date_display": "11 April 2026",
+      "url": "recettes/tartiflette-reblochon-pommes-de-terre.html"
+    },
+    {
       "slug": "saumon-gravlax-maison-aneth-citron",
       "title": "Gravlax de saumon maison à l'aneth et citron nordique",
       "meta_description": "Découvrez ma recette authentique de gravlax, cette spécialité scandinave qui sublime le saumon frais. Technique traditionnelle et saveurs incomparables.",
@@ -300,5 +313,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-10"
+  "last_updated": "2026-04-11"
 }
