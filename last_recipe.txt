@@ -1,3 +1,3 @@
-slug=tartiflette-reblochon-pommes-de-terre
-title=Tartiflette au Reblochon Fermier - Recette Savoyarde Authentique
-date=2026-04-11
+slug=panna-cotta-vanille-coulis-fruits
+title=Panna Cotta Vanille au Coulis de Fruits Rouges Maison
+date=2026-04-12

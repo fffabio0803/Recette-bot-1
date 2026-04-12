@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "panna-cotta-vanille-coulis-fruits",
+      "title": "Panna Cotta Vanille au Coulis de Fruits Rouges Maison",
+      "meta_description": "Découvrez ma panna cotta vanille authentique avec son coulis de fruits rouges acidulé. Recette traditionnelle de chef pour un dessert raffiné.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "3h frigo",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-04-12",
+      "date_display": "12 April 2026",
+      "url": "recettes/panna-cotta-vanille-coulis-fruits.html"
+    },
+    {
       "slug": "tartiflette-reblochon-pommes-de-terre",
       "title": "Tartiflette au Reblochon Fermier - Recette Savoyarde Authentique",
       "meta_description": "Découvrez la véritable tartiflette savoyarde avec reblochon fermier, pommes de terre Charlotte et lardons fumés. Recette traditionnelle de chef.",
@@ -313,5 +326,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-11"
+  "last_updated": "2026-04-12"
 }
