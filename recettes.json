@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "poulet-basquaise-tomates-poivrons",
+      "title": "Poulet Basquaise Authentique aux Poivrons du Piment d'Espelette",
+      "meta_description": "Découvrez la vraie recette du poulet basquaise avec tomates fraîches, poivrons colorés et piment d'Espelette. Une explosion de saveurs du Pays Basque!",
+      "category": "Volaille",
+      "emoji": "Volaille",
+      "cook_time": "1h",
+      "prep_time": "20 min",
+      "servings": 4,
+      "date_iso": "2026-04-13",
+      "date_display": "13 April 2026",
+      "url": "recettes/poulet-basquaise-tomates-poivrons.html"
+    },
+    {
       "slug": "panna-cotta-vanille-coulis-fruits",
       "title": "Panna Cotta Vanille au Coulis de Fruits Rouges Maison",
       "meta_description": "Découvrez ma panna cotta vanille authentique avec son coulis de fruits rouges acidulé. Recette traditionnelle de chef pour un dessert raffiné.",
@@ -326,5 +339,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-12"
+  "last_updated": "2026-04-13"
 }
