@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "salade-de-lentilles-vinaigrette-moutarde",
+      "title": "Salade de lentilles vertes du Puy vinaigrette moutarde ancienne",
+      "meta_description": "Recette authentique de salade de lentilles vertes du Puy à la vinaigrette moutarde ancienne. Une salade bistrot française généreuse et savoureuse.",
+      "category": "Salades",
+      "emoji": "Salades",
+      "cook_time": "30 min",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-04-14",
+      "date_display": "14 April 2026",
+      "url": "recettes/salade-de-lentilles-vinaigrette-moutarde.html"
+    },
+    {
       "slug": "poulet-basquaise-tomates-poivrons",
       "title": "Poulet Basquaise Authentique aux Poivrons du Piment d'Espelette",
       "meta_description": "Découvrez la vraie recette du poulet basquaise avec tomates fraîches, poivrons colorés et piment d'Espelette. Une explosion de saveurs du Pays Basque!",
@@ -339,5 +352,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-13"
+  "last_updated": "2026-04-14"
 }
