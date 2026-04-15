@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "madeleine-recette-classique-bosse",
+      "title": "Madeleines à la Bosse Parfaite - Recette Traditionnelle",
+      "meta_description": "Découvrez les secrets des vraies madeleines françaises avec leur bosse caractéristique. Technique de chef pour réussir ces petits gâteaux moelleux.",
+      "category": "Gateaux",
+      "emoji": "Gateaux",
+      "cook_time": "1h repos",
+      "prep_time": "12 min",
+      "servings": 16,
+      "date_iso": "2026-04-15",
+      "date_display": "15 April 2026",
+      "url": "recettes/madeleine-recette-classique-bosse.html"
+    },
+    {
       "slug": "salade-de-lentilles-vinaigrette-moutarde",
       "title": "Salade de lentilles vertes du Puy vinaigrette moutarde ancienne",
       "meta_description": "Recette authentique de salade de lentilles vertes du Puy à la vinaigrette moutarde ancienne. Une salade bistrot française généreuse et savoureuse.",
@@ -352,5 +365,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-14"
+  "last_updated": "2026-04-15"
 }
