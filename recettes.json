@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tortilla-espagnole-pommes-de-terre-oignon",
+      "title": "Tortilla Espagnole Authentique aux Pommes de Terre et Oignon",
+      "meta_description": "Découvrez la véritable tortilla española selon la tradition madrilène. Une recette ancestrale aux pommes de terre fondantes et oignons dorés.",
+      "category": "Oeufs",
+      "emoji": "Oeufs",
+      "cook_time": "30 min",
+      "prep_time": "15 min",
+      "servings": 4,
+      "date_iso": "2026-04-16",
+      "date_display": "16 April 2026",
+      "url": "recettes/tortilla-espagnole-pommes-de-terre-oignon.html"
+    },
+    {
       "slug": "madeleine-recette-classique-bosse",
       "title": "Madeleines à la Bosse Parfaite - Recette Traditionnelle",
       "meta_description": "Découvrez les secrets des vraies madeleines françaises avec leur bosse caractéristique. Technique de chef pour réussir ces petits gâteaux moelleux.",
@@ -365,5 +378,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-15"
+  "last_updated": "2026-04-16"
 }
