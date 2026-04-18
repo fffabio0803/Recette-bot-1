@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "brandade-de-morue-maison-recette",
+      "title": "Brandade de morue authentique de Nîmes - recette traditionnelle",
+      "meta_description": "Découvrez la vraie brandade de morue nîmoise avec cette recette ancestrale. Technique professionnelle pour un résultat crémeux et savoureux.",
+      "category": "Poisson",
+      "emoji": "Poisson",
+      "cook_time": "30 min",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-04-18",
+      "date_display": "18 April 2026",
+      "url": "recettes/brandade-de-morue-maison-recette.html"
+    },
+    {
       "slug": "baba-au-rhum-recette-traditionnelle",
       "title": "Baba au Rhum Traditionnel - Recette Authentique du Chef",
       "meta_description": "Découvrez la véritable recette du baba au rhum traditionnel avec sa pâte levée parfaite et son sirop parfumé. Secrets de chef inclus.",
@@ -391,5 +404,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-17"
+  "last_updated": "2026-04-18"
 }

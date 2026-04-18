@@ -1,3 +1,3 @@
-slug=baba-au-rhum-recette-traditionnelle
-title=Baba au Rhum Traditionnel - Recette Authentique du Chef
-date=2026-04-17
+slug=brandade-de-morue-maison-recette
+title=Brandade de morue authentique de Nîmes - recette traditionnelle
+date=2026-04-18
