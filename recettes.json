@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "oeufs-cocotte-creme-fraiche-facile",
+      "title": "Œufs cocotte à la crème fraîche et ciboulette fermière",
+      "meta_description": "Recette traditionnelle d'œufs cocotte crémeux à la ciboulette. Technique de cuisson au bain-marie pour une texture parfaite en 25 minutes.",
+      "category": "Oeufs",
+      "emoji": "Oeufs",
+      "cook_time": "15 min",
+      "prep_time": "5 min",
+      "servings": 2,
+      "date_iso": "2026-04-19",
+      "date_display": "19 April 2026",
+      "url": "recettes/oeufs-cocotte-creme-fraiche-facile.html"
+    },
+    {
       "slug": "brandade-de-morue-maison-recette",
       "title": "Brandade de morue authentique de Nîmes - recette traditionnelle",
       "meta_description": "Découvrez la vraie brandade de morue nîmoise avec cette recette ancestrale. Technique professionnelle pour un résultat crémeux et savoureux.",
@@ -404,5 +417,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-18"
+  "last_updated": "2026-04-19"
 }
