@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "sorbet-mangue-citron-vert-recette",
+      "title": "Sorbet mangue citron vert glacé à la cardamome - recette chef",
+      "meta_description": "Sorbet mangue citron vert onctueux parfumé à la cardamome. Recette de chef avec technique professionnelle pour un dessert tropical raffiné.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "4h congelateur",
+      "prep_time": "10 min",
+      "servings": 6,
+      "date_iso": "2026-04-20",
+      "date_display": "20 April 2026",
+      "url": "recettes/sorbet-mangue-citron-vert-recette.html"
+    },
+    {
       "slug": "oeufs-cocotte-creme-fraiche-facile",
       "title": "Œufs cocotte à la crème fraîche et ciboulette fermière",
       "meta_description": "Recette traditionnelle d'œufs cocotte crémeux à la ciboulette. Technique de cuisson au bain-marie pour une texture parfaite en 25 minutes.",
@@ -417,5 +430,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-19"
+  "last_updated": "2026-04-20"
 }
