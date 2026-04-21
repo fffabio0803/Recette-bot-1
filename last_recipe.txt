@@ -1,3 +1,3 @@
-slug=sorbet-mangue-citron-vert-recette
-title=Sorbet mangue citron vert glacé à la cardamome - recette chef
-date=2026-04-20
+slug=roti-de-porc-moutarde-miel-recette
+title=Rôti de Porc Moutarde-Miel à la Bourguignonne
+date=2026-04-21
