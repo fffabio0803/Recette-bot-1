@@ -1,3 +1,3 @@
-slug=roti-de-porc-moutarde-miel-recette
-title=Rôti de Porc Moutarde-Miel à la Bourguignonne
-date=2026-04-21
+slug=creme-caramel-renversee-classique
+title=Crème caramel renversée authentique de grand-mère Dubois
+date=2026-04-22

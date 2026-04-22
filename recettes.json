@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "creme-caramel-renversee-classique",
+      "title": "Crème caramel renversée authentique de grand-mère Dubois",
+      "meta_description": "Découvrez la vraie recette de crème caramel renversée, secrets de pâtissier pour un caramel ambré parfait et une crème soyeuse irrésistible.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "45 min",
+      "prep_time": "15 min",
+      "servings": 6,
+      "date_iso": "2026-04-22",
+      "date_display": "22 April 2026",
+      "url": "recettes/creme-caramel-renversee-classique.html"
+    },
+    {
       "slug": "roti-de-porc-moutarde-miel-recette",
       "title": "Rôti de Porc Moutarde-Miel à la Bourguignonne",
       "meta_description": "Découvrez cette recette authentique de rôti de porc laqué au miel et moutarde de Dijon, tradition culinaire bourguignonne transmise depuis 1847.",
@@ -443,5 +456,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-21"
+  "last_updated": "2026-04-22"
 }
