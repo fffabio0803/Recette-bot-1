@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "fraisier-recette-patisserie-maison",
+      "title": "Fraisier Traditionnel Maison - Recette Authentique du Chef",
+      "meta_description": "Découvrez ma recette authentique du fraisier traditionnel français avec génoise vanille, crème mousseline et fraises Gariguette de saison.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "3h",
+      "prep_time": "45 min",
+      "servings": 8,
+      "date_iso": "2026-04-23",
+      "date_display": "23 April 2026",
+      "url": "recettes/fraisier-recette-patisserie-maison.html"
+    },
+    {
       "slug": "creme-caramel-renversee-classique",
       "title": "Crème caramel renversée authentique de grand-mère Dubois",
       "meta_description": "Découvrez la vraie recette de crème caramel renversée, secrets de pâtissier pour un caramel ambré parfait et une crème soyeuse irrésistible.",
@@ -456,5 +469,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-22"
+  "last_updated": "2026-04-23"
 }
