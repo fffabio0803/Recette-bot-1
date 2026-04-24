@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "daurade-royale-four-citron-fenouil",
+      "title": "Daurade royale au four, fenouil braisé et citron confit",
+      "meta_description": "Découvrez cette recette de daurade royale au four avec fenouil braisé et citron confit, inspirée des traditions culinaires provençales authentiques.",
+      "category": "Poisson",
+      "emoji": "Poisson",
+      "cook_time": "25 min",
+      "prep_time": "10 min",
+      "servings": 2,
+      "date_iso": "2026-04-24",
+      "date_display": "24 April 2026",
+      "url": "recettes/daurade-royale-four-citron-fenouil.html"
+    },
+    {
       "slug": "fraisier-recette-patisserie-maison",
       "title": "Fraisier Traditionnel Maison - Recette Authentique du Chef",
       "meta_description": "Découvrez ma recette authentique du fraisier traditionnel français avec génoise vanille, crème mousseline et fraises Gariguette de saison.",
@@ -469,5 +482,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-23"
+  "last_updated": "2026-04-24"
 }
