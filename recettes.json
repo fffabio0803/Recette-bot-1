@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "ile-flottante-oeufs-neige-creme-anglaise",
+      "title": "Île flottante aux œufs à la neige et crème anglaise dorée",
+      "meta_description": "Découvrez la recette authentique de l'île flottante aux œufs à la neige sur crème anglaise, un dessert français emblématique aux saveurs délicates.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "30 min",
+      "prep_time": "20 min",
+      "servings": 4,
+      "date_iso": "2026-04-25",
+      "date_display": "25 April 2026",
+      "url": "recettes/ile-flottante-oeufs-neige-creme-anglaise.html"
+    },
+    {
       "slug": "daurade-royale-four-citron-fenouil",
       "title": "Daurade royale au four, fenouil braisé et citron confit",
       "meta_description": "Découvrez cette recette de daurade royale au four avec fenouil braisé et citron confit, inspirée des traditions culinaires provençales authentiques.",
@@ -482,5 +495,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-24"
+  "last_updated": "2026-04-25"
 }
