@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "salade-caesar-poulet-grille-maison",
+      "title": "Salade César au Poulet Grillé à la Française - Recette Maison",
+      "meta_description": "Découvrez ma version française de la salade César avec poulet grillé aux herbes de Provence, croûtons à l'ail et sauce César authentique maison.",
+      "category": "Salades",
+      "emoji": "Salades",
+      "cook_time": "0 min",
+      "prep_time": "20 min",
+      "servings": 2,
+      "date_iso": "2026-04-26",
+      "date_display": "26 April 2026",
+      "url": "recettes/salade-caesar-poulet-grille-maison.html"
+    },
+    {
       "slug": "ile-flottante-oeufs-neige-creme-anglaise",
       "title": "Île flottante aux œufs à la neige et crème anglaise dorée",
       "meta_description": "Découvrez la recette authentique de l'île flottante aux œufs à la neige sur crème anglaise, un dessert français emblématique aux saveurs délicates.",
@@ -495,5 +508,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-25"
+  "last_updated": "2026-04-26"
 }
