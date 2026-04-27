@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "pain-perdu-brioche-recette-facile",
+      "title": "Pain perdu à la brioche dorée, secret de grand-mère",
+      "meta_description": "Découvrez le vrai pain perdu à la brioche comme le faisait ma grand-mère normande. Recette authentique, dorée et fondante, prête en 20 minutes.",
+      "category": "Petit-dejeuner",
+      "emoji": "Petit-dejeuner",
+      "cook_time": "10 min",
+      "prep_time": "5 min",
+      "servings": 2,
+      "date_iso": "2026-04-27",
+      "date_display": "27 April 2026",
+      "url": "recettes/pain-perdu-brioche-recette-facile.html"
+    },
+    {
       "slug": "salade-caesar-poulet-grille-maison",
       "title": "Salade César au Poulet Grillé à la Française - Recette Maison",
       "meta_description": "Découvrez ma version française de la salade César avec poulet grillé aux herbes de Provence, croûtons à l'ail et sauce César authentique maison.",
@@ -508,5 +521,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-26"
+  "last_updated": "2026-04-27"
 }
