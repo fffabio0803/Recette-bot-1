@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "coq-au-vin-rouge-champignons-lardons",
+      "title": "Coq au Vin Rouge aux Champignons et Lardons de Bourgogne",
+      "meta_description": "Découvrez cette recette authentique de coq au vin rouge aux champignons et lardons, mijotée selon la tradition bourguignonne ancestrale.",
+      "category": "Volaille",
+      "emoji": "Volaille",
+      "cook_time": "2h",
+      "prep_time": "30 min",
+      "servings": 6,
+      "date_iso": "2026-04-28",
+      "date_display": "28 April 2026",
+      "url": "recettes/coq-au-vin-rouge-champignons-lardons.html"
+    },
+    {
       "slug": "pain-perdu-brioche-recette-facile",
       "title": "Pain perdu à la brioche dorée, secret de grand-mère",
       "meta_description": "Découvrez le vrai pain perdu à la brioche comme le faisait ma grand-mère normande. Recette authentique, dorée et fondante, prête en 20 minutes.",
@@ -521,5 +534,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-27"
+  "last_updated": "2026-04-28"
 }
