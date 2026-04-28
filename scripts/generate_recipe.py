@@ -47,7 +47,7 @@ RECIPES = [
     ("far breton pruneaux recette bretonne", "Desserts", "Desserts", "45 min", "10 min", 8),
     ("gnocchis pommes de terre maison", "Pates", "Pates", "30 min", "30 min", 4),
     ("pavlova fruits rouges meringue", "Desserts", "Desserts", "1h30", "20 min", 8),
-    ("tajine poulet citron confit olives", "Plats du monde", "Plats du monde", "1h30", "20 min", 4),
+    ("tajine de poulet citron confit olives", "Plats du monde", "Plats du monde", "1h30", "20 min", 4),
     ("gaspacho andalou recette fraiche", "Soupes", "Soupes", "2h frigo", "15 min", 6),
     ("profiteroles choux creme glacee chocolat", "Desserts", "Desserts", "40 min", "20 min", 8),
     ("saumon gravlax maison aneth citron", "Poisson", "Poisson", "48h", "20 min", 8),
