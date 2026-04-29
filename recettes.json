@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "terrine-de-campagne-recette-maison",
+      "title": "Terrine de Campagne Maison aux Herbes de Provence - Recette",
+      "meta_description": "Découvrez ma terrine de campagne authentique aux herbes de Provence. Une recette familiale transmise de génération en génération, savoureuse et généreuse.",
+      "category": "Entrees",
+      "emoji": "Entrees",
+      "cook_time": "24h",
+      "prep_time": "30 min",
+      "servings": 10,
+      "date_iso": "2026-04-29",
+      "date_display": "29 April 2026",
+      "url": "recettes/terrine-de-campagne-recette-maison.html"
+    },
+    {
       "slug": "coq-au-vin-rouge-champignons-lardons",
       "title": "Coq au Vin Rouge aux Champignons et Lardons de Bourgogne",
       "meta_description": "Découvrez cette recette authentique de coq au vin rouge aux champignons et lardons, mijotée selon la tradition bourguignonne ancestrale.",
@@ -534,5 +547,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-28"
+  "last_updated": "2026-04-29"
 }
