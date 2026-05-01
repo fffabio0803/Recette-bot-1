@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "carbonara-authentique-recette-romaine",
+      "title": "Carbonara Authentique Romaine - La Vraie Recette Traditionnelle",
+      "meta_description": "Découvrez la véritable carbonara romaine avec ses 5 ingrédients sacrés. Technique parfaite du chef pour une crème onctueuse sans œufs brouillés.",
+      "category": "Pates",
+      "emoji": "Pates",
+      "cook_time": "20 min",
+      "prep_time": "10 min",
+      "servings": 2,
+      "date_iso": "2026-05-01",
+      "date_display": "01 May 2026",
+      "url": "recettes/carbonara-authentique-recette-romaine.html"
+    },
+    {
       "slug": "poulet-roti-herbes-de-provence-facile",
       "title": "Poulet rôti aux herbes de Provence authentique et facile",
       "meta_description": "Découvrez ma recette de poulet rôti parfumé aux herbes de Provence, croustillant dehors, moelleux dedans. Technique de chef pour un plat familial réussi.",
@@ -560,5 +573,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-04-30"
+  "last_updated": "2026-05-01"
 }
