@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tarte-tatin-pommes-caramel-facile",
+      "title": "Tarte Tatin aux Pommes et Caramel Beurre Salé - Recette Facile",
+      "meta_description": "Découvrez la vraie recette de tarte Tatin des sœurs Tatin avec pommes fondantes et caramel au beurre salé. Technique infaillible de chef français.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "25 min",
+      "prep_time": "35 min",
+      "servings": 6,
+      "date_iso": "2026-05-02",
+      "date_display": "02 May 2026",
+      "url": "recettes/tarte-tatin-pommes-caramel-facile.html"
+    },
+    {
       "slug": "carbonara-authentique-recette-romaine",
       "title": "Carbonara Authentique Romaine - La Vraie Recette Traditionnelle",
       "meta_description": "Découvrez la véritable carbonara romaine avec ses 5 ingrédients sacrés. Technique parfaite du chef pour une crème onctueuse sans œufs brouillés.",
@@ -573,5 +586,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-01"
+  "last_updated": "2026-05-02"
 }
