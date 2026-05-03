@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "boeuf-bourguignon-recette-traditionnelle",
+      "title": "Bœuf Bourguignon Traditionnel : Recette Authentique de Chef",
+      "meta_description": "Découvrez le vrai bœuf bourguignon traditionnel de Bourgogne. Recette authentique du chef avec marinade 24h et cuisson lente pour une viande fondante.",
+      "category": "Viande",
+      "emoji": "Viande",
+      "cook_time": "4h",
+      "prep_time": "30 min",
+      "servings": 6,
+      "date_iso": "2026-05-03",
+      "date_display": "03 May 2026",
+      "url": "recettes/boeuf-bourguignon-recette-traditionnelle.html"
+    },
+    {
       "slug": "tarte-tatin-pommes-caramel-facile",
       "title": "Tarte Tatin aux Pommes et Caramel Beurre Salé - Recette Facile",
       "meta_description": "Découvrez la vraie recette de tarte Tatin des sœurs Tatin avec pommes fondantes et caramel au beurre salé. Technique infaillible de chef français.",
@@ -586,5 +599,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-02"
+  "last_updated": "2026-05-03"
 }
