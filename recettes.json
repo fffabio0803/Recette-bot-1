@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "risotto-champignons-cremeux-facile",
+      "title": "Risotto crémeux aux champignons de saison - Recette facile",
+      "meta_description": "Découvrez le secret d'un risotto aux champignons onctueux comme en Italie. Technique authentique, ingrédients de qualité, résultat garanti.",
+      "category": "Vegetarien",
+      "emoji": "Vegetarien",
+      "cook_time": "25 min",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-05-04",
+      "date_display": "04 May 2026",
+      "url": "recettes/risotto-champignons-cremeux-facile.html"
+    },
+    {
       "slug": "boeuf-bourguignon-recette-traditionnelle",
       "title": "Bœuf Bourguignon Traditionnel : Recette Authentique de Chef",
       "meta_description": "Découvrez le vrai bœuf bourguignon traditionnel de Bourgogne. Recette authentique du chef avec marinade 24h et cuisson lente pour une viande fondante.",
@@ -599,5 +612,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-03"
+  "last_updated": "2026-05-04"
 }
