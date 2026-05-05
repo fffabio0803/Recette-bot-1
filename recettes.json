@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "soupe-a-loignon-gratinee-parisienne",
+      "title": "Soupe à l'Oignon Gratinée des Halles - Recette Parisienne",
+      "meta_description": "Découvrez la vraie soupe à l'oignon gratinée des Halles de Paris. Recette authentique avec oignons confits, bouillon corsé et croûton doré au gruyère.",
+      "category": "Soupes",
+      "emoji": "Soupes",
+      "cook_time": "45 min",
+      "prep_time": "15 min",
+      "servings": 4,
+      "date_iso": "2026-05-05",
+      "date_display": "05 May 2026",
+      "url": "recettes/soupe-a-loignon-gratinee-parisienne.html"
+    },
+    {
       "slug": "risotto-champignons-cremeux-facile",
       "title": "Risotto crémeux aux champignons de saison - Recette facile",
       "meta_description": "Découvrez le secret d'un risotto aux champignons onctueux comme en Italie. Technique authentique, ingrédients de qualité, résultat garanti.",
@@ -612,5 +625,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-04"
+  "last_updated": "2026-05-05"
 }
