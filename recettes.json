@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "salade-nicoise-traditionnelle-recette",
+      "title": "Salade Niçoise Traditionnelle - Recette Authentique du Chef",
+      "meta_description": "Découvrez la vraie salade niçoise avec ses ingrédients d'origine : anchois, tomates, œufs durs, olives. Recette traditionnelle sans haricots verts.",
+      "category": "Salades",
+      "emoji": "Salades",
+      "cook_time": "0 min",
+      "prep_time": "20 min",
+      "servings": 4,
+      "date_iso": "2026-05-06",
+      "date_display": "06 May 2026",
+      "url": "recettes/salade-nicoise-traditionnelle-recette.html"
+    },
+    {
       "slug": "soupe-a-loignon-gratinee-parisienne",
       "title": "Soupe à l'Oignon Gratinée des Halles - Recette Parisienne",
       "meta_description": "Découvrez la vraie soupe à l'oignon gratinée des Halles de Paris. Recette authentique avec oignons confits, bouillon corsé et croûton doré au gruyère.",
@@ -625,5 +638,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-05"
+  "last_updated": "2026-05-06"
 }
