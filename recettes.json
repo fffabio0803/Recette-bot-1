@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "blanquette-de-veau-classique",
+      "title": "Blanquette de Veau Classique - Recette Traditionnelle",
+      "meta_description": "Découvrez la vraie blanquette de veau à l'ancienne, mijotée comme autrefois. Viande fondante, sauce veloutée et légumes parfumés.",
+      "category": "Viande",
+      "emoji": "Viande",
+      "cook_time": "1h30",
+      "prep_time": "30 min",
+      "servings": 6,
+      "date_iso": "2026-05-07",
+      "date_display": "07 May 2026",
+      "url": "recettes/blanquette-de-veau-classique.html"
+    },
+    {
       "slug": "salade-nicoise-traditionnelle-recette",
       "title": "Salade Niçoise Traditionnelle - Recette Authentique du Chef",
       "meta_description": "Découvrez la vraie salade niçoise avec ses ingrédients d'origine : anchois, tomates, œufs durs, olives. Recette traditionnelle sans haricots verts.",
@@ -638,5 +651,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-06"
+  "last_updated": "2026-05-07"
 }
