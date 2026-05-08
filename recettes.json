@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "creme-brulee-recette-facile-maison",
+      "title": "Crème Brûlée Maison Facile - Recette Authentique du Chef",
+      "meta_description": "Découvrez ma recette authentique de crème brûlée maison, facile à réaliser. Texture veloutée parfaite et caramel croustillant garanti.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "30 min",
+      "prep_time": "15 min",
+      "servings": 4,
+      "date_iso": "2026-05-08",
+      "date_display": "08 May 2026",
+      "url": "recettes/creme-brulee-recette-facile-maison.html"
+    },
+    {
       "slug": "blanquette-de-veau-classique",
       "title": "Blanquette de Veau Classique - Recette Traditionnelle",
       "meta_description": "Découvrez la vraie blanquette de veau à l'ancienne, mijotée comme autrefois. Viande fondante, sauce veloutée et légumes parfumés.",
@@ -651,5 +664,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-07"
+  "last_updated": "2026-05-08"
 }
