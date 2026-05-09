@@ -1,3 +1,3 @@
-slug=creme-brulee-recette-facile-maison
-title=Crème Brûlée Maison Facile - Recette Authentique du Chef
-date=2026-05-08
+slug=quiche-lorraine-recette-authentique
+title=Quiche Lorraine authentique de grand-mère : recette originale
+date=2026-05-09

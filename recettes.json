@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "quiche-lorraine-recette-authentique",
+      "title": "Quiche Lorraine authentique de grand-mère : recette originale",
+      "meta_description": "Découvrez la vraie recette de quiche lorraine avec ses secrets d'antan. Pâte maison, lardons fumés et migaine parfaite pour un résultat authentique.",
+      "category": "Tartes",
+      "emoji": "Tartes",
+      "cook_time": "35 min",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-05-09",
+      "date_display": "09 May 2026",
+      "url": "recettes/quiche-lorraine-recette-authentique.html"
+    },
+    {
       "slug": "creme-brulee-recette-facile-maison",
       "title": "Crème Brûlée Maison Facile - Recette Authentique du Chef",
       "meta_description": "Découvrez ma recette authentique de crème brûlée maison, facile à réaliser. Texture veloutée parfaite et caramel croustillant garanti.",
@@ -664,5 +677,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-08"
+  "last_updated": "2026-05-09"
 }
