@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "ratatouille-provencale-recette-simple",
+      "title": "Ratatouille provençale authentique - Recette traditionnelle",
+      "meta_description": "Découvrez la vraie ratatouille provençale avec cette recette traditionnelle. Légumes confits séparément puis mijotés ensemble, un délice méditerranéen.",
+      "category": "Vegetarien",
+      "emoji": "Vegetarien",
+      "cook_time": "1h",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-05-10",
+      "date_display": "10 May 2026",
+      "url": "recettes/ratatouille-provencale-recette-simple.html"
+    },
+    {
       "slug": "quiche-lorraine-recette-authentique",
       "title": "Quiche Lorraine authentique de grand-mère : recette originale",
       "meta_description": "Découvrez la vraie recette de quiche lorraine avec ses secrets d'antan. Pâte maison, lardons fumés et migaine parfaite pour un résultat authentique.",
@@ -677,5 +690,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-09"
+  "last_updated": "2026-05-10"
 }
