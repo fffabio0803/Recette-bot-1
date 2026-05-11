@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "mousse-au-chocolat-legere-rapide",
+      "title": "Mousse au chocolat légère express aux blancs montés",
+      "meta_description": "Découvrez ma mousse au chocolat ultra-légère en 15 minutes chrono. Technique de chef pour une texture aérienne avec seulement 3 œufs et du chocolat noir.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "2h frigo",
+      "prep_time": "15 min",
+      "servings": 6,
+      "date_iso": "2026-05-11",
+      "date_display": "11 May 2026",
+      "url": "recettes/mousse-au-chocolat-legere-rapide.html"
+    },
+    {
       "slug": "ratatouille-provencale-recette-simple",
       "title": "Ratatouille provençale authentique - Recette traditionnelle",
       "meta_description": "Découvrez la vraie ratatouille provençale avec cette recette traditionnelle. Légumes confits séparément puis mijotés ensemble, un délice méditerranéen.",
@@ -690,5 +703,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-10"
+  "last_updated": "2026-05-11"
 }
