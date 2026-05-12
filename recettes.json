@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "gratin-dauphinois-cremeux-facile",
+      "title": "Gratin Dauphinois Crémeux de Grand-Mère - Recette Facile",
+      "meta_description": "Découvrez le vrai gratin dauphinois crémeux de Savoie avec notre technique secrète. Pommes de terre fondantes, crème parfumée à l'ail. Résultat garanti !",
+      "category": "Accompagnement",
+      "emoji": "Accompagnement",
+      "cook_time": "1h",
+      "prep_time": "15 min",
+      "servings": 6,
+      "date_iso": "2026-05-12",
+      "date_display": "12 May 2026",
+      "url": "recettes/gratin-dauphinois-cremeux-facile.html"
+    },
+    {
       "slug": "mousse-au-chocolat-legere-rapide",
       "title": "Mousse au chocolat légère express aux blancs montés",
       "meta_description": "Découvrez ma mousse au chocolat ultra-légère en 15 minutes chrono. Technique de chef pour une texture aérienne avec seulement 3 œufs et du chocolat noir.",
@@ -703,5 +716,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-11"
+  "last_updated": "2026-05-12"
 }
