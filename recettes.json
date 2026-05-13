@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "bouillabaisse-marseillaise-recette",
+      "title": "Bouillabaisse Marseillaise Authentique - Recette Traditionnelle",
+      "meta_description": "Découvrez la vraie bouillabaisse marseillaise avec ses poissons de roche méditerranéens, son fumet doré et sa rouille épicée. Recette de chef authentique.",
+      "category": "Poisson",
+      "emoji": "Poisson",
+      "cook_time": "1h30",
+      "prep_time": "30 min",
+      "servings": 6,
+      "date_iso": "2026-05-13",
+      "date_display": "13 May 2026",
+      "url": "recettes/bouillabaisse-marseillaise-recette.html"
+    },
+    {
       "slug": "gratin-dauphinois-cremeux-facile",
       "title": "Gratin Dauphinois Crémeux de Grand-Mère - Recette Facile",
       "meta_description": "Découvrez le vrai gratin dauphinois crémeux de Savoie avec notre technique secrète. Pommes de terre fondantes, crème parfumée à l'ail. Résultat garanti !",
@@ -716,5 +729,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-12"
+  "last_updated": "2026-05-13"
 }
