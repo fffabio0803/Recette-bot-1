@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tarte-au-citron-meringuee-facile",
+      "title": "Tarte au citron meringuée façon grand-mère : recette facile",
+      "meta_description": "Découvrez la recette authentique de tarte au citron meringuée de ma grand-mère bretonne. Pâte croustillante, crème onctueuse, meringue dorée. Succès garanti !",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "25 min",
+      "prep_time": "30 min",
+      "servings": 8,
+      "date_iso": "2026-05-14",
+      "date_display": "14 May 2026",
+      "url": "recettes/tarte-au-citron-meringuee-facile.html"
+    },
+    {
       "slug": "bouillabaisse-marseillaise-recette",
       "title": "Bouillabaisse Marseillaise Authentique - Recette Traditionnelle",
       "meta_description": "Découvrez la vraie bouillabaisse marseillaise avec ses poissons de roche méditerranéens, son fumet doré et sa rouille épicée. Recette de chef authentique.",
@@ -729,5 +742,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-13"
+  "last_updated": "2026-05-14"
 }
