@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "pot-au-feu-recette-traditionnelle",
+      "title": "Pot-au-feu traditionnel français authentique et savoureux",
+      "meta_description": "Découvrez la véritable recette du pot-au-feu traditionnel français avec ses viandes tendres, légumes fondants et bouillon parfumé.",
+      "category": "Viande",
+      "emoji": "Viande",
+      "cook_time": "3h",
+      "prep_time": "30 min",
+      "servings": 8,
+      "date_iso": "2026-05-15",
+      "date_display": "15 May 2026",
+      "url": "recettes/pot-au-feu-recette-traditionnelle.html"
+    },
+    {
       "slug": "tarte-au-citron-meringuee-facile",
       "title": "Tarte au citron meringuée façon grand-mère : recette facile",
       "meta_description": "Découvrez la recette authentique de tarte au citron meringuée de ma grand-mère bretonne. Pâte croustillante, crème onctueuse, meringue dorée. Succès garanti !",
@@ -742,5 +755,5 @@
       "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-14"
+  "last_updated": "2026-05-15"
 }
