@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "financiers-amandes-moelleux-recette",
+      "title": "Financiers aux Amandes Moelleux de Ma Grand-Mère Lorraine",
+      "meta_description": "Découvrez ma recette familiale de financiers aux amandes ultra-moelleux. Secret d'un beurre noisette parfumé et technique de ma grand-mère.",
+      "category": "Gateaux",
+      "emoji": "Gateaux",
+      "cook_time": "15 min",
+      "prep_time": "12 min",
+      "servings": 12,
+      "date_iso": "2026-05-17",
+      "date_display": "17 May 2026",
+      "url": "recettes/financiers-amandes-moelleux-recette.html"
+    },
+    {
       "slug": "omelette-parfaite-technique-francaise",
       "title": "Omelette Parfaite à la Française - Technique de Chef Étoilé",
       "meta_description": "Découvrez la vraie technique française de l'omelette parfaite, crémeuse et baveuse, avec les secrets des grands chefs parisiens transmis depuis 1850.",
@@ -753,20 +766,7 @@
       "date_iso": "2026-03-19",
       "date_display": "19 March 2026",
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
-    },
-    {
-      "slug": "financiers-amandes-moelleux-recette",
-      "title": "Financiers aux amandes moelleux - Recette traditionnelle",
-      "meta_description": "Découvrez la recette authentique des financiers aux amandes moelleux. Petits gâteaux dorés et fondants, parfaits pour le goûter ou accompagner le thé.",
-      "category": "Gâteaux",
-      "emoji": "🧁",
-      "cook_time": "15 min",
-      "prep_time": "12 min",
-      "servings": 12,
-      "date_iso": "2026-03-18",
-      "date_display": "18 March 2026",
-      "url": "recettes/financiers-amandes-moelleux-recette.html"
     }
   ],
-  "last_updated": "2026-05-16"
+  "last_updated": "2026-05-17"
 }
