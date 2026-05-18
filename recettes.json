@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "soupe-de-tomates-fraiches-basilic",
+      "title": "Soupe de tomates fraîches au basilic selon la tradition provençale",
+      "meta_description": "Découvrez cette authentique soupe de tomates fraîches au basilic, inspirée des marchés de Provence. Une recette crémeuse et parfumée qui révèle toute la saveur de l'été.",
+      "category": "Soupes",
+      "emoji": "Soupes",
+      "cook_time": "20 min",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-05-18",
+      "date_display": "18 May 2026",
+      "url": "recettes/soupe-de-tomates-fraiches-basilic.html"
+    },
+    {
       "slug": "financiers-amandes-moelleux-recette",
       "title": "Financiers aux Amandes Moelleux de Ma Grand-Mère Lorraine",
       "meta_description": "Découvrez ma recette familiale de financiers aux amandes ultra-moelleux. Secret d'un beurre noisette parfumé et technique de ma grand-mère.",
@@ -768,5 +781,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-05-17"
+  "last_updated": "2026-05-18"
 }
