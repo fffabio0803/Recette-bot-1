@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "magret-de-canard-sauce-miel-soja",
+      "title": "Magret de Canard Laqué au Miel de Châtaignier et Soja",
+      "meta_description": "Découvrez ma recette signature de magret de canard, inspirée des marchés de Périgueux, avec une sauce veloutée miel-soja aux épices douces.",
+      "category": "Volaille",
+      "emoji": "Volaille",
+      "cook_time": "15 min",
+      "prep_time": "10 min",
+      "servings": 2,
+      "date_iso": "2026-05-20",
+      "date_display": "20 May 2026",
+      "url": "recettes/magret-de-canard-sauce-miel-soja.html"
+    },
+    {
       "slug": "pate-a-crepes-recette-de-base",
       "title": "Pâte à Crêpes Traditionnelle de Chef - Recette Authentique",
       "meta_description": "Découvrez la véritable recette de pâte à crêpes des maîtres crêpiers bretons. Technique infaillible pour des crêpes parfaites à tous les coups.",
@@ -755,19 +768,6 @@
       "url": "recettes/clafoutis-cerises-recette-classique.html"
     },
     {
-      "slug": "magret-de-canard-sauce-miel-soja",
-      "title": "Magret de canard sauce miel soja - Recette facile et savoureuse",
-      "meta_description": "Découvrez notre recette de magret de canard sauce miel soja, un plat raffiné aux saveurs asiatiques. Cuisson parfaite et sauce onctueuse garanties.",
-      "category": "Volaille",
-      "emoji": "🦆",
-      "cook_time": "15 min",
-      "prep_time": "10 min",
-      "servings": 2,
-      "date_iso": "2026-03-21",
-      "date_display": "21 March 2026",
-      "url": "recettes/magret-de-canard-sauce-miel-soja.html"
-    },
-    {
       "slug": "p-te-cr-pes-recette-de-base",
       "title": "Pâte à crêpes recette de base facile et rapide - Guide complet",
       "meta_description": "Recette de pâte à crêpes traditionnelle en 10 minutes. Ingrédients simples, technique infaillible pour des crêpes parfaites à tous les coups.",
@@ -794,5 +794,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-05-19"
+  "last_updated": "2026-05-20"
 }
