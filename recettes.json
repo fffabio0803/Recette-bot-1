@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tiramisu-recette-italienne-originale",
+      "title": "Tiramisu authentique italien : recette originale de Venise",
+      "meta_description": "Découvrez le vrai tiramisu vénitien avec mascarpone Lombardie, savoiardi artisanaux et café espresso. Recette traditionnelle italienne authentique.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "4h frigo",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-05-25",
+      "date_display": "25 May 2026",
+      "url": "recettes/tiramisu-recette-italienne-originale.html"
+    },
+    {
       "slug": "taboul-maison-menthe-citron",
       "title": "Taboulé Maison à la Menthe Fraîche et Citron de Menton",
       "meta_description": "Découvrez ma recette authentique de taboulé libanais aux herbes fraîches, menthe du jardin et citron de Menton. Saveurs méditerranéennes garanties !",
@@ -755,19 +768,6 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     },
     {
-      "slug": "tiramisu-recette-italienne-originale",
-      "title": "Tiramisu Italien Authentique - Recette Originale Traditionnelle",
-      "meta_description": "Découvrez la vraie recette du tiramisu italien avec mascarpone, café et biscuits à la cuillère. Simple, authentique et irrésistible !",
-      "category": "Desserts",
-      "emoji": "☕",
-      "cook_time": "4h frigo",
-      "prep_time": "20 min",
-      "servings": 6,
-      "date_iso": "2026-03-26",
-      "date_display": "26 March 2026",
-      "url": "recettes/tiramisu-recette-italienne-originale.html"
-    },
-    {
       "slug": "croque-monsieur-b-chamel-maison",
       "title": "Croque-monsieur béchamel maison classique et gourmand",
       "meta_description": "Découvrez la recette authentique du croque-monsieur avec sa béchamel maison crémeuse. Un plat réconfortant parfait pour un déjeuner savoureux.",
@@ -807,5 +807,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-05-24"
+  "last_updated": "2026-05-25"
 }
