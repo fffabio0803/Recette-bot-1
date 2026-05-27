@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tarte-flambee-alsacienne-recette",
+      "title": "Tarte Flambée Alsacienne Authentique - Recette Traditionnelle",
+      "meta_description": "Découvrez la véritable tarte flambée alsacienne avec sa pâte fine comme du papier, crème fraîche, lardons fumés et oignons dorés. Recette authentique de chef.",
+      "category": "Tartes",
+      "emoji": "Tartes",
+      "cook_time": "20 min",
+      "prep_time": "15 min",
+      "servings": 4,
+      "date_iso": "2026-05-27",
+      "date_display": "27 May 2026",
+      "url": "recettes/tarte-flambee-alsacienne-recette.html"
+    },
+    {
       "slug": "tiramisu-recette-italienne-originale",
       "title": "Tiramisu authentique italien : recette originale de Venise",
       "meta_description": "Découvrez le vrai tiramisu vénitien avec mascarpone Lombardie, savoiardi artisanaux et café espresso. Recette traditionnelle italienne authentique.",
@@ -807,5 +820,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-05-25"
+  "last_updated": "2026-05-27"
 }
