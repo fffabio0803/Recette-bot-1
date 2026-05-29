@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "osso-buco-milanaise-recette-italienne",
+      "title": "Osso Buco alla Milanese authentique - Recette traditionnelle",
+      "meta_description": "Découvrez l'authentique Osso Buco alla Milanese avec sa gremolata au safran. Une recette traditionnelle lombarde sublimée par nos techniques de chef.",
+      "category": "Viande",
+      "emoji": "Viande",
+      "cook_time": "1h30",
+      "prep_time": "20 min",
+      "servings": 4,
+      "date_iso": "2026-05-29",
+      "date_display": "29 May 2026",
+      "url": "recettes/osso-buco-milanaise-recette-italienne.html"
+    },
+    {
       "slug": "fondant-chocolat-coulant-moelleux",
       "title": "Fondant au Chocolat Coulant aux Épices de Noël - Recette Chef",
       "meta_description": "Découvrez le secret du fondant chocolat coulant parfait avec cannelle et cardamome. Une recette de chef pour un cœur qui coule à tous les coups !",
@@ -742,19 +755,6 @@
       "url": "recettes/velout-butternut-courge-gingembre.html"
     },
     {
-      "slug": "osso-buco-milanaise-recette-italienne",
-      "title": "Osso Buco alla Milanese - Authentique Recette Italienne",
-      "meta_description": "Découvrez la vraie recette de l'osso buco milanaise avec jarret de veau braisé, gremolata et risotto. Plat traditionnel lombard facile à réaliser.",
-      "category": "Viande",
-      "emoji": "🍖",
-      "cook_time": "1h30",
-      "prep_time": "20 min",
-      "servings": 4,
-      "date_iso": "2026-03-30",
-      "date_display": "30 March 2026",
-      "url": "recettes/osso-buco-milanaise-recette-italienne.html"
-    },
-    {
       "slug": "tarte-flamb-e-alsacienne-recette",
       "title": "Tarte flambée alsacienne recette traditionnelle authentique",
       "meta_description": "Découvrez la vraie recette de tarte flambée alsacienne avec pâte fine, crème fraîche, lardons et oignons. Recette traditionnelle facile à réaliser.",
@@ -820,5 +820,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-05-28"
+  "last_updated": "2026-05-29"
 }
