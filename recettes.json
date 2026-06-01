@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "rillettes-de-saumon-fume-maison",
+      "title": "Rillettes de Saumon Fumé Maison aux Herbes de Provence",
+      "meta_description": "Découvrez ma recette authentique de rillettes de saumon fumé maison, crémeuses et parfumées aux herbes de Provence. Un délice raffiné et facile à réaliser.",
+      "category": "Entrees",
+      "emoji": "Entrees",
+      "cook_time": "1h frigo",
+      "prep_time": "10 min",
+      "servings": 6,
+      "date_iso": "2026-06-01",
+      "date_display": "01 June 2026",
+      "url": "recettes/rillettes-de-saumon-fume-maison.html"
+    },
+    {
       "slug": "cake-citron-moelleux-facile-rapide",
       "title": "Cake au Citron Moelleux de Ma Grand-Mère - Recette Rapide",
       "meta_description": "Découvrez le secret du cake citron ultra-moelleux de ma grand-mère ! Une recette française authentique, rapide et inratable avec glaçage fondant.",
@@ -833,5 +846,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-05-31"
+  "last_updated": "2026-06-01"
 }
