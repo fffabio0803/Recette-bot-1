@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "pissaladiere-nicoise-oignons-anchois",
+      "title": "Pissaladière Niçoise Authentique aux Anchois et Oignons Doux",
+      "meta_description": "Découvrez la vraie pissaladière niçoise avec sa pâte à pain, ses oignons confits et ses anchois de Collioure. Recette traditionnelle de chef.",
+      "category": "Tartes",
+      "emoji": "Tartes",
+      "cook_time": "45 min",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-06-02",
+      "date_display": "02 June 2026",
+      "url": "recettes/pissaladiere-nicoise-oignons-anchois.html"
+    },
+    {
       "slug": "rillettes-de-saumon-fume-maison",
       "title": "Rillettes de Saumon Fumé Maison aux Herbes de Provence",
       "meta_description": "Découvrez ma recette authentique de rillettes de saumon fumé maison, crémeuses et parfumées aux herbes de Provence. Un délice raffiné et facile à réaliser.",
@@ -846,5 +859,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-06-01"
+  "last_updated": "2026-06-02"
 }
