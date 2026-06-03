@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "far-breton-pruneaux-recette-bretonne",
+      "title": "Far Breton aux Pruneaux : Recette Authentique de Quimper",
+      "meta_description": "Découvrez le véritable far breton aux pruneaux de Quimper, dessert traditionnel breton moelleux et parfumé. Recette authentique du chef.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "45 min",
+      "prep_time": "10 min",
+      "servings": 8,
+      "date_iso": "2026-06-03",
+      "date_display": "03 June 2026",
+      "url": "recettes/far-breton-pruneaux-recette-bretonne.html"
+    },
+    {
       "slug": "pissaladiere-nicoise-oignons-anchois",
       "title": "Pissaladière Niçoise Authentique aux Anchois et Oignons Doux",
       "meta_description": "Découvrez la vraie pissaladière niçoise avec sa pâte à pain, ses oignons confits et ses anchois de Collioure. Recette traditionnelle de chef.",
@@ -742,19 +755,6 @@
       "url": "recettes/gnocchis-pommes-de-terre-maison.html"
     },
     {
-      "slug": "far-breton-pruneaux-recette-bretonne",
-      "title": "Far breton aux pruneaux - Recette traditionnelle bretonne",
-      "meta_description": "Découvrez le vrai far breton aux pruneaux, dessert traditionnel de Bretagne. Recette authentique facile avec des pruneaux moelleux et une pâte onctueuse.",
-      "category": "Desserts",
-      "emoji": "🍮",
-      "cook_time": "45 min",
-      "prep_time": "10 min",
-      "servings": 8,
-      "date_iso": "2026-04-04",
-      "date_display": "4 April 2026",
-      "url": "recettes/far-breton-pruneaux-recette-bretonne.html"
-    },
-    {
       "slug": "pissaladi-re-ni-oise-oignons-anchois",
       "title": "Pissaladière niçoise traditionnelle aux oignons et anchois",
       "meta_description": "Découvrez la vraie recette de pissaladière niçoise avec oignons confits et anchois. Une spécialité provençale authentique et savoureuse à réaliser facilement.",
@@ -859,5 +859,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-06-02"
+  "last_updated": "2026-06-03"
 }
