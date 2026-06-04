@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "gnocchis-pommes-de-terre-maison",
+      "title": "Gnocchis de pommes de terre maison à l'ancienne",
+      "meta_description": "Recette authentique de gnocchis maison avec pommes de terre Bintje, technique traditionnelle italienne revisitée par un chef français passionné.",
+      "category": "Pates",
+      "emoji": "Pates",
+      "cook_time": "30 min",
+      "prep_time": "30 min",
+      "servings": 4,
+      "date_iso": "2026-06-04",
+      "date_display": "04 June 2026",
+      "url": "recettes/gnocchis-pommes-de-terre-maison.html"
+    },
+    {
       "slug": "far-breton-pruneaux-recette-bretonne",
       "title": "Far Breton aux Pruneaux : Recette Authentique de Quimper",
       "meta_description": "Découvrez le véritable far breton aux pruneaux de Quimper, dessert traditionnel breton moelleux et parfumé. Recette authentique du chef.",
@@ -742,19 +755,6 @@
       "url": "recettes/pavlova-fruits-rouges-meringue.html"
     },
     {
-      "slug": "gnocchis-pommes-de-terre-maison",
-      "title": "Gnocchis de pommes de terre maison : recette traditionnelle",
-      "meta_description": "Découvrez comment préparer des gnocchis de pommes de terre maison moelleux et savoureux. Recette traditionnelle italienne facile avec conseils de chef.",
-      "category": "Pâtes",
-      "emoji": "🥔",
-      "cook_time": "30 min",
-      "prep_time": "30 min",
-      "servings": 4,
-      "date_iso": "2026-04-05",
-      "date_display": "5 April 2026",
-      "url": "recettes/gnocchis-pommes-de-terre-maison.html"
-    },
-    {
       "slug": "pissaladi-re-ni-oise-oignons-anchois",
       "title": "Pissaladière niçoise traditionnelle aux oignons et anchois",
       "meta_description": "Découvrez la vraie recette de pissaladière niçoise avec oignons confits et anchois. Une spécialité provençale authentique et savoureuse à réaliser facilement.",
@@ -859,5 +859,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-06-03"
+  "last_updated": "2026-06-04"
 }
