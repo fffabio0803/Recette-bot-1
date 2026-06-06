@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tajine-de-poulet-citron-confit-olives",
+      "title": "Tajine de Poulet aux Citrons Confits et Olives Violettes",
+      "meta_description": "Découvrez cette recette authentique de tajine marocain au poulet fondant, citrons confits maison et olives violettes. Saveurs méditerranéennes garanties.",
+      "category": "Plats du monde",
+      "emoji": "Plats du monde",
+      "cook_time": "1h30",
+      "prep_time": "20 min",
+      "servings": 4,
+      "date_iso": "2026-06-06",
+      "date_display": "06 June 2026",
+      "url": "recettes/tajine-de-poulet-citron-confit-olives.html"
+    },
+    {
       "slug": "pavlova-fruits-rouges-meringue",
       "title": "Pavlova aux fruits rouges : la meringue aérienne parfaite",
       "meta_description": "Découvrez la recette authentique de la pavlova aux fruits rouges, cette meringue fondante garnie de crème fouettée et de baies fraîches. Un dessert spectaculaire et léger.",
@@ -859,5 +872,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-06-05"
+  "last_updated": "2026-06-06"
 }
