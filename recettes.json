@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "profiteroles-choux-creme-glacee-chocolat",
+      "title": "Profiteroles aux Choux Glacés, Sauce Chocolat Grand Marnier",
+      "meta_description": "Découvrez la recette authentique des profiteroles de Jean Avice, pâtissier de Napoléon. Choux craquants, glace vanille et sauce chocolat au Grand Marnier.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "40 min",
+      "prep_time": "20 min",
+      "servings": 8,
+      "date_iso": "2026-06-08",
+      "date_display": "08 June 2026",
+      "url": "recettes/profiteroles-choux-creme-glacee-chocolat.html"
+    },
+    {
       "slug": "gaspacho-andalou-recette-fraiche",
       "title": "Gaspacho Andalou Authentique - Recette Fraîche de Cordoue",
       "meta_description": "Découvrez le vrai gaspacho andalou de Cordoue avec cette recette traditionnelle. Tomates parfumées, pain rassis et huile d'olive pour un été rafraîchissant.",
@@ -872,5 +885,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-06-07"
+  "last_updated": "2026-06-08"
 }
