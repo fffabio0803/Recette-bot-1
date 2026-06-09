@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "saumon-gravlax-maison-aneth-citron",
+      "title": "Saumon gravlax maison à l'aneth et citron - Recette authentique",
+      "meta_description": "Découvrez la vraie recette du saumon gravlax maison parfumé à l'aneth frais et citron. Technique de chef pour un résultat exceptionnel en 48h.",
+      "category": "Poisson",
+      "emoji": "Poisson",
+      "cook_time": "48h",
+      "prep_time": "20 min",
+      "servings": 8,
+      "date_iso": "2026-06-09",
+      "date_display": "09 June 2026",
+      "url": "recettes/saumon-gravlax-maison-aneth-citron.html"
+    },
+    {
       "slug": "profiteroles-choux-creme-glacee-chocolat",
       "title": "Profiteroles aux Choux Glacés, Sauce Chocolat Grand Marnier",
       "meta_description": "Découvrez la recette authentique des profiteroles de Jean Avice, pâtissier de Napoléon. Choux craquants, glace vanille et sauce chocolat au Grand Marnier.",
@@ -755,19 +768,6 @@
       "url": "recettes/tartiflette-reblochon-pommes-de-terre.html"
     },
     {
-      "slug": "saumon-gravlax-maison-aneth-citron",
-      "title": "Gravlax de saumon maison à l'aneth et citron nordique",
-      "meta_description": "Découvrez ma recette authentique de gravlax, cette spécialité scandinave qui sublime le saumon frais. Technique traditionnelle et saveurs incomparables.",
-      "category": "Poisson",
-      "emoji": "Poisson",
-      "cook_time": "48h",
-      "prep_time": "20 min",
-      "servings": 8,
-      "date_iso": "2026-04-10",
-      "date_display": "10 April 2026",
-      "url": "recettes/saumon-gravlax-maison-aneth-citron.html"
-    },
-    {
       "slug": "tajine-poulet-citron-confit-olives",
       "title": "Tajine de Poulet aux Citrons Confits et Olives Violettes",
       "meta_description": "Découvrez ma recette authentique de tajine marocain au poulet, citrons confits maison et olives violettes. Saveurs méditerranéennes garanties en 90 minutes.",
@@ -885,5 +885,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-06-08"
+  "last_updated": "2026-06-09"
 }
