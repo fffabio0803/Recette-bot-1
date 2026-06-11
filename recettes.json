@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "panna-cotta-vanille-coulis-fruits",
+      "title": "Panna Cotta Vanille Coulis Fruits Rouges Maison",
+      "meta_description": "Découvrez ma panna cotta vanille authentique avec coulis de fruits rouges. Recette de chef avec gélification parfaite et saveurs intenses.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "3h frigo",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-06-11",
+      "date_display": "11 June 2026",
+      "url": "recettes/panna-cotta-vanille-coulis-fruits.html"
+    },
+    {
       "slug": "tartiflette-reblochon-pommes-de-terre",
       "title": "Tartiflette authentique au reblochon fermier de Savoie",
       "meta_description": "Découvrez la vraie tartiflette savoyarde avec du reblochon fermier, des pommes de terre Charlotte et lardons fumés. Recette traditionnelle du chef.",
@@ -755,19 +768,6 @@
       "url": "recettes/poulet-basquaise-tomates-poivrons.html"
     },
     {
-      "slug": "panna-cotta-vanille-coulis-fruits",
-      "title": "Panna Cotta Vanille au Coulis de Fruits Rouges Maison",
-      "meta_description": "Découvrez ma panna cotta vanille authentique avec son coulis de fruits rouges acidulé. Recette traditionnelle de chef pour un dessert raffiné.",
-      "category": "Desserts",
-      "emoji": "Desserts",
-      "cook_time": "3h frigo",
-      "prep_time": "10 min",
-      "servings": 4,
-      "date_iso": "2026-04-12",
-      "date_display": "12 April 2026",
-      "url": "recettes/panna-cotta-vanille-coulis-fruits.html"
-    },
-    {
       "slug": "tajine-poulet-citron-confit-olives",
       "title": "Tajine de Poulet aux Citrons Confits et Olives Violettes",
       "meta_description": "Découvrez ma recette authentique de tajine marocain au poulet, citrons confits maison et olives violettes. Saveurs méditerranéennes garanties en 90 minutes.",
@@ -885,5 +885,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-06-10"
+  "last_updated": "2026-06-11"
 }
