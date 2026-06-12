@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "poulet-basquaise-tomates-poivrons",
+      "title": "Poulet Basquaise aux Tomates et Poivrons - Recette Authentique",
+      "meta_description": "Découvrez le vrai poulet basquaise avec tomates confites et poivrons grillés. Une recette traditionnelle du Pays Basque, généreuse et parfumée.",
+      "category": "Volaille",
+      "emoji": "Volaille",
+      "cook_time": "1h",
+      "prep_time": "20 min",
+      "servings": 4,
+      "date_iso": "2026-06-12",
+      "date_display": "12 June 2026",
+      "url": "recettes/poulet-basquaise-tomates-poivrons.html"
+    },
+    {
       "slug": "panna-cotta-vanille-coulis-fruits",
       "title": "Panna Cotta Vanille Coulis Fruits Rouges Maison",
       "meta_description": "Découvrez ma panna cotta vanille authentique avec coulis de fruits rouges. Recette de chef avec gélification parfaite et saveurs intenses.",
@@ -755,19 +768,6 @@
       "url": "recettes/salade-de-lentilles-vinaigrette-moutarde.html"
     },
     {
-      "slug": "poulet-basquaise-tomates-poivrons",
-      "title": "Poulet Basquaise Authentique aux Poivrons du Piment d'Espelette",
-      "meta_description": "Découvrez la vraie recette du poulet basquaise avec tomates fraîches, poivrons colorés et piment d'Espelette. Une explosion de saveurs du Pays Basque!",
-      "category": "Volaille",
-      "emoji": "Volaille",
-      "cook_time": "1h",
-      "prep_time": "20 min",
-      "servings": 4,
-      "date_iso": "2026-04-13",
-      "date_display": "13 April 2026",
-      "url": "recettes/poulet-basquaise-tomates-poivrons.html"
-    },
-    {
       "slug": "tajine-poulet-citron-confit-olives",
       "title": "Tajine de Poulet aux Citrons Confits et Olives Violettes",
       "meta_description": "Découvrez ma recette authentique de tajine marocain au poulet, citrons confits maison et olives violettes. Saveurs méditerranéennes garanties en 90 minutes.",
@@ -885,5 +885,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-06-11"
+  "last_updated": "2026-06-12"
 }
