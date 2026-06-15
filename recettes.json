@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tortilla-espagnole-pommes-de-terre-oignon",
+      "title": "Tortilla Espagnole Traditionnelle aux Pommes de Terre et Oignon",
+      "meta_description": "Découvrez la véritable recette de la tortilla española avec pommes de terre fondantes et oignons confits. Technique de chef pour une tortilla parfaite.",
+      "category": "Oeufs",
+      "emoji": "Oeufs",
+      "cook_time": "30 min",
+      "prep_time": "15 min",
+      "servings": 4,
+      "date_iso": "2026-06-15",
+      "date_display": "15 June 2026",
+      "url": "recettes/tortilla-espagnole-pommes-de-terre-oignon.html"
+    },
+    {
       "slug": "madeleine-recette-classique-bosse",
       "title": "Madeleines de Commercy à la bosse parfaite - Recette chef",
       "meta_description": "Découvrez la véritable recette des madeleines de Commercy avec leur fameuse bosse dorée. Secrets de chef pour des madeleines moelleuses authentiques.",
@@ -755,19 +768,6 @@
       "url": "recettes/baba-au-rhum-recette-traditionnelle.html"
     },
     {
-      "slug": "tortilla-espagnole-pommes-de-terre-oignon",
-      "title": "Tortilla Espagnole Authentique aux Pommes de Terre et Oignon",
-      "meta_description": "Découvrez la véritable tortilla española selon la tradition madrilène. Une recette ancestrale aux pommes de terre fondantes et oignons dorés.",
-      "category": "Oeufs",
-      "emoji": "Oeufs",
-      "cook_time": "30 min",
-      "prep_time": "15 min",
-      "servings": 4,
-      "date_iso": "2026-04-16",
-      "date_display": "16 April 2026",
-      "url": "recettes/tortilla-espagnole-pommes-de-terre-oignon.html"
-    },
-    {
       "slug": "tajine-poulet-citron-confit-olives",
       "title": "Tajine de Poulet aux Citrons Confits et Olives Violettes",
       "meta_description": "Découvrez ma recette authentique de tajine marocain au poulet, citrons confits maison et olives violettes. Saveurs méditerranéennes garanties en 90 minutes.",
@@ -885,5 +885,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-06-14"
+  "last_updated": "2026-06-15"
 }
