@@ -657,7 +657,7 @@ def main():
     index_data["recettes"] = index_data["recettes"][:300]
     index_data["last_updated"] = recipe["date_iso"]
 
-    index_path.write_text(
+        index_path.write_text(
         json.dumps(
             index_data,
             ensure_ascii=False,
@@ -665,6 +665,8 @@ def main():
         ),
         encoding="utf-8"
     )
+
+    generate_sitemap(index_data)
 
     last_recipe_path = Path("last_recipe.txt")
 
