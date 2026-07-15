@@ -90,18 +90,20 @@ def call_api(client, prompt):
                 "content": prompt
             }
         ],
-        system=(
-            "Tu es chef cuisinier expert francais. "
-            "Reponds UNIQUEMENT en JSON valide sans backticks "
-            "ni texte supplementaire."
-        )
+        system="Tu es chef cuisinier expert francais. Reponds UNIQUEMENT en JSON valide sans backticks ni texte supplementaire."
     )
 
-    raw = msg.content[0].text.strip()
+    raw = ""
+
+    for block in msg.content:
+        if hasattr(block, "text"):
+            raw += block.text
+
+    raw = raw.strip()
     raw = re.sub(r"^```json\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
 
-    return raw.strip()
+    return raw
 
 
 def generate_recipe(recipe_data):
