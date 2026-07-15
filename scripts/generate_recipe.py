@@ -657,7 +657,7 @@ def main():
     index_data["recettes"] = index_data["recettes"][:300]
     index_data["last_updated"] = recipe["date_iso"]
 
-        index_path.write_text(
+    index_path.write_text(
         json.dumps(
             index_data,
             ensure_ascii=False,
