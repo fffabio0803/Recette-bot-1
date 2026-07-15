@@ -1,109 +1,423 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/</loc>
-    <lastmod>2026-03-28</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/toutes-les-recettes.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/toutes-les-recettes.html</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/financiers-amandes-moelleux-recette.html</loc>
-    <lastmod>2026-03-18</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/omelette-parfaite-technique-francaise.html</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/croque-monsieur-b-chamel-maison.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/tortilla-espagnole-pommes-de-terre-oignon.html</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/vichyssoise-froide-poireaux-pommes-de-terre.html</loc>
-    <lastmod>2026-03-20</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/madeleine-recette-classique-bosse.html</loc>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/clafoutis-cerises-recette-classique.html</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/salade-de-lentilles-vinaigrette-moutarde.html</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/magret-de-canard-sauce-miel-soja.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/poulet-basquaise-tomates-poivrons.html</loc>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/moules-marini-res-vin-blanc-facile.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/panna-cotta-vanille-coulis-fruits.html</loc>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/osso-buco-milanaise-recette-italienne.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/tartiflette-reblochon-pommes-de-terre.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/p-te-cr-pes-recette-de-base.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/saumon-gravlax-maison-aneth-citron.html</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/soupe-de-tomates-fra-ches-basilic.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/profiteroles-choux-creme-glacee-chocolat.html</loc>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/taboul-maison-menthe-citron.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/gaspacho-andalou-recette-fraiche.html</loc>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/tarte-flamb-e-alsacienne-recette.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/tajine-de-poulet-citron-confit-olives.html</loc>
+    <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/tiramisu-recette-italienne-originale.html</loc>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/pavlova-fruits-rouges-meringue.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/gnocchis-pommes-de-terre-maison.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/far-breton-pruneaux-recette-bretonne.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/pissaladiere-nicoise-oignons-anchois.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/rillettes-de-saumon-fume-maison.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/cake-citron-moelleux-facile-rapide.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/veloute-butternut-courge-gingembre.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/osso-buco-milanaise-recette-italienne.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/fondant-chocolat-coulant-moelleux.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/tarte-flambee-alsacienne-recette.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/tiramisu-recette-italienne-originale.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/taboul-maison-menthe-citron.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/croque-monsieur-bechamel-maison.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/vichyssoise-froide-poireaux-pommes-de-terre.html</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/clafoutis-cerises-recette-classique.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/magret-de-canard-sauce-miel-soja.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/pate-a-crepes-recette-de-base.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/soupe-de-tomates-fraiches-basilic.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/financiers-amandes-moelleux-recette.html</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/pot-au-feu-recette-traditionnelle.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/tarte-au-citron-meringuee-facile.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/bouillabaisse-marseillaise-recette.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/gratin-dauphinois-cremeux-facile.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/mousse-au-chocolat-legere-rapide.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/ratatouille-provencale-recette-simple.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/quiche-lorraine-recette-authentique.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/creme-brulee-recette-facile-maison.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/blanquette-de-veau-classique.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/salade-nicoise-traditionnelle-recette.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/soupe-a-loignon-gratinee-parisienne.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/risotto-champignons-cremeux-facile.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/boeuf-bourguignon-recette-traditionnelle.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/tarte-tatin-pommes-caramel-facile.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/carbonara-authentique-recette-romaine.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/poulet-roti-herbes-de-provence-facile.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/terrine-de-campagne-recette-maison.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/coq-au-vin-rouge-champignons-lardons.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/pain-perdu-brioche-recette-facile.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/salade-caesar-poulet-grille-maison.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/ile-flottante-oeufs-neige-creme-anglaise.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/daurade-royale-four-citron-fenouil.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/fraisier-recette-patisserie-maison.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/creme-caramel-renversee-classique.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/roti-de-porc-moutarde-miel-recette.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/sorbet-mangue-citron-vert-recette.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/oeufs-cocotte-creme-fraiche-facile.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/brandade-de-morue-maison-recette.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/baba-au-rhum-recette-traditionnelle.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/tajine-poulet-citron-confit-olives.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/pissaladi-re-ni-oise-oignons-anchois.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/rillettes-de-saumon-fum-maison.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/velout-butternut-courge-gingembre.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/tarte-flamb-e-alsacienne-recette.html</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/moules-marini-res-vin-blanc-facile.html</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/fondant-chocolat-coulant-moelleux.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/croque-monsieur-b-chamel-maison.html</loc>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/p-te-cr-pes-recette-de-base.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/recettes-maison/recettes/soupe-de-tomates-fra-ches-basilic.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
