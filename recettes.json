@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "omelette-parfaite-technique-francaise",
+      "title": "Omelette Parfaite à la Française : Baveuse et Roulée",
+      "meta_description": "Apprenez la véritable technique de l'omelette française baveuse, roulée sans coloration, selon la méthode classique des grands chefs parisiens.",
+      "category": "Oeufs",
+      "emoji": "Oeufs",
+      "cook_time": "5 min",
+      "prep_time": "3 min",
+      "servings": 2,
+      "date_iso": "2026-07-15",
+      "date_display": "15 July 2026",
+      "url": "recettes/omelette-parfaite-technique-francaise.html"
+    },
+    {
       "slug": "tortilla-espagnole-pommes-de-terre-oignon",
       "title": "Tortilla Espagnole Traditionnelle aux Pommes de Terre et Oignon",
       "meta_description": "Découvrez la véritable recette de la tortilla española avec pommes de terre fondantes et oignons confits. Technique de chef pour une tortilla parfaite.",
@@ -376,19 +389,6 @@
       "date_iso": "2026-05-17",
       "date_display": "17 May 2026",
       "url": "recettes/financiers-amandes-moelleux-recette.html"
-    },
-    {
-      "slug": "omelette-parfaite-technique-francaise",
-      "title": "Omelette Parfaite à la Française - Technique de Chef Étoilé",
-      "meta_description": "Découvrez la vraie technique française de l'omelette parfaite, crémeuse et baveuse, avec les secrets des grands chefs parisiens transmis depuis 1850.",
-      "category": "Oeufs",
-      "emoji": "Oeufs",
-      "cook_time": "5 min",
-      "prep_time": "3 min",
-      "servings": 2,
-      "date_iso": "2026-05-16",
-      "date_display": "16 May 2026",
-      "url": "recettes/omelette-parfaite-technique-francaise.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -885,5 +885,5 @@
       "url": "recettes/soupe-de-tomates-fra-ches-basilic.html"
     }
   ],
-  "last_updated": "2026-06-15"
+  "last_updated": "2026-07-15"
 }
