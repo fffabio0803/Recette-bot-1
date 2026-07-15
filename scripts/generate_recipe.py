@@ -8,11 +8,7 @@ from datetime import datetime
 from pathlib import Path
 
 
-SITE_URL = os.environ.get(
-    "SITE_URL",
-    "https://fffabio0803.github.io/Recette-bot-1"
-).rstrip("/")
-
+SITE_URL = "https://fffabio0803.github.io/Recette-bot-1"
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 
@@ -81,27 +77,34 @@ RECIPES = [
 
 
 def call_api(client, prompt):
-    msg = client.messages.create(
+    message = client.messages.create(
         model="claude-sonnet-5",
         max_tokens=4000,
+        system=(
+            "Tu es chef cuisinier expert francais. "
+            "Reponds UNIQUEMENT en JSON valide, "
+            "sans backticks ni texte supplementaire."
+        ),
         messages=[
             {
                 "role": "user",
-                "content": prompt
+                "content": prompt,
             }
         ],
-        system="Tu es chef cuisinier expert francais. Reponds UNIQUEMENT en JSON valide sans backticks ni texte supplementaire."
     )
 
     raw = ""
 
-    for block in msg.content:
+    for block in message.content:
         if hasattr(block, "text"):
             raw += block.text
 
     raw = raw.strip()
     raw = re.sub(r"^```json\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
+
+    if not raw:
+        raise RuntimeError("Claude n'a renvoye aucun bloc de texte.")
 
     return raw
 
@@ -114,7 +117,9 @@ def generate_recipe(recipe_data):
             "Le secret ANTHROPIC_API_KEY est absent ou vide."
         )
 
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    client = anthropic.Anthropic(
+        api_key=ANTHROPIC_API_KEY
+    )
 
     slug = re.sub(
         r"[^a-z0-9]+",
@@ -157,7 +162,9 @@ def generate_recipe(recipe_data):
         '"a": "Reponse honnete avec solution"}'
         "]}\n\n"
         "Exigences : 10-12 ingredients, 6-7 etapes, "
-        "intro unique avec histoire reelle, zero phrase generique."
+        "intro unique avec une information verifiable ou une origine prudente. "
+        "N'invente pas de souvenir personnel, de mentor ou d'evenement historique precis. "
+        "Zero phrase generique."
     )
 
     data = None
@@ -178,11 +185,13 @@ def generate_recipe(recipe_data):
 
             if attempt == 2:
                 raise RuntimeError(
-                    "Echec de la génération JSON après 3 tentatives."
+                    "Echec de la generation JSON apres 3 tentatives."
                 ) from error
 
     if data is None:
-        raise RuntimeError("Aucune recette valide n'a été générée.")
+        raise RuntimeError(
+            "Aucune recette valide n'a ete generee."
+        )
 
     data["slug"] = slug
     data["category"] = category
@@ -192,14 +201,12 @@ def generate_recipe(recipe_data):
     data["servings"] = servings
     data["topic"] = topic
     data["date_iso"] = datetime.now().strftime("%Y-%m-%d")
-    data["date_display"] = datetime.now().strftime("%d %B %Y")
+    data["date_display"] = datetime.now().strftime("%d/%m/%Y")
 
     return data
 
 
 def render_recipe_html(recipe):
-    site = SITE_URL
-
     ingredients_html = ""
 
     for ingredient in recipe["ingredients"]:
@@ -236,7 +243,11 @@ def render_recipe_html(recipe):
     tips_html = ""
 
     for tip in recipe["tips"]:
-        tips_html += "<li>" + str(tip) + "</li>"
+        tips_html += (
+            "<li>"
+            + str(tip)
+            + "</li>"
+        )
 
     faq_html = ""
 
@@ -251,6 +262,13 @@ def render_recipe_html(recipe):
             + "</p>"
             "</div>"
         )
+
+    canonical_url = (
+        SITE_URL
+        + "/recettes/"
+        + recipe["slug"]
+        + ".html"
+    )
 
     page = "<!DOCTYPE html>\n"
     page += "<html lang='fr'>\n"
@@ -272,10 +290,8 @@ def render_recipe_html(recipe):
     )
     page += (
         "<link rel='canonical' href='"
-        + site
-        + "/recettes/"
-        + recipe["slug"]
-        + ".html'>\n"
+        + canonical_url
+        + "'>\n"
     )
     page += (
         "<link href='https://fonts.googleapis.com/css2?"
@@ -317,8 +333,7 @@ def render_recipe_html(recipe):
         "nav a:hover{background:var(--ink);color:var(--cream);}\n"
     )
     page += (
-        ".container{max-width:860px;margin:0 auto;"
-        "padding:32px 24px;}"
+        ".container{max-width:860px;margin:0 auto;padding:32px 24px;}"
         ".breadcrumb{font-size:11px;color:var(--mid);"
         "letter-spacing:1px;text-transform:uppercase;"
         "margin-bottom:12px;}"
@@ -379,7 +394,7 @@ def render_recipe_html(recipe):
         "background:var(--terracotta);color:#fff;"
         "display:flex;align-items:center;justify-content:center;"
         "font-family:'Cormorant Garamond',serif;"
-        "font-size:22px;font-weight:700;flex-shrink:0;}"
+        "font-size:22px;font-weight:700;}"
         ".step-body strong{display:block;font-size:15px;"
         "font-weight:600;margin-bottom:6px;}"
         ".step-body p{font-size:14px;line-height:1.7;"
@@ -408,8 +423,7 @@ def render_recipe_html(recipe):
     page += (
         "footer{background:var(--ink);color:#888;"
         "padding:32px;text-align:center;font-size:12px;"
-        "margin-top:48px;}"
-        "footer a{color:#888;text-decoration:none;}\n"
+        "margin-top:48px;}\n"
     )
     page += (
         "@media(max-width:768px){"
@@ -425,18 +439,16 @@ def render_recipe_html(recipe):
     page += (
         "<header class='masthead'>"
         "<a href='"
-        + site
-        + "' class='site-name'>"
+        + SITE_URL
+        + "/' class='site-name'>"
         "Recettes <em>Maison</em>"
-        "</a>\n"
-    )
-    page += (
+        "</a>"
         "<nav>"
         "<a href='"
-        + site
-        + "'>Accueil</a>"
+        + SITE_URL
+        + "/'>Accueil</a>"
         "<a href='"
-        + site
+        + SITE_URL
         + "/toutes-les-recettes.html'>Toutes les recettes</a>"
         "</nav>"
         "</header>\n"
@@ -447,8 +459,8 @@ def render_recipe_html(recipe):
     page += (
         "<div class='breadcrumb'>"
         "<a href='"
-        + site
-        + "'>Accueil</a> - "
+        + SITE_URL
+        + "/'>Accueil</a> - "
         + recipe["category"]
         + "</div>\n"
     )
@@ -459,7 +471,11 @@ def render_recipe_html(recipe):
         + "</span>\n"
     )
 
-    page += "<h1>" + recipe["title"] + "</h1>\n"
+    page += (
+        "<h1>"
+        + recipe["title"]
+        + "</h1>\n"
+    )
 
     page += (
         "<div class='recipe-bar'>"
@@ -541,57 +557,80 @@ def render_recipe_html(recipe):
     )
 
     page += "</body>\n"
-    page += "</html>"
+    page += "</html>\n"
 
     return page
 
 
-
 def generate_sitemap(index_data):
-    """Reconstruit sitemap.xml à partir de recettes.json."""
     today = datetime.now().strftime("%Y-%m-%d")
+
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-        '  <url>',
-        '    <loc>' + SITE_URL + '/</loc>',
-        '    <lastmod>' + today + '</lastmod>',
-        '    <changefreq>daily</changefreq>',
-        '    <priority>1.0</priority>',
-        '  </url>',
-        '  <url>',
-        '    <loc>' + SITE_URL + '/toutes-les-recettes.html</loc>',
-        '    <lastmod>' + today + '</lastmod>',
-        '    <changefreq>daily</changefreq>',
-        '    <priority>0.9</priority>',
-        '  </url>',
+        "  <url>",
+        "    <loc>" + SITE_URL + "/</loc>",
+        "    <lastmod>" + today + "</lastmod>",
+        "    <changefreq>daily</changefreq>",
+        "    <priority>1.0</priority>",
+        "  </url>",
+        "  <url>",
+        "    <loc>"
+        + SITE_URL
+        + "/toutes-les-recettes.html</loc>",
+        "    <lastmod>" + today + "</lastmod>",
+        "    <changefreq>daily</changefreq>",
+        "    <priority>0.9</priority>",
+        "  </url>",
     ]
 
     seen_urls = set()
 
     for recipe in index_data.get("recettes", []):
-        relative_url = str(recipe.get("url", "")).lstrip("/")
+        relative_url = str(
+            recipe.get("url", "")
+        ).lstrip("/")
+
         if not relative_url:
             continue
 
-        full_url = SITE_URL + "/" + relative_url
+        full_url = (
+            SITE_URL
+            + "/"
+            + relative_url
+        )
+
         if full_url in seen_urls:
             continue
+
         seen_urls.add(full_url)
 
-        lastmod = str(recipe.get("date_iso") or today)
+        lastmod = str(
+            recipe.get("date_iso") or today
+        )
+
         lines.extend([
-            '  <url>',
-            '    <loc>' + full_url + '</loc>',
-            '    <lastmod>' + lastmod + '</lastmod>',
-            '    <changefreq>monthly</changefreq>',
-            '    <priority>0.8</priority>',
-            '  </url>',
+            "  <url>",
+            "    <loc>" + full_url + "</loc>",
+            "    <lastmod>" + lastmod + "</lastmod>",
+            "    <changefreq>monthly</changefreq>",
+            "    <priority>0.8</priority>",
+            "  </url>",
         ])
 
-    lines.append('</urlset>')
-    Path("sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print("Sitemap mis à jour : " + str(len(seen_urls) + 2) + " URLs")
+    lines.append("</urlset>")
+
+    Path("sitemap.xml").write_text(
+        "\n".join(lines) + "\n",
+        encoding="utf-8"
+    )
+
+    print(
+        "Sitemap mis a jour : "
+        + str(len(seen_urls) + 2)
+        + " URLs"
+    )
+
 
 def main():
     print(
@@ -622,16 +661,23 @@ def main():
         encoding="utf-8"
     )
 
-    print("Fichier cree : " + str(output_path))
+    print(
+        "Fichier cree : "
+        + str(output_path)
+    )
 
     index_path = Path("recettes.json")
 
     if index_path.exists():
         index_data = json.loads(
-            index_path.read_text(encoding="utf-8")
+            index_path.read_text(
+                encoding="utf-8"
+            )
         )
     else:
-        index_data = {"recettes": []}
+        index_data = {
+            "recettes": []
+        }
 
     entry = {
         "slug": recipe["slug"],
@@ -644,18 +690,33 @@ def main():
         "servings": recipe["servings"],
         "date_iso": recipe["date_iso"],
         "date_display": recipe["date_display"],
-        "url": "recettes/" + recipe["slug"] + ".html"
+        "url": (
+            "recettes/"
+            + recipe["slug"]
+            + ".html"
+        ),
     }
 
     index_data["recettes"] = [
         existing_recipe
-        for existing_recipe in index_data.get("recettes", [])
-        if existing_recipe.get("slug") != recipe["slug"]
+        for existing_recipe
+        in index_data.get("recettes", [])
+        if existing_recipe.get("slug")
+        != recipe["slug"]
     ]
 
-    index_data["recettes"].insert(0, entry)
-    index_data["recettes"] = index_data["recettes"][:300]
-    index_data["last_updated"] = recipe["date_iso"]
+    index_data["recettes"].insert(
+        0,
+        entry
+    )
+
+    index_data["recettes"] = (
+        index_data["recettes"][:300]
+    )
+
+    index_data["last_updated"] = (
+        recipe["date_iso"]
+    )
 
     index_path.write_text(
         json.dumps(
@@ -668,9 +729,7 @@ def main():
 
     generate_sitemap(index_data)
 
-    last_recipe_path = Path("last_recipe.txt")
-
-    last_recipe_path.write_text(
+    Path("last_recipe.txt").write_text(
         "slug="
         + recipe["slug"]
         + "\n"
@@ -683,7 +742,10 @@ def main():
         encoding="utf-8"
     )
 
-    print("Publie : " + recipe["title"])
+    print(
+        "Publie : "
+        + recipe["title"]
+    )
 
 
 if __name__ == "__main__":
