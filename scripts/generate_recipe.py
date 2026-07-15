@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import anthropic
+import html
 import json
 import os
 import re
@@ -76,6 +77,48 @@ RECIPES = [
 ]
 
 
+def escape(value):
+    return html.escape(str(value), quote=True)
+
+
+def duration_to_iso8601(value):
+    """
+    Transforme par exemple :
+    45 min -> PT45M
+    1h30 -> PT1H30M
+    2h frigo -> PT2H
+    0 min -> PT0M
+    48h -> PT48H
+    """
+    text = str(value).lower().strip()
+
+    hours_match = re.search(r"(\d+)\s*h", text)
+    minutes_match = re.search(r"(\d+)\s*min", text)
+
+    hours = int(hours_match.group(1)) if hours_match else 0
+    minutes = int(minutes_match.group(1)) if minutes_match else 0
+
+    if not hours and not minutes:
+        compact_match = re.search(r"(\d+)h(\d+)", text)
+
+        if compact_match:
+            hours = int(compact_match.group(1))
+            minutes = int(compact_match.group(2))
+
+    duration = "PT"
+
+    if hours:
+        duration += str(hours) + "H"
+
+    if minutes:
+        duration += str(minutes) + "M"
+
+    if duration == "PT":
+        duration = "PT0M"
+
+    return duration
+
+
 def call_api(client, prompt):
     message = client.messages.create(
         model="claude-sonnet-5",
@@ -104,7 +147,9 @@ def call_api(client, prompt):
     raw = re.sub(r"\s*```$", "", raw)
 
     if not raw:
-        raise RuntimeError("Claude n'a renvoye aucun bloc de texte.")
+        raise RuntimeError(
+            "Claude n'a renvoye aucun bloc de texte."
+        )
 
     return raw
 
@@ -131,14 +176,14 @@ def generate_recipe(recipe_data):
         "Genere une recette complete et UNIQUE pour : "
         + topic
         + "\n\n"
-        "Redige comme un vrai chef cuisinier francais passionne.\n"
+        "Redige comme un chef cuisinier francais competent et pedagogique.\n"
         "IMPORTANT : Reponds UNIQUEMENT avec du JSON valide. "
         "Pas de backticks. Pas de texte avant ou apres.\n"
         "Utilise uniquement des guillemets doubles dans le JSON.\n\n"
         "Format exact :\n"
         '{"title": "Titre SEO 55-65 caracteres", '
         '"meta_description": "Description 145-155 caracteres appetissante", '
-        '"intro": "Introduction 150 mots avec histoire ou anecdote du plat, ton chaleureux", '
+        '"intro": "Introduction 130-170 mots avec origine prudente du plat et conseils utiles", '
         '"ingredients": ['
         '{"amount": "200", "unit": "g", '
         '"name": "ingredient precis avec qualite ou origine"}'
@@ -155,15 +200,16 @@ def generate_recipe(recipe_data):
         "], "
         '"faq": ['
         '{"q": "Question specifique ?", '
-        '"a": "Reponse experte 60 mots"}, '
+        '"a": "Reponse experte et pratique"}, '
         '{"q": "Adaptation possible ?", '
-        '"a": "Reponse pratique 60 mots"}, '
+        '"a": "Reponse pratique"}, '
         '{"q": "Erreur la plus commune ?", '
         '"a": "Reponse honnete avec solution"}'
         "]}\n\n"
-        "Exigences : 10-12 ingredients, 6-7 etapes, "
-        "intro unique avec une information verifiable ou une origine prudente. "
-        "N'invente pas de souvenir personnel, de mentor ou d'evenement historique precis. "
+        "Exigences : 10-12 ingredients, 6-7 etapes. "
+        "N'invente pas de souvenir personnel, de mentor, "
+        "de chef rencontre ou d'evenement historique precis. "
+        "Ne presente jamais une information incertaine comme un fait. "
         "Zero phrase generique."
     )
 
@@ -193,6 +239,23 @@ def generate_recipe(recipe_data):
             "Aucune recette valide n'a ete generee."
         )
 
+    required_fields = [
+        "title",
+        "meta_description",
+        "intro",
+        "ingredients",
+        "steps",
+        "tips",
+        "faq",
+    ]
+
+    for field in required_fields:
+        if field not in data:
+            raise RuntimeError(
+                "Champ manquant dans la reponse Claude : "
+                + field
+            )
+
     data["slug"] = slug
     data["category"] = category
     data["emoji"] = emoji
@@ -206,6 +269,128 @@ def generate_recipe(recipe_data):
     return data
 
 
+def build_structured_data(recipe):
+    canonical_url = (
+        SITE_URL
+        + "/recettes/"
+        + recipe["slug"]
+        + ".html"
+    )
+
+    ingredients = []
+
+    for ingredient in recipe["ingredients"]:
+        ingredient_text = " ".join(
+            part
+            for part in [
+                str(ingredient.get("amount", "")).strip(),
+                str(ingredient.get("unit", "")).strip(),
+                str(ingredient.get("name", "")).strip(),
+            ]
+            if part
+        )
+
+        ingredients.append(ingredient_text)
+
+    instructions = []
+
+    for step in recipe["steps"]:
+        instructions.append(
+            {
+                "@type": "HowToStep",
+                "position": step.get("num"),
+                "name": str(step.get("title", "")),
+                "text": str(step.get("text", "")),
+            }
+        )
+
+    recipe_schema = {
+        "@type": "Recipe",
+        "@id": canonical_url + "#recipe",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonical_url,
+        },
+        "name": recipe["title"],
+        "description": recipe["meta_description"],
+        "author": {
+            "@type": "Organization",
+            "name": "Recettes Maison",
+            "url": SITE_URL + "/",
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Recettes Maison",
+            "url": SITE_URL + "/",
+        },
+        "datePublished": recipe["date_iso"],
+        "dateModified": recipe["date_iso"],
+        "prepTime": duration_to_iso8601(
+            recipe["prep_time"]
+        ),
+        "cookTime": duration_to_iso8601(
+            recipe["cook_time"]
+        ),
+        "recipeYield": (
+            str(recipe["servings"])
+            + " portions"
+        ),
+        "recipeCategory": recipe["category"],
+        "recipeCuisine": "Cuisine maison",
+        "keywords": [
+            recipe["topic"],
+            recipe["category"],
+            "recette maison",
+        ],
+        "recipeIngredient": ingredients,
+        "recipeInstructions": instructions,
+        "url": canonical_url,
+        "inLanguage": "fr-FR",
+    }
+
+    graph = [recipe_schema]
+
+    faq_entities = []
+
+    for faq in recipe.get("faq", []):
+        question = str(faq.get("q", "")).strip()
+        answer = str(faq.get("a", "")).strip()
+
+        if not question or not answer:
+            continue
+
+        faq_entities.append(
+            {
+                "@type": "Question",
+                "name": question,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": answer,
+                },
+            }
+        )
+
+    if faq_entities:
+        graph.append(
+            {
+                "@type": "FAQPage",
+                "@id": canonical_url + "#faq",
+                "mainEntity": faq_entities,
+            }
+        )
+
+    structured_data = {
+        "@context": "https://schema.org",
+        "@graph": graph,
+    }
+
+    return json.dumps(
+        structured_data,
+        ensure_ascii=False,
+        separators=(",", ":"),
+    ).replace("</", "<\\/")
+
+
 def render_recipe_html(recipe):
     ingredients_html = ""
 
@@ -213,11 +398,11 @@ def render_recipe_html(recipe):
         ingredients_html += (
             "<li>"
             "<span class='ing-amount'>"
-            + str(ingredient["amount"])
+            + escape(ingredient.get("amount", ""))
             + " "
-            + str(ingredient["unit"])
+            + escape(ingredient.get("unit", ""))
             + "</span> "
-            + str(ingredient["name"])
+            + escape(ingredient.get("name", ""))
             + "</li>"
         )
 
@@ -227,14 +412,14 @@ def render_recipe_html(recipe):
         steps_html += (
             "<div class='step'>"
             "<div class='step-num'>"
-            + str(step["num"])
+            + escape(step.get("num", ""))
             + "</div>"
             "<div class='step-body'>"
             "<strong>"
-            + str(step["title"])
+            + escape(step.get("title", ""))
             + "</strong>"
             "<p>"
-            + str(step["text"])
+            + escape(step.get("text", ""))
             + "</p>"
             "</div>"
             "</div>"
@@ -245,7 +430,7 @@ def render_recipe_html(recipe):
     for tip in recipe["tips"]:
         tips_html += (
             "<li>"
-            + str(tip)
+            + escape(tip)
             + "</li>"
         )
 
@@ -255,10 +440,10 @@ def render_recipe_html(recipe):
         faq_html += (
             "<div class='faq-item'>"
             "<h3>"
-            + str(faq["q"])
+            + escape(faq.get("q", ""))
             + "</h3>"
             "<p>"
-            + str(faq["a"])
+            + escape(faq.get("a", ""))
             + "</p>"
             "</div>"
         )
@@ -268,6 +453,10 @@ def render_recipe_html(recipe):
         + "/recettes/"
         + recipe["slug"]
         + ".html"
+    )
+
+    structured_data = build_structured_data(
+        recipe
     )
 
     page = "<!DOCTYPE html>\n"
@@ -280,18 +469,23 @@ def render_recipe_html(recipe):
     )
     page += (
         "<meta name='description' content='"
-        + recipe["meta_description"].replace("'", "&#39;")
+        + escape(recipe["meta_description"])
         + "'>\n"
     )
     page += (
         "<title>"
-        + recipe["title"]
+        + escape(recipe["title"])
         + " - Recettes Maison</title>\n"
     )
     page += (
         "<link rel='canonical' href='"
         + canonical_url
         + "'>\n"
+    )
+    page += (
+        "<script type='application/ld+json'>"
+        + structured_data
+        + "</script>\n"
     )
     page += (
         "<link href='https://fonts.googleapis.com/css2?"
@@ -461,42 +655,42 @@ def render_recipe_html(recipe):
         "<a href='"
         + SITE_URL
         + "/'>Accueil</a> - "
-        + recipe["category"]
+        + escape(recipe["category"])
         + "</div>\n"
     )
 
     page += (
         "<span class='cat-tag'>"
-        + recipe["category"]
+        + escape(recipe["category"])
         + "</span>\n"
     )
 
     page += (
         "<h1>"
-        + recipe["title"]
+        + escape(recipe["title"])
         + "</h1>\n"
     )
 
     page += (
         "<div class='recipe-bar'>"
         "<span>Préparation : <strong>"
-        + recipe["prep_time"]
+        + escape(recipe["prep_time"])
         + "</strong></span>"
         "<span>Cuisson : <strong>"
-        + recipe["cook_time"]
+        + escape(recipe["cook_time"])
         + "</strong></span>"
         "<span>Portions : <strong>"
-        + str(recipe["servings"])
+        + escape(recipe["servings"])
         + " pers.</strong></span>"
         "<span>"
-        + recipe["date_display"]
+        + escape(recipe["date_display"])
         + "</span>"
         "</div>\n"
     )
 
     page += (
         "<p class='intro'>"
-        + recipe["intro"]
+        + escape(recipe["intro"])
         + "</p>\n"
     )
 
@@ -641,15 +835,27 @@ def main():
     day = datetime.now().timetuple().tm_yday
     recipe_data = RECIPES[day % len(RECIPES)]
 
-    print("Recette : " + recipe_data[0])
+    print(
+        "Recette : "
+        + recipe_data[0]
+    )
 
-    recipe = generate_recipe(recipe_data)
+    recipe = generate_recipe(
+        recipe_data
+    )
 
-    print("Generee : " + recipe["title"])
+    print(
+        "Generee : "
+        + recipe["title"]
+    )
 
-    Path("recettes").mkdir(exist_ok=True)
+    Path("recettes").mkdir(
+        exist_ok=True
+    )
 
-    html = render_recipe_html(recipe)
+    recipe_html = render_recipe_html(
+        recipe
+    )
 
     output_path = (
         Path("recettes")
@@ -657,7 +863,7 @@ def main():
     )
 
     output_path.write_text(
-        html,
+        recipe_html,
         encoding="utf-8"
     )
 
@@ -666,7 +872,9 @@ def main():
         + str(output_path)
     )
 
-    index_path = Path("recettes.json")
+    index_path = Path(
+        "recettes.json"
+    )
 
     if index_path.exists():
         index_data = json.loads(
@@ -700,7 +908,10 @@ def main():
     index_data["recettes"] = [
         existing_recipe
         for existing_recipe
-        in index_data.get("recettes", [])
+        in index_data.get(
+            "recettes",
+            []
+        )
         if existing_recipe.get("slug")
         != recipe["slug"]
     ]
@@ -727,7 +938,9 @@ def main():
         encoding="utf-8"
     )
 
-    generate_sitemap(index_data)
+    generate_sitemap(
+        index_data
+    )
 
     Path("last_recipe.txt").write_text(
         "slug="
