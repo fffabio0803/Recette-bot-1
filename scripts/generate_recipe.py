@@ -546,6 +546,53 @@ def render_recipe_html(recipe):
     return page
 
 
+
+def generate_sitemap(index_data):
+    """Reconstruit sitemap.xml à partir de recettes.json."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        '  <url>',
+        '    <loc>' + SITE_URL + '/</loc>',
+        '    <lastmod>' + today + '</lastmod>',
+        '    <changefreq>daily</changefreq>',
+        '    <priority>1.0</priority>',
+        '  </url>',
+        '  <url>',
+        '    <loc>' + SITE_URL + '/toutes-les-recettes.html</loc>',
+        '    <lastmod>' + today + '</lastmod>',
+        '    <changefreq>daily</changefreq>',
+        '    <priority>0.9</priority>',
+        '  </url>',
+    ]
+
+    seen_urls = set()
+
+    for recipe in index_data.get("recettes", []):
+        relative_url = str(recipe.get("url", "")).lstrip("/")
+        if not relative_url:
+            continue
+
+        full_url = SITE_URL + "/" + relative_url
+        if full_url in seen_urls:
+            continue
+        seen_urls.add(full_url)
+
+        lastmod = str(recipe.get("date_iso") or today)
+        lines.extend([
+            '  <url>',
+            '    <loc>' + full_url + '</loc>',
+            '    <lastmod>' + lastmod + '</lastmod>',
+            '    <changefreq>monthly</changefreq>',
+            '    <priority>0.8</priority>',
+            '  </url>',
+        ])
+
+    lines.append('</urlset>')
+    Path("sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print("Sitemap mis à jour : " + str(len(seen_urls) + 2) + " URLs")
+
 def main():
     print(
         "Generateur Recettes Maison - "
