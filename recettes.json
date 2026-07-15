@@ -2,15 +2,15 @@
   "recettes": [
     {
       "slug": "omelette-parfaite-technique-francaise",
-      "title": "Omelette Parfaite à la Française : Technique du Chef",
-      "meta_description": "Apprenez la vraie omelette baveuse française, roulée et fondante comme au Mont-Saint-Michel. Technique, gestes et secrets d'un chef pour la réussir à tous les coups.",
+      "title": "Omelette Parfaite à la Française : La Technique du Chef",
+      "meta_description": "Apprenez la véritable omelette baveuse à la française, roulée sans coloration, selon la technique classique enseignée dans les brigades françaises.",
       "category": "Oeufs",
       "emoji": "Oeufs",
       "cook_time": "5 min",
       "prep_time": "3 min",
       "servings": 2,
       "date_iso": "2026-07-15",
-      "date_display": "15 July 2026",
+      "date_display": "15/07/2026",
       "url": "recettes/omelette-parfaite-technique-francaise.html"
     },
     {
