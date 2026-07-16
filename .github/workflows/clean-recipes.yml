@@ -1,0 +1,36 @@
+name: 🧹 Nettoyage des recettes
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Cloner le dépôt
+        uses: actions/checkout@v4
+
+      - name: 🐍 Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 🚀 Exécuter le nettoyage
+        run: |
+          python scripts/clean_recipes.py
+
+      - name: 💾 Commit automatique si modifications
+        run: |
+          git config user.name "Recettes Bot"
+          git config user.email "actions@github.com"
+
+          git add recettes.json sitemap.xml
+
+          git diff --cached --quiet || (
+            git commit -m "🧹 Nettoyage automatique des recettes"
+            git push
+          )
