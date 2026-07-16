@@ -1,319 +1,1919 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Recettes Maison — Des recettes faciles, rapides et délicieuses pour cuisiner au quotidien.">
-<title>Recettes Maison — Cuisine facile et savoureuse</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root {
-  --cream: #faf6f0; --warm: #f2ebe0; --ink: #1c1812;
-  --terracotta: #c4622d; --sage: #7a8c6e;
-  --rule: #e0d8cc; --mid: #9a8f82;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { background:var(--cream); color:var(--ink); font-family:'Jost',sans-serif; font-weight:300; }
+  <meta charset="UTF-8">
 
-.top-bar { background:var(–ink); color:#888; text-align:center; padding:8px; font-size:11px; letter-spacing:2px; text-transform:uppercase; }
-.top-bar span { color:var(–terracotta); }
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
 
-.masthead { border-bottom:2px solid var(–ink); padding:28px 48px 20px; text-align:center; }
-.masthead::before { content:’· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·’; display:block; font-size:10px; color:var(–rule); letter-spacing:4px; margin-bottom:16px; overflow:hidden; }
-.site-name { font-family:‘Cormorant Garamond’,serif; font-size:clamp(56px,8vw,104px); font-weight:700; letter-spacing:-2px; line-height:1; color:var(–ink); }
-.site-name em { color:var(–terracotta); font-style:italic; }
-.site-tagline { font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(–mid); margin-top:8px; }
+  <meta
+    name="description"
+    content="Recettes Maison : des recettes faciles, gourmandes et accessibles pour cuisiner chaque jour."
+  >
 
-nav { display:flex; justify-content:center; border-top:1px solid var(–rule); border-bottom:1px solid var(–rule); padding:0; margin-top:16px; flex-wrap:wrap; }
-nav a { padding:10px 24px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(–ink); text-decoration:none; border-right:1px solid var(–rule); transition:all 0.2s; }
-nav a:first-child { border-left:1px solid var(–rule); }
-nav a:hover { background:var(–ink); color:var(–cream); }
+  <meta name="theme-color" content="#f7f7f5">
 
-.container { max-width:1200px; margin:0 auto; padding:0 24px; }
-.ad-box { background:var(–warm); border:1px dashed var(–rule); display:flex; align-items:center; justify-content:center; font-size:10px; color:var(–mid); letter-spacing:2px; text-transform:uppercase; margin:24px 0; }
-.ad-strip { background:var(–warm); border-bottom:1px solid var(–rule); padding:10px; text-align:center; font-size:10px; color:var(–mid); letter-spacing:2px; text-transform:uppercase; }
+  <title>Recettes Maison — Cuisine facile et savoureuse</title>
 
-/* HERO */
-.hero { display:grid; grid-template-columns:3fr 2fr; gap:0; margin-top:32px; border:1px solid var(–rule); }
-.hero-main { padding:40px; border-right:1px solid var(–rule); background:var(–warm); }
-.recipe-tag { display:inline-block; background:var(–terracotta); color:#fff; font-size:10px; font-weight:500; letter-spacing:2px; text-transform:uppercase; padding:4px 12px; margin-bottom:16px; }
-.hero-title { font-family:‘Cormorant Garamond’,serif; font-size:clamp(28px,3.5vw,48px); font-weight:700; line-height:1.1; letter-spacing:-0.5px; margin-bottom:16px; }
-.hero-title a { text-decoration:none; color:var(–ink); transition:color 0.2s; }
-.hero-title a:hover { color:var(–terracotta); }
-.recipe-meta { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:16px; font-size:12px; color:var(–mid); }
-.hero-excerpt { font-size:15px; line-height:1.8; color:#4a3f35; margin-bottom:24px; }
-.btn-recipe { display:inline-block; background:var(–ink); color:var(–cream); padding:12px 28px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; text-decoration:none; transition:all 0.2s; }
-.btn-recipe:hover { background:var(–terracotta); }
+  <link
+    rel="canonical"
+    href="https://fffabio0803.github.io/Recette-bot-1/"
+  >
 
-.hero-side { display:flex; flex-direction:column; }
-.side-recipe { padding:20px 24px; border-bottom:1px solid var(–rule); transition:background 0.2s; cursor:pointer; }
-.side-recipe:last-child { border-bottom:none; }
-.side-recipe:hover { background:var(–warm); }
-.side-cat { font-size:10px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(–terracotta); margin-bottom:6px; }
-.side-title { font-family:‘Cormorant Garamond’,serif; font-size:18px; font-weight:600; line-height:1.3; margin-bottom:4px; }
-.side-title a { text-decoration:none; color:var(–ink); }
-.side-title a:hover { color:var(–terracotta); }
-.side-meta { font-size:11px; color:var(–mid); }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-/* SECTION */
-.section-head { display:flex; align-items:center; gap:16px; margin:40px 0 24px; }
-.section-head h2 { font-family:‘Cormorant Garamond’,serif; font-size:28px; font-weight:700; white-space:nowrap; font-style:italic; }
-.section-head::after { content:’’; flex:1; height:1px; background:var(–ink); }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-/* GRID */
-.recipes-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(–rule); border:1px solid var(–rule); margin-bottom:40px; }
-.recipe-card { background:var(–cream); padding:28px 24px; transition:background 0.2s; }
-.recipe-card:hover { background:var(–warm); }
-.card-cat { font-size:10px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(–sage); margin-bottom:8px; }
-.card-title { font-family:‘Cormorant Garamond’,serif; font-size:22px; font-weight:700; line-height:1.2; margin-bottom:10px; }
-.card-title a { text-decoration:none; color:var(–ink); }
-.card-title a:hover { color:var(–terracotta); }
-.card-excerpt { font-size:13px; line-height:1.7; color:#6a5f55; margin-bottom:14px; }
-.card-meta { font-size:11px; color:var(–mid); display:flex; gap:12px; }
+  <style>
+    :root {
+      --background: #f7f7f5;
+      --surface: #ffffff;
+      --surface-soft: #f0f0ed;
+      --text: #171715;
+      --muted: #696965;
+      --line: rgba(23, 23, 21, 0.10);
+      --line-strong: rgba(23, 23, 21, 0.18);
+      --shadow:
+        0 24px 70px rgba(23, 23, 21, 0.08),
+        0 4px 16px rgba(23, 23, 21, 0.04);
+      --shadow-small:
+        0 12px 30px rgba(23, 23, 21, 0.07);
+      --radius-large: 34px;
+      --radius-medium: 24px;
+      --radius-small: 16px;
+      --max-width: 1240px;
+    }
 
-/* TWO COL */
-.two-col { display:grid; grid-template-columns:2fr 1fr; gap:40px; border-top:2px solid var(–ink); padding-top:32px; margin-bottom:48px; }
-.list-recipe { display:grid; grid-template-columns:80px 1fr; gap:16px; padding:20px 0; border-bottom:1px solid var(–rule); align-items:start; }
-.list-num { font-family:‘Cormorant Garamond’,serif; font-size:56px; font-weight:700; color:var(–rule); line-height:1; }
-.list-title { font-family:‘Cormorant Garamond’,serif; font-size:20px; font-weight:600; line-height:1.3; margin-bottom:6px; }
-.list-title a { text-decoration:none; color:var(–ink); }
-.list-title a:hover { color:var(–terracotta); }
-.list-excerpt { font-size:12px; color:var(–mid); line-height:1.6; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* SIDEBAR */
-.widget { background:var(–warm); padding:24px; margin-bottom:24px; border:1px solid var(–rule); }
-.widget h3 { font-family:‘Cormorant Garamond’,serif; font-size:20px; font-weight:700; font-style:italic; margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(–rule); }
-.widget-list { list-style:none; }
-.widget-list li { padding:8px 0; border-bottom:1px solid var(–rule); font-size:13px; display:flex; justify-content:space-between; }
-.widget-list li:last-child { border-bottom:none; }
-.widget-list a { text-decoration:none; color:var(–ink); font-weight:500; }
-.widget-list a:hover { color:var(–terracotta); }
-.widget-count { font-size:10px; color:var(–mid); }
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* LOADING */
-.loading { text-align:center; padding:60px; font-size:14px; color:var(–mid); letter-spacing:2px; text-transform:uppercase; }
+    body {
+      min-height: 100vh;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
 
-/* SAISON */
-.saison-banner { background:var(–terracotta); color:#fff; padding:32px 48px; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; margin:40px 0; }
-.saison-item { padding:16px 24px; border-right:1px solid rgba(255,255,255,0.2); text-align:center; }
-.saison-item:last-child { border-right:none; }
-.saison-emoji { font-size:32px; display:block; margin-bottom:8px; }
-.saison-name { font-size:11px; letter-spacing:2px; text-transform:uppercase; opacity:0.8; }
-.saison-count { font-family:‘Cormorant Garamond’,serif; font-size:24px; font-weight:700; }
+    button,
+    input {
+      font: inherit;
+    }
 
-/* FOOTER */
-footer { background:var(–ink); color:#888; padding:48px; margin-top:48px; }
-.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto 32px; }
-.footer-brand .logo { font-family:‘Cormorant Garamond’,serif; font-size:32px; font-weight:700; color:#fff; margin-bottom:12px; }
-.footer-brand .logo em { color:var(–terracotta); }
-.footer-brand p { font-size:13px; line-height:1.7; max-width:240px; }
-.footer-col h4 { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(–terracotta); margin-bottom:16px; }
-.footer-col a { display:block; font-size:13px; color:#888; text-decoration:none; padding:4px 0; }
-.footer-col a:hover { color:#fff; }
-.footer-bottom { max-width:1200px; margin:0 auto; border-top:1px solid #333; padding-top:20px; display:flex; justify-content:space-between; font-size:11px; }
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
 
-@media(max-width:768px) {
-.masthead { padding:20px; }
-.hero { grid-template-columns:1fr; }
-.hero-main { border-right:none; border-bottom:1px solid var(–rule); }
-.recipes-grid { grid-template-columns:1fr; }
-.two-col { grid-template-columns:1fr; }
-.saison-banner { grid-template-columns:1fr 1fr; padding:20px; }
-.footer-grid { grid-template-columns:1fr 1fr; }
-}
-</style>
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 247, 245, 0.86);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+    }
+
+    .header-inner {
+      min-height: 78px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .brand {
+      color: var(--text);
+      text-decoration: none;
+      white-space: nowrap;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(27px, 3vw, 37px);
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .desktop-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .desktop-nav a {
+      position: relative;
+      padding: 28px 0;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .desktop-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 18px;
+      height: 2px;
+      background: var(--text);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 180ms ease;
+    }
+
+    .desktop-nav a:hover::after,
+    .desktop-nav a[aria-current="page"]::after {
+      transform: scaleX(1);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .icon-button {
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      transition:
+        background 180ms ease,
+        transform 180ms ease;
+    }
+
+    .icon-button:hover {
+      background: rgba(23, 23, 21, 0.07);
+      transform: translateY(-1px);
+    }
+
+    .icon-button svg {
+      width: 21px;
+      height: 21px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .menu-button {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 4px 0 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .mobile-menu.is-open {
+      display: grid;
+    }
+
+    .mobile-menu a {
+      padding: 13px 0;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    main {
+      padding: 36px 0 80px;
+    }
+
+    .hero {
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+      min-height: 560px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-large);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-visual {
+      position: relative;
+      overflow: hidden;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      isolation: isolate;
+      background:
+        radial-gradient(
+          circle at 24% 25%,
+          rgba(255, 255, 255, 0.85) 0,
+          rgba(255, 255, 255, 0) 31%
+        ),
+        linear-gradient(145deg, #e7e0d3 0%, #cbbca3 48%, #8f806d 100%);
+    }
+
+    .hero-visual::before,
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(4px);
+      z-index: -1;
+    }
+
+    .hero-visual::before {
+      width: 420px;
+      height: 420px;
+      left: -130px;
+      bottom: -120px;
+      background: rgba(255, 255, 255, 0.38);
+    }
+
+    .hero-visual::after {
+      width: 320px;
+      height: 320px;
+      top: -90px;
+      right: -70px;
+      background: rgba(83, 67, 48, 0.18);
+    }
+
+    .hero-badge {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      z-index: 3;
+      padding: 10px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.30);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 600;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .hero-plate {
+      position: relative;
+      width: min(76%, 470px);
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.64);
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.97) 0 55%,
+          rgba(237, 235, 230, 0.94) 56% 70%,
+          rgba(255, 255, 255, 0.68) 71% 100%
+        );
+      box-shadow:
+        0 42px 80px rgba(55, 42, 26, 0.25),
+        inset 0 2px 3px rgba(255, 255, 255, 0.9);
+      transform: rotate(-4deg);
+    }
+
+    .hero-emoji {
+      font-size: clamp(96px, 15vw, 175px);
+      line-height: 1;
+      filter: drop-shadow(0 18px 24px rgba(49, 38, 25, 0.20));
+      transform: rotate(4deg);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(40px, 6vw, 78px);
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      max-width: 620px;
+      margin-bottom: 22px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(46px, 5.7vw, 78px);
+      font-weight: 600;
+      letter-spacing: -0.035em;
+      line-height: 0.97;
+    }
+
+    .hero-title a {
+      text-decoration: none;
+    }
+
+    .hero-description {
+      max-width: 590px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: clamp(15px, 1.5vw, 18px);
+      line-height: 1.75;
+    }
+
+    .recipe-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin-bottom: 32px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .meta-item svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .primary-button {
+      width: fit-content;
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 25px;
+      border-radius: 999px;
+      background: var(--text);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        background 180ms ease;
+    }
+
+    .primary-button:hover {
+      transform: translateY(-2px);
+      background: #000000;
+      box-shadow: 0 14px 26px rgba(23, 23, 21, 0.20);
+    }
+
+    .categories {
+      padding: 28px 0 8px;
+    }
+
+    .category-scroller {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(126px, 1fr);
+      gap: 12px;
+      overflow-x: auto;
+      padding: 4px 2px 16px;
+      scrollbar-width: none;
+    }
+
+    .category-scroller::-webkit-scrollbar {
+      display: none;
+    }
+
+    .category-button {
+      min-height: 112px;
+      padding: 15px 12px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.76);
+      color: var(--text);
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(23, 23, 21, 0.035);
+      transition:
+        transform 180ms ease,
+        background 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    .category-button:hover,
+    .category-button.is-active {
+      transform: translateY(-3px);
+      border-color: var(--line-strong);
+      background: #ffffff;
+      box-shadow: var(--shadow-small);
+    }
+
+    .category-icon {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .category-name {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .category-count {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .section {
+      padding-top: 58px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: clamp(27px, 3.3vw, 42px);
+      font-weight: 650;
+      letter-spacing: -0.035em;
+    }
+
+    .section-subtitle {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .text-link {
+      flex-shrink: 0;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .trending-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .recipe-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-medium);
+      background: var(--surface);
+      box-shadow: 0 10px 32px rgba(23, 23, 21, 0.045);
+      transition:
+        transform 200ms ease,
+        box-shadow 200ms ease;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-small);
+    }
+
+    .recipe-card a {
+      text-decoration: none;
+    }
+
+    .card-visual {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(
+          circle at 22% 18%,
+          rgba(255, 255, 255, 0.82) 0,
+          rgba(255, 255, 255, 0) 28%
+        ),
+        linear-gradient(145deg, var(--card-color-a), var(--card-color-b));
+    }
+
+    .card-visual::after {
+      content: "";
+      position: absolute;
+      width: 70%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.64);
+      box-shadow:
+        0 24px 38px rgba(44, 34, 22, 0.14),
+        inset 0 0 0 12px rgba(235, 233, 228, 0.65);
+    }
+
+    .card-emoji {
+      position: relative;
+      z-index: 2;
+      font-size: clamp(58px, 7vw, 86px);
+      filter: drop-shadow(0 12px 15px rgba(43, 32, 21, 0.15));
+    }
+
+    .card-content {
+      padding: 18px 18px 20px;
+    }
+
+    .card-category {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .card-title {
+      min-height: 48px;
+      margin-bottom: 13px;
+      font-size: 16px;
+      font-weight: 650;
+      letter-spacing: -0.018em;
+      line-height: 1.42;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px 15px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .latest-list {
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 48px;
+      border-top: 1px solid var(--line);
+    }
+
+    .latest-item {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .latest-visual {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1.35;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      background:
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(255, 255, 255, 0.8),
+          transparent 30%
+        ),
+        linear-gradient(145deg, var(--card-color-a), var(--card-color-b));
+    }
+
+    .latest-visual::after {
+      content: "";
+      position: absolute;
+      width: 70%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.67);
+      box-shadow: inset 0 0 0 6px rgba(233, 231, 226, 0.70);
+    }
+
+    .latest-emoji {
+      position: relative;
+      z-index: 1;
+      font-size: 40px;
+    }
+
+    .latest-content {
+      min-width: 0;
+    }
+
+    .latest-category {
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .latest-title {
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: 650;
+      letter-spacing: -0.015em;
+      line-height: 1.4;
+    }
+
+    .latest-title a {
+      text-decoration: none;
+    }
+
+    .latest-title a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .latest-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .empty-state,
+    .loading-state,
+    .error-state {
+      grid-column: 1 / -1;
+      padding: 60px 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-medium);
+      background: var(--surface);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .loading-dot {
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      margin: 0 3px;
+      border-radius: 50%;
+      background: var(--text);
+      animation: loadingPulse 1.2s infinite ease-in-out;
+    }
+
+    .loading-dot:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .loading-dot:nth-child(3) {
+      animation-delay: 0.30s;
+    }
+
+    @keyframes loadingPulse {
+      0%,
+      100% {
+        opacity: 0.25;
+        transform: translateY(0);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateY(-5px);
+      }
+    }
+
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 100px 20px 30px;
+      background: rgba(247, 247, 245, 0.86);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .search-overlay.is-open {
+      display: flex;
+    }
+
+    .search-panel {
+      width: min(100%, 760px);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .search-form {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 14px;
+      padding: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .search-form svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: var(--muted);
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .search-input {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    .search-close {
+      padding: 8px 12px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--surface-soft);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .search-results {
+      max-height: 60vh;
+      overflow-y: auto;
+      padding: 8px;
+    }
+
+    .search-result {
+      display: block;
+      padding: 14px 15px;
+      border-radius: 16px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .search-result:hover {
+      background: var(--surface-soft);
+    }
+
+    .search-result-title {
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .search-result-meta {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .site-footer {
+      margin-top: 36px;
+      padding: 46px 0 26px;
+      border-top: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.38);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 56px;
+      padding-bottom: 34px;
+    }
+
+    .footer-brand {
+      margin-bottom: 10px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .footer-description {
+      max-width: 460px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer-column h2 {
+      margin-bottom: 13px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-column a {
+      display: block;
+      width: fit-content;
+      margin: 9px 0;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .footer-column a:hover {
+      color: var(--text);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    @media (max-width: 1040px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 440px;
+      }
+
+      .hero-content {
+        padding: 48px;
+      }
+
+      .trending-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .desktop-nav {
+        gap: 22px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page-shell {
+        width: min(calc(100% - 24px), var(--max-width));
+      }
+
+      .header-inner {
+        min-height: 68px;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+      }
+
+      .desktop-nav {
+        display: none;
+      }
+
+      .menu-button {
+        display: inline-flex;
+      }
+
+      main {
+        padding-top: 18px;
+      }
+
+      .hero {
+        min-height: auto;
+        border-radius: 26px;
+      }
+
+      .hero-visual {
+        min-height: 330px;
+      }
+
+      .hero-badge {
+        top: 16px;
+        left: 16px;
+      }
+
+      .hero-content {
+        padding: 34px 24px 38px;
+      }
+
+      .hero-title {
+        font-size: clamp(42px, 13vw, 62px);
+      }
+
+      .categories {
+        padding-top: 20px;
+      }
+
+      .category-scroller {
+        grid-auto-columns: 116px;
+      }
+
+      .section {
+        padding-top: 42px;
+      }
+
+      .section-header {
+        align-items: flex-start;
+      }
+
+      .section-subtitle {
+        max-width: 250px;
+      }
+
+      .trending-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-visual {
+        aspect-ratio: 16 / 10;
+      }
+
+      .latest-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .header-actions .icon-button:first-child {
+        display: inline-flex;
+      }
+
+      .hero-visual {
+        min-height: 280px;
+      }
+
+      .hero-plate {
+        width: 72%;
+      }
+
+      .hero-emoji {
+        font-size: 90px;
+      }
+
+      .latest-item {
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .text-link {
+        display: inline-block;
+        margin-top: 13px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="page-shell">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="https://fffabio0803.github.io/Recette-bot-1/"
+          aria-label="Recettes Maison, accueil"
+        >
+          Recettes Maison
+        </a>
 
-<div class="top-bar">Publié <span>aujourd'hui</span> · Recette du jour · <span id="date-top"></span></div>
+        <nav class="desktop-nav" aria-label="Navigation principale">
+          <a
+            href="https://fffabio0803.github.io/Recette-bot-1/"
+            aria-current="page"
+          >
+            Accueil
+          </a>
 
-<header class="masthead">
-  <div class="site-name">Recettes <em>Maison</em></div>
-  <p class="site-tagline">Cuisine facile · Saveurs authentiques · Idées du quotidien</p>
-  <nav>
-    <nav>
-  <a href="https://fffabio0803.github.io/Recette-bot-1">Accueil</a>
-  <a href="toutes-les-recettes.html">Toutes les recettes</a>
-</nav>
+          <a href="toutes-les-recettes.html">
+            Toutes les recettes
+          </a>
 
-  </nav>
-</header>
+          <a href="#categories">
+            Catégories
+          </a>
 
-<div class="ad-strip">Publicité · <span id="date-strip"></span></div>
+          <a href="#tendances">
+            Tendances
+          </a>
+        </nav>
 
-<main class="container">
-  <div class="ad-box" style="height:90px;">[ Google AdSense 728×90 ]</div>
+        <div class="header-actions">
+          <button
+            class="icon-button"
+            id="open-search"
+            type="button"
+            aria-label="Rechercher une recette"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-3.4-3.4"></path>
+            </svg>
+          </button>
 
-  <!-- HERO — rempli dynamiquement -->
+          <button
+            class="icon-button menu-button"
+            id="menu-button"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16"></path>
+              <path d="M4 12h16"></path>
+              <path d="M4 17h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
 
-  <section id="hero-section" class="hero">
-    <div class="hero-main">
-      <div class="loading">Chargement des recettes...</div>
+      <nav
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="Navigation mobile"
+      >
+        <a href="https://fffabio0803.github.io/Recette-bot-1/">
+          Accueil
+        </a>
+
+        <a href="toutes-les-recettes.html">
+          Toutes les recettes
+        </a>
+
+        <a href="#categories">
+          Catégories
+        </a>
+
+        <a href="#tendances">
+          Tendances
+        </a>
+      </nav>
     </div>
-    <div class="hero-side" id="hero-side"></div>
-  </section>
+  </header>
 
-  <div class="ad-box" style="height:90px;">[ Google AdSense 728×90 ]</div>
+  <main class="page-shell">
+    <section class="hero" id="hero-section" aria-labelledby="hero-title">
+      <div class="hero-visual" id="hero-visual">
+        <div class="hero-badge">Recette du jour</div>
 
-  <!-- GRID -->
+        <div class="hero-plate">
+          <span class="hero-emoji" id="hero-emoji" aria-hidden="true">
+            🍽️
+          </span>
+        </div>
+      </div>
 
-  <div class="section-head" id="plats"><h2>Recettes populaires</h2></div>
-  <div class="recipes-grid" id="recipes-grid">
-    <div class="loading" style="grid-column:1/-1;">Chargement...</div>
-  </div>
+      <div class="hero-content" id="hero-content">
+        <p class="eyebrow">Une nouvelle recette chaque jour</p>
 
-  <!-- SAISON -->
+        <h1 class="hero-title" id="hero-title">
+          Recettes simples, cuisine maison
+        </h1>
 
-  <div class="saison-banner">
-    <div class="saison-item"><span class="saison-emoji">🌸</span><div class="saison-count" id="count-printemps">—</div><div class="saison-name">Printemps</div></div>
-    <div class="saison-item"><span class="saison-emoji">☀️</span><div class="saison-count" id="count-ete">—</div><div class="saison-name">Été</div></div>
-    <div class="saison-item"><span class="saison-emoji">🍂</span><div class="saison-count" id="count-automne">—</div><div class="saison-name">Automne</div></div>
-    <div class="saison-item"><span class="saison-emoji">❄️</span><div class="saison-count" id="count-hiver">—</div><div class="saison-name">Hiver</div></div>
-  </div>
+        <p class="hero-description">
+          Chargement de la dernière recette...
+        </p>
 
-  <!-- TWO COL -->
+        <div class="recipe-meta">
+          <span class="meta-item">Préparation</span>
+          <span class="meta-item">Cuisson</span>
+          <span class="meta-item">Portions</span>
+        </div>
 
-  <div class="two-col" id="desserts">
-    <div>
-      <div class="section-head"><h2>Dernières recettes</h2></div>
-      <div id="list-recipes">
-        <div class="loading">Chargement...</div>
+        <div class="loading-state" style="padding: 20px;">
+          <span class="loading-dot"></span>
+          <span class="loading-dot"></span>
+          <span class="loading-dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="categories"
+      id="categories"
+      aria-labelledby="categories-title"
+    >
+      <h2 id="categories-title" style="position:absolute;left:-9999px;">
+        Catégories de recettes
+      </h2>
+
+      <div class="category-scroller" id="category-scroller">
+        <button class="category-button is-active" type="button">
+          <span class="category-icon">🍽️</span>
+          <span class="category-name">Toutes</span>
+          <span class="category-count">Chargement</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="tendances">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Tendances du moment</h2>
+          <p class="section-subtitle">
+            Quelques idées gourmandes à découvrir aujourd’hui.
+          </p>
+        </div>
+
+        <a class="text-link" href="toutes-les-recettes.html">
+          Voir tout →
+        </a>
+      </div>
+
+      <div class="trending-grid" id="trending-grid">
+        <div class="loading-state">
+          <span class="loading-dot"></span>
+          <span class="loading-dot"></span>
+          <span class="loading-dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dernieres-recettes">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Dernières recettes</h2>
+          <p class="section-subtitle">
+            Les dernières recettes publiées automatiquement.
+          </p>
+        </div>
+
+        <a class="text-link" href="toutes-les-recettes.html">
+          Voir toutes les recettes →
+        </a>
+      </div>
+
+      <div class="latest-list" id="latest-list">
+        <div class="loading-state">
+          <span class="loading-dot"></span>
+          <span class="loading-dot"></span>
+          <span class="loading-dot"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Recettes Maison</div>
+
+          <p class="footer-description">
+            Des recettes simples, gourmandes et accessibles pour cuisiner
+            facilement au quotidien.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h2>Navigation</h2>
+
+          <a href="https://fffabio0803.github.io/Recette-bot-1/">
+            Accueil
+          </a>
+
+          <a href="toutes-les-recettes.html">
+            Toutes les recettes
+          </a>
+
+          <a href="#categories">
+            Catégories
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Le site</h2>
+
+          <a href="robots.txt">
+            Robots.txt
+          </a>
+
+          <a href="sitemap.xml">
+            Sitemap
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span id="copyright">
+          © Recettes Maison
+        </span>
+
+        <span>
+          Une nouvelle recette publiée chaque jour
+        </span>
       </div>
     </div>
-    <aside>
-      <div class="ad-box" style="height:250px;">[ AdSense 300×250 ]</div>
-      <div class="widget">
-        <h3>Par catégorie</h3>
-        <ul class="widget-list" id="categories-list">
-          <li><a href="#">🥩 Viandes</a></li>
-          <li><a href="#">🐟 Poissons</a></li>
-          <li><a href="#">🥦 Végétarien</a></li>
-          <li><a href="#">🍰 Desserts</a></li>
-          <li><a href="#">🍝 Pâtes & Riz</a></li>
-          <li><a href="#">🥗 Salades</a></li>
-          <li><a href="#">🍲 Soupes</a></li>
-        </ul>
+  </footer>
+
+  <div
+    class="search-overlay"
+    id="search-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Recherche de recettes"
+  >
+    <div class="search-panel">
+      <div class="search-form">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-3.4-3.4"></path>
+        </svg>
+
+        <input
+          class="search-input"
+          id="search-input"
+          type="search"
+          placeholder="Rechercher une recette ou une catégorie..."
+          autocomplete="off"
+        >
+
+        <button
+          class="search-close"
+          id="search-close"
+          type="button"
+        >
+          Fermer
+        </button>
       </div>
-      <div class="ad-box" style="height:250px;">[ AdSense 300×250 ]</div>
-    </aside>
-  </div>
 
-</main>
-
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="logo">Recettes <em>Maison</em></div>
-      <p>Des recettes testées et approuvées pour cuisiner facilement au quotidien. Mis à jour chaque jour.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Recettes</h4>
-      <a href="#">Viandes</a><a href="#">Poissons</a>
-      <a href="#">Végétarien</a><a href="#">Desserts</a>
-    </div>
-    <div class="footer-col">
-      <h4>Par temps</h4>
-      <a href="#">- de 15 min</a><a href="#">15-30 min</a>
-      <a href="#">30 min - 1h</a><a href="#">Mijotés</a>
-    </div>
-    <div class="footer-col">
-      <h4>Infos</h4>
-      <a href="#">À propos</a>
-      <a href="#">Mentions légales</a>
-      <a href="#">Confidentialité</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 Recettes Maison</span>
-    <span>Mis à jour quotidiennement</span>
-  </div>
-</footer>
-
-<script>
-// Date
-const now = new Date();
-const opts = { weekday:'long', day:'numeric', month:'long', year:'numeric' };
-const dateStr = now.toLocaleDateString('fr-FR', opts);
-document.getElementById('date-top').textContent = dateStr;
-document.getElementById('date-strip').textContent = dateStr;
-
-// Charge les recettes depuis recettes.json
-async function loadRecipes() {
-  let recettes = [];
-
-  try {
-    const res = await fetch('recettes.json');
-    const data = await res.json();
-    recettes = data.recettes || [];
-  } catch(e) {
-    // Pas encore de recettes.json — affiche un message
-    document.querySelector('.hero-main').innerHTML = `
-      <span class="recipe-tag">⭐ À venir</span>
-      <h2 class="hero-title">La première recette arrive demain matin !</h2>
-      <p class="hero-excerpt">Le bot génère une nouvelle recette chaque matin à 8h. Revenez demain pour découvrir la première recette du site.</p>`;
-    document.getElementById('recipes-grid').innerHTML = '<div class="loading" style="grid-column:1/-1; padding:40px;">Les recettes apparaîtront ici dès demain matin.</div>';
-    document.getElementById('list-recipes').innerHTML = '<div class="loading">Première recette en cours de génération...</div>';
-    return;
-  }
-
-  if (recettes.length === 0) return;
-
-  // ── HERO (recette la plus récente) ──────────────────────────────
-  const hero = recettes[0];
-  document.querySelector('.hero-main').innerHTML = `
-    <span class="recipe-tag">⭐ Recette du jour</span>
-    <h2 class="hero-title"><a href="${hero.url}">${hero.title}</a></h2>
-    <div class="recipe-meta">
-      <span>⏱ ${hero.prep_time} prep</span>
-      <span>🔥 ${hero.cook_time}</span>
-      <span>👥 ${hero.servings} pers.</span>
-    </div>
-    <p class="hero-excerpt">${hero.meta_description}</p>
-    <a href="${hero.url}" class="btn-recipe">Voir la recette complète →</a>`;
-
-  // ── HERO SIDEBAR (recettes 1-4) ──────────────────────────────────
-  const sideHtml = recettes.slice(1, 5).map(r => `
-    <div class="side-recipe">
-      <div class="side-cat">${r.emoji} ${r.category}</div>
-      <div class="side-title"><a href="${r.url}">${r.title}</a></div>
-      <div class="side-meta">⏱ ${r.prep_time} · 👥 ${r.servings} pers.</div>
-    </div>`).join('');
-  document.getElementById('hero-side').innerHTML = sideHtml;
-
-  // ── GRID (recettes 5-7) ──────────────────────────────────────────
-  const gridRecettes = recettes.slice(4, 7).length > 0 ? recettes.slice(4, 7) : recettes.slice(0, 3);
-  document.getElementById('recipes-grid').innerHTML = gridRecettes.map(r => `
-    <article class="recipe-card">
-      <div class="card-cat">${r.emoji} ${r.category}</div>
-      <h3 class="card-title"><a href="${r.url}">${r.title}</a></h3>
-      <p class="card-excerpt">${r.meta_description}</p>
-      <div class="card-meta"><span>⏱ ${r.prep_time}</span><span>🔥 ${r.cook_time}</span><span>👥 ${r.servings} pers.</span></div>
-    </article>`).join('');
-
-  // ── LISTE (recettes 7-12) ────────────────────────────────────────
-  const listRecettes = recettes.slice(6, 11).length > 0 ? recettes.slice(6, 11) : recettes.slice(0, 5);
-  document.getElementById('list-recipes').innerHTML = listRecettes.map((r, i) => `
-    <div class="list-recipe">
-      <div class="list-num">0${i+1}</div>
-      <div>
-        <div class="side-cat">${r.emoji} ${r.category}</div>
-        <div class="list-title"><a href="${r.url}">${r.title}</a></div>
-        <p class="list-excerpt">${r.meta_description.substring(0, 100)}...</p>
+      <div class="search-results" id="search-results">
+        <div class="empty-state" style="border:0;">
+          Commencez à écrire pour rechercher une recette.
+        </div>
       </div>
-    </div>`).join('');
+    </div>
+  </div>
 
-  // ── COMPTEURS SAISON ─────────────────────────────────────────────
-  document.getElementById('count-printemps').textContent = recettes.length;
-  document.getElementById('count-ete').textContent = Math.floor(recettes.length * 0.9);
-  document.getElementById('count-automne').textContent = Math.floor(recettes.length * 0.8);
-  document.getElementById('count-hiver').textContent = Math.floor(recettes.length * 0.7);
-}
+  <script>
+    "use strict";
 
-loadRecipes();
-</script>
+    const CATEGORY_CONFIG = {
+      "Toutes": {
+        emoji: "🍽️",
+        colors: ["#e5dfd5", "#b9aa96"]
+      },
+      "Volaille": {
+        emoji: "🍗",
+        colors: ["#e2c9a7", "#a8794f"]
+      },
+      "Viande": {
+        emoji: "🥩",
+        colors: ["#d8b1a6", "#9d6255"]
+      },
+      "Poisson": {
+        emoji: "🐟",
+        colors: ["#c7dfe3", "#7199a5"]
+      },
+      "Desserts": {
+        emoji: "🍰",
+        colors: ["#ead3d7", "#bd8e99"]
+      },
+      "Gateaux": {
+        emoji: "🧁",
+        colors: ["#e6cbd2", "#b77d8c"]
+      },
+      "Soupes": {
+        emoji: "🥣",
+        colors: ["#e1cfaa", "#ac854f"]
+      },
+      "Salades": {
+        emoji: "🥗",
+        colors: ["#ced9bf", "#7e9967"]
+      },
+      "Pates": {
+        emoji: "🍝",
+        colors: ["#ead7aa", "#b28c4e"]
+      },
+      "Crepes": {
+        emoji: "🥞",
+        colors: ["#e4c59d", "#aa7b47"]
+      },
+      "Vegetarien": {
+        emoji: "🌿",
+        colors: ["#cfddc6", "#78966b"]
+      },
+      "Tartes": {
+        emoji: "🥧",
+        colors: ["#e2c597", "#ad7d43"]
+      },
+      "Oeufs": {
+        emoji: "🍳",
+        colors: ["#eadb9e", "#b59c4d"]
+      },
+      "Entrees": {
+        emoji: "🥄",
+        colors: ["#d9d8ce", "#9d9a86"]
+      },
+      "Sandwichs": {
+        emoji: "🥪",
+        colors: ["#dfc89c", "#a87f48"]
+      },
+      "Plats": {
+        emoji: "🍲",
+        colors: ["#dbc5a8", "#9f7650"]
+      },
+      "Plats du monde": {
+        emoji: "🌍",
+        colors: ["#dbb99e", "#a36e4f"]
+      },
+      "Accompagnement": {
+        emoji: "🥔",
+        colors: ["#dfd3ad", "#a8925b"]
+      },
+      "Petit-dejeuner": {
+        emoji: "🥐",
+        colors: ["#ead5ae", "#b58b53"]
+      }
+    };
 
+    const FALLBACK_CONFIG = {
+      emoji: "🍽️",
+      colors: ["#dfddd7", "#9c978d"]
+    };
+
+    let allRecipes = [];
+    let currentCategory = "Toutes";
+
+    const heroContent = document.getElementById("hero-content");
+    const heroVisual = document.getElementById("hero-visual");
+    const heroEmoji = document.getElementById("hero-emoji");
+    const categoryScroller = document.getElementById("category-scroller");
+    const trendingGrid = document.getElementById("trending-grid");
+    const latestList = document.getElementById("latest-list");
+
+    const searchOverlay = document.getElementById("search-overlay");
+    const searchInput = document.getElementById("search-input");
+    const searchResults = document.getElementById("search-results");
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function getCategoryConfig(category) {
+      return CATEGORY_CONFIG[category] || FALLBACK_CONFIG;
+    }
+
+    function getRecipeEmoji(recipe) {
+      const config = getCategoryConfig(recipe.category);
+
+      if (recipe.emoji && /[\p{Emoji_Presentation}\p{Extended_Pictographic}]/u.test(recipe.emoji)) {
+        return recipe.emoji;
+      }
+
+      return config.emoji;
+    }
+
+    function getCardStyle(recipe) {
+      const config = getCategoryConfig(recipe.category);
+
+      return [
+        "--card-color-a:" + config.colors[0],
+        "--card-color-b:" + config.colors[1]
+      ].join(";");
+    }
+
+    function normalizeText(value) {
+      return String(value ?? "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+    }
+
+    function renderHero(recipe) {
+      const config = getCategoryConfig(recipe.category);
+      const emoji = getRecipeEmoji(recipe);
+
+      heroVisual.style.background =
+        "radial-gradient(circle at 24% 25%, rgba(255,255,255,.85) 0, rgba(255,255,255,0) 31%)," +
+        "linear-gradient(145deg, " +
+        config.colors[0] +
+        " 0%, " +
+        config.colors[1] +
+        " 100%)";
+
+      heroEmoji.textContent = emoji;
+
+      heroContent.innerHTML = `
+        <p class="eyebrow">
+          ${escapeHtml(recipe.category || "Recette du jour")}
+        </p>
+
+        <h1 class="hero-title" id="hero-title">
+          <a href="${escapeHtml(recipe.url)}">
+            ${escapeHtml(recipe.title)}
+          </a>
+        </h1>
+
+        <p class="hero-description">
+          ${escapeHtml(recipe.meta_description)}
+        </p>
+
+        <div class="recipe-meta">
+          <span class="meta-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="8"></circle>
+              <path d="M12 8v5l3 2"></path>
+            </svg>
+            ${escapeHtml(recipe.prep_time)} de préparation
+          </span>
+
+          <span class="meta-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3c2 3 4 4.5 4 8a4 4 0 0 1-8 0c0-2 1-4 4-8Z"></path>
+              <path d="M12 13c1 1 2 2 2 3.2a2 2 0 0 1-4 0c0-1 .7-2 2-3.2Z"></path>
+            </svg>
+            ${escapeHtml(recipe.cook_time)} de cuisson
+          </span>
+
+          <span class="meta-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="9" cy="8" r="3"></circle>
+              <circle cx="16.5" cy="9.5" r="2.5"></circle>
+              <path d="M3.5 20c.4-4 2.2-6 5.5-6s5.1 2 5.5 6"></path>
+              <path d="M14 15c3.3 0 5.2 1.7 5.5 5"></path>
+            </svg>
+            ${escapeHtml(recipe.servings)} personnes
+          </span>
+        </div>
+
+        <a
+          class="primary-button"
+          href="${escapeHtml(recipe.url)}"
+        >
+          Voir la recette
+          <span aria-hidden="true">→</span>
+        </a>
+      `;
+    }
+
+    function renderCategories(recipes) {
+      const counts = {};
+
+      recipes.forEach((recipe) => {
+        const category = recipe.category || "Autres";
+        counts[category] = (counts[category] || 0) + 1;
+      });
+
+      const categories = Object.entries(counts)
+        .sort((a, b) => b[1] - a[1]);
+
+      const allButton = `
+        <button
+          class="category-button ${
+            currentCategory === "Toutes" ? "is-active" : ""
+          }"
+          type="button"
+          data-category="Toutes"
+        >
+          <span class="category-icon">🍽️</span>
+          <span class="category-name">Toutes</span>
+          <span class="category-count">
+            ${recipes.length} recettes
+          </span>
+        </button>
+      `;
+
+      const categoryButtons = categories
+        .map(([category, count]) => {
+          const config = getCategoryConfig(category);
+
+          return `
+            <button
+              class="category-button ${
+                currentCategory === category ? "is-active" : ""
+              }"
+              type="button"
+              data-category="${escapeHtml(category)}"
+            >
+              <span class="category-icon">
+                ${config.emoji}
+              </span>
+
+              <span class="category-name">
+                ${escapeHtml(category)}
+              </span>
+
+              <span class="category-count">
+                ${count} recette${count > 1 ? "s" : ""}
+              </span>
+            </button>
+          `;
+        })
+        .join("");
+
+      categoryScroller.innerHTML = allButton + categoryButtons;
+
+      categoryScroller
+        .querySelectorAll(".category-button")
+        .forEach((button) => {
+          button.addEventListener("click", () => {
+            currentCategory = button.dataset.category || "Toutes";
+            renderCategories(allRecipes);
+            renderRecipeSections();
+            document
+              .getElementById("tendances")
+              .scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        });
+    }
+
+    function renderTrending(recipes) {
+      if (!recipes.length) {
+        trendingGrid.innerHTML = `
+          <div class="empty-state">
+            Aucune recette trouvée dans cette catégorie.
+          </div>
+        `;
+        return;
+      }
+
+      const selectedRecipes = recipes.slice(0, 4);
+
+      trendingGrid.innerHTML = selectedRecipes
+        .map((recipe) => {
+          return `
+            <article
+              class="recipe-card"
+              style="${getCardStyle(recipe)}"
+            >
+              <a href="${escapeHtml(recipe.url)}">
+                <div class="card-visual">
+                  <span class="card-emoji" aria-hidden="true">
+                    ${getRecipeEmoji(recipe)}
+                  </span>
+                </div>
+
+                <div class="card-content">
+                  <div class="card-category">
+                    ${escapeHtml(recipe.category)}
+                  </div>
+
+                  <h3 class="card-title">
+                    ${escapeHtml(recipe.title)}
+                  </h3>
+
+                  <div class="card-meta">
+                    <span>⏱ ${escapeHtml(recipe.prep_time)}</span>
+                    <span>♨ ${escapeHtml(recipe.cook_time)}</span>
+                    <span>♙ ${escapeHtml(recipe.servings)} pers.</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          `;
+        })
+        .join("");
+    }
+
+    function renderLatest(recipes) {
+      if (!recipes.length) {
+        latestList.innerHTML = `
+          <div class="empty-state">
+            Aucune recette trouvée dans cette catégorie.
+          </div>
+        `;
+        return;
+      }
+
+      const selectedRecipes = recipes.slice(4, 12).length
+        ? recipes.slice(4, 12)
+        : recipes.slice(0, 8);
+
+      latestList.innerHTML = selectedRecipes
+        .map((recipe) => {
+          return `
+            <article
+              class="latest-item"
+              style="${getCardStyle(recipe)}"
+            >
+              <a
+                class="latest-visual"
+                href="${escapeHtml(recipe.url)}"
+                aria-label="${escapeHtml(recipe.title)}"
+              >
+                <span class="latest-emoji" aria-hidden="true">
+                  ${getRecipeEmoji(recipe)}
+                </span>
+              </a>
+
+              <div class="latest-content">
+                <div class="latest-category">
+                  ${escapeHtml(recipe.category)}
+                </div>
+
+                <h3 class="latest-title">
+                  <a href="${escapeHtml(recipe.url)}">
+                    ${escapeHtml(recipe.title)}
+                  </a>
+                </h3>
+
+                <div class="latest-meta">
+                  <span>⏱ ${escapeHtml(recipe.prep_time)}</span>
+                  <span>♨ ${escapeHtml(recipe.cook_time)}</span>
+                  <span>♙ ${escapeHtml(recipe.servings)} pers.</span>
+                </div>
+              </div>
+            </article>
+          `;
+        })
+        .join("");
+    }
+
+    function renderRecipeSections() {
+      const filteredRecipes =
+        currentCategory === "Toutes"
+          ? allRecipes
+          : allRecipes.filter(
+              (recipe) => recipe.category === currentCategory
+            );
+
+      renderTrending(filteredRecipes);
+      renderLatest(filteredRecipes);
+    }
+
+    function renderSearchResults(query) {
+      const normalizedQuery = normalizeText(query.trim());
+
+      if (!normalizedQuery) {
+        searchResults.innerHTML = `
+          <div class="empty-state" style="border:0;">
+            Commencez à écrire pour rechercher une recette.
+          </div>
+        `;
+        return;
+      }
+
+      const matchingRecipes = allRecipes
+        .filter((recipe) => {
+          const searchableText = normalizeText(
+            [
+              recipe.title,
+              recipe.category,
+              recipe.meta_description
+            ].join(" ")
+          );
+
+          return searchableText.includes(normalizedQuery);
+        })
+        .slice(0, 12);
+
+      if (!matchingRecipes.length) {
+        searchResults.innerHTML = `
+          <div class="empty-state" style="border:0;">
+            Aucune recette ne correspond à votre recherche.
+          </div>
+        `;
+        return;
+      }
+
+      searchResults.innerHTML = matchingRecipes
+        .map((recipe) => {
+          return `
+            <a
+              class="search-result"
+              href="${escapeHtml(recipe.url)}"
+            >
+              <div class="search-result-title">
+                ${getRecipeEmoji(recipe)}
+                ${escapeHtml(recipe.title)}
+              </div>
+
+              <div class="search-result-meta">
+                ${escapeHtml(recipe.category)}
+                · ${escapeHtml(recipe.prep_time)}
+                · ${escapeHtml(recipe.servings)} pers.
+              </div>
+            </a>
+          `;
+        })
+        .join("");
+    }
+
+    function showLoadError() {
+      heroContent.innerHTML = `
+        <p class="eyebrow">Erreur de chargement</p>
+
+        <h1 class="hero-title">
+          Les recettes sont momentanément indisponibles
+        </h1>
+
+        <p class="hero-description">
+          Vérifiez que le fichier recettes.json est bien présent à la racine
+          du dépôt, puis rechargez la page.
+        </p>
+
+        <a class="primary-button" href="">
+          Recharger la page
+        </a>
+      `;
+
+      trendingGrid.innerHTML = `
+        <div class="error-state">
+          Impossible de charger recettes.json.
+        </div>
+      `;
+
+      latestList.innerHTML = `
+        <div class="error-state">
+          Impossible de charger les dernières recettes.
+        </div>
+      `;
+    }
+
+    async function loadRecipes() {
+      try {
+        const response = await fetch(
+          "./recettes.json?v=" + Date.now(),
+          {
+            cache: "no-store"
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(
+            "Erreur HTTP lors du chargement : " + response.status
+          );
+        }
+
+        const data = await response.json();
+
+        if (!data || !Array.isArray(data.recettes)) {
+          throw new Error(
+            "Le fichier recettes.json ne contient pas de tableau recettes."
+          );
+        }
+
+        allRecipes = data.recettes.filter(
+          (recipe) =>
+            recipe &&
+            recipe.title &&
+            recipe.url
+        );
+
+        if (!allRecipes.length) {
+          throw new Error(
+            "Aucune recette valide n'a été trouvée."
+          );
+        }
+
+        renderHero(allRecipes[0]);
+        renderCategories(allRecipes);
+        renderRecipeSections();
+      } catch (error) {
+        console.error(error);
+        showLoadError();
+      }
+    }
+
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("is-open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document
+      .getElementById("open-search")
+      .addEventListener("click", () => {
+        searchOverlay.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+
+        window.setTimeout(() => {
+          searchInput.focus();
+        }, 50);
+      });
+
+    function closeSearch() {
+      searchOverlay.classList.remove("is-open");
+      document.body.style.overflow = "";
+      searchInput.value = "";
+      renderSearchResults("");
+    }
+
+    document
+      .getElementById("search-close")
+      .addEventListener("click", closeSearch);
+
+    searchOverlay.addEventListener("click", (event) => {
+      if (event.target === searchOverlay) {
+        closeSearch();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeSearch();
+      }
+
+      if (
+        event.key === "/" &&
+        !["INPUT", "TEXTAREA"].includes(
+          document.activeElement.tagName
+        )
+      ) {
+        event.preventDefault();
+        searchOverlay.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+        searchInput.focus();
+      }
+    });
+
+    searchInput.addEventListener("input", (event) => {
+      renderSearchResults(event.target.value);
+    });
+
+    document.getElementById("copyright").textContent =
+      "© " +
+      new Date().getFullYear() +
+      " Recettes Maison";
+
+    loadRecipes();
+  </script>
 </body>
 </html>
