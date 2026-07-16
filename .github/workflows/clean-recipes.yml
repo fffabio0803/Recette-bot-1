@@ -21,15 +21,14 @@ jobs:
 
       - name: 🚀 Exécuter le nettoyage
         run: |
-          python scripts/clean_recipes.py
+          python scripts/clean_recipes.py --delete-old-html
 
       - name: 💾 Commit automatique si modifications
         run: |
           git config user.name "Recettes Bot"
           git config user.email "actions@github.com"
 
-          git add recettes.json sitemap.xml
-
+          git add -A
           git diff --cached --quiet || (
             git commit -m "🧹 Nettoyage automatique des recettes"
             git push
