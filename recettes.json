@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "soupe-de-tomates-fraiches-basilic",
+      "title": "Soupe de Tomates Fraîches au Basilic : Recette Provençale",
+      "meta_description": "Découvrez une soupe de tomates fraîches et basilic onctueuse, parfumée et facile à réaliser. Idéale en été pour un repas léger et savoureux.",
+      "category": "Soupes",
+      "emoji": "Soupes",
+      "cook_time": "20 min",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-07-17",
+      "date_display": "17/07/2026",
+      "url": "recettes/soupe-de-tomates-fraiches-basilic.html"
+    },
+    {
       "slug": "financiers-amandes-moelleux-recette",
       "title": "Financiers amandes moelleux : la vraie recette de chef",
       "meta_description": "Recette authentique de financiers amandes moelleux au beurre noisette, croustillants dehors, fondants dedans. Astuces de chef pour reussir a coup sur.",
@@ -376,19 +389,6 @@
       "date_iso": "2026-05-19",
       "date_display": "19 mai 2026",
       "url": "recettes/pate-a-crepes-recette-de-base.html"
-    },
-    {
-      "slug": "soupe-de-tomates-fraiches-basilic",
-      "title": "Soupe de tomates fraîches au basilic selon la tradition provençale",
-      "meta_description": "Découvrez cette authentique soupe de tomates fraîches au basilic, inspirée des marchés de Provence. Une recette crémeuse et parfumée qui révèle toute la saveur de l'été.",
-      "category": "Soupes",
-      "emoji": "🥣",
-      "cook_time": "20 min",
-      "prep_time": "10 min",
-      "servings": 4,
-      "date_iso": "2026-05-18",
-      "date_display": "18 mai 2026",
-      "url": "recettes/soupe-de-tomates-fraiches-basilic.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -781,5 +781,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-16"
+  "last_updated": "2026-07-17"
 }
