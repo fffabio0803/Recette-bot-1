@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "pate-a-crepes-recette-de-base",
+      "title": "Pate a Crepes Maison : La Recette de Base Infaillible",
+      "meta_description": "Decouvrez la veritable pate a crepes maison, moelleuse et fine a souhait. Recette de base facile, astuces de chef et secrets pour des crepes parfaites.",
+      "category": "Crepes",
+      "emoji": "Crepes",
+      "cook_time": "1h repos",
+      "prep_time": "15 min",
+      "servings": 4,
+      "date_iso": "2026-07-18",
+      "date_display": "18/07/2026",
+      "url": "recettes/pate-a-crepes-recette-de-base.html"
+    },
+    {
       "slug": "soupe-de-tomates-fraiches-basilic",
       "title": "Soupe de Tomates Fraîches au Basilic : Recette Provençale",
       "meta_description": "Découvrez une soupe de tomates fraîches et basilic onctueuse, parfumée et facile à réaliser. Idéale en été pour un repas léger et savoureux.",
@@ -376,19 +389,6 @@
       "date_iso": "2026-05-20",
       "date_display": "20 mai 2026",
       "url": "recettes/magret-de-canard-sauce-miel-soja.html"
-    },
-    {
-      "slug": "pate-a-crepes-recette-de-base",
-      "title": "Pâte à Crêpes Traditionnelle de Chef - Recette Authentique",
-      "meta_description": "Découvrez la véritable recette de pâte à crêpes des maîtres crêpiers bretons. Technique infaillible pour des crêpes parfaites à tous les coups.",
-      "category": "Crêpes",
-      "emoji": "🥞",
-      "cook_time": "1h repos",
-      "prep_time": "15 min",
-      "servings": 4,
-      "date_iso": "2026-05-19",
-      "date_display": "19 mai 2026",
-      "url": "recettes/pate-a-crepes-recette-de-base.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -781,5 +781,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-17"
+  "last_updated": "2026-07-18"
 }
