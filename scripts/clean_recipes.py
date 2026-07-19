@@ -3,7 +3,6 @@
 import argparse
 import json
 import os
-import sys
 import unicodedata
 from datetime import datetime
 from pathlib import Path
@@ -17,11 +16,13 @@ from xml.sax.saxutils import escape
 ROOT_DIR = Path(__file__).resolve().parent.parent
 JSON_FILE = ROOT_DIR / "recettes.json"
 RECIPES_DIR = ROOT_DIR / "recettes"
+
 SITEMAP_FILE = ROOT_DIR / "sitemap.xml"
+SITEMAP_TEXT_FILE = ROOT_DIR / "sitemap.txt"
 
 SITE_URL = os.environ.get(
     "SITE_URL",
-    "https://fffabio0803.github.io/Recette-bot-1"
+    "https://fffabio0803.github.io/Recette-bot-1",
 ).rstrip("/")
 
 
@@ -61,6 +62,7 @@ CATEGORY_NAMES = {
     "pates": "Pâtes",
 
     "petit dejeuner": "Petit-déjeuner",
+    "petits dejeuners": "Petit-déjeuner",
 
     "poisson": "Poisson",
     "poissons": "Poisson",
@@ -137,7 +139,7 @@ FRENCH_MONTHS = {
 # ============================================================
 
 def normalize_text(value):
-    """Texte simplifié pour comparer catégories et titres."""
+    """Simplifie un texte pour comparer les catégories et les titres."""
     text = str(value or "").strip().lower()
 
     text = unicodedata.normalize("NFD", text)
@@ -168,7 +170,10 @@ def normalize_category(value):
 def format_french_date(date_iso):
     """Transforme 2026-07-16 en 16 juillet 2026."""
     try:
-        date = datetime.strptime(str(date_iso), "%Y-%m-%d")
+        date = datetime.strptime(
+            str(date_iso),
+            "%Y-%m-%d",
+        )
     except (ValueError, TypeError):
         return str(date_iso or "")
 
@@ -184,14 +189,14 @@ def date_for_sort(recipe):
     try:
         return datetime.strptime(
             str(recipe.get("date_iso", "")),
-            "%Y-%m-%d"
+            "%Y-%m-%d",
         )
-    except ValueError:
+    except (ValueError, TypeError):
         return datetime.min
 
 
 def load_recipes_json():
-    """Charge et vérifie recettes.json."""
+    """Charge et vérifie le fichier recettes.json."""
     if not JSON_FILE.exists():
         raise FileNotFoundError(
             f"Le fichier {JSON_FILE.name} est introuvable."
@@ -223,7 +228,10 @@ def clean_recipe(recipe):
     """Nettoie les informations d'une recette."""
     cleaned = dict(recipe)
 
-    slug = str(cleaned.get("slug", "")).strip()
+    slug = str(
+        cleaned.get("slug", "")
+    ).strip()
+
     category = normalize_category(
         cleaned.get("category", "")
     )
@@ -232,7 +240,7 @@ def clean_recipe(recipe):
     cleaned["category"] = category
     cleaned["emoji"] = CATEGORY_EMOJIS.get(
         category,
-        "🍽️"
+        "🍽️",
     )
 
     if slug:
@@ -266,7 +274,7 @@ def remove_duplicates(recipes):
     sorted_recipes = sorted(
         recipes,
         key=date_for_sort,
-        reverse=True
+        reverse=True,
     )
 
     kept = []
@@ -276,7 +284,10 @@ def remove_duplicates(recipes):
     seen_titles = set()
 
     for recipe in sorted_recipes:
-        slug = str(recipe.get("slug", "")).strip()
+        slug = str(
+            recipe.get("slug", "")
+        ).strip()
+
         title_key = normalize_text(
             recipe.get("title", "")
         )
@@ -308,7 +319,7 @@ def remove_duplicates(recipes):
 
 
 def validate_recipes(recipes):
-    """Vérifie les champs indispensables."""
+    """Vérifie les champs indispensables de chaque recette."""
     required_fields = [
         "slug",
         "title",
@@ -323,7 +334,10 @@ def validate_recipes(recipes):
 
     errors = []
 
-    for index, recipe in enumerate(recipes, start=1):
+    for index, recipe in enumerate(
+        recipes,
+        start=1,
+    ):
         missing = [
             field
             for field in required_fields
@@ -347,7 +361,7 @@ def save_recipes_json(data, recipes):
     if recipes:
         output["last_updated"] = recipes[0].get(
             "date_iso",
-            ""
+            "",
         )
     else:
         output["last_updated"] = datetime.now().strftime(
@@ -358,27 +372,57 @@ def save_recipes_json(data, recipes):
         json.dumps(
             output,
             ensure_ascii=False,
-            indent=2
+            indent=2,
         ) + "\n",
-        encoding="utf-8"
+        encoding="utf-8",
     )
 
 
-def generate_sitemap(recipes):
-    """Crée un sitemap XML propre."""
-    today = datetime.now().strftime("%Y-%m-%d")
+def build_site_urls(recipes):
+    """Construit la liste complète des URL du site."""
+    urls = [
+        f"{SITE_URL}/",
+        f"{SITE_URL}/toutes-les-recettes.html",
+    ]
+
+    for recipe in recipes:
+        relative_url = str(
+            recipe.get("url", "")
+        ).strip().lstrip("/")
+
+        if not relative_url:
+            continue
+
+        urls.append(
+            f"{SITE_URL}/{relative_url}"
+        )
+
+    # Supprime les éventuels doublons en conservant l'ordre.
+    return list(dict.fromkeys(urls))
+
+
+def generate_xml_sitemap(recipes):
+    """Crée le sitemap XML."""
+    today = datetime.now().strftime(
+        "%Y-%m-%d"
+    )
 
     if recipes:
-        latest_date = recipes[0].get(
-            "date_iso",
-            today
-        )
+        latest_date = str(
+            recipes[0].get(
+                "date_iso",
+                today,
+            )
+        ).strip() or today
     else:
         latest_date = today
 
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        (
+            '<urlset '
+            'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+        ),
         "  <url>",
         f"    <loc>{escape(SITE_URL + '/')}</loc>",
         f"    <lastmod>{escape(latest_date)}</lastmod>",
@@ -387,7 +431,9 @@ def generate_sitemap(recipes):
         "  </url>",
         "  <url>",
         (
-            f"    <loc>{escape(SITE_URL + '/toutes-les-recettes.html')}</loc>"
+            "    <loc>"
+            f"{escape(SITE_URL + '/toutes-les-recettes.html')}"
+            "</loc>"
         ),
         f"    <lastmod>{escape(latest_date)}</lastmod>",
         "    <changefreq>daily</changefreq>",
@@ -398,7 +444,10 @@ def generate_sitemap(recipes):
     for recipe in recipes:
         relative_url = str(
             recipe.get("url", "")
-        ).lstrip("/")
+        ).strip().lstrip("/")
+
+        if not relative_url:
+            continue
 
         recipe_url = (
             f"{SITE_URL}/{relative_url}"
@@ -407,6 +456,9 @@ def generate_sitemap(recipes):
         date_iso = str(
             recipe.get("date_iso", "")
         ).strip()
+
+        if not date_iso:
+            date_iso = today
 
         lines.extend([
             "  <url>",
@@ -421,7 +473,21 @@ def generate_sitemap(recipes):
 
     SITEMAP_FILE.write_text(
         "\n".join(lines) + "\n",
-        encoding="utf-8"
+        encoding="utf-8",
+    )
+
+
+def generate_text_sitemap(recipes):
+    """
+    Crée un sitemap au format texte.
+
+    Une URL complète est inscrite sur chaque ligne.
+    """
+    urls = build_site_urls(recipes)
+
+    SITEMAP_TEXT_FILE.write_text(
+        "\n".join(urls) + "\n",
+        encoding="utf-8",
     )
 
 
@@ -429,8 +495,12 @@ def delete_old_html_files():
     """Supprime les anciennes pages HTML en double."""
     deleted = []
 
-    for slug in sorted(OLD_DUPLICATE_SLUGS):
-        file_path = RECIPES_DIR / f"{slug}.html"
+    for slug in sorted(
+        OLD_DUPLICATE_SLUGS
+    ):
+        file_path = (
+            RECIPES_DIR / f"{slug}.html"
+        )
 
         if file_path.exists():
             file_path.unlink()
@@ -445,13 +515,19 @@ def delete_old_html_files():
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Nettoyage des recettes du site."
+        description=(
+            "Nettoyage des recettes du site "
+            "Recettes Maison."
+        )
     )
 
     parser.add_argument(
         "--delete-old-html",
         action="store_true",
-        help="Supprime aussi les anciennes pages HTML en double."
+        help=(
+            "Supprime aussi les anciennes pages HTML "
+            "en double."
+        ),
     )
 
     args = parser.parse_args()
@@ -469,7 +545,7 @@ def main():
     original_recipes = data["recettes"]
 
     print(
-        f"Entrées avant nettoyage : "
+        "Entrées avant nettoyage : "
         f"{len(original_recipes)}"
     )
 
@@ -487,10 +563,12 @@ def main():
 
     unique_recipes.sort(
         key=date_for_sort,
-        reverse=True
+        reverse=True,
     )
 
-    errors = validate_recipes(unique_recipes)
+    errors = validate_recipes(
+        unique_recipes
+    )
 
     if errors:
         print()
@@ -508,26 +586,32 @@ def main():
 
     save_recipes_json(
         data,
+        unique_recipes,
+    )
+
+    generate_xml_sitemap(
         unique_recipes
     )
 
-    generate_sitemap(
+    generate_text_sitemap(
         unique_recipes
     )
 
     deleted_files = []
 
     if args.delete_old_html:
-        deleted_files = delete_old_html_files()
+        deleted_files = (
+            delete_old_html_files()
+        )
 
     print()
     print(
-        f"Entrées après nettoyage : "
+        "Entrées après nettoyage : "
         f"{len(unique_recipes)}"
     )
 
     print(
-        f"Entrées supprimées : "
+        "Entrées supprimées : "
         f"{len(original_recipes) - len(unique_recipes)}"
     )
 
@@ -541,13 +625,14 @@ def main():
     print()
     print("recettes.json nettoyé")
     print("sitemap.xml régénéré")
+    print("sitemap.txt régénéré")
     print("catégories normalisées")
     print("emojis corrigés")
     print("dates affichées en français")
 
     if args.delete_old_html:
         print(
-            f"Pages HTML supprimées : "
+            "Pages HTML supprimées : "
             f"{len(deleted_files)}"
         )
     else:
@@ -562,4 +647,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    raise SystemExit(main())
