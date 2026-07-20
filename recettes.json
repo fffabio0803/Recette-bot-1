@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "clafoutis-cerises-recette-classique",
+      "title": "Clafoutis aux Cerises Recette Classique du Limousin",
+      "meta_description": "Clafoutis aux cerises moelleux et fondant, recette traditionnelle avec noyaux, pate onctueuse et cuisson parfaite. Un dessert familial incontournable a partager.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "35 min",
+      "prep_time": "10 min",
+      "servings": 6,
+      "date_iso": "2026-07-20",
+      "date_display": "20/07/2026",
+      "url": "recettes/clafoutis-cerises-recette-classique.html"
+    },
+    {
       "slug": "magret-de-canard-sauce-miel-soja",
       "title": "Magret de Canard Sauce Miel Soja Croustillant et Fondant",
       "meta_description": "Recette de magret de canard sauce miel soja : peau croustillante, chair rosée et sauce sucrée-salée. Technique de chef pour un résultat parfait à la maison.",
@@ -376,19 +389,6 @@
       "date_iso": "2026-05-22",
       "date_display": "22 mai 2026",
       "url": "recettes/vichyssoise-froide-poireaux-pommes-de-terre.html"
-    },
-    {
-      "slug": "clafoutis-cerises-recette-classique",
-      "title": "Clafoutis aux Cerises du Limousin - Recette Authentique",
-      "meta_description": "Découvrez le vrai clafoutis aux cerises du Limousin, avec noyaux pour l'authentique saveur d'amande. Recette traditionnelle de chef cuisinier.",
-      "category": "Desserts",
-      "emoji": "🍰",
-      "cook_time": "35 min",
-      "prep_time": "10 min",
-      "servings": 6,
-      "date_iso": "2026-05-21",
-      "date_display": "21 mai 2026",
-      "url": "recettes/clafoutis-cerises-recette-classique.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -781,5 +781,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-19"
+  "last_updated": "2026-07-20"
 }
