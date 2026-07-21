@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "vichyssoise-froide-poireaux-pommes-de-terre",
+      "title": "Vichyssoise Froide Traditionnelle aux Poireaux et Pommes de Terre",
+      "meta_description": "Recette authentique de vichyssoise froide, veloute onctueux de poireaux et pommes de terre a la creme, parfait pour les chaudes journees d'ete.",
+      "category": "Soupes",
+      "emoji": "Soupes",
+      "cook_time": "2h frigo",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-07-21",
+      "date_display": "21/07/2026",
+      "url": "recettes/vichyssoise-froide-poireaux-pommes-de-terre.html"
+    },
+    {
       "slug": "clafoutis-cerises-recette-classique",
       "title": "Clafoutis aux Cerises Recette Classique du Limousin",
       "meta_description": "Clafoutis aux cerises moelleux et fondant, recette traditionnelle avec noyaux, pate onctueuse et cuisson parfaite. Un dessert familial incontournable a partager.",
@@ -376,19 +389,6 @@
       "date_iso": "2026-05-23",
       "date_display": "23 mai 2026",
       "url": "recettes/croque-monsieur-bechamel-maison.html"
-    },
-    {
-      "slug": "vichyssoise-froide-poireaux-pommes-de-terre",
-      "title": "Vichyssoise Glacée aux Poireaux du Vexin et Pommes Ratte",
-      "meta_description": "Découvrez la vraie vichyssoise du chef Louis Diat, revisitée avec des poireaux du Vexin et pommes Ratte. Veloutée, rafraîchissante, parfaite pour l'été.",
-      "category": "Soupes",
-      "emoji": "🥣",
-      "cook_time": "2h frigo",
-      "prep_time": "20 min",
-      "servings": 6,
-      "date_iso": "2026-05-22",
-      "date_display": "22 mai 2026",
-      "url": "recettes/vichyssoise-froide-poireaux-pommes-de-terre.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -781,5 +781,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-20"
+  "last_updated": "2026-07-21"
 }
