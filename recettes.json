@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "croque-monsieur-bechamel-maison",
+      "title": "Croque-Monsieur Béchamel Maison : la Recette Authentique",
+      "meta_description": "Croque-monsieur à la béchamel onctueuse maison, jambon et gruyère affiné. Recette de chef, croustillant garanti et fondant irrésistible.",
+      "category": "Sandwichs",
+      "emoji": "Sandwichs",
+      "cook_time": "15 min",
+      "prep_time": "10 min",
+      "servings": 2,
+      "date_iso": "2026-07-22",
+      "date_display": "22/07/2026",
+      "url": "recettes/croque-monsieur-bechamel-maison.html"
+    },
+    {
       "slug": "vichyssoise-froide-poireaux-pommes-de-terre",
       "title": "Vichyssoise Froide Traditionnelle aux Poireaux et Pommes de Terre",
       "meta_description": "Recette authentique de vichyssoise froide, veloute onctueux de poireaux et pommes de terre a la creme, parfait pour les chaudes journees d'ete.",
@@ -376,19 +389,6 @@
       "date_iso": "2026-05-24",
       "date_display": "24 mai 2026",
       "url": "recettes/taboul-maison-menthe-citron.html"
-    },
-    {
-      "slug": "croque-monsieur-bechamel-maison",
-      "title": "Croque-Monsieur à la Béchamel Maison de Grand-Mère Louise",
-      "meta_description": "Découvrez la recette authentique du croque-monsieur à la béchamel maison, transmise par ma grand-mère Louise, chef de bistrot parisien des années 50.",
-      "category": "Sandwichs",
-      "emoji": "🥪",
-      "cook_time": "15 min",
-      "prep_time": "10 min",
-      "servings": 2,
-      "date_iso": "2026-05-23",
-      "date_display": "23 mai 2026",
-      "url": "recettes/croque-monsieur-bechamel-maison.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -781,5 +781,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-21"
+  "last_updated": "2026-07-22"
 }
