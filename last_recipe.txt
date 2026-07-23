@@ -1,3 +1,3 @@
-slug=croque-monsieur-bechamel-maison
-title=Croque-Monsieur Béchamel Maison : la Recette Authentique
-date=2026-07-22
+slug=taboul-maison-menthe-citron
+title=Taboulé maison à la menthe et citron : recette fraîche
+date=2026-07-23

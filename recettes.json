@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "taboul-maison-menthe-citron",
+      "title": "Taboulé maison à la menthe et citron : recette fraîche",
+      "meta_description": "Découvrez notre taboulé maison à la menthe et citron, une recette libanaise authentique, fraîche et parfumée, idéale en été comme en toute saison.",
+      "category": "Salades",
+      "emoji": "Salades",
+      "cook_time": "1h frigo",
+      "prep_time": "20 min",
+      "servings": 4,
+      "date_iso": "2026-07-23",
+      "date_display": "23/07/2026",
+      "url": "recettes/taboul-maison-menthe-citron.html"
+    },
+    {
       "slug": "croque-monsieur-bechamel-maison",
       "title": "Croque-Monsieur Béchamel Maison : la Recette Authentique",
       "meta_description": "Croque-monsieur à la béchamel onctueuse maison, jambon et gruyère affiné. Recette de chef, croustillant garanti et fondant irrésistible.",
@@ -376,19 +389,6 @@
       "date_iso": "2026-05-25",
       "date_display": "25 mai 2026",
       "url": "recettes/tiramisu-recette-italienne-originale.html"
-    },
-    {
-      "slug": "taboul-maison-menthe-citron",
-      "title": "Taboulé Maison à la Menthe Fraîche et Citron de Menton",
-      "meta_description": "Découvrez ma recette authentique de taboulé libanais aux herbes fraîches, menthe du jardin et citron de Menton. Saveurs méditerranéennes garanties !",
-      "category": "Salades",
-      "emoji": "🥗",
-      "cook_time": "1h frigo",
-      "prep_time": "20 min",
-      "servings": 4,
-      "date_iso": "2026-05-24",
-      "date_display": "24 mai 2026",
-      "url": "recettes/taboul-maison-menthe-citron.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -781,5 +781,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-22"
+  "last_updated": "2026-07-23"
 }
