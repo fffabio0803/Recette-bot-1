@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tiramisu-recette-italienne-originale",
+      "title": "Tiramisu Original : Recette Italienne Authentique et Cremeuse",
+      "meta_description": "Decouvrez le vrai tiramisu italien : mascarpone onctueux, biscuits imbibes au cafe, cacao amer. Recette traditionnelle etape par etape, sans cuisson.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "4h frigo",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-07-24",
+      "date_display": "24/07/2026",
+      "url": "recettes/tiramisu-recette-italienne-originale.html"
+    },
+    {
       "slug": "taboul-maison-menthe-citron",
       "title": "Taboulé maison à la menthe et citron : recette fraîche",
       "meta_description": "Découvrez notre taboulé maison à la menthe et citron, une recette libanaise authentique, fraîche et parfumée, idéale en été comme en toute saison.",
@@ -376,19 +389,6 @@
       "date_iso": "2026-05-27",
       "date_display": "27 mai 2026",
       "url": "recettes/tarte-flambee-alsacienne-recette.html"
-    },
-    {
-      "slug": "tiramisu-recette-italienne-originale",
-      "title": "Tiramisu authentique italien : recette originale de Venise",
-      "meta_description": "Découvrez le vrai tiramisu vénitien avec mascarpone Lombardie, savoiardi artisanaux et café espresso. Recette traditionnelle italienne authentique.",
-      "category": "Desserts",
-      "emoji": "🍰",
-      "cook_time": "4h frigo",
-      "prep_time": "20 min",
-      "servings": 6,
-      "date_iso": "2026-05-25",
-      "date_display": "25 mai 2026",
-      "url": "recettes/tiramisu-recette-italienne-originale.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -781,5 +781,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-23"
+  "last_updated": "2026-07-24"
 }
