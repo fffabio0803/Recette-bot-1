@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "moules-marinieres-vin-blanc-facile",
+      "title": "Moules Marinières au Vin Blanc Facile et Rapide",
+      "meta_description": "Recette traditionnelle de moules marinières au vin blanc, simple et savoureuse. Prêtes en 20 minutes avec astuces de chef pour réussir la cuisson.",
+      "category": "Poisson",
+      "emoji": "Poisson",
+      "cook_time": "20 min",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-07-25",
+      "date_display": "25/07/2026",
+      "url": "recettes/moules-marinieres-vin-blanc-facile.html"
+    },
+    {
       "slug": "tiramisu-recette-italienne-originale",
       "title": "Tiramisu Original : Recette Italienne Authentique et Cremeuse",
       "meta_description": "Decouvrez le vrai tiramisu italien : mascarpone onctueux, biscuits imbibes au cafe, cacao amer. Recette traditionnelle etape par etape, sans cuisson.",
@@ -781,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-24"
+  "last_updated": "2026-07-25"
 }
