@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "fondant-chocolat-coulant-moelleux",
+      "title": "Fondant Chocolat Coulant Moelleux : Recette Infaillible du Chef",
+      "meta_description": "Fondant chocolat coulant maison : coeur fondant garanti, exterieur moelleux. Recette precise, temps de cuisson et astuces pour reussir a coup sur.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "12 min",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-07-27",
+      "date_display": "27/07/2026",
+      "url": "recettes/fondant-chocolat-coulant-moelleux.html"
+    },
+    {
       "slug": "tarte-flambee-alsacienne-recette",
       "title": "Tarte Flambée Alsacienne : Recette Authentique et Croustillante",
       "meta_description": "Découvrez la vraie tarte flambée alsacienne : pâte fine et croustillante, crème fraîche, lardons et oignons. Recette traditionnelle facile et rapide.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-05-29",
       "date_display": "29 mai 2026",
       "url": "recettes/osso-buco-milanaise-recette-italienne.html"
-    },
-    {
-      "slug": "fondant-chocolat-coulant-moelleux",
-      "title": "Fondant au Chocolat Coulant aux Épices de Noël - Recette Chef",
-      "meta_description": "Découvrez le secret du fondant chocolat coulant parfait avec cannelle et cardamome. Une recette de chef pour un cœur qui coule à tous les coups !",
-      "category": "Desserts",
-      "emoji": "🍰",
-      "cook_time": "12 min",
-      "prep_time": "10 min",
-      "servings": 4,
-      "date_iso": "2026-05-28",
-      "date_display": "28 mai 2026",
-      "url": "recettes/fondant-chocolat-coulant-moelleux.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-26"
+  "last_updated": "2026-07-27"
 }
