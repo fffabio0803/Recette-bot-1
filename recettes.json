@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "veloute-butternut-courge-gingembre",
+      "title": "Velouté de Butternut au Gingembre : Recette Onctueuse",
+      "meta_description": "Un velouté de butternut au gingembre frais, crémeux et parfumé. Recette facile, astuces de chef pour une texture parfaite et un équilibre des saveurs réussi.",
+      "category": "Soupes",
+      "emoji": "Soupes",
+      "cook_time": "30 min",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-07-29",
+      "date_display": "29/07/2026",
+      "url": "recettes/veloute-butternut-courge-gingembre.html"
+    },
+    {
       "slug": "osso-buco-milanaise-recette-italienne",
       "title": "Osso Buco Milanaise Traditionnel : Recette Italienne Authentique",
       "meta_description": "Osso buco milanaise fondant mijoté au vin blanc, servi avec sa gremolata acidulée. Recette italienne authentique pas à pas, technique et astuces de chef.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-05-31",
       "date_display": "31 mai 2026",
       "url": "recettes/cake-citron-moelleux-facile-rapide.html"
-    },
-    {
-      "slug": "veloute-butternut-courge-gingembre",
-      "title": "Velouté de butternut au gingembre frais et lait de coco",
-      "meta_description": "Découvrez ce velouté onctueux de butternut parfumé au gingembre frais. Une recette automnale réconfortante aux saveurs subtiles et exotiques.",
-      "category": "Soupes",
-      "emoji": "🥣",
-      "cook_time": "30 min",
-      "prep_time": "10 min",
-      "servings": 4,
-      "date_iso": "2026-05-30",
-      "date_display": "30 mai 2026",
-      "url": "recettes/veloute-butternut-courge-gingembre.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-28"
+  "last_updated": "2026-07-29"
 }
