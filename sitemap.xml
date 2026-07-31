@@ -2,15 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fffabio0803.github.io/Recette-bot-1/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://fffabio0803.github.io/Recette-bot-1/toutes-les-recettes.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/rillettes-de-saumon-fume-maison.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/cake-citron-moelleux-facile-rapide.html</loc>
@@ -189,12 +195,6 @@
   <url>
     <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/pissaladiere-nicoise-oignons-anchois.html</loc>
     <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/rillettes-de-saumon-fume-maison.html</loc>
-    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

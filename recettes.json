@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "rillettes-de-saumon-fume-maison",
+      "title": "Rillettes de Saumon Fumé Maison Onctueuses et Faciles",
+      "meta_description": "Recette de rillettes de saumon fumé maison, crémeuses et parfumées à l'aneth. Simple, rapide, idéale à l'apéritif ou en entrée raffinée.",
+      "category": "Entrees",
+      "emoji": "Entrees",
+      "cook_time": "1h frigo",
+      "prep_time": "10 min",
+      "servings": 6,
+      "date_iso": "2026-07-31",
+      "date_display": "31/07/2026",
+      "url": "recettes/rillettes-de-saumon-fume-maison.html"
+    },
+    {
       "slug": "cake-citron-moelleux-facile-rapide",
       "title": "Cake au Citron Moelleux Facile et Rapide - Recette Express",
       "meta_description": "Un cake citron ultra moelleux prêt en 15 min de préparation. Recette simple, glaçage brillant, astuces de chef pour un résultat parfait à tous les coups.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-06-02",
       "date_display": "2 juin 2026",
       "url": "recettes/pissaladiere-nicoise-oignons-anchois.html"
-    },
-    {
-      "slug": "rillettes-de-saumon-fume-maison",
-      "title": "Rillettes de Saumon Fumé Maison aux Herbes de Provence",
-      "meta_description": "Découvrez ma recette authentique de rillettes de saumon fumé maison, crémeuses et parfumées aux herbes de Provence. Un délice raffiné et facile à réaliser.",
-      "category": "Entrées",
-      "emoji": "🥄",
-      "cook_time": "1h frigo",
-      "prep_time": "10 min",
-      "servings": 6,
-      "date_iso": "2026-06-01",
-      "date_display": "1 juin 2026",
-      "url": "recettes/rillettes-de-saumon-fume-maison.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-30"
+  "last_updated": "2026-07-31"
 }
