@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "pissaladiere-nicoise-oignons-anchois",
+      "title": "Pissaladière Niçoise Authentique aux Oignons et Anchois",
+      "meta_description": "Recette traditionnelle de pissaladière niçoise : oignons fondants caramélisés, anchois de Collioure et olives niçoises sur pâte briochée maison.",
+      "category": "Tartes",
+      "emoji": "Tartes",
+      "cook_time": "45 min",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-08-01",
+      "date_display": "01/08/2026",
+      "url": "recettes/pissaladiere-nicoise-oignons-anchois.html"
+    },
+    {
       "slug": "rillettes-de-saumon-fume-maison",
       "title": "Rillettes de Saumon Fumé Maison Onctueuses et Faciles",
       "meta_description": "Recette de rillettes de saumon fumé maison, crémeuses et parfumées à l'aneth. Simple, rapide, idéale à l'apéritif ou en entrée raffinée.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-06-03",
       "date_display": "3 juin 2026",
       "url": "recettes/far-breton-pruneaux-recette-bretonne.html"
-    },
-    {
-      "slug": "pissaladiere-nicoise-oignons-anchois",
-      "title": "Pissaladière Niçoise Authentique aux Anchois et Oignons Doux",
-      "meta_description": "Découvrez la vraie pissaladière niçoise avec sa pâte à pain, ses oignons confits et ses anchois de Collioure. Recette traditionnelle de chef.",
-      "category": "Tartes",
-      "emoji": "🥧",
-      "cook_time": "45 min",
-      "prep_time": "20 min",
-      "servings": 6,
-      "date_iso": "2026-06-02",
-      "date_display": "2 juin 2026",
-      "url": "recettes/pissaladiere-nicoise-oignons-anchois.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-07-31"
+  "last_updated": "2026-08-01"
 }
