@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "gnocchis-pommes-de-terre-maison",
+      "title": "Gnocchis de pommes de terre maison : la recette authentique",
+      "meta_description": "Découvrez la recette traditionnelle des gnocchis maison, moelleux et fondants, avec pommes de terre farineuses et technique italienne pas à pas.",
+      "category": "Pates",
+      "emoji": "Pates",
+      "cook_time": "30 min",
+      "prep_time": "30 min",
+      "servings": 4,
+      "date_iso": "2026-08-03",
+      "date_display": "03/08/2026",
+      "url": "recettes/gnocchis-pommes-de-terre-maison.html"
+    },
+    {
       "slug": "far-breton-pruneaux-recette-bretonne",
       "title": "Far Breton aux Pruneaux : Recette Authentique Bretonne",
       "meta_description": "Découvrez le vrai far breton aux pruneaux, moelleux et fondant. Recette traditionnelle pas à pas avec astuces de chef pour une texture parfaite.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-06-05",
       "date_display": "5 juin 2026",
       "url": "recettes/pavlova-fruits-rouges-meringue.html"
-    },
-    {
-      "slug": "gnocchis-pommes-de-terre-maison",
-      "title": "Gnocchis de pommes de terre maison à l'ancienne",
-      "meta_description": "Recette authentique de gnocchis maison avec pommes de terre Bintje, technique traditionnelle italienne revisitée par un chef français passionné.",
-      "category": "Pâtes",
-      "emoji": "🍝",
-      "cook_time": "30 min",
-      "prep_time": "30 min",
-      "servings": 4,
-      "date_iso": "2026-06-04",
-      "date_display": "4 juin 2026",
-      "url": "recettes/gnocchis-pommes-de-terre-maison.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-08-02"
+  "last_updated": "2026-08-03"
 }

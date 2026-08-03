@@ -1,3 +1,3 @@
-slug=far-breton-pruneaux-recette-bretonne
-title=Far Breton aux Pruneaux : Recette Authentique Bretonne
-date=2026-08-02
+slug=gnocchis-pommes-de-terre-maison
+title=Gnocchis de pommes de terre maison : la recette authentique
+date=2026-08-03
