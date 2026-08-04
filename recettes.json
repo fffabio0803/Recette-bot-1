@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "pavlova-fruits-rouges-meringue",
+      "title": "Pavlova aux fruits rouges : meringue croustifondante",
+      "meta_description": "Recette de pavlova meringuée aux fruits rouges et chantilly mascarpone. Croustillante à l'extérieur, moelleuse à cœur, un dessert spectaculaire et facile.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "1h30",
+      "prep_time": "20 min",
+      "servings": 8,
+      "date_iso": "2026-08-04",
+      "date_display": "04/08/2026",
+      "url": "recettes/pavlova-fruits-rouges-meringue.html"
+    },
+    {
       "slug": "gnocchis-pommes-de-terre-maison",
       "title": "Gnocchis de pommes de terre maison : la recette authentique",
       "meta_description": "Découvrez la recette traditionnelle des gnocchis maison, moelleux et fondants, avec pommes de terre farineuses et technique italienne pas à pas.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-06-06",
       "date_display": "6 juin 2026",
       "url": "recettes/tajine-de-poulet-citron-confit-olives.html"
-    },
-    {
-      "slug": "pavlova-fruits-rouges-meringue",
-      "title": "Pavlova aux fruits rouges : la meringue aérienne parfaite",
-      "meta_description": "Découvrez la recette authentique de la pavlova aux fruits rouges, cette meringue fondante garnie de crème fouettée et de baies fraîches. Un dessert spectaculaire et léger.",
-      "category": "Desserts",
-      "emoji": "🍰",
-      "cook_time": "1h30",
-      "prep_time": "20 min",
-      "servings": 8,
-      "date_iso": "2026-06-05",
-      "date_display": "5 juin 2026",
-      "url": "recettes/pavlova-fruits-rouges-meringue.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-08-03"
+  "last_updated": "2026-08-04"
 }
