@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "gaspacho-andalou-recette-fraiche",
+      "title": "Gaspacho andalou recette fraîche : le vrai goût d'Espagne",
+      "meta_description": "Découvrez la recette authentique du gaspacho andalou : tomates mûres, poivrons, concombre et un filet d'huile d'olive pour un été plein de fraîcheur.",
+      "category": "Soupes",
+      "emoji": "Soupes",
+      "cook_time": "2h frigo",
+      "prep_time": "15 min",
+      "servings": 6,
+      "date_iso": "2026-08-06",
+      "date_display": "06/08/2026",
+      "url": "recettes/gaspacho-andalou-recette-fraiche.html"
+    },
+    {
       "slug": "tajine-de-poulet-citron-confit-olives",
       "title": "Tajine de poulet citron confit et olives à la marocaine",
       "meta_description": "Recette authentique de tajine de poulet, citron confit et olives violettes, mijoté aux épices douces. Un plat parfumé et fondant, facile à réussir.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-06-08",
       "date_display": "8 juin 2026",
       "url": "recettes/profiteroles-choux-creme-glacee-chocolat.html"
-    },
-    {
-      "slug": "gaspacho-andalou-recette-fraiche",
-      "title": "Gaspacho Andalou Authentique - Recette Fraîche de Cordoue",
-      "meta_description": "Découvrez le vrai gaspacho andalou de Cordoue avec cette recette traditionnelle. Tomates parfumées, pain rassis et huile d'olive pour un été rafraîchissant.",
-      "category": "Soupes",
-      "emoji": "🥣",
-      "cook_time": "2h frigo",
-      "prep_time": "15 min",
-      "servings": 6,
-      "date_iso": "2026-06-07",
-      "date_display": "7 juin 2026",
-      "url": "recettes/gaspacho-andalou-recette-fraiche.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-08-05"
+  "last_updated": "2026-08-06"
 }
