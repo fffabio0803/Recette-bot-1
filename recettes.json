@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "profiteroles-choux-creme-glacee-chocolat",
+      "title": "Profiteroles maison : choux, glace vanille et chocolat",
+      "meta_description": "Recette authentique de profiteroles au choux croustillants, glace vanille et sauce chocolat coulante. Dessert français incontournable, facile et gourmand.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "40 min",
+      "prep_time": "20 min",
+      "servings": 8,
+      "date_iso": "2026-08-07",
+      "date_display": "07/08/2026",
+      "url": "recettes/profiteroles-choux-creme-glacee-chocolat.html"
+    },
+    {
       "slug": "gaspacho-andalou-recette-fraiche",
       "title": "Gaspacho andalou recette fraîche : le vrai goût d'Espagne",
       "meta_description": "Découvrez la recette authentique du gaspacho andalou : tomates mûres, poivrons, concombre et un filet d'huile d'olive pour un été plein de fraîcheur.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-06-09",
       "date_display": "9 juin 2026",
       "url": "recettes/saumon-gravlax-maison-aneth-citron.html"
-    },
-    {
-      "slug": "profiteroles-choux-creme-glacee-chocolat",
-      "title": "Profiteroles aux Choux Glacés, Sauce Chocolat Grand Marnier",
-      "meta_description": "Découvrez la recette authentique des profiteroles de Jean Avice, pâtissier de Napoléon. Choux craquants, glace vanille et sauce chocolat au Grand Marnier.",
-      "category": "Desserts",
-      "emoji": "🍰",
-      "cook_time": "40 min",
-      "prep_time": "20 min",
-      "servings": 8,
-      "date_iso": "2026-06-08",
-      "date_display": "8 juin 2026",
-      "url": "recettes/profiteroles-choux-creme-glacee-chocolat.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-08-06"
+  "last_updated": "2026-08-07"
 }
