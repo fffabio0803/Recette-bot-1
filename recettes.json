@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "saumon-gravlax-maison-aneth-citron",
+      "title": "Saumon Gravlax Maison à l'Aneth et Citron Facile",
+      "meta_description": "Recette du saumon gravlax maison mariné à l'aneth et citron. Technique traditionnelle scandinave expliquée pas à pas pour un résultat digne d'un chef.",
+      "category": "Poisson",
+      "emoji": "Poisson",
+      "cook_time": "48h",
+      "prep_time": "20 min",
+      "servings": 8,
+      "date_iso": "2026-08-08",
+      "date_display": "08/08/2026",
+      "url": "recettes/saumon-gravlax-maison-aneth-citron.html"
+    },
+    {
       "slug": "profiteroles-choux-creme-glacee-chocolat",
       "title": "Profiteroles maison : choux, glace vanille et chocolat",
       "meta_description": "Recette authentique de profiteroles au choux croustillants, glace vanille et sauce chocolat coulante. Dessert français incontournable, facile et gourmand.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-06-10",
       "date_display": "10 juin 2026",
       "url": "recettes/tartiflette-reblochon-pommes-de-terre.html"
-    },
-    {
-      "slug": "saumon-gravlax-maison-aneth-citron",
-      "title": "Saumon gravlax maison à l'aneth et citron - Recette authentique",
-      "meta_description": "Découvrez la vraie recette du saumon gravlax maison parfumé à l'aneth frais et citron. Technique de chef pour un résultat exceptionnel en 48h.",
-      "category": "Poisson",
-      "emoji": "🐟",
-      "cook_time": "48h",
-      "prep_time": "20 min",
-      "servings": 8,
-      "date_iso": "2026-06-09",
-      "date_display": "9 juin 2026",
-      "url": "recettes/saumon-gravlax-maison-aneth-citron.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-08-07"
+  "last_updated": "2026-08-08"
 }
