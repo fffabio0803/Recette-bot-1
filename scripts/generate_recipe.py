@@ -12,6 +12,14 @@ from pathlib import Path
 SITE_URL = "https://fffabio0803.github.io/Recette-bot-1"
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
+PILOT_RECIPE_SLUGS = {
+    "saumon-gravlax-maison-aneth-citron",
+    "carbonara-authentique-recette-romaine",
+    "gaspacho-andalou-recette-fraiche",
+    "tarte-tatin-pommes-caramel-facile",
+    "poulet-roti-herbes-de-provence-facile",
+}
+
 
 RECIPES = [
     ("poulet roti herbes de provence facile", "Volaille", "Volaille", "45 min", "15 min", 4),
@@ -117,6 +125,26 @@ def duration_to_iso8601(value):
         duration = "PT0M"
 
     return duration
+
+
+def is_rest_time(value):
+    text = str(value).lower()
+    return any(
+        marker in text
+        for marker in ("frigo", "repos", "congelateur", "congélateur")
+    ) or str(value).strip() == "48h"
+
+
+def pilot_image_url(recipe):
+    if recipe["slug"] not in PILOT_RECIPE_SLUGS:
+        return ""
+
+    return (
+        SITE_URL
+        + "/assets/images/recettes/"
+        + recipe["slug"]
+        + ".jpg"
+    )
 
 
 def call_api(client, prompt):
@@ -328,9 +356,6 @@ def build_structured_data(recipe):
         "prepTime": duration_to_iso8601(
             recipe["prep_time"]
         ),
-        "cookTime": duration_to_iso8601(
-            recipe["cook_time"]
-        ),
         "recipeYield": (
             str(recipe["servings"])
             + " portions"
@@ -347,6 +372,16 @@ def build_structured_data(recipe):
         "url": canonical_url,
         "inLanguage": "fr-FR",
     }
+
+    if not is_rest_time(recipe["cook_time"]):
+        recipe_schema["cookTime"] = duration_to_iso8601(
+            recipe["cook_time"]
+        )
+
+    image_url = pilot_image_url(recipe)
+
+    if image_url:
+        recipe_schema["image"] = [image_url]
 
     graph = [recipe_schema]
 
@@ -458,6 +493,12 @@ def render_recipe_html(recipe):
     structured_data = build_structured_data(
         recipe
     )
+    image_url = pilot_image_url(recipe)
+    time_label = (
+        "Repos"
+        if is_rest_time(recipe["cook_time"])
+        else "Cuisson"
+    )
 
     page = "<!DOCTYPE html>\n"
     page += "<html lang='fr'>\n"
@@ -482,6 +523,14 @@ def render_recipe_html(recipe):
         + canonical_url
         + "'>\n"
     )
+    if image_url:
+        page += "<meta property='og:type' content='article'>\n"
+        page += (
+            "<meta property='og:image' content='"
+            + image_url
+            + "'>\n"
+        )
+        page += "<meta name='twitter:card' content='summary_large_image'>\n"
     page += (
         "<script type='application/ld+json'>"
         + structured_data
@@ -557,6 +606,16 @@ def render_recipe_html(recipe):
         "color:#4a3f35;margin-bottom:28px;font-style:italic;"
         "border-left:3px solid var(--terracotta);"
         "padding-left:16px;}\n"
+    )
+    page += (
+        ".recipe-hero{margin:0 0 24px;}"
+        ".recipe-hero img{display:block;width:100%;height:auto;"
+        "aspect-ratio:16/9;object-fit:cover;border:1px solid var(--rule);}"
+        ".recipe-hero figcaption{font-size:11px;color:var(--mid);"
+        "margin-top:7px;}"
+        ".editorial-note{font-size:13px;color:#5d5147;"
+        "background:#fff;border:1px solid var(--rule);padding:14px 16px;"
+        "margin:0 0 28px;}\n"
     )
     page += (
         "h2{font-family:'Cormorant Garamond',serif;"
@@ -669,7 +728,9 @@ def render_recipe_html(recipe):
         "<span>Préparation : <strong>"
         + escape(recipe["prep_time"])
         + "</strong></span>"
-        "<span>Cuisson : <strong>"
+        "<span>"
+        + time_label
+        + " : <strong>"
         + escape(recipe["cook_time"])
         + "</strong></span>"
         "<span>Portions : <strong>"
@@ -681,10 +742,29 @@ def render_recipe_html(recipe):
         "</div>\n"
     )
 
+    if image_url:
+        page += (
+            "<figure class='recipe-hero'>"
+            "<img src='"
+            + image_url
+            + "' alt='Illustration de "
+            + escape(recipe["title"])
+            + "' width='1672' height='941'>"
+            "<figcaption>Illustration culinaire générée pour cette recette.</figcaption>"
+            "</figure>\n"
+        )
+
     page += (
         "<p class='intro'>"
         + escape(recipe["intro"])
         + "</p>\n"
+    )
+    page += (
+        "<aside class='editorial-note'><strong>Note éditoriale :</strong> "
+        "cette recette a été préparée avec l’aide d’un outil d’intelligence "
+        "artificielle puis structurée pour publication. Adaptez toujours les "
+        "temps et les températures à vos ingrédients et à votre matériel."
+        "</aside>\n"
     )
 
     page += (
