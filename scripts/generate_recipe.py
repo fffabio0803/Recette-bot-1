@@ -15,25 +15,25 @@ ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 RECIPES = [
     ("poulet roti herbes de provence facile", "Volaille", "Volaille", "45 min", "15 min", 4),
-    ("carbonara authentique recette romaine", "Pates", "Pates", "20 min", "10 min", 2),
+    ("carbonara authentique recette romaine", "Pâtes", "Pâtes", "20 min", "10 min", 2),
     ("tarte tatin pommes caramel facile", "Desserts", "Desserts", "25 min", "35 min", 6),
     ("boeuf bourguignon recette traditionnelle", "Viande", "Viande", "4h", "30 min", 6),
-    ("risotto champignons cremeux facile", "Vegetarien", "Vegetarien", "25 min", "10 min", 4),
+    ("risotto champignons cremeux facile", "Végétarien", "Végétarien", "25 min", "10 min", 4),
     ("soupe a loignon gratinee parisienne", "Soupes", "Soupes", "45 min", "15 min", 4),
     ("salade nicoise traditionnelle recette", "Salades", "Salades", "0 min", "20 min", 4),
     ("blanquette de veau classique", "Viande", "Viande", "1h30", "30 min", 6),
     ("creme brulee recette facile maison", "Desserts", "Desserts", "30 min", "15 min", 4),
     ("quiche lorraine recette authentique", "Tartes", "Tartes", "35 min", "20 min", 6),
-    ("ratatouille provencale recette simple", "Vegetarien", "Vegetarien", "1h", "20 min", 6),
+    ("ratatouille provencale recette simple", "Végétarien", "Végétarien", "1h", "20 min", 6),
     ("mousse au chocolat legere rapide", "Desserts", "Desserts", "2h frigo", "15 min", 6),
-    ("gratin dauphinois cremeux facile", "Accompagnement", "Accompagnement", "1h", "15 min", 6),
+    ("gratin dauphinois cremeux facile", "Accompagnements", "Accompagnements", "1h", "15 min", 6),
     ("bouillabaisse marseillaise recette", "Poisson", "Poisson", "1h30", "30 min", 6),
     ("tarte au citron meringuee facile", "Desserts", "Desserts", "25 min", "30 min", 8),
     ("pot-au-feu recette traditionnelle", "Viande", "Viande", "3h", "30 min", 8),
-    ("omelette parfaite technique francaise", "Oeufs", "Oeufs", "5 min", "3 min", 2),
-    ("financiers amandes moelleux recette", "Gateaux", "Gateaux", "15 min", "12 min", 12),
+    ("omelette parfaite technique francaise", "Œufs", "Œufs", "5 min", "3 min", 2),
+    ("financiers amandes moelleux recette", "Gâteaux", "Gâteaux", "15 min", "12 min", 12),
     ("soupe de tomates fraiches basilic", "Soupes", "Soupes", "20 min", "10 min", 4),
-    ("pate a crepes recette de base", "Crepes", "Crepes", "1h repos", "15 min", 4),
+    ("pate a crepes recette de base", "Crêpes", "Crêpes", "1h repos", "15 min", 4),
     ("magret de canard sauce miel soja", "Volaille", "Volaille", "15 min", "10 min", 2),
     ("clafoutis cerises recette classique", "Desserts", "Desserts", "35 min", "10 min", 6),
     ("vichyssoise froide poireaux pommes de terre", "Soupes", "Soupes", "2h frigo", "20 min", 6),
@@ -45,11 +45,11 @@ RECIPES = [
     ("fondant chocolat coulant moelleux", "Desserts", "Desserts", "12 min", "10 min", 4),
     ("osso buco milanaise recette italienne", "Viande", "Viande", "1h30", "20 min", 4),
     ("veloute butternut courge gingembre", "Soupes", "Soupes", "30 min", "10 min", 4),
-    ("cake citron moelleux facile rapide", "Gateaux", "Gateaux", "40 min", "10 min", 8),
-    ("rillettes de saumon fume maison", "Entrees", "Entrees", "1h frigo", "10 min", 6),
+    ("cake citron moelleux facile rapide", "Gâteaux", "Gâteaux", "40 min", "10 min", 8),
+    ("rillettes de saumon fume maison", "Entrées", "Entrées", "1h frigo", "10 min", 6),
     ("pissaladiere nicoise oignons anchois", "Tartes", "Tartes", "45 min", "20 min", 6),
     ("far breton pruneaux recette bretonne", "Desserts", "Desserts", "45 min", "10 min", 8),
-    ("gnocchis pommes de terre maison", "Pates", "Pates", "30 min", "30 min", 4),
+    ("gnocchis pommes de terre maison", "Pâtes", "Pâtes", "30 min", "30 min", 4),
     ("pavlova fruits rouges meringue", "Desserts", "Desserts", "1h30", "20 min", 8),
     ("tajine de poulet citron confit olives", "Plats du monde", "Plats du monde", "1h30", "20 min", 4),
     ("gaspacho andalou recette fraiche", "Soupes", "Soupes", "2h frigo", "15 min", 6),
@@ -59,11 +59,11 @@ RECIPES = [
     ("panna cotta vanille coulis fruits", "Desserts", "Desserts", "3h frigo", "10 min", 4),
     ("poulet basquaise tomates poivrons", "Volaille", "Volaille", "1h", "20 min", 4),
     ("salade de lentilles vinaigrette moutarde", "Salades", "Salades", "30 min", "10 min", 4),
-    ("madeleine recette classique bosse", "Gateaux", "Gateaux", "1h repos", "12 min", 16),
-    ("tortilla espagnole pommes de terre oignon", "Oeufs", "Oeufs", "30 min", "15 min", 4),
+    ("madeleine recette classique bosse", "Gâteaux", "Gâteaux", "1h repos", "12 min", 16),
+    ("tortilla espagnole pommes de terre oignon", "Œufs", "Œufs", "30 min", "15 min", 4),
     ("baba au rhum recette traditionnelle", "Desserts", "Desserts", "45 min", "20 min", 6),
     ("brandade de morue maison recette", "Poisson", "Poisson", "30 min", "20 min", 6),
-    ("oeufs cocotte creme fraiche facile", "Oeufs", "Oeufs", "15 min", "5 min", 2),
+    ("oeufs cocotte creme fraiche facile", "Œufs", "Œufs", "15 min", "5 min", 2),
     ("sorbet mangue citron vert recette", "Desserts", "Desserts", "4h congelateur", "10 min", 6),
     ("roti de porc moutarde miel recette", "Viande", "Viande", "1h", "10 min", 6),
     ("creme caramel renversee classique", "Desserts", "Desserts", "45 min", "15 min", 6),
@@ -71,9 +71,9 @@ RECIPES = [
     ("daurade royale four citron fenouil", "Poisson", "Poisson", "25 min", "10 min", 2),
     ("ile flottante oeufs neige creme anglaise", "Desserts", "Desserts", "30 min", "20 min", 4),
     ("salade caesar poulet grille maison", "Salades", "Salades", "0 min", "20 min", 2),
-    ("pain perdu brioche recette facile", "Petit-dejeuner", "Petit-dejeuner", "10 min", "5 min", 2),
+    ("pain perdu brioche recette facile", "Petit-déjeuner", "Petit-déjeuner", "10 min", "5 min", 2),
     ("coq au vin rouge champignons lardons", "Volaille", "Volaille", "2h", "30 min", 6),
-    ("terrine de campagne recette maison", "Entrees", "Entrees", "24h", "30 min", 10),
+    ("terrine de campagne recette maison", "Entrées", "Entrées", "24h", "30 min", 10),
 ]
 
 
@@ -559,13 +559,6 @@ def render_recipe_html(recipe):
         "padding-left:16px;}\n"
     )
     page += (
-        ".ad-box{background:var(--warm);"
-        "border:1px dashed var(--rule);display:flex;"
-        "align-items:center;justify-content:center;"
-        "font-size:10px;color:var(--mid);letter-spacing:2px;"
-        "text-transform:uppercase;margin:20px 0;height:90px;}\n"
-    )
-    page += (
         "h2{font-family:'Cormorant Garamond',serif;"
         "font-size:26px;font-weight:700;font-style:italic;"
         "margin:28px 0 16px;padding-bottom:8px;"
@@ -695,12 +688,6 @@ def render_recipe_html(recipe):
     )
 
     page += (
-        "<div class='ad-box'>"
-        "[ Google AdSense 728x90 ]"
-        "</div>\n"
-    )
-
-    page += (
         "<h2>Ingrédients</h2>"
         "<ul class='ingredients-list'>"
         + ingredients_html
@@ -711,12 +698,6 @@ def render_recipe_html(recipe):
         "<h2>Préparation</h2>"
         + steps_html
         + "\n"
-    )
-
-    page += (
-        "<div class='ad-box'>"
-        "[ Google AdSense 728x90 ]"
-        "</div>\n"
     )
 
     page += (
@@ -747,6 +728,18 @@ def render_recipe_html(recipe):
         "<p>"
         + str(datetime.now().year)
         + " Recettes Maison</p>"
+        "<p><a href='"
+        + SITE_URL
+        + "/a-propos.html' style='color:#ccc'>À propos</a> · "
+        "<a href='"
+        + SITE_URL
+        + "/contact.html' style='color:#ccc'>Contact</a> · "
+        "<a href='"
+        + SITE_URL
+        + "/confidentialite.html' style='color:#ccc'>Confidentialité</a> · "
+        "<a href='"
+        + SITE_URL
+        + "/mentions-legales.html' style='color:#ccc'>Mentions légales</a></p>"
         "</footer>\n"
     )
 

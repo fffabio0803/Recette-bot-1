@@ -29,6 +29,9 @@ jobs:
           SITE_URL: ${{ secrets.SITE_URL }}
         run: python scripts/generate_recipe.py
 
+      - name: Structure SEO statique
+        run: node scripts/refresh_static_structure.mjs
+
       - name: Publication
         run: |
           git config user.email "bot@recettes-maison.fr"
