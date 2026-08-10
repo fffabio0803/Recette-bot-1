@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "panna-cotta-vanille-coulis-fruits",
+      "title": "Recette Panna Cotta Vanille et Coulis de Fruits Rouges Facile",
+      "meta_description": "Panna cotta vanille onctueuse nappée d'un coulis de fruits rouges maison : recette facile, crémeuse et parfumée, idéale à préparer la veille pour vos repas.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "3h frigo",
+      "prep_time": "10 min",
+      "servings": 4,
+      "date_iso": "2026-08-10",
+      "date_display": "10/08/2026",
+      "url": "recettes/panna-cotta-vanille-coulis-fruits.html"
+    },
+    {
       "slug": "tartiflette-reblochon-pommes-de-terre",
       "title": "Tartiflette au reblochon fermier et pommes de terre",
       "meta_description": "Recette authentique de la tartiflette savoyarde : reblochon fondant, lardons dorés, oignons confits et pommes de terre fermes. Réconfort garanti en 1h.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-06-12",
       "date_display": "12 juin 2026",
       "url": "recettes/poulet-basquaise-tomates-poivrons.html"
-    },
-    {
-      "slug": "panna-cotta-vanille-coulis-fruits",
-      "title": "Panna Cotta Vanille Coulis Fruits Rouges Maison",
-      "meta_description": "Découvrez ma panna cotta vanille authentique avec coulis de fruits rouges. Recette de chef avec gélification parfaite et saveurs intenses.",
-      "category": "Desserts",
-      "emoji": "🍰",
-      "cook_time": "3h frigo",
-      "prep_time": "10 min",
-      "servings": 4,
-      "date_iso": "2026-06-11",
-      "date_display": "11 juin 2026",
-      "url": "recettes/panna-cotta-vanille-coulis-fruits.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-08-09"
+  "last_updated": "2026-08-10"
 }
