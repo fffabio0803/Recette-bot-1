@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "poulet-basquaise-tomates-poivrons",
+      "title": "Poulet Basquaise Traditionnel aux Poivrons et Tomates",
+      "meta_description": "Recette authentique du poulet basquaise mijoté avec poivrons, tomates et piment doux. Un classique du Sud-Ouest, savoureux et facile a realiser.",
+      "category": "Volaille",
+      "emoji": "Volaille",
+      "cook_time": "1h",
+      "prep_time": "20 min",
+      "servings": 4,
+      "date_iso": "2026-08-11",
+      "date_display": "11/08/2026",
+      "url": "recettes/poulet-basquaise-tomates-poivrons.html"
+    },
+    {
       "slug": "panna-cotta-vanille-coulis-fruits",
       "title": "Recette Panna Cotta Vanille et Coulis de Fruits Rouges Facile",
       "meta_description": "Panna cotta vanille onctueuse nappée d'un coulis de fruits rouges maison : recette facile, crémeuse et parfumée, idéale à préparer la veille pour vos repas.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-06-13",
       "date_display": "13 juin 2026",
       "url": "recettes/salade-de-lentilles-vinaigrette-moutarde.html"
-    },
-    {
-      "slug": "poulet-basquaise-tomates-poivrons",
-      "title": "Poulet Basquaise aux Tomates et Poivrons - Recette Authentique",
-      "meta_description": "Découvrez le vrai poulet basquaise avec tomates confites et poivrons grillés. Une recette traditionnelle du Pays Basque, généreuse et parfumée.",
-      "category": "Volaille",
-      "emoji": "🍗",
-      "cook_time": "1h",
-      "prep_time": "20 min",
-      "servings": 4,
-      "date_iso": "2026-06-12",
-      "date_display": "12 juin 2026",
-      "url": "recettes/poulet-basquaise-tomates-poivrons.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-08-10"
+  "last_updated": "2026-08-11"
 }
