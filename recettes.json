@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "tortilla-espagnole-pommes-de-terre-oignon",
+      "title": "Tortilla Espagnole Authentique aux Pommes de Terre et Oignon",
+      "meta_description": "Recette traditionnelle de tortilla espagnole moelleuse : pommes de terre fondantes, oignon caramelise et cuisson maitrisee pour un resultat parfait.",
+      "category": "Œufs",
+      "emoji": "Œufs",
+      "cook_time": "30 min",
+      "prep_time": "15 min",
+      "servings": 4,
+      "date_iso": "2026-08-14",
+      "date_display": "14/08/2026",
+      "url": "recettes/tortilla-espagnole-pommes-de-terre-oignon.html"
+    },
+    {
       "slug": "madeleine-recette-classique-bosse",
       "title": "Madeleines classiques à la bosse : la recette du chef",
       "meta_description": "Découvrez la véritable recette des madeleines avec leur bosse caractéristique, moelleuses et parfumées au beurre noisette et au citron.",
@@ -389,19 +402,6 @@
       "date_iso": "2026-07-15",
       "date_display": "15 juillet 2026",
       "url": "recettes/omelette-parfaite-technique-francaise.html"
-    },
-    {
-      "slug": "tortilla-espagnole-pommes-de-terre-oignon",
-      "title": "Tortilla Espagnole Traditionnelle aux Pommes de Terre et Oignon",
-      "meta_description": "Découvrez la véritable recette de la tortilla española avec pommes de terre fondantes et oignons confits. Technique de chef pour une tortilla parfaite.",
-      "category": "Œufs",
-      "emoji": "🍳",
-      "cook_time": "30 min",
-      "prep_time": "15 min",
-      "servings": 4,
-      "date_iso": "2026-06-15",
-      "date_display": "15 juin 2026",
-      "url": "recettes/tortilla-espagnole-pommes-de-terre-oignon.html"
     },
     {
       "slug": "pot-au-feu-recette-traditionnelle",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-08-13"
+  "last_updated": "2026-08-14"
 }
