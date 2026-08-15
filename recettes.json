@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "baba-au-rhum-recette-traditionnelle",
+      "title": "Baba au Rhum Traditionnel : la Recette Authentique",
+      "meta_description": "Baba au rhum moelleux et imbibe comme il se doit : pate levee aerienne, sirop parfume au rhum ambre et chantilly maison. Recette pas a pas.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "45 min",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-08-15",
+      "date_display": "15/08/2026",
+      "url": "recettes/baba-au-rhum-recette-traditionnelle.html"
+    },
+    {
       "slug": "tortilla-espagnole-pommes-de-terre-oignon",
       "title": "Tortilla Espagnole Authentique aux Pommes de Terre et Oignon",
       "meta_description": "Recette traditionnelle de tortilla espagnole moelleuse : pommes de terre fondantes, oignon caramelise et cuisson maitrisee pour un resultat parfait.",
@@ -768,19 +781,6 @@
       "url": "recettes/brandade-de-morue-maison-recette.html"
     },
     {
-      "slug": "baba-au-rhum-recette-traditionnelle",
-      "title": "Baba au Rhum Traditionnel - Recette Authentique du Chef",
-      "meta_description": "Découvrez la véritable recette du baba au rhum traditionnel avec sa pâte levée parfaite et son sirop parfumé. Secrets de chef inclus.",
-      "category": "Desserts",
-      "emoji": "🍰",
-      "cook_time": "45 min",
-      "prep_time": "20 min",
-      "servings": 6,
-      "date_iso": "2026-04-17",
-      "date_display": "17 avril 2026",
-      "url": "recettes/baba-au-rhum-recette-traditionnelle.html"
-    },
-    {
       "slug": "moules-marini-res-vin-blanc-facile",
       "title": "Moules marinières au vin blanc facile - Recette traditionnelle",
       "meta_description": "Découvrez la vraie recette des moules marinières au vin blanc. Simple, rapide et savoureuse, cette recette traditionnelle ravira toute la famille.",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-08-14"
+  "last_updated": "2026-08-15"
 }
