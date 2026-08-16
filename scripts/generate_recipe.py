@@ -238,6 +238,12 @@ def generate_recipe(recipe_data):
         "N'invente pas de souvenir personnel, de mentor, "
         "de chef rencontre ou d'evenement historique precis. "
         "Ne presente jamais une information incertaine comme un fait. "
+        "Interdiction d'employer des promesses ou origines invérifiables comme "
+        "'recette authentique', 'vraie recette', 'secret de grand-mere', "
+        "'tradition ancestrale', 'transmise de generation en generation' ou "
+        "une date historique precise sans source. Decris plutot le resultat "
+        "attendu, un geste technique observable, une erreur concrete a eviter, "
+        "une substitution realiste et une methode de conservation prudente. "
         "Zero phrase generique."
     )
 
@@ -329,6 +335,7 @@ def build_structured_data(recipe):
                 "position": step.get("num"),
                 "name": str(step.get("title", "")),
                 "text": str(step.get("text", "")),
+                "url": canonical_url + "#etape-" + str(step.get("num", "")),
             }
         )
 
@@ -344,7 +351,7 @@ def build_structured_data(recipe):
         "author": {
             "@type": "Organization",
             "name": "Recettes Maison",
-            "url": SITE_URL + "/",
+            "url": SITE_URL + "/a-propos.html",
         },
         "publisher": {
             "@type": "Organization",
@@ -383,7 +390,32 @@ def build_structured_data(recipe):
     if image_url:
         recipe_schema["image"] = [image_url]
 
-    graph = [recipe_schema]
+    breadcrumb_schema = {
+        "@type": "BreadcrumbList",
+        "@id": canonical_url + "#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": SITE_URL + "/",
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Toutes les recettes",
+                "item": SITE_URL + "/toutes-les-recettes.html",
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": recipe["title"],
+                "item": canonical_url,
+            },
+        ],
+    }
+
+    graph = [recipe_schema, breadcrumb_schema]
 
     faq_entities = []
 
@@ -445,7 +477,9 @@ def render_recipe_html(recipe):
 
     for step in recipe["steps"]:
         steps_html += (
-            "<div class='step'>"
+            "<div class='step' id='etape-"
+            + escape(step.get("num", ""))
+            + "'>"
             "<div class='step-num'>"
             + escape(step.get("num", ""))
             + "</div>"
@@ -761,9 +795,12 @@ def render_recipe_html(recipe):
     )
     page += (
         "<aside class='editorial-note'><strong>Note éditoriale :</strong> "
-        "cette recette a été préparée avec l’aide d’un outil d’intelligence "
-        "artificielle puis structurée pour publication. Adaptez toujours les "
-        "temps et les températures à vos ingrédients et à votre matériel."
+        "cette recette a été rédigée avec l’aide d’un outil d’intelligence "
+        "artificielle, puis soumise à des contrôles de cohérence culinaire et "
+        "de structure. Consultez <a href='"
+        + SITE_URL
+        + "/a-propos.html'>notre méthode éditoriale</a> et adaptez les temps "
+        "à vos ingrédients et à votre matériel."
         "</aside>\n"
     )
 
