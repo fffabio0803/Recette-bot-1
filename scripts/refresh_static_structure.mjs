@@ -104,6 +104,13 @@ for (const filename of fs.readdirSync(path.join(root, "recettes"))) {
     "https://latablemijote.fr",
   );
   html = html.replaceAll("Recettes Maison", "La Table Mijote");
+  html = html.replaceAll("Recettes <em>Maison</em>", "La Table <em>Mijote</em>");
+  html = html.replaceAll("--terracotta:#c4622d", "--terracotta:#a7441e");
+  html = html.replaceAll("--mid:#9a8f82", "--mid:#675d52");
+  if (/<div class=["']container["']>/i.test(html) && !/<main class=["']container["']>/i.test(html)) {
+    html = html.replace(/<div class=["']container["']>/i, "<main class='container'>");
+    html = html.replace(/<\/div>\s*(<footer)/i, "</main>\n$1");
+  }
   html = html.replace(/\s*<link[^>]+fonts\\.googleapis\\.com[^>]*>/gi, "");
   html = html.replace(/\s*<link[^>]+fonts\\.gstatic\\.com[^>]*>/gi, "");
   html = html.replaceAll("font-family:'Cormorant Garamond',serif", "font-family:Georgia,serif");
