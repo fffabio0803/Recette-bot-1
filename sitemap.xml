@@ -2,15 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fffabio0803.github.io/Recette-bot-1/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://fffabio0803.github.io/Recette-bot-1/toutes-les-recettes.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/brandade-de-morue-maison-recette.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/baba-au-rhum-recette-traditionnelle.html</loc>
@@ -363,12 +369,6 @@
   <url>
     <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/oeufs-cocotte-creme-fraiche-facile.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fffabio0803.github.io/Recette-bot-1/recettes/brandade-de-morue-maison-recette.html</loc>
-    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

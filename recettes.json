@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "brandade-de-morue-maison-recette",
+      "title": "Brandade de Morue Maison : Recette Traditionnelle Nîmoise",
+      "meta_description": "Recette authentique de brandade de morue maison, onctueuse et parfumée à l'huile d'olive et à l'ail, façon nîmoise, sans pomme de terre.",
+      "category": "Poisson",
+      "emoji": "Poisson",
+      "cook_time": "30 min",
+      "prep_time": "20 min",
+      "servings": 6,
+      "date_iso": "2026-08-16",
+      "date_display": "16/08/2026",
+      "url": "recettes/brandade-de-morue-maison-recette.html"
+    },
+    {
       "slug": "baba-au-rhum-recette-traditionnelle",
       "title": "Baba au Rhum Traditionnel : la Recette Authentique",
       "meta_description": "Baba au rhum moelleux et imbibe comme il se doit : pate levee aerienne, sirop parfume au rhum ambre et chantilly maison. Recette pas a pas.",
@@ -768,19 +781,6 @@
       "url": "recettes/oeufs-cocotte-creme-fraiche-facile.html"
     },
     {
-      "slug": "brandade-de-morue-maison-recette",
-      "title": "Brandade de morue authentique de Nîmes - recette traditionnelle",
-      "meta_description": "Découvrez la vraie brandade de morue nîmoise avec cette recette ancestrale. Technique professionnelle pour un résultat crémeux et savoureux.",
-      "category": "Poisson",
-      "emoji": "🐟",
-      "cook_time": "30 min",
-      "prep_time": "20 min",
-      "servings": 6,
-      "date_iso": "2026-04-18",
-      "date_display": "18 avril 2026",
-      "url": "recettes/brandade-de-morue-maison-recette.html"
-    },
-    {
       "slug": "moules-marini-res-vin-blanc-facile",
       "title": "Moules marinières au vin blanc facile - Recette traditionnelle",
       "meta_description": "Découvrez la vraie recette des moules marinières au vin blanc. Simple, rapide et savoureuse, cette recette traditionnelle ravira toute la famille.",
@@ -794,5 +794,5 @@
       "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
-  "last_updated": "2026-08-15"
+  "last_updated": "2026-08-16"
 }
