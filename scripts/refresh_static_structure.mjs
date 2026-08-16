@@ -104,6 +104,13 @@ for (const filename of fs.readdirSync(path.join(root, "recettes"))) {
     "https://latablemijote.fr",
   );
   html = html.replaceAll("Recettes Maison", "La Table Mijote");
+  html = html.replace(/\s*<link[^>]+fonts\\.googleapis\\.com[^>]*>/gi, "");
+  html = html.replace(/\s*<link[^>]+fonts\\.gstatic\\.com[^>]*>/gi, "");
+  html = html.replaceAll("font-family:'Cormorant Garamond',serif", "font-family:Georgia,serif");
+  html = html.replaceAll("font-family:'Jost',sans-serif", "font-family:system-ui,-apple-system,'Segoe UI',sans-serif");
+  if (!html.includes("/favicon.svg")) {
+    html = html.replace(/(<meta[^>]+name=["']viewport["'][^>]*>)/i, `$1\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">`);
+  }
   html = html.replace(/<div class=['"]ad-box['"]>\s*\[ Google AdSense 728x90 \]\s*<\/div>/g, "");
   const slug = path.basename(filename, ".html");
   const related = relatedSection(slug);
