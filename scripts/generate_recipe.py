@@ -354,12 +354,12 @@ def build_structured_data(recipe):
         "description": recipe["meta_description"],
         "author": {
             "@type": "Organization",
-            "name": "Recettes Maison",
+            "name": "La Table Mijote",
             "url": SITE_URL + "/a-propos.html",
         },
         "publisher": {
             "@type": "Organization",
-            "name": "Recettes Maison",
+            "name": "La Table Mijote",
             "url": SITE_URL + "/",
         },
         "datePublished": recipe["date_iso"],
@@ -554,7 +554,7 @@ def render_recipe_html(recipe):
     page += (
         "<title>"
         + escape(recipe["title"])
-        + " - Recettes Maison</title>\n"
+        + " - La Table Mijote</title>\n"
     )
     page += (
         "<link rel='canonical' href='"
@@ -844,11 +844,11 @@ def render_recipe_html(recipe):
         "<div style=\"font-family:'Cormorant Garamond',serif;"
         "font-size:28px;font-weight:700;color:#fff;"
         "margin-bottom:8px;\">"
-        "Recettes Maison"
+        "La Table Mijote"
         "</div>"
         "<p>"
         + str(datetime.now().year)
-        + " Recettes Maison</p>"
+        + " La Table Mijote</p>"
         "<p><a href='"
         + SITE_URL
         + "/a-propos.html' style='color:#ccc'>À propos</a> · "
@@ -942,7 +942,7 @@ def generate_sitemap(index_data):
 
 def main():
     print(
-        "Generateur Recettes Maison - "
+        "Generateur La Table Mijote - "
         + datetime.now().strftime("%Y-%m-%d %H:%M")
     )
 
