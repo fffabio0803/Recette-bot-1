@@ -19,6 +19,9 @@ PILOT_RECIPE_SLUGS = {
     "tarte-tatin-pommes-caramel-facile",
     "poulet-roti-herbes-de-provence-facile",
     "boeuf-bourguignon-recette-traditionnelle",
+    "tiramisu-recette-italienne-originale",
+    "quiche-lorraine-recette-authentique",
+    "gratin-dauphinois-cremeux-facile",
 }
 
 
