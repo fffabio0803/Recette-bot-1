@@ -9,7 +9,7 @@ from datetime import datetime
 from pathlib import Path
 
 
-SITE_URL = "https://fffabio0803.github.io/Recette-bot-1"
+SITE_URL = "https://latablemijote.fr"
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 PILOT_RECIPE_SLUGS = {
