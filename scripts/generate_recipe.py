@@ -22,6 +22,9 @@ PILOT_RECIPE_SLUGS = {
     "tiramisu-recette-italienne-originale",
     "quiche-lorraine-recette-authentique",
     "gratin-dauphinois-cremeux-facile",
+    "ratatouille-provencale-recette-simple",
+    "mousse-au-chocolat-legere-rapide",
+    "pate-a-crepes-recette-de-base",
 }
 
 
