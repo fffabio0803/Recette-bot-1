@@ -22,7 +22,7 @@ SITEMAP_TEXT_FILE = ROOT_DIR / "sitemap.txt"
 
 SITE_URL = os.environ.get(
     "SITE_URL",
-    "https://fffabio0803.github.io/Recette-bot-1",
+    "https://latablemijote.fr",
 ).rstrip("/")
 
 
