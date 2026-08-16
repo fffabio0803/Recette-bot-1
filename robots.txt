@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://fffabio0803.github.io/Recette-bot-1/sitemap.xml
+Sitemap: https://latablemijote.fr/sitemap.xml
