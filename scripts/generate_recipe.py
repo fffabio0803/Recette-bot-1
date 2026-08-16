@@ -588,8 +588,8 @@ def render_recipe_html(recipe):
     page += "<style>\n"
     page += (
         ":root{--cream:#faf6f0;--warm:#f2ebe0;"
-        "--ink:#1c1812;--terracotta:#c4622d;"
-        "--sage:#7a8c6e;--rule:#e0d8cc;--mid:#9a8f82;}\n"
+        "--ink:#1c1812;--terracotta:#a7441e;"
+        "--sage:#7a8c6e;--rule:#e0d8cc;--mid:#675d52;}\n"
     )
     page += (
         "*{margin:0;padding:0;box-sizing:border-box;}"
@@ -729,7 +729,7 @@ def render_recipe_html(recipe):
         "<a href='"
         + SITE_URL
         + "/' class='site-name'>"
-        "Recettes <em>Maison</em>"
+        "La Table <em>Mijote</em>"
         "</a>"
         "<nav>"
         "<a href='"
