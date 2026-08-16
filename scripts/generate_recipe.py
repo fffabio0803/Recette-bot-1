@@ -18,6 +18,7 @@ PILOT_RECIPE_SLUGS = {
     "gaspacho-andalou-recette-fraiche",
     "tarte-tatin-pommes-caramel-facile",
     "poulet-roti-herbes-de-provence-facile",
+    "boeuf-bourguignon-recette-traditionnelle",
 }
 
 
