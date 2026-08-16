@@ -117,6 +117,12 @@ for (const filename of fs.readdirSync(path.join(root, "recettes"))) {
       html = html.replace("</style>", ".related-recipes ul{display:grid;gap:10px;list-style:none}.related-recipes a{color:var(--terracotta);font-weight:500;text-decoration:none}.related-recipes a:hover{text-decoration:underline}\n</style>");
     }
   }
+  if (!html.includes("/charte-editoriale.html")) {
+    html = html.replace(
+      /(<a href=["']https:\/\/latablemijote\.fr\/a-propos\.html["'][^>]*>À propos<\/a>)/i,
+      `$1 · <a href="https://latablemijote.fr/charte-editoriale.html" style="color:#ccc">Charte éditoriale</a>`,
+    );
+  }
   if (!html.includes("/a-propos.html")) {
     html = html.replace(
       "</footer>",
@@ -128,6 +134,7 @@ for (const filename of fs.readdirSync(path.join(root, "recettes"))) {
 
 const trustPages = [
   "a-propos.html",
+  "charte-editoriale.html",
   "contact.html",
   "confidentialite.html",
   "mentions-legales.html",
