@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const SITE = 'https://fffabio0803.github.io/Recette-bot-1';
+const SITE = 'https://latablemijote.fr';
 
 const pilots = {
   'saumon-gravlax-maison-aneth-citron': {
@@ -23,6 +23,10 @@ const pilots = {
   'poulet-roti-herbes-de-provence-facile': {
     prep: '15 min', secondaryLabel: 'Cuisson', secondary: '45 min',
     related: ['poulet-basquaise-tomates-poivrons', 'tajine-de-poulet-citron-confit-olives', 'ratatouille-provencale-recette-simple'],
+  },
+  'boeuf-bourguignon-recette-traditionnelle': {
+    prep: '30 min', secondaryLabel: 'Cuisson', secondary: '4 h',
+    related: ['blanquette-de-veau-classique', 'pot-au-feu-recette-traditionnelle', 'osso-buco-milanaise-recette-italienne'],
   },
 };
 
