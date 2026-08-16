@@ -544,6 +544,7 @@ def render_recipe_html(recipe):
     page = "<!DOCTYPE html>\n"
     page += "<html lang='fr'>\n"
     page += "<head>\n"
+    page += "<link rel='icon' href='/favicon.svg' type='image/svg+xml'>\n"
     page += "<meta charset='UTF-8'>\n"
     page += (
         "<meta name='viewport' "
@@ -593,13 +594,13 @@ def render_recipe_html(recipe):
     page += (
         "*{margin:0;padding:0;box-sizing:border-box;}"
         "body{background:var(--cream);color:var(--ink);"
-        "font-family:'Jost',sans-serif;font-weight:300;"
+        "font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-weight:300;"
         "line-height:1.6;}\n"
     )
     page += (
         ".masthead{border-bottom:2px solid var(--ink);"
         "text-align:center;padding:20px;}"
-        ".site-name{font-family:'Cormorant Garamond',serif;"
+        ".site-name{font-family:Georgia,serif;"
         "font-size:42px;font-weight:700;text-decoration:none;"
         "color:var(--ink);}"
         ".site-name em{color:var(--terracotta);}\n"
@@ -631,7 +632,7 @@ def render_recipe_html(recipe):
         "margin-bottom:12px;}\n"
     )
     page += (
-        "h1{font-family:'Cormorant Garamond',serif;"
+        "h1{font-family:Georgia,serif;"
         "font-size:clamp(28px,4vw,46px);font-weight:700;"
         "line-height:1.1;margin-bottom:16px;}\n"
     )
@@ -659,7 +660,7 @@ def render_recipe_html(recipe):
         "margin:0 0 28px;}\n"
     )
     page += (
-        "h2{font-family:'Cormorant Garamond',serif;"
+        "h2{font-family:Georgia,serif;"
         "font-size:26px;font-weight:700;font-style:italic;"
         "margin:28px 0 16px;padding-bottom:8px;"
         "border-bottom:1px solid var(--rule);}\n"
@@ -680,7 +681,7 @@ def render_recipe_html(recipe):
         ".step-num{width:48px;height:48px;"
         "background:var(--terracotta);color:#fff;"
         "display:flex;align-items:center;justify-content:center;"
-        "font-family:'Cormorant Garamond',serif;"
+        "font-family:Georgia,serif;"
         "font-size:22px;font-weight:700;}"
         ".step-body strong{display:block;font-size:15px;"
         "font-weight:600;margin-bottom:6px;}"
@@ -691,7 +692,7 @@ def render_recipe_html(recipe):
         ".tips{background:var(--warm);"
         "border-left:4px solid var(--sage);"
         "padding:20px 24px;margin:24px 0;}"
-        ".tips h3{font-family:'Cormorant Garamond',serif;"
+        ".tips h3{font-family:Georgia,serif;"
         "font-size:20px;font-weight:700;margin-bottom:12px;}"
         ".tips ul{list-style:none;}"
         ".tips li{padding:6px 0;font-size:14px;"
@@ -844,7 +845,7 @@ def render_recipe_html(recipe):
 
     page += (
         "<footer>"
-        "<div style=\"font-family:'Cormorant Garamond',serif;"
+        "<div style=\"font-family:Georgia,serif;"
         "font-size:28px;font-weight:700;color:#fff;"
         "margin-bottom:8px;\">"
         "La Table Mijote"
