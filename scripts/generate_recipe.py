@@ -150,7 +150,7 @@ def pilot_image_url(recipe):
         SITE_URL
         + "/assets/images/recettes/"
         + recipe["slug"]
-        + ".jpg"
+        + ".webp"
     )
 
 
@@ -789,7 +789,7 @@ def render_recipe_html(recipe):
             "<figure class='recipe-hero'>"
             "<img src='"
             + image_url
-            + "' alt='Illustration de "
+            + "' fetchpriority='high' decoding='async' alt='Illustration de "
             + escape(recipe["title"])
             + "' width='1672' height='941'>"
             "<figcaption>Illustration culinaire générée pour cette recette.</figcaption>"
