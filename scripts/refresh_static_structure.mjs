@@ -42,6 +42,21 @@ const cards = data.recettes.map((recipe) => `
   </a>
 </article>`).join("");
 
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Recettes de La Table Mijote",
+  url: "https://latablemijote.fr/toutes-les-recettes.html",
+  numberOfItems: data.recettes.length,
+  itemListElement: data.recettes.map((recipe, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: recipe.title,
+    url: `https://latablemijote.fr/${recipe.url}`,
+  })),
+};
+const itemListTag = `<script id="recipe-itemlist" type="application/ld+json">${JSON.stringify(itemListSchema)}</script>`;
+
 let listing = fs.readFileSync(listingPath, "utf8");
 listing = listing.replace(
   /<!-- STATIC_RECIPE_LINKS_START -->[\s\S]*?<!-- STATIC_RECIPE_LINKS_END -->/,
@@ -51,6 +66,11 @@ listing = listing.replace(
   /<span class="total-number" id="total-number">[^<]*<\/span>/,
   `<span class="total-number" id="total-number">${data.recettes.length}</span>`,
 );
+if (/<script id=["']recipe-itemlist["'][\s\S]*?<\/script>/i.test(listing)) {
+  listing = listing.replace(/<script id=["']recipe-itemlist["'][\s\S]*?<\/script>/i, itemListTag);
+} else {
+  listing = listing.replace("</head>", `${itemListTag}\n</head>`);
+}
 fs.writeFileSync(listingPath, listing);
 
 const recipesBySlug = new Map(data.recettes.map((recipe) => [
