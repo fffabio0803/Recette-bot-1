@@ -59,13 +59,17 @@ for (const filename of fs.readdirSync(path.join(root, "recettes"))) {
   let html = fs.readFileSync(recipePath, "utf8");
   html = html.replaceAll(
     "https://fffabio0803.github.io/recettes-maison",
+    "https://latablemijote.fr",
+  );
+  html = html.replaceAll(
     "https://fffabio0803.github.io/Recette-bot-1",
+    "https://latablemijote.fr",
   );
   html = html.replace(/<div class=['"]ad-box['"]>\s*\[ Google AdSense 728x90 \]\s*<\/div>/g, "");
   if (!html.includes("/a-propos.html")) {
     html = html.replace(
       "</footer>",
-      `<p><a href="https://fffabio0803.github.io/Recette-bot-1/a-propos.html" style="color:#ccc">À propos</a> · <a href="https://fffabio0803.github.io/Recette-bot-1/contact.html" style="color:#ccc">Contact</a> · <a href="https://fffabio0803.github.io/Recette-bot-1/confidentialite.html" style="color:#ccc">Confidentialité</a> · <a href="https://fffabio0803.github.io/Recette-bot-1/mentions-legales.html" style="color:#ccc">Mentions légales</a></p></footer>`,
+      `<p><a href="https://latablemijote.fr/a-propos.html" style="color:#ccc">À propos</a> · <a href="https://latablemijote.fr/contact.html" style="color:#ccc">Contact</a> · <a href="https://latablemijote.fr/confidentialite.html" style="color:#ccc">Confidentialité</a> · <a href="https://latablemijote.fr/mentions-legales.html" style="color:#ccc">Mentions légales</a></p></footer>`,
     );
   }
   fs.writeFileSync(recipePath, html);
@@ -80,7 +84,7 @@ const trustPages = [
 let sitemap = fs.readFileSync(sitemapPath, "utf8");
 const additions = trustPages
   .filter((page) => !sitemap.includes(`/${page}</loc>`))
-  .map((page) => `  <url>\n    <loc>https://fffabio0803.github.io/Recette-bot-1/${page}</loc>\n    <changefreq>yearly</changefreq>\n    <priority>0.3</priority>\n  </url>\n`)
+  .map((page) => `  <url>\n    <loc>https://latablemijote.fr/${page}</loc>\n    <changefreq>yearly</changefreq>\n    <priority>0.3</priority>\n  </url>\n`)
   .join("");
 sitemap = sitemap.replace("</urlset>", `${additions}</urlset>`);
 fs.writeFileSync(sitemapPath, sitemap);
