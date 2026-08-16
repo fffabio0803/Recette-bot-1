@@ -83,6 +83,7 @@ for (const filename of fs.readdirSync(path.join(root, "recettes"))) {
     "https://fffabio0803.github.io/Recette-bot-1",
     "https://latablemijote.fr",
   );
+  html = html.replaceAll("Recettes Maison", "La Table Mijote");
   html = html.replace(/<div class=['"]ad-box['"]>\s*\[ Google AdSense 728x90 \]\s*<\/div>/g, "");
   const slug = path.basename(filename, ".html");
   const related = relatedSection(slug);
