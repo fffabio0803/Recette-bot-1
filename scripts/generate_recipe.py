@@ -857,6 +857,9 @@ def render_recipe_html(recipe):
         + "/a-propos.html' style='color:#ccc'>À propos</a> · "
         "<a href='"
         + SITE_URL
+        + "/charte-editoriale.html' style='color:#ccc'>Charte éditoriale</a> · "
+        "<a href='"
+        + SITE_URL
         + "/contact.html' style='color:#ccc'>Contact</a> · "
         "<a href='"
         + SITE_URL
