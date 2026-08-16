@@ -64,8 +64,8 @@ for (const [slug, config] of Object.entries(pilots)) {
     .map((match, index) => ({'@type': 'HowToStep', position: index + 1, name: decode(match[2]), text: decode(match[3])}));
   const recipe = {
     '@type': 'Recipe', '@id': `${canonical}#recipe`, mainEntityOfPage: {'@type': 'WebPage', '@id': canonical},
-    name: title, description, image: [image], author: {'@type': 'Organization', name: 'Recettes Maison', url: `${SITE}/`},
-    publisher: {'@type': 'Organization', name: 'Recettes Maison', url: `${SITE}/`}, prepTime: iso(config.prep),
+    name: title, description, image: [image], author: {'@type': 'Organization', name: 'La Table Mijote', url: `${SITE}/`},
+    publisher: {'@type': 'Organization', name: 'La Table Mijote', url: `${SITE}/`}, prepTime: iso(config.prep),
     recipeYield: `${servings} portions`, recipeCategory: category, recipeCuisine: 'Cuisine maison',
     recipeIngredient: ingredients, recipeInstructions: steps, url: canonical, inLanguage: 'fr-FR',
   };
