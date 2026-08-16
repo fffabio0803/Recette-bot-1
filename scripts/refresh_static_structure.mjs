@@ -53,6 +53,24 @@ listing = listing.replace(
 );
 fs.writeFileSync(listingPath, listing);
 
+const recipesBySlug = new Map(data.recettes.map((recipe) => [
+  path.basename(recipe.url, ".html"),
+  recipe,
+]));
+
+const relatedSection = (slug) => {
+  const current = recipesBySlug.get(slug);
+  if (!current) return "";
+  const related = data.recettes
+    .filter((recipe) => recipe.category === current.category && path.basename(recipe.url, ".html") !== slug)
+    .slice(0, 3);
+  if (!related.length) return "";
+  const links = related.map((recipe) =>
+    `<li><a href="https://latablemijote.fr/${escapeHtml(recipe.url)}">${escapeHtml(recipe.title)}</a></li>`
+  ).join("");
+  return `<section class="related-recipes"><h2>À découvrir aussi</h2><ul>${links}</ul></section>`;
+};
+
 for (const filename of fs.readdirSync(path.join(root, "recettes"))) {
   if (!filename.endsWith(".html")) continue;
   const recipePath = path.join(root, "recettes", filename);
@@ -66,6 +84,18 @@ for (const filename of fs.readdirSync(path.join(root, "recettes"))) {
     "https://latablemijote.fr",
   );
   html = html.replace(/<div class=['"]ad-box['"]>\s*\[ Google AdSense 728x90 \]\s*<\/div>/g, "");
+  const slug = path.basename(filename, ".html");
+  const related = relatedSection(slug);
+  if (related) {
+    if (/<section class=['"]related-recipes['"]>[\s\S]*?<\/section>/i.test(html)) {
+      html = html.replace(/<section class=['"]related-recipes['"]>[\s\S]*?<\/section>/i, related);
+    } else {
+      html = html.replace(/(<div class=['"]faq-section['"]>)/i, `${related}\n$1`);
+    }
+    if (!html.includes(".related-recipes ul{")) {
+      html = html.replace("</style>", ".related-recipes ul{display:grid;gap:10px;list-style:none}.related-recipes a{color:var(--terracotta);font-weight:500;text-decoration:none}.related-recipes a:hover{text-decoration:underline}\n</style>");
+    }
+  }
   if (!html.includes("/a-propos.html")) {
     html = html.replace(
       "</footer>",
