@@ -779,19 +779,6 @@
       "date_iso": "2026-04-19",
       "date_display": "19 avril 2026",
       "url": "recettes/oeufs-cocotte-creme-fraiche-facile.html"
-    },
-    {
-      "slug": "moules-marini-res-vin-blanc-facile",
-      "title": "Moules marinières au vin blanc facile - Recette traditionnelle",
-      "meta_description": "Découvrez la vraie recette des moules marinières au vin blanc. Simple, rapide et savoureuse, cette recette traditionnelle ravira toute la famille.",
-      "category": "Poisson",
-      "emoji": "🐟",
-      "cook_time": "20 min",
-      "prep_time": "10 min",
-      "servings": 4,
-      "date_iso": "2026-03-27",
-      "date_display": "27 mars 2026",
-      "url": "recettes/moules-marini-res-vin-blanc-facile.html"
     }
   ],
   "last_updated": "2026-08-16"
