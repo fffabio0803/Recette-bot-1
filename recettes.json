@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "oeufs-cocotte-creme-fraiche-facile",
+      "title": "Oeufs Cocotte à la Crème Fraîche : Recette Facile et Onctueuse",
+      "meta_description": "Découvrez la recette des oeufs cocotte à la crème fraîche, un plat simple et réconfortant, prêt en 20 minutes, parfait pour un brunch ou dîner léger.",
+      "category": "Œufs",
+      "emoji": "Œufs",
+      "cook_time": "15 min",
+      "prep_time": "5 min",
+      "servings": 2,
+      "date_iso": "2026-08-17",
+      "date_display": "17/08/2026",
+      "url": "recettes/oeufs-cocotte-creme-fraiche-facile.html"
+    },
+    {
       "slug": "brandade-de-morue-maison-recette",
       "title": "Brandade de morue à l’huile d’olive et à l’ail",
       "meta_description": "Une brandade de morue onctueuse à l’huile d’olive et à l’ail, avec des conseils pour dessaler le poisson et maîtriser la texture.",
@@ -766,20 +779,7 @@
       "date_iso": "2026-04-20",
       "date_display": "20 avril 2026",
       "url": "recettes/sorbet-mangue-citron-vert-recette.html"
-    },
-    {
-      "slug": "oeufs-cocotte-creme-fraiche-facile",
-      "title": "Œufs cocotte à la crème fraîche et ciboulette",
-      "meta_description": "Des œufs cocotte à la crème fraîche et à la ciboulette, cuits doucement pour conserver un jaune coulant et un blanc correctement pris.",
-      "category": "Œufs",
-      "emoji": "🍳",
-      "cook_time": "15 min",
-      "prep_time": "5 min",
-      "servings": 2,
-      "date_iso": "2026-04-19",
-      "date_display": "19 avril 2026",
-      "url": "recettes/oeufs-cocotte-creme-fraiche-facile.html"
     }
   ],
-  "last_updated": "2026-08-16"
+  "last_updated": "2026-08-17"
 }
