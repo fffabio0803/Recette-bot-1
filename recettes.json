@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "sorbet-mangue-citron-vert-recette",
+      "title": "Sorbet Mangue Citron Vert Maison : Recette Fraîche et Onctueuse",
+      "meta_description": "Découvrez un sorbet mangue citron vert crémeux et acidulé, facile à réaliser sans sorbetière obligatoire, pour un dessert d'été rafraîchissant et gourmand.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "4h congelateur",
+      "prep_time": "10 min",
+      "servings": 6,
+      "date_iso": "2026-08-18",
+      "date_display": "18/08/2026",
+      "url": "recettes/sorbet-mangue-citron-vert-recette.html"
+    },
+    {
       "slug": "oeufs-cocotte-creme-fraiche-facile",
       "title": "Oeufs Cocotte à la Crème Fraîche : Recette Facile et Onctueuse",
       "meta_description": "Découvrez la recette des oeufs cocotte à la crème fraîche, un plat simple et réconfortant, prêt en 20 minutes, parfait pour un brunch ou dîner léger.",
@@ -766,20 +779,7 @@
       "date_iso": "2026-04-21",
       "date_display": "21 avril 2026",
       "url": "recettes/roti-de-porc-moutarde-miel-recette.html"
-    },
-    {
-      "slug": "sorbet-mangue-citron-vert-recette",
-      "title": "Sorbet mangue et citron vert",
-      "meta_description": "Un sorbet à la mangue et au citron vert, avec des conseils pour équilibrer le sucre et conserver une texture souple après congélation.",
-      "category": "Desserts",
-      "emoji": "🍰",
-      "cook_time": "4h congelateur",
-      "prep_time": "10 min",
-      "servings": 6,
-      "date_iso": "2026-04-20",
-      "date_display": "20 avril 2026",
-      "url": "recettes/sorbet-mangue-citron-vert-recette.html"
     }
   ],
-  "last_updated": "2026-08-17"
+  "last_updated": "2026-08-18"
 }

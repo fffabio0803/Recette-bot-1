@@ -2,15 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://latablemijote.fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://latablemijote.fr/toutes-les-recettes.html</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://latablemijote.fr/recettes/sorbet-mangue-citron-vert-recette.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://latablemijote.fr/recettes/oeufs-cocotte-creme-fraiche-facile.html</loc>
@@ -363,12 +369,6 @@
   <url>
     <loc>https://latablemijote.fr/recettes/roti-de-porc-moutarde-miel-recette.html</loc>
     <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://latablemijote.fr/recettes/sorbet-mangue-citron-vert-recette.html</loc>
-    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
