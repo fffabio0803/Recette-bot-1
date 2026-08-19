@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "roti-de-porc-moutarde-miel-recette",
+      "title": "Rôti de Porc Moutarde Miel : Fondant et Caramélisé au Four",
+      "meta_description": "Rôti de porc moutarde miel juteux et doré, glaçage caramélisé parfait. Recette facile, astuces de cuisson et temps précis pour réussir à coup sûr.",
+      "category": "Viande",
+      "emoji": "Viande",
+      "cook_time": "1h",
+      "prep_time": "10 min",
+      "servings": 6,
+      "date_iso": "2026-08-19",
+      "date_display": "19/08/2026",
+      "url": "recettes/roti-de-porc-moutarde-miel-recette.html"
+    },
+    {
       "slug": "sorbet-mangue-citron-vert-recette",
       "title": "Sorbet Mangue Citron Vert Maison : Recette Fraîche et Onctueuse",
       "meta_description": "Découvrez un sorbet mangue citron vert crémeux et acidulé, facile à réaliser sans sorbetière obligatoire, pour un dessert d'été rafraîchissant et gourmand.",
@@ -766,20 +779,7 @@
       "date_iso": "2026-04-22",
       "date_display": "22 avril 2026",
       "url": "recettes/creme-caramel-renversee-classique.html"
-    },
-    {
-      "slug": "roti-de-porc-moutarde-miel-recette",
-      "title": "Rôti de porc laqué à la moutarde et au miel",
-      "meta_description": "Un rôti de porc laqué à la moutarde et au miel, avec des repères de cuisson pour préserver une viande moelleuse et obtenir une sauce équilibrée.",
-      "category": "Viande",
-      "emoji": "🥩",
-      "cook_time": "1h",
-      "prep_time": "10 min",
-      "servings": 6,
-      "date_iso": "2026-04-21",
-      "date_display": "21 avril 2026",
-      "url": "recettes/roti-de-porc-moutarde-miel-recette.html"
     }
   ],
-  "last_updated": "2026-08-18"
+  "last_updated": "2026-08-19"
 }
