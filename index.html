@@ -750,6 +750,15 @@
       font-size: 40px;
     }
 
+    .latest-photo {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .latest-content {
       min-width: 0;
     }
@@ -1524,6 +1533,16 @@
     };
 
     const RECIPE_IMAGES = {
+      "creme-caramel-renversee-classique":
+        "assets/images/home/creme-caramel.jpg",
+      "roti-de-porc-moutarde-miel-recette":
+        "assets/images/home/roti-de-porc.jpg",
+      "sorbet-mangue-citron-vert-recette":
+        "assets/images/home/sorbet-mangue.jpg",
+      "oeufs-cocotte-creme-fraiche-facile":
+        "assets/images/home/oeufs-cocotte.jpg",
+      "brandade-de-morue-maison-recette":
+        "assets/images/home/brandade.jpg",
       "baba-au-rhum-recette-traditionnelle":
         "assets/images/home/baba-au-rhum.jpg",
       "tortilla-espagnole-pommes-de-terre-oignon":
@@ -1848,6 +1867,8 @@
     }
 
     function latestRecipe(recipe) {
+      const image = getRecipeImage(recipe);
+
       return `
         <article
           class="latest-item"
@@ -1858,6 +1879,15 @@
             href="${escapeHtml(safeUrl(recipe.url))}"
             aria-label="${escapeHtml(recipe.title)}"
           >
+            ${image ? `
+              <img
+                class="latest-photo"
+                src="${escapeHtml(image)}"
+                alt="Photo de ${escapeHtml(recipe.title || "la recette")}" 
+                loading="lazy"
+              >
+            ` : ""}
+
             <span
               class="latest-emoji"
               aria-hidden="true"
