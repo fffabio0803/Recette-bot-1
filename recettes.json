@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "creme-caramel-renversee-classique",
+      "title": "Crème Caramel Renversée Classique : Recette Fondante Facile",
+      "meta_description": "Découvrez la crème caramel renversée parfaite : onctueuse, lisse et caramel ambré. Technique de chef pour un démoulage impeccable à tous les coups.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "45 min",
+      "prep_time": "15 min",
+      "servings": 6,
+      "date_iso": "2026-08-20",
+      "date_display": "20/08/2026",
+      "url": "recettes/creme-caramel-renversee-classique.html"
+    },
+    {
       "slug": "roti-de-porc-moutarde-miel-recette",
       "title": "Rôti de Porc Moutarde Miel : Fondant et Caramélisé au Four",
       "meta_description": "Rôti de porc moutarde miel juteux et doré, glaçage caramélisé parfait. Recette facile, astuces de cuisson et temps précis pour réussir à coup sûr.",
@@ -766,20 +779,7 @@
       "date_iso": "2026-04-23",
       "date_display": "23 avril 2026",
       "url": "recettes/fraisier-recette-patisserie-maison.html"
-    },
-    {
-      "slug": "creme-caramel-renversee-classique",
-      "title": "Crème caramel renversée à la vanille",
-      "meta_description": "Une crème caramel renversée à la vanille, avec un caramel ambré et une texture lisse obtenue grâce à une cuisson douce au bain-marie.",
-      "category": "Desserts",
-      "emoji": "🍰",
-      "cook_time": "45 min",
-      "prep_time": "15 min",
-      "servings": 6,
-      "date_iso": "2026-04-22",
-      "date_display": "22 avril 2026",
-      "url": "recettes/creme-caramel-renversee-classique.html"
     }
   ],
-  "last_updated": "2026-08-19"
+  "last_updated": "2026-08-20"
 }
