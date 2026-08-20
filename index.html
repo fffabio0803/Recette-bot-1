@@ -289,6 +289,30 @@
         linear-gradient(145deg, #e5ddd3 0%, #b9aa98 100%);
     }
 
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 240ms ease;
+    }
+
+    .hero-visual.has-photo {
+      background: #5f4633;
+    }
+
+    .hero-visual.has-photo .hero-photo {
+      opacity: 1;
+    }
+
+    .hero-visual.has-photo .hero-plate {
+      display: none;
+    }
+
     .hero-visual::before,
     .hero-visual::after {
       content: "";
@@ -604,6 +628,19 @@
           var(--card-color-a),
           var(--card-color-b)
         );
+    }
+
+    .card-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .recipe-card.has-photo .card-visual::after,
+    .recipe-card.has-photo .card-emoji {
+      display: none;
     }
 
     .card-visual::after {
@@ -1200,6 +1237,13 @@
   <main class="page-shell" id="main-content">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-visual" id="hero-visual">
+        <img
+          class="hero-photo"
+          id="hero-photo"
+          src=""
+          alt=""
+        >
+
         <div class="hero-badge">
           Recette du jour
         </div>
@@ -1479,6 +1523,19 @@
       colors: ["#dfddd7", "#9c978d"]
     };
 
+    const RECIPE_IMAGES = {
+      "baba-au-rhum-recette-traditionnelle":
+        "assets/images/home/baba-au-rhum.jpg",
+      "tortilla-espagnole-pommes-de-terre-oignon":
+        "assets/images/home/tortilla-espagnole.jpg",
+      "madeleine-recette-classique-bosse":
+        "assets/images/home/madeleines.jpg",
+      "salade-de-lentilles-vinaigrette-moutarde":
+        "assets/images/home/salade-de-lentilles.jpg",
+      "poulet-basquaise-tomates-poivrons":
+        "assets/images/home/poulet-basquaise.jpg"
+    };
+
     let allRecipes = [];
     let currentCategory = "Toutes";
 
@@ -1490,6 +1547,9 @@
 
     const heroEmoji =
       document.getElementById("hero-emoji");
+
+    const heroPhoto =
+      document.getElementById("hero-photo");
 
     const categoryScroller =
       document.getElementById("category-scroller");
@@ -1537,6 +1597,10 @@
       return getCategoryConfig(recipe.category).emoji;
     }
 
+    function getRecipeImage(recipe) {
+      return RECIPE_IMAGES[String(recipe.slug || "")] || "";
+    }
+
     function getCardStyle(recipe) {
       const config = getCategoryConfig(recipe.category);
 
@@ -1561,14 +1625,24 @@
 
     function renderHero(recipe) {
       const config = getCategoryConfig(recipe.category);
+      const image = getRecipeImage(recipe);
 
-      heroVisual.style.background =
-        "radial-gradient(circle at 24% 25%, rgba(255,255,255,.85) 0, rgba(255,255,255,0) 31%)," +
-        "linear-gradient(145deg, " +
-        config.colors[0] +
-        " 0%, " +
-        config.colors[1] +
-        " 100%)";
+      heroVisual.classList.toggle("has-photo", Boolean(image));
+
+      if (image) {
+        heroPhoto.src = image;
+        heroPhoto.alt = "Photo de " + (recipe.title || "la recette du jour");
+      } else {
+        heroPhoto.removeAttribute("src");
+        heroPhoto.alt = "";
+        heroVisual.style.background =
+          "radial-gradient(circle at 24% 25%, rgba(255,255,255,.85) 0, rgba(255,255,255,0) 31%)," +
+          "linear-gradient(145deg, " +
+          config.colors[0] +
+          " 0%, " +
+          config.colors[1] +
+          " 100%)";
+      }
 
       heroEmoji.textContent = config.emoji;
 
@@ -1719,13 +1793,24 @@
     }
 
     function recipeCard(recipe) {
+      const image = getRecipeImage(recipe);
+
       return `
         <article
-          class="recipe-card"
+          class="recipe-card${image ? " has-photo" : ""}"
           style="${getCardStyle(recipe)}"
         >
           <a href="${escapeHtml(safeUrl(recipe.url))}">
             <div class="card-visual">
+              ${image ? `
+                <img
+                  class="card-photo"
+                  src="${escapeHtml(image)}"
+                  alt="Photo de ${escapeHtml(recipe.title || "la recette")}" 
+                  loading="lazy"
+                >
+              ` : ""}
+
               <span
                 class="card-emoji"
                 aria-hidden="true"
