@@ -540,6 +540,12 @@
       font-size: 11px;
     }
 
+    .category-shortcuts { padding: 12px 0 26px; }
+    .category-shortcuts-title { margin-bottom: 12px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .category-shortcuts-links { display: flex; flex-wrap: wrap; gap: 9px; }
+    .category-shortcuts a { padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; color: var(--text); background: rgba(255,255,255,.7); text-decoration: none; font-size: 13px; font-weight: 600; }
+    .category-shortcuts a:hover { border-color: var(--line-strong); background: #fff; }
+
     /* SECTIONS */
 
     .section {
@@ -1304,6 +1310,18 @@
           <span class="category-name">Toutes</span>
           <span class="category-count">Chargement</span>
         </button>
+      </div>
+    </section>
+
+    <section class="category-shortcuts" aria-label="Explorer les univers de recettes">
+      <p class="category-shortcuts-title">Explorer par univers</p>
+      <div class="category-shortcuts-links">
+        <a href="toutes-les-recettes.html#desserts">Desserts et pâtisserie</a>
+        <a href="toutes-les-recettes.html#plats-sales">Plats salés</a>
+        <a href="toutes-les-recettes.html#poisson">Poisson et fruits de mer</a>
+        <a href="toutes-les-recettes.html#soupes">Soupes et veloutés</a>
+        <a href="toutes-les-recettes.html#salades">Salades et recettes légères</a>
+        <a href="toutes-les-recettes.html#quotidien">Idées du quotidien</a>
       </div>
     </section>
 
