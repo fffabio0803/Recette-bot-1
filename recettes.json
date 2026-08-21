@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "fraisier-recette-patisserie-maison",
+      "title": "Fraisier Maison : Recette Pâtisserie Classique et Gourmande",
+      "meta_description": "Réalisez un fraisier maison digne des vitrines de pâtissier : génoise moelleuse, crème mousseline légère et fraises fraîches. Recette détaillée pas à pas.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "3h",
+      "prep_time": "45 min",
+      "servings": 8,
+      "date_iso": "2026-08-21",
+      "date_display": "21/08/2026",
+      "url": "recettes/fraisier-recette-patisserie-maison.html"
+    },
+    {
       "slug": "creme-caramel-renversee-classique",
       "title": "Crème Caramel Renversée Classique : Recette Fondante Facile",
       "meta_description": "Découvrez la crème caramel renversée parfaite : onctueuse, lisse et caramel ambré. Technique de chef pour un démoulage impeccable à tous les coups.",
@@ -766,20 +779,7 @@
       "date_iso": "2026-04-24",
       "date_display": "24 avril 2026",
       "url": "recettes/daurade-royale-four-citron-fenouil.html"
-    },
-    {
-      "slug": "fraisier-recette-patisserie-maison",
-      "title": "Fraisier maison à la crème et aux fraises",
-      "meta_description": "Un fraisier maison composé d’une génoise, d’une crème légère et de fraises, avec des repères pour réussir le montage et la découpe.",
-      "category": "Desserts",
-      "emoji": "🍰",
-      "cook_time": "3h",
-      "prep_time": "45 min",
-      "servings": 8,
-      "date_iso": "2026-04-23",
-      "date_display": "23 avril 2026",
-      "url": "recettes/fraisier-recette-patisserie-maison.html"
     }
   ],
-  "last_updated": "2026-08-20"
+  "last_updated": "2026-08-21"
 }
