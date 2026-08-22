@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "daurade-royale-four-citron-fenouil",
+      "title": "Daurade Royale au Four, Fenouil et Citron Confit",
+      "meta_description": "Daurade royale entière rôtie au four sur lit de fenouil fondant et citron, huile d'olive et herbes de Provence. Recette simple et parfumée.",
+      "category": "Poisson",
+      "emoji": "Poisson",
+      "cook_time": "25 min",
+      "prep_time": "10 min",
+      "servings": 2,
+      "date_iso": "2026-08-22",
+      "date_display": "22/08/2026",
+      "url": "recettes/daurade-royale-four-citron-fenouil.html"
+    },
+    {
       "slug": "fraisier-recette-patisserie-maison",
       "title": "Fraisier Maison : Recette Pâtisserie Classique et Gourmande",
       "meta_description": "Réalisez un fraisier maison digne des vitrines de pâtissier : génoise moelleuse, crème mousseline légère et fraises fraîches. Recette détaillée pas à pas.",
@@ -766,20 +779,7 @@
       "date_iso": "2026-04-25",
       "date_display": "25 avril 2026",
       "url": "recettes/ile-flottante-oeufs-neige-creme-anglaise.html"
-    },
-    {
-      "slug": "daurade-royale-four-citron-fenouil",
-      "title": "Daurade royale au four, citron et fenouil",
-      "meta_description": "Une daurade royale cuite au four avec citron et fenouil, accompagnée de repères simples pour préserver une chair moelleuse et parfumée.",
-      "category": "Poisson",
-      "emoji": "🐟",
-      "cook_time": "25 min",
-      "prep_time": "10 min",
-      "servings": 2,
-      "date_iso": "2026-04-24",
-      "date_display": "24 avril 2026",
-      "url": "recettes/daurade-royale-four-citron-fenouil.html"
     }
   ],
-  "last_updated": "2026-08-21"
+  "last_updated": "2026-08-22"
 }
