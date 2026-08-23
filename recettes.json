@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "ile-flottante-oeufs-neige-creme-anglaise",
+      "title": "Île flottante aux œufs en neige et crème anglaise maison",
+      "meta_description": "Recette classique de l'île flottante : blancs pochés moelleux, crème anglaise onctueuse et caramel doré. Un dessert français léger et raffiné.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "cook_time": "30 min",
+      "prep_time": "20 min",
+      "servings": 4,
+      "date_iso": "2026-08-23",
+      "date_display": "23/08/2026",
+      "url": "recettes/ile-flottante-oeufs-neige-creme-anglaise.html"
+    },
+    {
       "slug": "daurade-royale-four-citron-fenouil",
       "title": "Daurade Royale au Four, Fenouil et Citron Confit",
       "meta_description": "Daurade royale entière rôtie au four sur lit de fenouil fondant et citron, huile d'olive et herbes de Provence. Recette simple et parfumée.",
@@ -766,20 +779,7 @@
       "date_iso": "2026-04-26",
       "date_display": "26 avril 2026",
       "url": "recettes/salade-caesar-poulet-grille-maison.html"
-    },
-    {
-      "slug": "ile-flottante-oeufs-neige-creme-anglaise",
-      "title": "Île flottante, crème anglaise et caramel",
-      "meta_description": "Une île flottante composée d’œufs à la neige, de crème anglaise à la vanille et d’un filet de caramel, avec des repères de cuisson précis.",
-      "category": "Desserts",
-      "emoji": "🍰",
-      "cook_time": "30 min",
-      "prep_time": "20 min",
-      "servings": 4,
-      "date_iso": "2026-04-25",
-      "date_display": "25 avril 2026",
-      "url": "recettes/ile-flottante-oeufs-neige-creme-anglaise.html"
     }
   ],
-  "last_updated": "2026-08-22"
+  "last_updated": "2026-08-23"
 }
