@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "salade-caesar-poulet-grille-maison",
+      "title": "Salade Caesar au poulet grille maison et croutons dores",
+      "meta_description": "Salade Caesar authentique : poulet grille juteux, sauce onctueuse maison, croutons croustillants et parmesan. Recette facile et gourmande a realiser chez vous.",
+      "category": "Salades",
+      "emoji": "Salades",
+      "cook_time": "0 min",
+      "prep_time": "20 min",
+      "servings": 2,
+      "date_iso": "2026-08-24",
+      "date_display": "24/08/2026",
+      "url": "recettes/salade-caesar-poulet-grille-maison.html"
+    },
+    {
       "slug": "ile-flottante-oeufs-neige-creme-anglaise",
       "title": "Île flottante aux œufs en neige et crème anglaise maison",
       "meta_description": "Recette classique de l'île flottante : blancs pochés moelleux, crème anglaise onctueuse et caramel doré. Un dessert français léger et raffiné.",
@@ -766,20 +779,7 @@
       "date_iso": "2026-04-27",
       "date_display": "27 avril 2026",
       "url": "recettes/pain-perdu-brioche-recette-facile.html"
-    },
-    {
-      "slug": "salade-caesar-poulet-grille-maison",
-      "title": "Salade César au poulet grillé et sauce crémeuse",
-      "meta_description": "Une salade César au poulet grillé avec laitue croquante, croûtons dorés et sauce crémeuse, expliquée étape par étape.",
-      "category": "Salades",
-      "emoji": "🥗",
-      "cook_time": "0 min",
-      "prep_time": "20 min",
-      "servings": 2,
-      "date_iso": "2026-04-26",
-      "date_display": "26 avril 2026",
-      "url": "recettes/salade-caesar-poulet-grille-maison.html"
     }
   ],
-  "last_updated": "2026-08-23"
+  "last_updated": "2026-08-24"
 }
