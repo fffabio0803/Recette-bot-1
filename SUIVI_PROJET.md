@@ -82,6 +82,14 @@ Chaque ligne validée correspond à une image distincte, contrôlée pour corres
 - [x] Gaspacho andalou aux tomates et poivrons
 - [x] Tajine de poulet au citron confit et aux olives
 - [x] Pavlova aux fruits rouges
+- [x] Gnocchis de pommes de terre maison
+- [x] Far breton aux pruneaux
+- [x] Pissaladière niçoise aux oignons et anchois
+- [x] Rillettes de saumon fumé maison
+- [x] Cake au citron moelleux
+- [x] Velouté de butternut au gingembre
+- [x] Osso buco à la milanaise
+- [x] Fondant au chocolat au cœur coulant
 - [ ] Toutes les autres recettes du catalogue, à produire par lots
 
 ## Règles de travail
