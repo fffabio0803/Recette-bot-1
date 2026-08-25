@@ -106,6 +106,14 @@ Chaque ligne validée correspond à une image distincte, contrôlée pour corres
 - [x] Tarte au citron meringuée
 - [x] Bouillabaisse marseillaise
 - [x] Gratin dauphinois crémeux
+- [x] Mousse au chocolat légère — image dédiée
+- [x] Ratatouille provençale — image dédiée
+- [x] Quiche lorraine — image dédiée
+- [x] Crème brûlée — image dédiée
+- [x] Blanquette de veau — image dédiée
+- [x] Salade niçoise — image dédiée
+- [x] Soupe à l'oignon gratinée — image dédiée
+- [x] Risotto aux champignons — image dédiée
 - [ ] Toutes les autres recettes du catalogue, à produire par lots
 
 ## Règles de travail
