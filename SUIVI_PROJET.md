@@ -56,6 +56,16 @@ Ne pas soumettre en masse les recettes une par une. Si aucune évolution n’app
 3. Réexaminer l’indexation le 3 septembre ; décider alors si la publication automatique peut reprendre à un rythme plus lent.
 4. Quand l’indexation et les premières visites progressent, réaliser l’audit final de préparation AdSense (contenu, pages légales, expérience utilisateur et conformité publicité/confidentialité).
 
+## Suivi des images de recettes
+
+Chaque ligne validée correspond à une image distincte, contrôlée pour correspondre réellement au plat. Les recettes non listées restent à traiter ; aucune image générique ne doit leur être attribuée.
+
+- [x] Pain perdu brioché
+- [x] Salade Caesar au poulet grillé
+- [x] Île flottante aux œufs en neige et crème anglaise
+- [x] Dorade royale au four, fenouil et citron
+- [ ] Toutes les autres recettes du catalogue, à produire par lots
+
 ## Règles de travail
 
 - Avant toute nouvelle amélioration, lire ce document et Search Console pour éviter de refaire une action déjà menée.
