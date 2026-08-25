@@ -64,6 +64,16 @@ Chaque ligne validée correspond à une image distincte, contrôlée pour corres
 - [x] Salade Caesar au poulet grillé
 - [x] Île flottante aux œufs en neige et crème anglaise
 - [x] Dorade royale au four, fenouil et citron
+- [x] Crème caramel renversée
+- [x] Rôti de porc à la moutarde et au miel
+- [x] Sorbet mangue et citron vert
+- [x] Œufs cocotte à la crème fraîche
+- [x] Brandade de morue maison
+- [x] Baba au rhum traditionnel
+- [x] Tortilla espagnole aux pommes de terre et à l’oignon
+- [x] Madeleines classiques à bosse
+- [x] Salade de lentilles, vinaigrette à la moutarde
+- [x] Poulet basquaise aux tomates et poivrons
 - [ ] Toutes les autres recettes du catalogue, à produire par lots
 
 ## Règles de travail
