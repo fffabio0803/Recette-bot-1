@@ -1,6 +1,19 @@
 {
   "recettes": [
     {
+      "slug": "pain-perdu-brioche-recette-facile",
+      "title": "Pain Perdu Brioché Facile : Fondant et Doré à Souhait",
+      "meta_description": "Pain perdu brioché ultra moelleux, croûte caramélisée en 20 minutes. Recette simple avec astuces de chef pour un résultat gourmand et régulier.",
+      "category": "Petit-déjeuner",
+      "emoji": "Petit-déjeuner",
+      "cook_time": "10 min",
+      "prep_time": "5 min",
+      "servings": 2,
+      "date_iso": "2026-08-25",
+      "date_display": "25/08/2026",
+      "url": "recettes/pain-perdu-brioche-recette-facile.html"
+    },
+    {
       "slug": "salade-caesar-poulet-grille-maison",
       "title": "Salade Caesar au poulet grille maison et croutons dores",
       "meta_description": "Salade Caesar authentique : poulet grille juteux, sauce onctueuse maison, croutons croustillants et parmesan. Recette facile et gourmande a realiser chez vous.",
@@ -766,20 +779,7 @@
       "date_iso": "2026-04-28",
       "date_display": "28 avril 2026",
       "url": "recettes/coq-au-vin-rouge-champignons-lardons.html"
-    },
-    {
-      "slug": "pain-perdu-brioche-recette-facile",
-      "title": "Pain perdu à la brioche, doré et fondant",
-      "meta_description": "Un pain perdu à la brioche, doré à l’extérieur et fondant au centre, avec des repères simples pour bien doser l’imbibage et la cuisson.",
-      "category": "Petit-déjeuner",
-      "emoji": "🥐",
-      "cook_time": "10 min",
-      "prep_time": "5 min",
-      "servings": 2,
-      "date_iso": "2026-04-27",
-      "date_display": "27 avril 2026",
-      "url": "recettes/pain-perdu-brioche-recette-facile.html"
     }
   ],
-  "last_updated": "2026-08-24"
+  "last_updated": "2026-08-25"
 }
