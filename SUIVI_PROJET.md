@@ -98,6 +98,14 @@ Chaque ligne validée correspond à une image distincte, contrôlée pour corres
 - [x] Vichyssoise froide aux poireaux et pommes de terre
 - [x] Clafoutis classique aux cerises
 - [x] Magret de canard sauce miel-soja
+- [x] Pâte à crêpes de base
+- [x] Soupe de tomates fraîches au basilic
+- [x] Financiers aux amandes
+- [x] Omelette française moelleuse
+- [x] Pot-au-feu traditionnel
+- [x] Tarte au citron meringuée
+- [x] Bouillabaisse marseillaise
+- [x] Gratin dauphinois crémeux
 - [ ] Toutes les autres recettes du catalogue, à produire par lots
 
 ## Règles de travail
