@@ -74,6 +74,10 @@ Chaque ligne validée correspond à une image distincte, contrôlée pour corres
 - [x] Madeleines classiques à bosse
 - [x] Salade de lentilles, vinaigrette à la moutarde
 - [x] Poulet basquaise aux tomates et poivrons
+- [x] Fraisier maison
+- [x] Panna cotta vanille et coulis de fruits rouges
+- [x] Tartiflette au reblochon et pommes de terre
+- [x] Saumon gravlax à l’aneth et au citron
 - [ ] Toutes les autres recettes du catalogue, à produire par lots
 
 ## Règles de travail
