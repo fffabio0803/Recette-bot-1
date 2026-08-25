@@ -114,7 +114,13 @@ Chaque ligne validée correspond à une image distincte, contrôlée pour corres
 - [x] Salade niçoise — image dédiée
 - [x] Soupe à l'oignon gratinée — image dédiée
 - [x] Risotto aux champignons — image dédiée
-- [ ] Toutes les autres recettes du catalogue, à produire par lots
+- [x] Bœuf bourguignon — image dédiée
+- [x] Tarte Tatin — image dédiée
+- [x] Carbonara romaine — image dédiée
+- [x] Poulet rôti — image dédiée
+- [x] Terrine de campagne — image dédiée
+- [x] Coq au vin — image dédiée
+- [x] Catalogue complet : chaque recette dispose de sa propre image dédiée
 
 ## Règles de travail
 
