@@ -1,8 +1,9 @@
 name: 🍳 Recette du Jour
 
 on:
-  schedule:
-    - cron: '0 7 * * *'
+  # La publication automatique est volontairement suspendue le temps que
+  # Google explore et évalue le catalogue existant. Une recette peut encore
+  # être publiée manuellement depuis l’onglet Actions de GitHub si besoin.
   workflow_dispatch:
 
 permissions:
