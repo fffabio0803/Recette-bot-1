@@ -654,10 +654,7 @@ def render_recipe_html(recipe):
         ".recipe-hero img{display:block;width:100%;height:auto;"
         "aspect-ratio:16/9;object-fit:cover;border:1px solid var(--rule);}"
         ".recipe-hero figcaption{font-size:11px;color:var(--mid);"
-        "margin-top:7px;}"
-        ".editorial-note{font-size:13px;color:#5d5147;"
-        "background:#fff;border:1px solid var(--rule);padding:14px 16px;"
-        "margin:0 0 28px;}\n"
+        "margin-top:7px;}\n"
     )
     page += (
         "h2{font-family:Georgia,serif;"
@@ -801,17 +798,6 @@ def render_recipe_html(recipe):
         + escape(recipe["intro"])
         + "</p>\n"
     )
-    page += (
-        "<aside class='editorial-note'><strong>Note éditoriale :</strong> "
-        "cette recette a été rédigée avec l’aide d’un outil d’intelligence "
-        "artificielle, puis soumise à des contrôles de cohérence culinaire et "
-        "de structure. Consultez <a href='"
-        + SITE_URL
-        + "/a-propos.html'>notre méthode éditoriale</a> et adaptez les temps "
-        "à vos ingrédients et à votre matériel."
-        "</aside>\n"
-    )
-
     page += (
         "<h2>Ingrédients</h2>"
         "<ul class='ingredients-list'>"
