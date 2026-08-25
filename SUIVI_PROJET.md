@@ -19,6 +19,9 @@ Construire un site de recettes utile, fiable et suffisamment visible dans Google
 - Pages de confiance présentes et alignées avec la marque : À propos, charte éditoriale, contact, confidentialité et mentions légales.
 - Page d’accueil déjà indexée par Google.
 - Demande d’indexation envoyée pour la page « Toutes les recettes » le 25 août 2026.
+- Catalogue visuel terminé : 60 recettes, 60 images distinctes et cohérentes avec les plats.
+- Encarts visibles sur l’assistance par intelligence artificielle supprimés des 25 recettes concernées ; transparence conservée uniquement dans la charte éditoriale et les mentions légales.
+- Émojis retirés des filtres de catégories et des deux filtres rapides pour un rendu plus sobre.
 
 ## État actuel
 
@@ -51,10 +54,12 @@ Ne pas soumettre en masse les recettes une par une. Si aucune évolution n’app
 
 ## Prochaines améliorations à envisager
 
-1. Renforcer trois à cinq recettes prioritaires avec des conseils pratiques réellement distinctifs, seulement après le contrôle du 27 août.
-2. Créer une présence externe légère et authentique (par exemple Pinterest), sans automatisation de masse, pour obtenir les premiers signaux de découverte.
-3. Réexaminer l’indexation le 3 septembre ; décider alors si la publication automatique peut reprendre à un rythme plus lent.
-4. Quand l’indexation et les premières visites progressent, réaliser l’audit final de préparation AdSense (contenu, pages légales, expérience utilisateur et conformité publicité/confidentialité).
+1. Ajouter le bloc « À découvrir aussi » aux six recettes qui en sont encore dépourvues : pain perdu, tartiflette, tajine, croque-monsieur, pâte à crêpes et gratin dauphinois.
+2. Raccourcir progressivement les 25 titres HTML dépassant 65 caractères, sans modifier les titres visibles des recettes.
+3. Renforcer trois à cinq recettes prioritaires avec des conseils pratiques réellement distinctifs, seulement après le contrôle du 27 août.
+4. Créer une présence externe légère et authentique (par exemple Pinterest), sans automatisation de masse, pour obtenir les premiers signaux de découverte.
+5. Réexaminer l’indexation le 3 septembre ; décider alors si la publication automatique peut reprendre à un rythme plus lent.
+6. Quand l’indexation et les premières visites progressent, réaliser l’audit final de préparation AdSense (contenu, pages légales, expérience utilisateur et conformité publicité/confidentialité).
 
 ## Suivi des images de recettes
 

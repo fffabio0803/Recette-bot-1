@@ -517,13 +517,6 @@
       box-shadow: var(--shadow-small);
     }
 
-    .category-icon {
-      display: block;
-      margin-bottom: 10px;
-      font-size: 28px;
-      line-height: 1;
-    }
-
     .category-name {
       display: block;
       overflow: hidden;
@@ -1306,7 +1299,6 @@
           type="button"
           data-category="Toutes"
         >
-          <span class="category-icon">🍽️</span>
           <span class="category-name">Toutes</span>
           <span class="category-count">Chargement</span>
         </button>
@@ -1829,7 +1821,6 @@
           type="button"
           data-category="Toutes"
         >
-          <span class="category-icon">🍽️</span>
           <span class="category-name">Toutes</span>
           <span class="category-count">
             ${recipes.length} recette${recipes.length > 1 ? "s" : ""}
@@ -1852,10 +1843,6 @@
               type="button"
               data-category="${escapeHtml(category)}"
             >
-              <span class="category-icon">
-                ${config.emoji}
-              </span>
-
               <span class="category-name">
                 ${escapeHtml(category)}
               </span>

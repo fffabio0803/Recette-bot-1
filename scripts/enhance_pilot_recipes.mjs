@@ -87,13 +87,11 @@ for (const [slug, config] of Object.entries(pilots)) {
     updated = updated.replace(/Cuisson\s*:\s*<strong>.*?<\/strong>/i, `${config.secondaryLabel} : <strong>${config.secondary}</strong>`);
     return updated;
   });
-  const note = "<aside class='editorial-note'><strong>Note éditoriale :</strong> cette recette a été préparée avec l’aide d’un outil d’intelligence artificielle puis structurée pour publication. Adaptez toujours les temps et les températures à vos ingrédients et à votre matériel.</aside>";
-  if (!html.includes("class='editorial-note'")) html = html.replace(/(<p class=['"]intro['"]>[\s\S]*?<\/p>)/i, `$1\n${note}`);
   const links = config.related.map((related) => `<li><a href='${SITE}/recettes/${related}.html'>${titleFor(related)}</a></li>`).join('');
   const related = `<section class='related-recipes'><h2>À découvrir aussi</h2><ul>${links}</ul></section>`;
   if (!html.includes("class='related-recipes'")) html = html.replace(/(<div class=['"]faq-section['"]>)/i, `${related}\n$1`);
   if (!html.includes('.recipe-hero{')) {
-    html = html.replace('</style>', `.recipe-hero{margin:0 0 24px}.recipe-hero img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--rule)}.recipe-hero figcaption{font-size:11px;color:var(--mid);margin-top:7px}.editorial-note{font-size:13px;color:#5d5147;background:#fff;border:1px solid var(--rule);padding:14px 16px;margin:0 0 28px}.related-recipes ul{display:grid;gap:10px;list-style:none}.related-recipes a{color:var(--terracotta);font-weight:500;text-decoration:none}.related-recipes a:hover{text-decoration:underline}\n</style>`);
+    html = html.replace('</style>', `.recipe-hero{margin:0 0 24px}.recipe-hero img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--rule)}.recipe-hero figcaption{font-size:11px;color:var(--mid);margin-top:7px}.related-recipes ul{display:grid;gap:10px;list-style:none}.related-recipes a{color:var(--terracotta);font-weight:500;text-decoration:none}.related-recipes a:hover{text-decoration:underline}\n</style>`);
   }
   fs.writeFileSync(file, html);
 }
