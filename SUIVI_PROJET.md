@@ -78,6 +78,10 @@ Chaque ligne validée correspond à une image distincte, contrôlée pour corres
 - [x] Panna cotta vanille et coulis de fruits rouges
 - [x] Tartiflette au reblochon et pommes de terre
 - [x] Saumon gravlax à l’aneth et au citron
+- [x] Profiteroles, glace vanille et sauce chocolat
+- [x] Gaspacho andalou aux tomates et poivrons
+- [x] Tajine de poulet au citron confit et aux olives
+- [x] Pavlova aux fruits rouges
 - [ ] Toutes les autres recettes du catalogue, à produire par lots
 
 ## Règles de travail
