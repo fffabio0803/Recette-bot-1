@@ -27,6 +27,22 @@ Construire un site de recettes utile, fiable et suffisamment visible dans Google
 - 0 clic enregistré à ce stade, ce qui est normal pour un domaine récent.
 - La publication automatique quotidienne est suspendue à compter du 25 août afin de laisser Google traiter le catalogue existant.
 
+## Indicateurs de progression
+
+Ces chiffres sont relevés dans Search Console à chaque contrôle. Ils permettent de distinguer une vraie progression d’une simple impression, et d’éviter de répéter une action déjà faite.
+
+| Date du contrôle | Pages indexées | Pages non indexées | Clics | Sitemap | Données Recette / fil d’Ariane | Action notable |
+| --- | ---: | ---: | ---: | --- | --- | --- |
+| 22 août 2026 | 4 | 64 | 0 | Valide | 1 valide / 1 valide, 0 erreur | Point de référence après les améliorations du site |
+| 25 août 2026 | 4 | 64 | 0 | Valide | 1 valide / 1 valide, 0 erreur | Demande d’indexation envoyée pour « Toutes les recettes » ; publication quotidienne suspendue |
+
+### Comment interpréter les prochains contrôles
+
+- **Pages indexées en hausse** : progression réelle ; on continue sans soumettre de nombreuses URL.
+- **Pages non indexées en baisse** : Google explore le catalogue ; c’est le signal le plus attendu à court terme.
+- **Premières impressions ou premiers clics** : le site commence à apparaître dans les recherches ; analyser alors les requêtes plutôt que publier davantage.
+- **Erreur nouvelle** : la noter ici, chercher la cause précise, puis corriger seulement le problème identifié.
+
 ## Prochaine vérification
 
 **27 août 2026** : vérifier dans Search Console si le nombre de pages indexées évolue et si la page « Toutes les recettes » a été explorée.
