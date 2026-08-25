@@ -90,6 +90,14 @@ Chaque ligne validée correspond à une image distincte, contrôlée pour corres
 - [x] Velouté de butternut au gingembre
 - [x] Osso buco à la milanaise
 - [x] Fondant au chocolat au cœur coulant
+- [x] Tarte flambée alsacienne
+- [x] Moules marinières au vin blanc
+- [x] Tiramisu italien au café et mascarpone
+- [x] Taboulé frais à la menthe et au citron
+- [x] Croque-monsieur à la béchamel
+- [x] Vichyssoise froide aux poireaux et pommes de terre
+- [x] Clafoutis classique aux cerises
+- [x] Magret de canard sauce miel-soja
 - [ ] Toutes les autres recettes du catalogue, à produire par lots
 
 ## Règles de travail
