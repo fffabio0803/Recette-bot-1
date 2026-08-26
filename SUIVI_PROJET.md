@@ -19,6 +19,7 @@ Construire un site de recettes utile, fiable et suffisamment visible dans Google
 - Pages de confiance présentes et alignées avec la marque : À propos, charte éditoriale, contact, confidentialité et mentions légales.
 - Page d’accueil déjà indexée par Google.
 - Demande d’indexation envoyée pour la page « Toutes les recettes » le 25 août 2026.
+- Demandes d’indexation ciblées acceptées par Google le 26 août 2026 pour cinq recettes prioritaires : bœuf bourguignon, gratin dauphinois, tiramisu, quiche lorraine et salade César. Ne pas les resoumettre avant le prochain contrôle.
 - Catalogue visuel terminé : 60 recettes, 60 images distinctes et cohérentes avec les plats.
 - Encarts visibles sur l’assistance par intelligence artificielle supprimés des 25 recettes concernées ; transparence conservée uniquement dans la charte éditoriale et les mentions légales.
 - Émojis retirés des filtres de catégories et des deux filtres rapides pour un rendu plus sobre.
@@ -40,6 +41,7 @@ Ces chiffres sont relevés dans Search Console à chaque contrôle. Ils permette
 | --- | ---: | ---: | ---: | --- | --- | --- |
 | 22 août 2026 | 4 | 64 | 0 | Valide | 1 valide / 1 valide, 0 erreur | Point de référence après les améliorations du site |
 | 25 août 2026 | 4 | 64 | 0 | Valide | 1 valide / 1 valide, 0 erreur | Demande d’indexation envoyée pour « Toutes les recettes » ; publication quotidienne suspendue |
+| 26 août 2026 | 4 | 64 | 0 | Valide | 2 recettes valides affichées dans la vue d’ensemble, 0 erreur | Cinq recettes prioritaires ajoutées à la file d’exploration de Google |
 
 ### Comment interpréter les prochains contrôles
 
@@ -50,15 +52,15 @@ Ces chiffres sont relevés dans Search Console à chaque contrôle. Ils permette
 
 ## Prochaine vérification
 
-**27 août 2026** : vérifier dans Search Console si le nombre de pages indexées évolue et si la page « Toutes les recettes » a été explorée.
+**27 août 2026** : contrôle rapide de la date de mise à jour du rapport, sans nouvelle demande d’indexation.
 
-Ne pas soumettre en masse les recettes une par une. Si aucune évolution n’apparaît, sélectionner au maximum trois recettes prioritaires et demander leur indexation de façon ciblée.
+**29 ou 30 août 2026** : vérifier si « Toutes les recettes » ou l’une des cinq recettes prioritaires a été explorée. Ne pas resoumettre les mêmes URL : Google a confirmé leur ajout à la file prioritaire.
 
 ## Prochaines améliorations à envisager
 
-1. Renforcer trois à cinq recettes prioritaires avec des conseils pratiques réellement distinctifs, seulement après le contrôle du 27 août.
-2. Convertir progressivement les images culinaires en WebP afin de réduire leur poids sans perte visuelle notable.
-3. Créer une présence externe légère et authentique (par exemple Pinterest), sans automatisation de masse, pour obtenir les premiers signaux de découverte.
+1. Créer une présence Pinterest cohérente avec La Table Mijote et publier une première sélection limitée de recettes afin d’amorcer une source de trafic externe.
+2. Renforcer trois à cinq recettes prioritaires avec des conseils pratiques réellement distinctifs en fonction des premières données de recherche.
+3. Convertir progressivement les images culinaires en WebP afin de réduire leur poids sans perte visuelle notable.
 4. Réexaminer l’indexation le 3 septembre ; décider alors si la publication automatique peut reprendre à un rythme plus lent.
 5. Quand l’indexation et les premières visites progressent, réaliser l’audit final de préparation AdSense (contenu, pages légales, expérience utilisateur et conformité publicité/confidentialité).
 
