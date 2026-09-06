@@ -197,13 +197,14 @@
       "emoji": "Gâteaux",
       "cook_time": "12 min",
       "prep_time": "12 min",
-      "servings": 16,
+      "servings": null,
       "date_iso": "2026-08-13",
       "date_display": "13/08/2026",
       "url": "recettes/madeleine-recette-classique-bosse.html",
       "rest_time": "2h",
       "time_note": "La pâte repose au moins 2 h au réfrigérateur. La cuisson dure 5 min puis 6 à 7 min ; ajouter le refroidissement sur grille et les fournées supplémentaires.",
-      "time_uncertain": true
+      "time_uncertain": true,
+      "yield_label": "Environ 16 madeleines"
     },
     {
       "slug": "salade-de-lentilles-vinaigrette-moutarde",
@@ -544,7 +545,8 @@
       "url": "recettes/croque-monsieur-bechamel-maison.html",
       "rest_time": "2 min",
       "time_note": "Compter environ 6 à 8 min pour la béchamel puis 10 à 12 min au four et 2 min avant de servir.",
-      "time_uncertain": false
+      "time_uncertain": false,
+      "yield_label": "4 croques pour 2 personnes"
     },
     {
       "slug": "vichyssoise-froide-poireaux-pommes-de-terre",
@@ -633,13 +635,14 @@
       "emoji": "🧁",
       "cook_time": "15 min",
       "prep_time": "12 min",
-      "servings": 12,
+      "servings": null,
       "date_iso": "2026-07-16",
       "date_display": "16 juillet 2026",
       "url": "recettes/financiers-amandes-moelleux-recette.html",
       "rest_time": "1h05",
       "time_note": "La pâte repose au moins 1 h au réfrigérateur. Ajouter 5 min avant démoulage puis le refroidissement sur grille.",
-      "time_uncertain": true
+      "time_uncertain": true,
+      "yield_label": "Environ 12 financiers"
     },
     {
       "slug": "omelette-parfaite-technique-francaise",
@@ -874,7 +877,8 @@
       "servings": 2,
       "date_iso": "2026-05-01",
       "date_display": "1 mai 2026",
-      "url": "recettes/carbonara-authentique-recette-romaine.html"
+      "url": "recettes/carbonara-authentique-recette-romaine.html",
+      "yield_label": "2 grandes portions"
     },
     {
       "slug": "poulet-roti-herbes-de-provence-facile",

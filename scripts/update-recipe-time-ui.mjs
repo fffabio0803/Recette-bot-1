@@ -10,7 +10,7 @@ if (!listing.includes('recipe.rest_time')) listing = listing.replace(oldMeta, ol
 listing = listing.replace(/<article class="recipe-card">[\s\S]*?<\/article>/g, card => {
   const r = data.find(r => card.includes('href="' + r.url + '"'));
   if (!r) return card;
-  return card.replace(/<div class="recipe-meta">[\s\S]*?<\/div>/, `<div class="recipe-meta"><span>Préparation : ${r.prep_time}</span><span>Cuisson : ${r.cook_time}</span>${r.rest_time ? '<span>Repos : ' + r.rest_time + '</span>' : ''}<span>${r.servings} pers.</span></div>`);
+  return card.replace(/<div class="recipe-meta">[\s\S]*?<\/div>/, `<div class="recipe-meta"><span>Préparation : ${r.prep_time}</span><span>Cuisson : ${r.cook_time}</span>${r.rest_time ? '<span>Repos : ' + r.rest_time + '</span>' : ''}<span>${r.yield_label || r.servings + ' pers.'}</span></div>`);
 });
 fs.writeFileSync('toutes-les-recettes.html', listing);
 let index = fs.readFileSync('index.html', 'utf8');

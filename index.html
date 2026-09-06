@@ -1167,6 +1167,7 @@
   </style>
   <link rel="stylesheet" href="/assets/analytics-consent.css">
   <script defer src="/assets/analytics-consent.js"></script>
+<script src="/assets/recipe-yield.js?v=20260906"></script>
 </head>
 
 <body>
@@ -1790,7 +1791,7 @@
               <path d="M14 15c3.3 0 5.2 1.7 5.5 5"></path>
             </svg>
 
-            ${escapeHtml(recipe.servings || "—")} personnes
+            ${escapeHtml(RecipeYield.label(recipe))}
           </span>
         </div>
 
@@ -1932,7 +1933,7 @@
                 </span>
 
                 <span>
-                  ♙ ${escapeHtml(recipe.servings || "—")} pers.
+                  ♙ ${escapeHtml(RecipeYield.label(recipe))}
                 </span>
               </div>
             </div>
@@ -1992,7 +1993,7 @@
               </span>
 
               <span>
-                ♙ ${escapeHtml(recipe.servings || "—")} pers.
+                ♙ ${escapeHtml(RecipeYield.label(recipe))}
               </span>
             </div>
           </div>
@@ -2123,7 +2124,7 @@
               <div class="search-result-meta">
                 ${escapeHtml(recipe.category || "Recette")}
                 · ${escapeHtml(recipe.prep_time || "—")}
-                · ${escapeHtml(recipe.servings || "—")} pers.
+                · ${escapeHtml(RecipeYield.label(recipe))}
               </div>
             </a>
           `)
