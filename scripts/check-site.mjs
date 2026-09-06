@@ -44,7 +44,7 @@ function browser(choice) {
     body: { appendChild: el => nodes.set(el.id, el) },
     createElement() { const children = new Map(); return {dataset: {}, handlers: {}, setAttribute() {}, addEventListener(k, fn) { this.handlers[k] = fn; }, remove() { nodes.delete(this.id); }, querySelector(key) { if (!children.has(key)) children.set(key, this.owner.createElement()); return children.get(key); }, owner: document}; }
   };
-  const window = { location: { hostname: 'latablemijote.fr', reload: () => reloads++ } };
+  const window = { handlers: {}, addEventListener(name, fn) { this.handlers[name] = fn; }, location: { hostname: 'latablemijote.fr', reload: () => reloads++ } };
   vm.runInNewContext(source, {window, document, localStorage: {getItem:k=>saved.get(k), setItem:(k,v)=>saved.set(k,v)}});
   return {window, nodes, saved, get script() {return script;}, get reloads() {return reloads;}};
 }
@@ -56,5 +56,8 @@ b.nodes.get('ltm-cookie-settings').handlers.click();
 b.nodes.get('ltm-cookie-banner').querySelector('[data-ltm-consent="refused"]').handlers.click();
 assert.equal(b.window['ga-disable-G-RD4N5W9HP7'], true); assert.equal(b.reloads, 1); assert.equal(b.saved.get('ltm_analytics_consent_v1'), 'refused');
 assert.equal(browser('refused').script, null);
+b = browser('accepted');
+b.window.handlers.storage({key: 'ltm_analytics_consent_v1', newValue: 'refused'});
+assert.equal(b.window['ga-disable-G-RD4N5W9HP7'], true); assert.equal(b.reloads, 1);
 if (errors.length) { console.error([...new Set(errors)].join('\n')); process.exitCode = 1; }
 console.log(`${pages.length} pages, ${recipes.length} recettes, ${schemaCount} blocs structurés ; consentement et corrections César testés.`);

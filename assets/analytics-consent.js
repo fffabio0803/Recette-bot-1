@@ -132,6 +132,17 @@
     }
   }
 
+  // Un refus doit également arrêter Analytics dans les autres onglets ouverts.
+  window.addEventListener('storage', function (event) {
+    if (event.key === STORAGE_KEY && event.newValue === 'refused') {
+      saveChoice('refused');
+    } else if (event.key === null || (event.key === STORAGE_KEY && event.newValue === null)) {
+      window[DISABLE_KEY] = true;
+      if (document.querySelector('script[data-ltm-analytics]')) window.location.reload();
+      else showBanner();
+    }
+  });
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
