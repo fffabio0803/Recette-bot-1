@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const timing = require('../assets/recipe-time.js');
-for (const [input, expected] of [['0 min',0], ['1h30',90], ['1 h 40 min',100], ['24h10',1450], ['24 à 48 h',2880], ['1,5h',90], ['15 min',15], ['inconnu',99999]]) {
+for (const [input, expected] of [['0 min',0], ['1h30',90], ['1 h 40 min',100], ['24h10',1450], ['24 à 48 h',2880], ['1,5h',90], ['15 min',15], ['1h repos',60], ['4h congelateur',240], ['2h frigo',120], ['inconnu',99999]]) {
   assert.equal(timing.parseMinutes(input), expected, input);
 }
 assert.equal(timing.isQuickRecipe({prep_time:'10 min',cook_time:'0 min'}), true);

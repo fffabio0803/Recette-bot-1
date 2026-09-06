@@ -2,6 +2,7 @@
   'use strict';
   function parseMinutes(value) {
     var text = String(value == null ? '' : value).trim().toLowerCase().replace(',', '.');
+    text = text.replace(/\s+(?:repos|frigo|cong[eé]lateur)$/, '');
     // Pour une plage, retenir la borne haute afin de ne pas sous-estimer le temps.
     text = text.replace(/\d+(?:\.\d+)?\s*(?:à|-)\s*(\d+(?:\.\d+)?)\s*(h|min)/g, '$1$2');
     var match = text.match(/^(\d+(?:\.\d+)?)\s*h(?:\s*(\d+)\s*(?:min)?)?$/);
