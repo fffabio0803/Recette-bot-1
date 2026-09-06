@@ -3,6 +3,8 @@
 
   var MEASUREMENT_ID = 'G-RD4N5W9HP7';
   var STORAGE_KEY = 'ltm_analytics_consent_v1';
+  var DISABLE_KEY = 'ga-disable-' + MEASUREMENT_ID;
+  window[DISABLE_KEY] = true;
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () {
@@ -18,13 +20,15 @@
   });
 
   function loadAnalytics() {
-    if (document.querySelector('script[data-ltm-analytics]')) return;
+    window[DISABLE_KEY] = false;
     window.gtag('consent', 'update', {
       analytics_storage: 'granted',
       ad_storage: 'denied',
       ad_user_data: 'denied',
       ad_personalization: 'denied'
     });
+
+    if (document.querySelector('script[data-ltm-analytics]')) return;
 
     var script = document.createElement('script');
     script.async = true;
@@ -51,7 +55,29 @@
       // Le choix reste valable pour la page courante si le stockage est bloqué.
     }
     removeBanner();
-    if (choice === 'accepted') loadAnalytics();
+    if (choice === 'accepted') {
+      loadAnalytics();
+    } else {
+      window[DISABLE_KEY] = true;
+      window.gtag('consent', 'update', {
+        analytics_storage: 'denied', ad_storage: 'denied',
+        ad_user_data: 'denied', ad_personalization: 'denied'
+      });
+      // Retirer les cookies GA du domaine courant et du domaine parent.
+      document.cookie.split(';').forEach(function (cookie) {
+        var name = cookie.split('=')[0].trim();
+        if (!/^_ga(?:_|$)/.test(name)) return;
+        var expiry = name + '=; Max-Age=0; path=/; SameSite=Lax';
+        document.cookie = expiry;
+        var parts = window.location.hostname.split('.');
+        while (parts.length > 1) {
+          document.cookie = expiry + '; domain=' + parts.join('.');
+          parts.shift();
+        }
+      });
+      // Le rechargement retire aussi la bibliothèque déjà chargée.
+      if (document.querySelector('script[data-ltm-analytics]')) window.location.reload();
+    }
   }
 
   function showBanner() {
@@ -60,7 +86,7 @@
     banner.id = 'ltm-cookie-banner';
     banner.className = 'ltm-cookie-banner';
     banner.setAttribute('role', 'dialog');
-    banner.setAttribute('aria-modal', 'true');
+    banner.setAttribute('aria-modal', 'false');
     banner.setAttribute('aria-labelledby', 'ltm-cookie-title');
     banner.innerHTML =
       '<div class="ltm-cookie-copy">' +
