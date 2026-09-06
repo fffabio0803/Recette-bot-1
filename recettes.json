@@ -630,12 +630,13 @@
       "meta_description": "Une quiche lorraine aux lardons avec une pâte croustillante et une migaine crémeuse, accompagnée de conseils pour éviter un fond détrempé.",
       "category": "Tartes",
       "emoji": "🥧",
-      "cook_time": "35 min",
+      "cook_time": "60 min",
       "prep_time": "20 min",
       "servings": 6,
       "date_iso": "2026-05-09",
       "date_display": "9 mai 2026",
-      "url": "recettes/quiche-lorraine-recette-authentique.html"
+      "url": "recettes/quiche-lorraine-recette-authentique.html",
+      "rest_time": "1h40"
     },
     {
       "slug": "creme-brulee-recette-facile-maison",
@@ -713,7 +714,8 @@
       "servings": 6,
       "date_iso": "2026-05-03",
       "date_display": "3 mai 2026",
-      "url": "recettes/boeuf-bourguignon-recette-traditionnelle.html"
+      "url": "recettes/boeuf-bourguignon-recette-traditionnelle.html",
+      "rest_time": "24h10"
     },
     {
       "slug": "tarte-tatin-pommes-caramel-facile",

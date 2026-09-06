@@ -2,12 +2,23 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const timing = require('../assets/recipe-time.js');
+for (const [input, expected] of [['0 min',0], ['1h30',90], ['1 h 40 min',100], ['24h10',1450], ['24 à 48 h',2880], ['1,5h',90], ['15 min',15], ['inconnu',99999]]) {
+  assert.equal(timing.parseMinutes(input), expected, input);
+}
+assert.equal(timing.isQuickRecipe({prep_time:'10 min',cook_time:'0 min'}), true);
+assert.equal(timing.isQuickRecipe({prep_time:'10 min',cook_time:'10 min',rest_time:'1h'}), false);
 const root = process.cwd();
 const pages = ['index.html', ...fs.readdirSync(root).filter(f => f.endsWith('.html') && f !== 'index.html'), ...['recettes', 'guides'].flatMap(d => fs.readdirSync(d).filter(f => f.endsWith('.html')).map(f => `${d}/${f}`))];
 const errors = [];
 let schemaCount = 0;
 for (const file of pages) {
   const html = fs.readFileSync(file, 'utf8');
+  for (const script of html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g)) {
+    if (!/type=|src=/.test(script[1])) new vm.Script(script[2], {filename:file});
+  }
   for (const m of html.matchAll(/(?:href|src)\s*=\s*['"]([^'"<>]+)['"]/g)) {
     if (/^(?:#|mailto:|tel:|data:|javascript:)/.test(m[1]) || m[1].includes('${')) continue;
     let url;
@@ -21,6 +32,12 @@ for (const file of pages) {
   }
 }
 const recipes = JSON.parse(fs.readFileSync('recettes.json', 'utf8')).recettes;
+for (const [slug, marker] of [['quiche-lorraine-recette-authentique','organisation-quiche'], ['boeuf-bourguignon-recette-traditionnelle','organisation-bourguignon'], ['saumon-gravlax-maison-aneth-citron','securite-gravlax']]) {
+  const html = fs.readFileSync('recettes/' + slug + '.html', 'utf8');
+  assert.ok(html.includes(marker), 'Section éditoriale manquante : ' + slug);
+}
+const quiche = recipes.find(r => r.slug === 'quiche-lorraine-recette-authentique');
+assert.equal(timing.parseMinutes(quiche.prep_time) + timing.parseMinutes(quiche.cook_time) + timing.parseMinutes(quiche.rest_time), 180);
 assert.equal(new Set(recipes.map(r => r.slug)).size, recipes.length, 'Slugs dupliqués');
 for (const r of recipes) assert.ok(fs.existsSync(r.url), r.url);
 const caesar = fs.readFileSync('recettes/salade-caesar-poulet-grille-maison.html', 'utf8');

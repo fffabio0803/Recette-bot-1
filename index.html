@@ -1779,7 +1779,7 @@
               <path d="M12 13c1 1 2 2 2 3.2a2 2 0 0 1-4 0c0-1 .7-2 2-3.2Z"></path>
             </svg>
 
-            ${escapeHtml(recipe.cook_time || "—")} de cuisson
+            ${escapeHtml(recipe.cook_time || "—")} de cuisson${recipe.rest_time ? " + repos " + escapeHtml(recipe.rest_time) : ""}
           </span>
 
           <span class="meta-item">
@@ -1928,7 +1928,7 @@
                 </span>
 
                 <span>
-                  ♨ ${escapeHtml(recipe.cook_time || "—")}
+                  ♨ ${escapeHtml(recipe.cook_time || "—")}${recipe.rest_time ? " + repos " + escapeHtml(recipe.rest_time) : ""}
                 </span>
 
                 <span>
@@ -1988,7 +1988,7 @@
               </span>
 
               <span>
-                ♨ ${escapeHtml(recipe.cook_time || "—")}
+                ♨ ${escapeHtml(recipe.cook_time || "—")}${recipe.rest_time ? " + repos " + escapeHtml(recipe.rest_time) : ""}
               </span>
 
               <span>
