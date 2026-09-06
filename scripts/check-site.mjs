@@ -26,6 +26,11 @@ for (const r of recipes) assert.ok(fs.existsSync(r.url), r.url);
 const caesar = fs.readFileSync('recettes/salade-caesar-poulet-grille-maison.html', 'utf8');
 assert.ok(!caesar.includes('65 degres') && !caesar.includes('48 heures'));
 assert.ok(caesar.includes('74 °C') && caesar.includes('24 heures'));
+for (const name of ['tiramisu-recette-italienne-originale', 'mousse-au-chocolat-legere-rapide']) {
+  const html = fs.readFileSync('recettes/' + name + '.html', 'utf8');
+  assert.ok(html.includes('24 heures'), 'Conservation manquante : ' + name);
+  assert.ok(!/maximum 48h|conserve 3 jours maximum|2 cuillères d.agar/.test(html), 'Ancien conseil : ' + name);
+}
 // Simuler le navigateur : vérifier que refuser ne charge rien et que retirer
 // le consentement désactive GA avant le rechargement de la page.
 const source = fs.readFileSync('assets/analytics-consent.js', 'utf8');
