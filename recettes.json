@@ -11,7 +11,10 @@
       "servings": 2,
       "date_iso": "2026-08-25",
       "date_display": "25/08/2026",
-      "url": "recettes/pain-perdu-brioche-recette-facile.html"
+      "url": "recettes/pain-perdu-brioche-recette-facile.html",
+      "rest_time": "8 min",
+      "time_note": "Prévoir 6 à 8 min de trempage. La cuisson indiquée dépend du nombre de fournées et de la taille de la poêle.",
+      "time_uncertain": true
     },
     {
       "slug": "salade-caesar-poulet-grille-maison",
@@ -24,7 +27,10 @@
       "servings": 2,
       "date_iso": "2026-08-24",
       "date_display": "24/08/2026",
-      "url": "recettes/salade-caesar-poulet-grille-maison.html"
+      "url": "recettes/salade-caesar-poulet-grille-maison.html",
+      "rest_time": "5 min",
+      "time_note": "Laisser reposer le poulet 5 min avant de le couper. Préparer la sauce et les croûtons pendant les autres étapes.",
+      "time_uncertain": false
     },
     {
       "slug": "ile-flottante-oeufs-neige-creme-anglaise",
@@ -37,7 +43,10 @@
       "servings": 4,
       "date_iso": "2026-08-23",
       "date_display": "23/08/2026",
-      "url": "recettes/ile-flottante-oeufs-neige-creme-anglaise.html"
+      "url": "recettes/ile-flottante-oeufs-neige-creme-anglaise.html",
+      "rest_time": "À prévoir",
+      "time_note": "Ajouter le refroidissement de la crème anglaise avant le service froid ; sa durée dépend du récipient et du mode de refroidissement.",
+      "time_uncertain": true
     },
     {
       "slug": "daurade-royale-four-citron-fenouil",
@@ -45,12 +54,15 @@
       "meta_description": "Daurade royale entière rôtie au four sur lit de fenouil fondant et citron, huile d'olive et herbes de Provence. Recette simple et parfumée.",
       "category": "Poisson",
       "emoji": "Poisson",
-      "cook_time": "25 min",
+      "cook_time": "40 min",
       "prep_time": "10 min",
       "servings": 2,
       "date_iso": "2026-08-22",
       "date_display": "22/08/2026",
-      "url": "recettes/daurade-royale-four-citron-fenouil.html"
+      "url": "recettes/daurade-royale-four-citron-fenouil.html",
+      "rest_time": "5 min",
+      "time_note": "Compter environ 10 min pour le fenouil et la réduction, puis 25 à 30 min au four et 5 min de repos.",
+      "time_uncertain": false
     },
     {
       "slug": "fraisier-recette-patisserie-maison",
@@ -58,12 +70,15 @@
       "meta_description": "Réalisez un fraisier maison digne des vitrines de pâtissier : génoise moelleuse, crème mousseline légère et fraises fraîches. Recette détaillée pas à pas.",
       "category": "Desserts",
       "emoji": "Desserts",
-      "cook_time": "3h",
+      "cook_time": "20 min + crème",
       "prep_time": "45 min",
       "servings": 8,
       "date_iso": "2026-08-21",
       "date_display": "21/08/2026",
-      "url": "recettes/fraisier-recette-patisserie-maison.html"
+      "url": "recettes/fraisier-recette-patisserie-maison.html",
+      "rest_time": "3h",
+      "time_note": "La génoise cuit 20 min ; la crème nécessite une cuisson supplémentaire. Ajouter leur refroidissement complet avant le montage, puis au moins 3 h au réfrigérateur.",
+      "time_uncertain": true
     },
     {
       "slug": "creme-caramel-renversee-classique",
@@ -71,12 +86,15 @@
       "meta_description": "Découvrez la crème caramel renversée parfaite : onctueuse, lisse et caramel ambré. Technique de chef pour un démoulage impeccable à tous les coups.",
       "category": "Desserts",
       "emoji": "Desserts",
-      "cook_time": "45 min",
+      "cook_time": "45 à 55 min + caramel",
       "prep_time": "15 min",
       "servings": 6,
       "date_iso": "2026-08-20",
       "date_display": "20/08/2026",
-      "url": "recettes/creme-caramel-renversee-classique.html"
+      "url": "recettes/creme-caramel-renversee-classique.html",
+      "rest_time": "4h15",
+      "time_note": "Le bain-marie dure 45 à 55 min, en plus du caramel. Prévoir 15 min d’infusion et au moins 4 h au réfrigérateur, ainsi que le refroidissement préalable.",
+      "time_uncertain": true
     },
     {
       "slug": "roti-de-porc-moutarde-miel-recette",
@@ -84,12 +102,15 @@
       "meta_description": "Rôti de porc moutarde miel juteux et doré, glaçage caramélisé parfait. Recette facile, astuces de cuisson et temps précis pour réussir à coup sûr.",
       "category": "Viande",
       "emoji": "Viande",
-      "cook_time": "1h",
+      "cook_time": "1h10",
       "prep_time": "10 min",
       "servings": 6,
       "date_iso": "2026-08-19",
       "date_display": "19/08/2026",
-      "url": "recettes/roti-de-porc-moutarde-miel-recette.html"
+      "url": "recettes/roti-de-porc-moutarde-miel-recette.html",
+      "rest_time": "15 min",
+      "time_note": "Le four est utilisé 15 min puis 45 à 55 min : compter jusqu’à 1 h 10. Ajouter 10 à 15 min de repos ; la marinade facultative de 30 min vient en supplément.",
+      "time_uncertain": false
     },
     {
       "slug": "sorbet-mangue-citron-vert-recette",
@@ -97,12 +118,15 @@
       "meta_description": "Découvrez un sorbet mangue citron vert crémeux et acidulé, facile à réaliser sans sorbetière obligatoire, pour un dessert d'été rafraîchissant et gourmand.",
       "category": "Desserts",
       "emoji": "Desserts",
-      "cook_time": "4h congelateur",
+      "cook_time": "Variable (sirop)",
       "prep_time": "10 min",
       "servings": 6,
       "date_iso": "2026-08-18",
       "date_display": "18/08/2026",
-      "url": "recettes/sorbet-mangue-citron-vert-recette.html"
+      "url": "recettes/sorbet-mangue-citron-vert-recette.html",
+      "rest_time": "Selon méthode",
+      "time_note": "Prévoir le refroidissement du sirop (30 min), puis 2 h au frais. Avec une sorbetière : 20 à 30 min de turbinage puis 2 h de raffermissement au congélateur. Sans machine : environ 4 h de congélation avec brassages, puis 2 h de raffermissement. Selon la machine, préparer sa cuve la veille.",
+      "time_uncertain": true
     },
     {
       "slug": "oeufs-cocotte-creme-fraiche-facile",
@@ -128,7 +152,10 @@
       "servings": 6,
       "date_iso": "2026-08-16",
       "date_display": "16/08/2026",
-      "url": "recettes/brandade-de-morue-maison-recette.html"
+      "url": "recettes/brandade-de-morue-maison-recette.html",
+      "rest_time": "Dessalage préalable",
+      "time_note": "Ces durées commencent avec une morue déjà dessalée. Prévoir le dessalage selon les indications du fournisseur, au réfrigérateur ; le gratinage facultatif s’ajoute à la préparation.",
+      "time_uncertain": true
     },
     {
       "slug": "baba-au-rhum-recette-traditionnelle",
@@ -141,7 +168,10 @@
       "servings": 6,
       "date_iso": "2026-08-15",
       "date_display": "15/08/2026",
-      "url": "recettes/baba-au-rhum-recette-traditionnelle.html"
+      "url": "recettes/baba-au-rhum-recette-traditionnelle.html",
+      "rest_time": "2h40",
+      "time_note": "Prévoir deux levées (1 h 30 puis 45 à 60 min) et 10 min d’infusion du sirop. Une partie du sirop peut être préparée pendant la levée ; ajouter le refroidissement et l’imbibage.",
+      "time_uncertain": true
     },
     {
       "slug": "tortilla-espagnole-pommes-de-terre-oignon",
@@ -149,12 +179,15 @@
       "meta_description": "Une tortilla épaisse aux pommes de terre et à l’oignon, avec des conseils pour cuire le centre tout en conservant une texture moelleuse.",
       "category": "Œufs",
       "emoji": "Œufs",
-      "cook_time": "30 min",
+      "cook_time": "35 min",
       "prep_time": "15 min",
       "servings": 4,
       "date_iso": "2026-08-14",
       "date_display": "14/08/2026",
-      "url": "recettes/tortilla-espagnole-pommes-de-terre-oignon.html"
+      "url": "recettes/tortilla-espagnole-pommes-de-terre-oignon.html",
+      "rest_time": "30 min",
+      "time_note": "Prévoir 20 à 25 min pour les pommes de terre, puis 7 à 9 min à la poêle. Les attentes sont de 10 min pour égoutter, 10 min avec les œufs et 10 min avant le service.",
+      "time_uncertain": false
     },
     {
       "slug": "madeleine-recette-classique-bosse",
@@ -162,12 +195,15 @@
       "meta_description": "Des madeleines moelleuses avec une bosse dorée, accompagnées de conseils sur le repos de la pâte et la température du four.",
       "category": "Gâteaux",
       "emoji": "Gâteaux",
-      "cook_time": "1h repos",
+      "cook_time": "12 min",
       "prep_time": "12 min",
       "servings": 16,
       "date_iso": "2026-08-13",
       "date_display": "13/08/2026",
-      "url": "recettes/madeleine-recette-classique-bosse.html"
+      "url": "recettes/madeleine-recette-classique-bosse.html",
+      "rest_time": "2h",
+      "time_note": "La pâte repose au moins 2 h au réfrigérateur. La cuisson dure 5 min puis 6 à 7 min ; ajouter le refroidissement sur grille et les fournées supplémentaires.",
+      "time_uncertain": true
     },
     {
       "slug": "salade-de-lentilles-vinaigrette-moutarde",
@@ -180,7 +216,10 @@
       "servings": 4,
       "date_iso": "2026-08-12",
       "date_display": "12/08/2026",
-      "url": "recettes/salade-de-lentilles-vinaigrette-moutarde.html"
+      "url": "recettes/salade-de-lentilles-vinaigrette-moutarde.html",
+      "rest_time": "40 min",
+      "time_note": "Après la cuisson, prévoir 10 min pour tiédir les lentilles puis 30 min de repos de la salade.",
+      "time_uncertain": false
     },
     {
       "slug": "poulet-basquaise-tomates-poivrons",
@@ -201,12 +240,15 @@
       "meta_description": "Panna cotta vanille onctueuse nappée d'un coulis de fruits rouges maison : recette facile, crémeuse et parfumée, idéale à préparer la veille pour vos repas.",
       "category": "Desserts",
       "emoji": "Desserts",
-      "cook_time": "3h frigo",
+      "cook_time": "Chauffage de la crème",
       "prep_time": "10 min",
       "servings": 4,
       "date_iso": "2026-08-10",
       "date_display": "10/08/2026",
-      "url": "recettes/panna-cotta-vanille-coulis-fruits.html"
+      "url": "recettes/panna-cotta-vanille-coulis-fruits.html",
+      "rest_time": "4h35",
+      "time_note": "Le chauffage de la crème est à surveiller, sans durée fixe. Ajouter 15 min d’infusion, environ 20 min de refroidissement et au moins 4 h au réfrigérateur. Faire tremper la gélatine pendant les autres préparatifs.",
+      "time_uncertain": true
     },
     {
       "slug": "tartiflette-reblochon-pommes-de-terre",
@@ -219,7 +261,10 @@
       "servings": 4,
       "date_iso": "2026-08-09",
       "date_display": "09/08/2026",
-      "url": "recettes/tartiflette-reblochon-pommes-de-terre.html"
+      "url": "recettes/tartiflette-reblochon-pommes-de-terre.html",
+      "rest_time": "5 min",
+      "time_note": "Préparer les oignons et les lardons pendant la cuisson des pommes de terre. Compter ensuite 20 à 25 min au four et environ 5 min avant de servir.",
+      "time_uncertain": false
     },
     {
       "slug": "saumon-gravlax-maison-aneth-citron",
@@ -227,12 +272,15 @@
       "meta_description": "Recette du saumon gravlax maison mariné à l'aneth et citron. Technique traditionnelle scandinave expliquée pas à pas pour un résultat digne d'un chef.",
       "category": "Poisson",
       "emoji": "Poisson",
-      "cook_time": "48h",
+      "cook_time": "0 min",
       "prep_time": "20 min",
       "servings": 8,
       "date_iso": "2026-08-08",
       "date_display": "08/08/2026",
-      "url": "recettes/saumon-gravlax-maison-aneth-citron.html"
+      "url": "recettes/saumon-gravlax-maison-aneth-citron.html",
+      "rest_time": "24 à 48 h",
+      "time_note": "Il n’y a pas de cuisson : le poisson marine 24 à 48 h au réfrigérateur. Les éventuels traitements préalables et la décongélation selon le fournisseur sont à anticiper ; voir les précautions pour le poisson cru.",
+      "time_uncertain": true
     },
     {
       "slug": "profiteroles-choux-creme-glacee-chocolat",
@@ -245,7 +293,10 @@
       "servings": 8,
       "date_iso": "2026-08-07",
       "date_display": "07/08/2026",
-      "url": "recettes/profiteroles-choux-creme-glacee-chocolat.html"
+      "url": "recettes/profiteroles-choux-creme-glacee-chocolat.html",
+      "rest_time": "À prévoir",
+      "time_note": "Ajouter 5 min pour tiédir la pâte puis le refroidissement complet des choux avant de les garnir de glace.",
+      "time_uncertain": true
     },
     {
       "slug": "gaspacho-andalou-recette-fraiche",
@@ -253,12 +304,15 @@
       "meta_description": "Un gaspacho frais aux tomates et poivrons, mixé avec huile d’olive et vinaigre, accompagné de conseils pour équilibrer la texture et l’assaisonnement.",
       "category": "Soupes",
       "emoji": "Soupes",
-      "cook_time": "2h frigo",
+      "cook_time": "0 min",
       "prep_time": "15 min",
       "servings": 6,
       "date_iso": "2026-08-06",
       "date_display": "06/08/2026",
-      "url": "recettes/gaspacho-andalou-recette-fraiche.html"
+      "url": "recettes/gaspacho-andalou-recette-fraiche.html",
+      "rest_time": "3h",
+      "time_note": "Faire tremper le pain environ 10 min pendant la préparation des légumes. Le gaspacho mixé repose ensuite au moins 3 h au réfrigérateur.",
+      "time_uncertain": false
     },
     {
       "slug": "tajine-de-poulet-citron-confit-olives",
@@ -271,7 +325,10 @@
       "servings": 4,
       "date_iso": "2026-08-05",
       "date_display": "05/08/2026",
-      "url": "recettes/tajine-de-poulet-citron-confit-olives.html"
+      "url": "recettes/tajine-de-poulet-citron-confit-olives.html",
+      "rest_time": "30 min",
+      "time_note": "Prévoir au moins 30 min de marinade au réfrigérateur avant la cuisson.",
+      "time_uncertain": false
     },
     {
       "slug": "pavlova-fruits-rouges-meringue",
@@ -284,7 +341,10 @@
       "servings": 8,
       "date_iso": "2026-08-04",
       "date_display": "04/08/2026",
-      "url": "recettes/pavlova-fruits-rouges-meringue.html"
+      "url": "recettes/pavlova-fruits-rouges-meringue.html",
+      "rest_time": "2h",
+      "time_note": "La meringue cuit environ 1 h 25, puis refroidit au moins 2 h dans le four éteint. Ne garnir qu’une fois froide.",
+      "time_uncertain": false
     },
     {
       "slug": "gnocchis-pommes-de-terre-maison",
@@ -292,12 +352,15 @@
       "meta_description": "Des gnocchis de pommes de terre tendres, avec des conseils pour limiter la farine et éviter une pâte lourde ou collante.",
       "category": "Pâtes",
       "emoji": "Pates",
-      "cook_time": "30 min",
+      "cook_time": "45 min",
       "prep_time": "30 min",
       "servings": 4,
       "date_iso": "2026-08-03",
       "date_display": "03/08/2026",
-      "url": "recettes/gnocchis-pommes-de-terre-maison.html"
+      "url": "recettes/gnocchis-pommes-de-terre-maison.html",
+      "rest_time": "5 min",
+      "time_note": "Les pommes de terre cuisent 35 à 40 min. Ajouter le pochage des gnocchis par petites quantités et leur finition ; le nombre de fournées peut prolonger la cuisson.",
+      "time_uncertain": true
     },
     {
       "slug": "far-breton-pruneaux-recette-bretonne",
@@ -305,12 +368,15 @@
       "meta_description": "Un far aux pruneaux à la texture fondante, avec des conseils pour répartir les fruits et obtenir une cuisson homogène.",
       "category": "Desserts",
       "emoji": "Desserts",
-      "cook_time": "45 min",
+      "cook_time": "50 min",
       "prep_time": "10 min",
       "servings": 8,
       "date_iso": "2026-08-02",
       "date_display": "02/08/2026",
-      "url": "recettes/far-breton-pruneaux-recette-bretonne.html"
+      "url": "recettes/far-breton-pruneaux-recette-bretonne.html",
+      "rest_time": "2h30",
+      "time_note": "Prévoir au moins 2 h de macération des pruneaux, en parallèle du repos de la pâte (au moins 1 h au frais), puis 45 à 50 min au four et 30 min pour tiédir. Les temps parallèles ne s’additionnent pas.",
+      "time_uncertain": false
     },
     {
       "slug": "pissaladiere-nicoise-oignons-anchois",
@@ -318,12 +384,15 @@
       "meta_description": "Une pissaladière garnie d’oignons fondants, d’anchois et d’olives, avec des conseils pour cuire les oignons sans les dessécher.",
       "category": "Tartes",
       "emoji": "Tartes",
-      "cook_time": "45 min",
+      "cook_time": "1h40",
       "prep_time": "20 min",
       "servings": 6,
       "date_iso": "2026-08-01",
       "date_display": "01/08/2026",
-      "url": "recettes/pissaladiere-nicoise-oignons-anchois.html"
+      "url": "recettes/pissaladiere-nicoise-oignons-anchois.html",
+      "rest_time": "1h50",
+      "time_note": "Les oignons cuisent 65 à 75 min et la tarte 20 à 25 min. Prévoir 10 min pour la levure, 1 h 30 de levée puis 5 à 10 min avant service. Cuire les oignons pendant la levée : le temps écoulé est inférieur à la somme de ces durées.",
+      "time_uncertain": false
     },
     {
       "slug": "rillettes-de-saumon-fume-maison",
@@ -331,12 +400,15 @@
       "meta_description": "Recette de rillettes de saumon fumé maison, crémeuses et parfumées à l'aneth. Simple, rapide, idéale à l'apéritif ou en entrée raffinée.",
       "category": "Entrées",
       "emoji": "Entrees",
-      "cook_time": "1h frigo",
+      "cook_time": "8 min",
       "prep_time": "10 min",
       "servings": 6,
       "date_iso": "2026-07-31",
       "date_display": "31/07/2026",
-      "url": "recettes/rillettes-de-saumon-fume-maison.html"
+      "url": "recettes/rillettes-de-saumon-fume-maison.html",
+      "rest_time": "3h",
+      "time_note": "Le saumon frais poche 6 à 8 min. Ajouter son refroidissement puis au moins 3 h de repos des rillettes au réfrigérateur.",
+      "time_uncertain": true
     },
     {
       "slug": "cake-citron-moelleux-facile-rapide",
@@ -349,7 +421,10 @@
       "servings": 8,
       "date_iso": "2026-07-30",
       "date_display": "30/07/2026",
-      "url": "recettes/cake-citron-moelleux-facile-rapide.html"
+      "url": "recettes/cake-citron-moelleux-facile-rapide.html",
+      "rest_time": "À prévoir",
+      "time_note": "Prévoir 10 min avant démoulage, le refroidissement complet sur grille, puis 15 min de prise du glaçage.",
+      "time_uncertain": true
     },
     {
       "slug": "veloute-butternut-courge-gingembre",
@@ -357,12 +432,14 @@
       "meta_description": "Un velouté de butternut au gingembre frais, crémeux et parfumé. Recette facile, astuces de chef pour une texture parfaite et un équilibre des saveurs réussi.",
       "category": "Soupes",
       "emoji": "Soupes",
-      "cook_time": "30 min",
+      "cook_time": "35 min",
       "prep_time": "10 min",
       "servings": 4,
       "date_iso": "2026-07-29",
       "date_display": "29/07/2026",
-      "url": "recettes/veloute-butternut-courge-gingembre.html"
+      "url": "recettes/veloute-butternut-courge-gingembre.html",
+      "time_note": "Les étapes chaudes s’enchaînent : environ 5 min, puis 3 à 4 min et 20 à 25 min de mijotage.",
+      "time_uncertain": false
     },
     {
       "slug": "osso-buco-milanaise-recette-italienne",
@@ -370,12 +447,14 @@
       "meta_description": "Un osso buco mijoté avec tomates et aromates, accompagné de conseils pour obtenir une viande tendre et une sauce concentrée.",
       "category": "Viande",
       "emoji": "Viande",
-      "cook_time": "1h30",
+      "cook_time": "2h20",
       "prep_time": "20 min",
       "servings": 4,
       "date_iso": "2026-07-28",
       "date_display": "28/07/2026",
-      "url": "recettes/osso-buco-milanaise-recette-italienne.html"
+      "url": "recettes/osso-buco-milanaise-recette-italienne.html",
+      "time_note": "Prévoir 6 à 8 min pour saisir la viande, 8 min pour les légumes puis environ 2 h au four. Prolonger par tranches de 20 min si la viande n’est pas encore tendre.",
+      "time_uncertain": false
     },
     {
       "slug": "fondant-chocolat-coulant-moelleux",
@@ -401,7 +480,10 @@
       "servings": 4,
       "date_iso": "2026-07-26",
       "date_display": "26/07/2026",
-      "url": "recettes/tarte-flambee-alsacienne-recette.html"
+      "url": "recettes/tarte-flambee-alsacienne-recette.html",
+      "rest_time": "30 min",
+      "time_note": "La pâte repose 30 min. Compter 8 à 10 min au four par fournée ; la durée affichée prévoit environ deux fournées.",
+      "time_uncertain": true
     },
     {
       "slug": "moules-marinieres-vin-blanc-facile",
@@ -422,12 +504,15 @@
       "meta_description": "Un tiramisu crémeux au mascarpone, biscuits imbibés de café et cacao amer, avec des repères précis pour réussir sa tenue sans cuisson.",
       "category": "Desserts",
       "emoji": "Desserts",
-      "cook_time": "4h frigo",
+      "cook_time": "0 min",
       "prep_time": "20 min",
       "servings": 6,
       "date_iso": "2026-07-24",
       "date_display": "24/07/2026",
-      "url": "recettes/tiramisu-recette-italienne-originale.html"
+      "url": "recettes/tiramisu-recette-italienne-originale.html",
+      "rest_time": "6h",
+      "time_note": "Prévoir au moins 6 h au réfrigérateur après le montage et du café refroidi pour les biscuits. Le repos ne remplace pas la limite de conservation de 24 h indiquée pour les œufs crus.",
+      "time_uncertain": true
     },
     {
       "slug": "taboul-maison-menthe-citron",
@@ -435,12 +520,15 @@
       "meta_description": "Un taboulé frais à la menthe et au citron, avec des légumes croquants et des conseils pour maîtriser l’hydratation de la semoule.",
       "category": "Salades",
       "emoji": "Salades",
-      "cook_time": "1h frigo",
+      "cook_time": "0 min",
       "prep_time": "20 min",
       "servings": 4,
       "date_iso": "2026-07-23",
       "date_display": "23/07/2026",
-      "url": "recettes/taboul-maison-menthe-citron.html"
+      "url": "recettes/taboul-maison-menthe-citron.html",
+      "rest_time": "1h20",
+      "time_note": "La semoule s’hydrate 15 à 20 min avec de l’eau chaude, pendant la découpe des légumes, puis le taboulé repose au moins 1 h au frais.",
+      "time_uncertain": false
     },
     {
       "slug": "croque-monsieur-bechamel-maison",
@@ -448,12 +536,15 @@
       "meta_description": "Un croque-monsieur à la béchamel gratinée, avec du jambon et un pain croustillant, accompagné de repères pour une cuisson régulière.",
       "category": "Sandwichs",
       "emoji": "Sandwichs",
-      "cook_time": "15 min",
+      "cook_time": "20 min",
       "prep_time": "10 min",
       "servings": 2,
       "date_iso": "2026-07-22",
       "date_display": "22/07/2026",
-      "url": "recettes/croque-monsieur-bechamel-maison.html"
+      "url": "recettes/croque-monsieur-bechamel-maison.html",
+      "rest_time": "2 min",
+      "time_note": "Compter environ 6 à 8 min pour la béchamel puis 10 à 12 min au four et 2 min avant de servir.",
+      "time_uncertain": false
     },
     {
       "slug": "vichyssoise-froide-poireaux-pommes-de-terre",
@@ -461,12 +552,15 @@
       "meta_description": "Une vichyssoise froide aux poireaux et pommes de terre, mixée finement et accompagnée de conseils pour ajuster sa texture après refroidissement.",
       "category": "Soupes",
       "emoji": "Soupes",
-      "cook_time": "2h frigo",
+      "cook_time": "40 min",
       "prep_time": "20 min",
       "servings": 6,
       "date_iso": "2026-07-21",
       "date_display": "21/07/2026",
-      "url": "recettes/vichyssoise-froide-poireaux-pommes-de-terre.html"
+      "url": "recettes/vichyssoise-froide-poireaux-pommes-de-terre.html",
+      "rest_time": "4h",
+      "time_note": "La cuisson comprend 10 min pour faire suer les légumes puis 25 à 30 min de mijotage. Refroidir rapidement et ajouter au moins 4 h au réfrigérateur.",
+      "time_uncertain": true
     },
     {
       "slug": "clafoutis-cerises-recette-classique",
@@ -474,12 +568,15 @@
       "meta_description": "Clafoutis aux cerises moelleux et fondant, recette traditionnelle avec noyaux, pate onctueuse et cuisson parfaite. Un dessert familial incontournable a partager.",
       "category": "Desserts",
       "emoji": "Desserts",
-      "cook_time": "35 min",
+      "cook_time": "40 min",
       "prep_time": "10 min",
       "servings": 6,
       "date_iso": "2026-07-20",
       "date_display": "20/07/2026",
-      "url": "recettes/clafoutis-cerises-recette-classique.html"
+      "url": "recettes/clafoutis-cerises-recette-classique.html",
+      "rest_time": "50 min",
+      "time_note": "Prévoir 30 min de repos de la pâte, 35 à 40 min de cuisson puis environ 20 min avant de servir.",
+      "time_uncertain": false
     },
     {
       "slug": "magret-de-canard-sauce-miel-soja",
@@ -492,7 +589,10 @@
       "servings": 2,
       "date_iso": "2026-07-19",
       "date_display": "19 juillet 2026",
-      "url": "recettes/magret-de-canard-sauce-miel-soja.html"
+      "url": "recettes/magret-de-canard-sauce-miel-soja.html",
+      "rest_time": "8 min",
+      "time_note": "Après la cuisson, laisser reposer le magret 5 à 8 min. Réduire la sauce pendant ce repos.",
+      "time_uncertain": false
     },
     {
       "slug": "pate-a-crepes-recette-de-base",
@@ -500,12 +600,15 @@
       "meta_description": "Une pâte à crêpes simple et fluide, avec des conseils pour éviter les grumeaux et obtenir des crêpes fines, souples et régulièrement dorées.",
       "category": "Crêpes",
       "emoji": "🥞",
-      "cook_time": "1h repos",
+      "cook_time": "2 min par crêpe",
       "prep_time": "15 min",
       "servings": 4,
       "date_iso": "2026-07-18",
       "date_display": "18 juillet 2026",
-      "url": "recettes/pate-a-crepes-recette-de-base.html"
+      "url": "recettes/pate-a-crepes-recette-de-base.html",
+      "rest_time": "1h",
+      "time_note": "La pâte repose au moins 1 h au réfrigérateur. Compter environ 1 min de chaque côté ; la cuisson totale dépend du nombre de crêpes et de poêles utilisées.",
+      "time_uncertain": true
     },
     {
       "slug": "soupe-de-tomates-fraiches-basilic",
@@ -513,12 +616,14 @@
       "meta_description": "Découvrez une soupe de tomates fraîches et basilic onctueuse, parfumée et facile à réaliser. Idéale en été pour un repas léger et savoureux.",
       "category": "Soupes",
       "emoji": "🥣",
-      "cook_time": "20 min",
+      "cook_time": "45 min",
       "prep_time": "10 min",
       "servings": 4,
       "date_iso": "2026-07-17",
       "date_display": "17 juillet 2026",
-      "url": "recettes/soupe-de-tomates-fraiches-basilic.html"
+      "url": "recettes/soupe-de-tomates-fraiches-basilic.html",
+      "time_note": "Prévoir environ 5 min pour l’oignon, 1 min pour l’ail, puis deux étapes successives de 15 et 20 min de mijotage.",
+      "time_uncertain": false
     },
     {
       "slug": "financiers-amandes-moelleux-recette",
@@ -531,7 +636,10 @@
       "servings": 12,
       "date_iso": "2026-07-16",
       "date_display": "16 juillet 2026",
-      "url": "recettes/financiers-amandes-moelleux-recette.html"
+      "url": "recettes/financiers-amandes-moelleux-recette.html",
+      "rest_time": "1h05",
+      "time_note": "La pâte repose au moins 1 h au réfrigérateur. Ajouter 5 min avant démoulage puis le refroidissement sur grille.",
+      "time_uncertain": true
     },
     {
       "slug": "omelette-parfaite-technique-francaise",
@@ -552,12 +660,14 @@
       "meta_description": "Un pot-au-feu mijoté avec plusieurs morceaux de viande, des légumes fondants et un bouillon clair et parfumé, expliqué étape par étape.",
       "category": "Viande",
       "emoji": "🥩",
-      "cook_time": "3h",
+      "cook_time": "4h05",
       "prep_time": "30 min",
       "servings": 8,
       "date_iso": "2026-05-15",
       "date_display": "15 mai 2026",
-      "url": "recettes/pot-au-feu-recette-traditionnelle.html"
+      "url": "recettes/pot-au-feu-recette-traditionnelle.html",
+      "time_note": "Les étapes principales s’additionnent : environ 20 min au démarrage, 2 h 30 de mijotage, puis 45 et 30 min après les ajouts de légumes. Cuire les pommes de terre pendant la dernière phase.",
+      "time_uncertain": false
     },
     {
       "slug": "tarte-au-citron-meringuee-facile",
@@ -565,12 +675,15 @@
       "meta_description": "Une tarte au citron meringuée avec une pâte croustillante, une crème acidulée et une meringue dorée, accompagnée de conseils de préparation.",
       "category": "Desserts",
       "emoji": "🍰",
-      "cook_time": "25 min",
+      "cook_time": "35 à 40 min + crème",
       "prep_time": "30 min",
       "servings": 8,
       "date_iso": "2026-05-14",
       "date_display": "14 mai 2026",
-      "url": "recettes/tarte-au-citron-meringuee-facile.html"
+      "url": "recettes/tarte-au-citron-meringuee-facile.html",
+      "rest_time": "2h45",
+      "time_note": "Le fond de tarte cuit 25 min et la meringue 10 à 15 min, en plus de la cuisson de la crème. Prévoir 30 min de repos de pâte, au moins 2 h au réfrigérateur et 15 min après la dernière cuisson ; ajouter les refroidissements intermédiaires.",
+      "time_uncertain": true
     },
     {
       "slug": "bouillabaisse-marseillaise-recette",
@@ -591,12 +704,15 @@
       "meta_description": "Un gratin dauphinois crémeux aux fines rondelles de pommes de terre, avec des conseils de cuisson pour obtenir un cœur fondant et un dessus doré.",
       "category": "Accompagnements",
       "emoji": "🥔",
-      "cook_time": "1h",
+      "cook_time": "1h05",
       "prep_time": "15 min",
       "servings": 6,
       "date_iso": "2026-05-12",
       "date_display": "12 mai 2026",
-      "url": "recettes/gratin-dauphinois-cremeux-facile.html"
+      "url": "recettes/gratin-dauphinois-cremeux-facile.html",
+      "rest_time": "10 min",
+      "time_note": "Le four est utilisé 45 min puis environ 20 min pour gratiner. Laisser reposer 10 min avant de servir.",
+      "time_uncertain": false
     },
     {
       "slug": "mousse-au-chocolat-legere-rapide",
@@ -604,12 +720,15 @@
       "meta_description": "Une mousse au chocolat légère et aérienne, avec des repères de température et d’incorporation pour conserver le volume des blancs montés.",
       "category": "Desserts",
       "emoji": "🍰",
-      "cook_time": "2h frigo",
+      "cook_time": "0 min",
       "prep_time": "15 min",
       "servings": 6,
       "date_iso": "2026-05-11",
       "date_display": "11 mai 2026",
-      "url": "recettes/mousse-au-chocolat-legere-rapide.html"
+      "url": "recettes/mousse-au-chocolat-legere-rapide.html",
+      "rest_time": "2h",
+      "time_note": "La fonte du chocolat fait partie de la préparation ; les œufs ne sont pas cuits. Prévoir au moins 2 h au réfrigérateur pour la prise et respecter la limite de conservation de 24 h.",
+      "time_uncertain": false
     },
     {
       "slug": "ratatouille-provencale-recette-simple",
@@ -644,12 +763,15 @@
       "meta_description": "Une crème brûlée à la vanille, cuite doucement pour conserver une texture lisse puis recouverte d’une fine couche de caramel croustillant.",
       "category": "Desserts",
       "emoji": "🍰",
-      "cook_time": "30 min",
+      "cook_time": "45 min + caramel",
       "prep_time": "15 min",
       "servings": 4,
       "date_iso": "2026-05-08",
       "date_display": "8 mai 2026",
-      "url": "recettes/creme-brulee-recette-facile-maison.html"
+      "url": "recettes/creme-brulee-recette-facile-maison.html",
+      "rest_time": "4h15",
+      "time_note": "Prévoir 15 min d’infusion, environ 45 min au bain-marie puis le refroidissement et au moins 4 h au réfrigérateur. La caramélisation finale s’ajoute à la cuisson.",
+      "time_uncertain": true
     },
     {
       "slug": "blanquette-de-veau-classique",
@@ -657,12 +779,14 @@
       "meta_description": "Une blanquette de veau mijotée avec légumes et sauce crémeuse, accompagnée de repères pour obtenir une viande tendre et une sauce lisse.",
       "category": "Viande",
       "emoji": "🥩",
-      "cook_time": "1h30",
+      "cook_time": "1h45",
       "prep_time": "30 min",
       "servings": 6,
       "date_iso": "2026-05-07",
       "date_display": "7 mai 2026",
-      "url": "recettes/blanquette-de-veau-classique.html"
+      "url": "recettes/blanquette-de-veau-classique.html",
+      "time_note": "Compter environ 3 min pour blanchir, 15 min de montée en température puis 1 h 15 de mijotage, auxquels s’ajoute la finition de la sauce.",
+      "time_uncertain": false
     },
     {
       "slug": "salade-nicoise-traditionnelle-recette",
@@ -670,12 +794,14 @@
       "meta_description": "Une salade niçoise composée de légumes, œufs et thon, avec des conseils pour préserver la fraîcheur et équilibrer l’assaisonnement.",
       "category": "Salades",
       "emoji": "🥗",
-      "cook_time": "0 min",
+      "cook_time": "10 min",
       "prep_time": "20 min",
       "servings": 4,
       "date_iso": "2026-05-06",
       "date_display": "6 mai 2026",
-      "url": "recettes/salade-nicoise-traditionnelle-recette.html"
+      "url": "recettes/salade-nicoise-traditionnelle-recette.html",
+      "time_note": "Les œufs durs nécessitent 10 min de cuisson. Préparer les légumes et faire dégorger les tomates pendant cette étape.",
+      "time_uncertain": false
     },
     {
       "slug": "soupe-a-loignon-gratinee-parisienne",
@@ -683,12 +809,14 @@
       "meta_description": "Une soupe à l’oignon gratinée avec des oignons longuement colorés, un bouillon parfumé et des croûtons recouverts de fromage doré.",
       "category": "Soupes",
       "emoji": "🥣",
-      "cook_time": "45 min",
+      "cook_time": "1h30",
       "prep_time": "15 min",
       "servings": 4,
       "date_iso": "2026-05-05",
       "date_display": "5 mai 2026",
-      "url": "recettes/soupe-a-loignon-gratinee-parisienne.html"
+      "url": "recettes/soupe-a-loignon-gratinee-parisienne.html",
+      "time_note": "Prévoir environ 45 min pour les oignons, 3 min de réduction, 25 min de bouillon et 8 à 10 min pour gratiner. Faire griller le pain pendant le mijotage.",
+      "time_uncertain": false
     },
     {
       "slug": "risotto-champignons-cremeux-facile",
@@ -696,12 +824,14 @@
       "meta_description": "Un risotto crémeux aux champignons poêlés, avec une méthode précise pour cuire le riz progressivement et conserver des grains légèrement fermes.",
       "category": "Végétarien",
       "emoji": "🌿",
-      "cook_time": "25 min",
+      "cook_time": "30 min",
       "prep_time": "10 min",
       "servings": 4,
       "date_iso": "2026-05-04",
       "date_display": "4 mai 2026",
-      "url": "recettes/risotto-champignons-cremeux-facile.html"
+      "url": "recettes/risotto-champignons-cremeux-facile.html",
+      "time_note": "Compter environ 2 min pour l’oignon, 3 min de nacrage, 2 min pour le vin puis 18 à 20 min pour le riz. Cuire les champignons en parallèle.",
+      "time_uncertain": false
     },
     {
       "slug": "boeuf-bourguignon-recette-traditionnelle",
@@ -723,12 +853,15 @@
       "meta_description": "Une tarte Tatin aux pommes fondantes et au caramel, avec des conseils pour maîtriser la coloration et réussir le démoulage.",
       "category": "Desserts",
       "emoji": "🍰",
-      "cook_time": "25 min",
+      "cook_time": "35 min + caramel",
       "prep_time": "35 min",
       "servings": 6,
       "date_iso": "2026-05-02",
       "date_display": "2 mai 2026",
-      "url": "recettes/tarte-tatin-pommes-caramel-facile.html"
+      "url": "recettes/tarte-tatin-pommes-caramel-facile.html",
+      "rest_time": "35 min",
+      "time_note": "Prévoir 30 min de macération des pommes, la réalisation du caramel, 35 min au four puis 5 min avant de retourner la tarte.",
+      "time_uncertain": true
     },
     {
       "slug": "carbonara-authentique-recette-romaine",
@@ -749,12 +882,15 @@
       "meta_description": "Un poulet rôti aux herbes de Provence avec une peau croustillante et une chair moelleuse, accompagné de repères simples pour contrôler la cuisson.",
       "category": "Volaille",
       "emoji": "🍗",
-      "cook_time": "45 min",
+      "cook_time": "1h35",
       "prep_time": "15 min",
       "servings": 4,
       "date_iso": "2026-04-30",
       "date_display": "30 avril 2026",
-      "url": "recettes/poulet-roti-herbes-de-provence-facile.html"
+      "url": "recettes/poulet-roti-herbes-de-provence-facile.html",
+      "rest_time": "40 min",
+      "time_note": "Prévoir 30 min pour la marinade aux herbes, environ 20 min pour saisir le poulet sur ses faces, 1 h 15 au four puis 10 min de repos. La durée varie avec le poids : vérifier la cuisson à cœur.",
+      "time_uncertain": false
     },
     {
       "slug": "terrine-de-campagne-recette-maison",
@@ -762,12 +898,15 @@
       "meta_description": "Une terrine de campagne maison aux herbes, expliquée pas à pas avec des repères de cuisson, de repos et de conservation pour un résultat régulier.",
       "category": "Entrées",
       "emoji": "🥄",
-      "cook_time": "24h",
+      "cook_time": "1h15",
       "prep_time": "30 min",
       "servings": 10,
       "date_iso": "2026-04-29",
       "date_display": "29 avril 2026",
-      "url": "recettes/terrine-de-campagne-recette-maison.html"
+      "url": "recettes/terrine-de-campagne-recette-maison.html",
+      "rest_time": "51h",
+      "time_note": "La farce repose 3 h au réfrigérateur avant cuisson. Après 1 h 15 au bain-marie, refroidir rapidement puis conserver au frais 48 h avant dégustation ; ce refroidissement s’ajoute aux 51 h de repos.",
+      "time_uncertain": true
     },
     {
       "slug": "coq-au-vin-rouge-champignons-lardons",
@@ -780,7 +919,10 @@
       "servings": 6,
       "date_iso": "2026-04-28",
       "date_display": "28 avril 2026",
-      "url": "recettes/coq-au-vin-rouge-champignons-lardons.html"
+      "url": "recettes/coq-au-vin-rouge-champignons-lardons.html",
+      "rest_time": "24h",
+      "time_note": "Prévoir 24 h de marinade au réfrigérateur avant les étapes de cuisson.",
+      "time_uncertain": false
     }
   ],
   "last_updated": "2026-08-25"

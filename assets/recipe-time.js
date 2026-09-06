@@ -11,6 +11,7 @@
     return match ? Number(match[1]) : 99999;
   }
   function isQuickRecipe(recipe) {
+    if (recipe.time_uncertain) return false;
     var prep = parseMinutes(recipe.prep_time), cook = parseMinutes(recipe.cook_time);
     var rest = recipe.rest_time ? parseMinutes(recipe.rest_time) : 0;
     return prep !== 99999 && cook !== 99999 && rest !== 99999 && prep + cook + rest <= 30;
