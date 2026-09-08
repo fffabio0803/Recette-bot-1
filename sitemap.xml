@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://latablemijote.fr/recettes/salade-caesar-poulet-grille-maison.html</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -413,6 +413,12 @@
   <url>
     <loc>https://latablemijote.fr/guides/pate-brisee-maison-pour-quiche.html</loc>
     <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://latablemijote.fr/guides/sirop-baba-au-rhum-dosage.html</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
