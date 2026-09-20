@@ -42,10 +42,19 @@ for (const file of fs.readdirSync('recettes').filter(f => f.endsWith('.html'))) 
   if (activeSlugs.has(slug)) {
     assert.ok(html.includes('/assets/quality-core.css') && html.includes('editorial-dossier'), 'Recette active non approfondie : ' + slug);
     assert.ok(!/noindex/i.test(html), 'Recette active en noindex : ' + slug);
+    const recipeNodes = [];
+    for (const match of html.matchAll(/<script[^>]*type=['"]application\/ld\+json['"][^>]*>([\s\S]*?)<\/script>/g)) {
+      const json = JSON.parse(match[1]);
+      recipeNodes.push(...(json['@graph'] || [json]).filter(node => node['@type'] === 'Recipe'));
+    }
+    assert.equal(recipeNodes.length, 1, 'Données Recipe manquantes ou dupliquées : ' + slug);
+    assert.equal(recipeNodes[0].dateModified, '2026-09-20', 'Date de révision structurée incorrecte : ' + slug);
   } else {
     assert.ok(/name="robots" content="noindex, follow"/i.test(html), 'Recette retirée encore indexable : ' + slug);
   }
 }
+const activeCopy = recipes.map(r => fs.readFileSync(r.url, 'utf8')).join('\n');
+assert.ok(!/digne d'un chef|astuces de chef|parfait à tous les coups|tradition lorraine authentique/i.test(activeCopy), 'Formulation promotionnelle ou invérifiable encore présente');
 const publicPages = [
   ...fs.readdirSync(root).filter(f => f.endsWith('.html')),
   ...['guides', 'outils'].flatMap(d => fs.readdirSync(d).filter(f => f.endsWith('.html')).map(f => `${d}/${f}`)),

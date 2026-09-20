@@ -17,6 +17,65 @@ const selected = [
 ];
 const active = new Set(selected);
 
+const editorialUpdates = {
+  'cake-citron-moelleux-facile-rapide': {
+    data: {
+      title: 'Cake au citron moelleux et glaçage léger',
+      meta_description: 'Un cake au citron moelleux avec un glaçage léger, des repères de cuisson et des conseils pour éviter une mie compacte ou un centre humide.'
+    },
+    replacements: [
+      ['Cake au Citron Moelleux Facile et Rapide - Recette Express', 'Cake au citron moelleux et glaçage léger'],
+      ['Un cake citron ultra moelleux prêt en 15 min de préparation. Recette simple, glaçage brillant, astuces de chef pour un résultat parfait à tous les coups.', 'Un cake au citron moelleux avec un glaçage léger, des repères de cuisson et des conseils pour éviter une mie compacte ou un centre humide.']
+    ]
+  },
+  'salade-caesar-poulet-grille-maison': {
+    data: {
+      title: 'Salade César au poulet grillé et croûtons',
+      meta_description: 'Une salade César au poulet grillé avec sauce maison, croûtons et parmesan, accompagnée de repères de cuisson et de conseils pour garder le croquant.'
+    },
+    replacements: [
+      ['Salade Caesar au poulet grille maison et croutons dores', 'Salade César au poulet grillé et croûtons'],
+      ['Salade Caesar authentique : poulet grille juteux, sauce onctueuse maison, croutons croustillants et parmesan. Recette facile et gourmande a realiser chez vous.', 'Une salade César au poulet grillé avec sauce maison, croûtons et parmesan, accompagnée de repères de cuisson et de conseils pour garder le croquant.']
+    ]
+  },
+  'oeufs-cocotte-creme-fraiche-facile': {
+    data: {
+      title: 'Œufs cocotte à la crème fraîche',
+      meta_description: 'Des œufs cocotte à la crème fraîche avec des repères précis pour obtenir un blanc pris et un jaune coulant au bain-marie.'
+    },
+    replacements: [
+      ['Oeufs Cocotte à la Crème Fraîche : Recette Facile et Onctueuse', 'Œufs cocotte à la crème fraîche'],
+      ['Découvrez la recette des oeufs cocotte à la crème fraîche, un plat simple et réconfortant, prêt en 20 minutes, parfait pour un brunch ou dîner léger.', 'Des œufs cocotte à la crème fraîche avec des repères précis pour obtenir un blanc pris et un jaune coulant au bain-marie.'],
+      ['Voici comment réussir cette préparation à tous les coups, avec les gestes techniques essentiels.', 'Voici les gestes techniques et les repères visuels à observer pendant la cuisson.']
+    ]
+  },
+  'saumon-gravlax-maison-aneth-citron': {
+    data: {
+      title: 'Saumon gravlax maison à l’aneth et au citron',
+      meta_description: 'Un saumon gravlax maison à l’aneth et au citron, avec des repères de salage, de durée, de texture et de sécurité pour le poisson cru.'
+    },
+    replacements: [
+      ["Saumon Gravlax Maison à l'Aneth et Citron Facile", 'Saumon gravlax maison à l’aneth et au citron'],
+      ["Recette du saumon gravlax maison mariné à l'aneth et citron. Technique traditionnelle scandinave expliquée pas à pas pour un résultat digne d'un chef.", 'Un saumon gravlax maison à l’aneth et au citron, avec des repères de salage, de durée, de texture et de sécurité pour le poisson cru.']
+    ]
+  },
+  'quiche-lorraine-recette-authentique': {
+    replacements: [
+      ['Quiche lorraine authentique', 'Quiche lorraine aux lardons'],
+      ['Confectionner la migaine traditionnelle', 'Préparer la migaine'],
+      ['Garnir et cuire la quiche authentique', 'Garnir et cuire la quiche'],
+      ['Finaliser et servir comme en Lorraine', 'Finaliser et servir'],
+      ["Servez accompagnée d'une salade de mâche aux noix, selon la tradition lorraine authentique.", "Servez tiède, éventuellement accompagnée d'une salade de mâche aux noix."]
+    ]
+  },
+  'boeuf-bourguignon-recette-traditionnelle': {
+    replacements: [
+      ['Service authentique bourguignon', 'Repos et service'],
+      ['Bœuf bourguignon traditionnel', 'Bœuf bourguignon mijoté']
+    ]
+  }
+};
+
 const dossiers = {
   'quiche-lorraine-recette-authentique': `<section class="editorial-dossier" id="dossier-pratique"><h2>Repères pratiques pour adapter la quiche</h2><p>La quantité de migaine dépend surtout de la surface et de la profondeur du moule. Pour un moule rond classique de 28 cm, la base de cette recette remplit le fond sans noyer les lardons.</p><table><tr><th>Situation</th><th>Ajustement utile</th><th>Pourquoi</th></tr><tr><td>Moule de 24 cm</td><td>3 œufs, 20 cl de crème, 10 cl de lait</td><td>Évite une couche trop épaisse qui prend mal au centre.</td></tr><tr><td>Garniture de légumes</td><td>Précuire et égoutter avant de garnir</td><td>L'eau rendue détrempe la pâte et dilue l'appareil.</td></tr><tr><td>Centre déjà ferme à la sortie</td><td>Retirer 5 minutes plus tôt la prochaine fois</td><td>La chaleur résiduelle poursuit la coagulation.</td></tr></table><h3>Contrôle sans thermomètre</h3><p>Le bord doit être pris et légèrement gonflé ; le centre peut encore bouger comme une crème. Laissez reposer dix minutes avant de couper. Une texture granuleuse indique généralement une cuisson trop chaude ou trop longue.</p><p class="method-note"><strong>Outil associé :</strong> adaptez automatiquement œufs, crème et lait avec le <a href="/outils/calculateur-migaine.html">calculateur de migaine</a>.</p></section>`,
   'baba-au-rhum-recette-traditionnelle': `<section class="editorial-dossier" id="dossier-pratique"><h2>Comprendre l'imbibage du baba</h2><p>La mie doit être suffisamment cuite et sèche pour absorber le sirop sans se défaire. Un baba tout juste sorti du four est fragile : laissez-le refroidir, ou préparez-le la veille.</p><table><tr><th>Problème</th><th>Cause probable</th><th>Correction</th></tr><tr><td>Cœur encore sec</td><td>Sirop versé trop vite</td><td>Retourner le baba et procéder en trois ajouts espacés.</td></tr><tr><td>Mie qui s'effondre</td><td>Baba sous-cuit ou sirop bouillant</td><td>Colorer davantage la pâte et viser un sirop chaud, non bouillant.</td></tr><tr><td>Goût d'alcool dominant</td><td>Rhum trop concentré</td><td>Réduire le rhum et servir un complément à part.</td></tr></table><p class="method-note"><strong>Outil associé :</strong> calculez les quantités exactes avec le <a href="/outils/calculateur-sirop-baba.html">calculateur de sirop pour baba</a>.</p></section>`,
@@ -50,7 +109,7 @@ const related = {
 const data = JSON.parse(fs.readFileSync('recettes.json','utf8'));
 if (!fs.existsSync('scripts/recettes-archive-2026-09-20.json')) fs.writeFileSync('scripts/recettes-archive-2026-09-20.json', JSON.stringify(data,null,2)+'\n');
 const bySlug = new Map(data.recettes.map(r => [r.slug,r]));
-const curated = selected.map(slug => bySlug.get(slug)).filter(Boolean).map(r => ({...r, editorial_status:'sélection éditoriale', date_reviewed:DATE}));
+const curated = selected.map(slug => bySlug.get(slug)).filter(Boolean).map(r => ({...r,...(editorialUpdates[r.slug]?.data||{}),editorial_status:'sélection éditoriale',date_reviewed:DATE}));
 if (curated.length !== selected.length) throw new Error(`Recettes sélectionnées manquantes : ${selected.filter(s=>!bySlug.has(s)).join(', ')}`);
 fs.writeFileSync('recettes.json', JSON.stringify({recettes:curated},null,2)+'\n');
 
@@ -66,6 +125,7 @@ for (const name of fs.readdirSync('recettes').filter(f=>f.endsWith('.html'))) {
     fs.writeFileSync(file,html); continue;
   }
   html=html.replace(/\s*<meta name=['"]robots['"][^>]*>/i,'');
+  for (const [from,to] of (editorialUpdates[slug]?.replacements||[])) html=html.split(from).join(to);
   if (!html.includes('/assets/quality-core.css')) html=html.replace(/<\/head>/i,'  <link rel="stylesheet" href="/assets/quality-core.css">\n</head>');
   html=html.replace(/<nav>[\s\S]*?<\/nav>/i,"<nav><a href='/'>Accueil</a><a href='/toutes-les-recettes.html'>Recettes sélectionnées</a><a href='/guides.html'>Guides</a><a href='/outils.html'>Outils</a></nav>");
   html=html.replace(/<p class=['"]editorial-byline['"][^>]*>[\s\S]*?<\/p>/i,'');
@@ -78,7 +138,7 @@ for (const name of fs.readdirSync('recettes').filter(f=>f.endsWith('.html'))) {
   if (/<section class=['"]related-recipes['"]>[\s\S]*?<\/section>/i.test(html)) html=html.replace(/<section class=['"]related-recipes['"]>[\s\S]*?<\/section>/gi,(m,offset)=>offset===html.search(/<section class=['"]related-recipes['"]/i)?section:'');
   else html=html.replace(/<div class=['"]faq-section['"]>/i,section+'\n<div class="faq-section">');
   html=html.replace(/<p>2025 La Table Mijote<\/p>/g,'<p>2026 La Table Mijote</p>');
-  html=html.replace(/(<script[^>]*application\/ld\+json[^>]*>)([\s\S]*?)(<\/script>)/,(_,a,raw,z)=>{try{const json=JSON.parse(raw),nodes=json['@graph']||[json],recipe=nodes.find(n=>n['@type']==='Recipe');if(recipe){recipe.dateModified=DATE;recipe.author={"@type":"Organization","name":"La Table Mijote","url":"https://latablemijote.fr/a-propos.html"};}return a+JSON.stringify(json)+z;}catch{return a+raw+z;}});
+  html=html.replace(/(<script[^>]*application\/ld\+json[^>]*>)([\s\S]*?)(<\/script>)/g,(_,a,raw,z)=>{try{const json=JSON.parse(raw),nodes=json['@graph']||[json],recipe=nodes.find(n=>n['@type']==='Recipe');if(recipe){recipe.dateModified=DATE;recipe.author={"@type":"Organization","name":"La Table Mijote","url":"https://latablemijote.fr/a-propos.html"};if(editorialUpdates[slug]?.data?.title)recipe.name=editorialUpdates[slug].data.title;if(editorialUpdates[slug]?.data?.meta_description)recipe.description=editorialUpdates[slug].data.meta_description;}return a+JSON.stringify(json)+z;}catch{return a+raw+z;}});
   fs.writeFileSync(file,html);
 }
 
@@ -109,6 +169,7 @@ let home=fs.readFileSync('index.html','utf8');
 home=home.replace(/<a href="guides\.html">\s*Guides[^<]*<\/a>(?:<a href="outils\.html">Outils<\/a>)*/g,'<a href="guides.html">Guides</a><a href="outils.html">Outils</a>');
 home=home.replace(/La Table Mijote : des recettes simples, gourmandes et accessibles, avec une nouvelle idée à cuisiner chaque jour\./g,'La Table Mijote : une sélection de recettes approfondies, de guides culinaires et de calculateurs pratiques.');
 home=home.replace(/Une nouvelle recette chaque jour/g,'Une sélection éditoriale approfondie').replace(/Une nouvelle recette publiée chaque jour/g,'Recettes, guides et outils pratiques');
+home=home.replace(/>Toutes les recettes</g,'>Recettes sélectionnées<');
 home=home.replace(/<a href="toutes-les-recettes\.html#soupes"[\s\S]*?<\/a>/i,'<a href="guides.html" class="category-feature-card"><span>Guides pratiques</span></a>');
 home=home.replace(/<a href="toutes-les-recettes\.html#quotidien"[\s\S]*?<\/a>/i,'<a href="outils.html" class="category-feature-card"><span>Calculateurs culinaires</span></a>');
 if (!home.includes('id="outils-pratiques-title"')) home=home.replace(/(<section class="category-shortcuts" aria-labelledby="guides-populaires-title">[\s\S]*?<\/section>)/,`$1\n<section class="category-shortcuts" aria-labelledby="outils-pratiques-title"><p class="category-shortcuts-title" id="outils-pratiques-title">Calculateurs pratiques</p><div class="category-shortcuts-links"><a href="outils/calculateur-migaine.html">Adapter une migaine</a><a href="outils/calculateur-sirop-baba.html">Calculer un sirop de baba</a><a href="outils/convertisseur-portions-moules.html">Convertir portions et moules</a></div></section>`);
