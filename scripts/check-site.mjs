@@ -13,7 +13,7 @@ for (const [input, expected] of [['0 min',0], ['1h30',90], ['1 h 40 min',100], [
 assert.equal(timing.isQuickRecipe({prep_time:'10 min',cook_time:'0 min'}), true);
 assert.equal(timing.isQuickRecipe({prep_time:'10 min',cook_time:'10 min',rest_time:'1h'}), false);
 const root = process.cwd();
-const pages = ['index.html', ...fs.readdirSync(root).filter(f => f.endsWith('.html') && f !== 'index.html'), ...['recettes', 'guides'].flatMap(d => fs.readdirSync(d).filter(f => f.endsWith('.html')).map(f => `${d}/${f}`))];
+const pages = ['index.html', ...fs.readdirSync(root).filter(f => f.endsWith('.html') && f !== 'index.html'), ...['recettes', 'guides', 'outils'].flatMap(d => fs.readdirSync(d).filter(f => f.endsWith('.html')).map(f => `${d}/${f}`))];
 const errors = [];
 let schemaCount = 0;
 for (const file of pages) {
@@ -34,6 +34,33 @@ for (const file of pages) {
   }
 }
 const recipes = JSON.parse(fs.readFileSync('recettes.json', 'utf8')).recettes;
+assert.equal(recipes.length, 12, 'Le catalogue public doit contenir 12 recettes sélectionnées');
+const activeSlugs = new Set(recipes.map(r => r.slug));
+for (const file of fs.readdirSync('recettes').filter(f => f.endsWith('.html'))) {
+  const html = fs.readFileSync(path.join('recettes', file), 'utf8');
+  const slug = file.slice(0, -5);
+  if (activeSlugs.has(slug)) {
+    assert.ok(html.includes('/assets/quality-core.css') && html.includes('editorial-dossier'), 'Recette active non approfondie : ' + slug);
+    assert.ok(!/noindex/i.test(html), 'Recette active en noindex : ' + slug);
+  } else {
+    assert.ok(/name="robots" content="noindex, follow"/i.test(html), 'Recette retirée encore indexable : ' + slug);
+  }
+}
+const publicPages = [
+  ...fs.readdirSync(root).filter(f => f.endsWith('.html')),
+  ...['guides', 'outils'].flatMap(d => fs.readdirSync(d).filter(f => f.endsWith('.html')).map(f => `${d}/${f}`)),
+  ...recipes.map(r => r.url)
+];
+for (const file of publicPages) {
+  const html = fs.readFileSync(file, 'utf8');
+  for (const match of html.matchAll(/(?:https:\/\/latablemijote\.fr\/|\/|\.\.\/|\.\/)?recettes\/([a-z0-9-]+)\.html/g)) {
+    assert.ok(activeSlugs.has(match[1]), `${file} renvoie encore vers une recette retirée : ${match[1]}`);
+  }
+}
+for (const file of ['outils.html', 'outils/calculateur-migaine.html', 'outils/calculateur-sirop-baba.html', 'outils/convertisseur-portions-moules.html']) {
+  assert.ok(fs.existsSync(file), 'Outil manquant : ' + file);
+}
+assert.equal((fs.readFileSync('sitemap.xml', 'utf8').match(/<loc>/g) || []).length, 27, 'Le sitemap doit contenir 27 URL utiles');
 for (const [slug, marker] of [['quiche-lorraine-recette-authentique','organisation-quiche'], ['boeuf-bourguignon-recette-traditionnelle','organisation-bourguignon'], ['saumon-gravlax-maison-aneth-citron','securite-gravlax']]) {
   const html = fs.readFileSync('recettes/' + slug + '.html', 'utf8');
   assert.ok(html.includes(marker), 'Section éditoriale manquante : ' + slug);

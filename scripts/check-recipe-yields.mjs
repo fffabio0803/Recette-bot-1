@@ -4,6 +4,7 @@ import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const yieldUI = require('../assets/recipe-yield.js');
 const recipes = JSON.parse(fs.readFileSync('recettes.json', 'utf8')).recettes;
+const archivedRecipes = JSON.parse(fs.readFileSync('scripts/recettes-archive-2026-09-20.json', 'utf8')).recettes;
 const listing = fs.readFileSync('toutes-les-recettes.html', 'utf8');
 const read = slug => fs.readFileSync(`recettes/${slug}.html`, 'utf8');
 for (const r of recipes.filter(r => r.yield_label)) {
@@ -16,7 +17,7 @@ for (const r of recipes.filter(r => r.yield_label)) {
   assert.equal(yieldUI.label(r), r.yield_label);
 }
 for (const slug of ['madeleine-recette-classique-bosse', 'financiers-amandes-moelleux-recette']) {
-  const r = recipes.find(r => r.slug === slug);
+  const r = archivedRecipes.find(r => r.slug === slug);
   assert.equal(r.servings, null);
   assert.ok(r.yield_label.startsWith('Environ'));
   assert.equal(yieldUI.compareServings(r, {servings:2}, false), 1);
