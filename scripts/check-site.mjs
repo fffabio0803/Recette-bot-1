@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import assert from 'node:assert/strict';
 import './check-recipe-times.mjs';
 import './check-recipe-yields.mjs';
+import './check-editorial-consistency.mjs';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const timing = require('../assets/recipe-time.js');
@@ -48,7 +49,7 @@ for (const file of fs.readdirSync('recettes').filter(f => f.endsWith('.html'))) 
       recipeNodes.push(...(json['@graph'] || [json]).filter(node => node['@type'] === 'Recipe'));
     }
     assert.equal(recipeNodes.length, 1, 'Données Recipe manquantes ou dupliquées : ' + slug);
-    assert.equal(recipeNodes[0].dateModified, '2026-09-20', 'Date de révision structurée incorrecte : ' + slug);
+    assert.equal(recipeNodes[0].dateModified, recipes.find(r => r.slug === slug).date_reviewed, 'Date de révision structurée incorrecte : ' + slug);
   } else {
     assert.ok(/name="robots" content="noindex, follow"/i.test(html), 'Recette retirée encore indexable : ' + slug);
   }

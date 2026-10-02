@@ -14,7 +14,7 @@
       "url": "recettes/quiche-lorraine-recette-authentique.html",
       "rest_time": "1h40",
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-09-20"
+      "date_reviewed": "2026-10-02"
     },
     {
       "slug": "baba-au-rhum-recette-traditionnelle",
@@ -36,8 +36,8 @@
     },
     {
       "slug": "gratin-dauphinois-cremeux-facile",
-      "title": "Gratin dauphinois crémeux aux pommes de terre",
-      "meta_description": "Un gratin dauphinois crémeux aux fines rondelles de pommes de terre, avec des conseils de cuisson pour obtenir un cœur fondant et un dessus doré.",
+      "title": "Gratin de pommes de terre crémeux au comté",
+      "meta_description": "Un gratin de pommes de terre au comté, avec infusion au frais, cuisson douce et repères pour un cœur fondant.",
       "category": "Accompagnements",
       "emoji": "🥔",
       "cook_time": "1h05",
@@ -46,11 +46,11 @@
       "date_iso": "2026-05-12",
       "date_display": "12 mai 2026",
       "url": "recettes/gratin-dauphinois-cremeux-facile.html",
-      "rest_time": "10 min",
-      "time_note": "Le four est utilisé 45 min puis environ 20 min pour gratiner. Laisser reposer 10 min avant de servir.",
-      "time_uncertain": false,
+      "rest_time": "1h10",
+      "time_note": "Prévoir 1 h d’infusion au réfrigérateur, 15 min de préparation, environ 1 h 05 au four et 10 min de repos, soit environ 2 h 30. Les pommes de terre doivent être tendres avant de servir ; prolonger si nécessaire.",
+      "time_uncertain": true,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-09-20"
+      "date_reviewed": "2026-10-02"
     },
     {
       "slug": "oeufs-cocotte-creme-fraiche-facile",
@@ -135,7 +135,7 @@
       "time_note": "Prévoir au moins 6 h au réfrigérateur après le montage et du café refroidi pour les biscuits. Le repos ne remplace pas la limite de conservation de 24 h indiquée pour les œufs crus.",
       "time_uncertain": true,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-09-20"
+      "date_reviewed": "2026-10-02"
     },
     {
       "slug": "salade-caesar-poulet-grille-maison",
@@ -189,11 +189,11 @@
       "time_note": "Prévoir 10 min avant démoulage, le refroidissement complet sur grille, puis 15 min de prise du glaçage.",
       "time_uncertain": true,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-09-20"
+      "date_reviewed": "2026-10-02"
     },
     {
       "slug": "daurade-royale-four-citron-fenouil",
-      "title": "Daurade Royale au Four, Fenouil et Citron Confit",
+      "title": "Daurade royale au four, fenouil et citron frais",
       "meta_description": "Daurade royale entière rôtie au four sur lit de fenouil fondant et citron, huile d'olive et herbes de Provence. Recette simple et parfumée.",
       "category": "Poisson",
       "emoji": "Poisson",
@@ -204,10 +204,10 @@
       "date_display": "22/08/2026",
       "url": "recettes/daurade-royale-four-citron-fenouil.html",
       "rest_time": "5 min",
-      "time_note": "Compter environ 10 min pour le fenouil et la réduction, puis 25 à 30 min au four et 5 min de repos.",
+      "time_note": "Compter 10 à 12 min pour le fenouil et la réduction, environ 30 min au four à 200 °C chaleur tournante pour le poisson de 1,2 kg, puis 5 min de repos. Vérifier dès 25 min et prolonger si nécessaire.",
       "time_uncertain": false,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-09-20"
+      "date_reviewed": "2026-10-02"
     }
   ]
 }
