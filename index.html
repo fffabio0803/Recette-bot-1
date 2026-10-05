@@ -1743,7 +1743,7 @@
 
       if (image) {
         heroPhoto.src = image;
-        heroPhoto.alt = "Photo de " + (recipe.title || "la recette du jour");
+        heroPhoto.alt = "Illustration : " + (recipe.title || "la recette du jour");
       } else {
         heroPhoto.removeAttribute("src");
         heroPhoto.alt = "";
@@ -1913,7 +1913,7 @@
                 <img
                   class="card-photo"
                   src="${escapeHtml(image)}"
-                  alt="Photo de ${escapeHtml(recipe.title || "la recette")}" 
+                  alt="Illustration : ${escapeHtml(recipe.title || "la recette")}" 
                   loading="lazy"
                 >
               ` : ""}
@@ -1971,7 +1971,7 @@
               <img
                 class="latest-photo"
                 src="${escapeHtml(image)}"
-                alt="Photo de ${escapeHtml(recipe.title || "la recette")}" 
+                alt="Illustration : ${escapeHtml(recipe.title || "la recette")}" 
                 loading="lazy"
               >
             ` : ""}
