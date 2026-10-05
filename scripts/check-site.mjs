@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import './check-recipe-times.mjs';
 import './check-recipe-yields.mjs';
 import './check-editorial-consistency.mjs';
+import './check-autumn-recipes.mjs';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const timing = require('../assets/recipe-time.js');
@@ -35,7 +36,7 @@ for (const file of pages) {
   }
 }
 const recipes = JSON.parse(fs.readFileSync('recettes.json', 'utf8')).recettes;
-assert.equal(recipes.length, 12, 'Le catalogue public doit contenir 12 recettes sélectionnées');
+assert.equal(recipes.length, 15, 'Le catalogue public doit contenir 15 recettes sélectionnées');
 const activeSlugs = new Set(recipes.map(r => r.slug));
 for (const file of fs.readdirSync('recettes').filter(f => f.endsWith('.html'))) {
   const html = fs.readFileSync(path.join('recettes', file), 'utf8');
@@ -70,7 +71,7 @@ for (const file of publicPages) {
 for (const file of ['outils.html', 'outils/calculateur-migaine.html', 'outils/calculateur-sirop-baba.html', 'outils/convertisseur-portions-moules.html']) {
   assert.ok(fs.existsSync(file), 'Outil manquant : ' + file);
 }
-assert.equal((fs.readFileSync('sitemap.xml', 'utf8').match(/<loc>/g) || []).length, 27, 'Le sitemap doit contenir 27 URL utiles');
+assert.equal((fs.readFileSync('sitemap.xml', 'utf8').match(/<loc>/g) || []).length, 30, 'Le sitemap doit contenir 30 URL utiles');
 for (const [slug, marker] of [['quiche-lorraine-recette-authentique','organisation-quiche'], ['boeuf-bourguignon-recette-traditionnelle','organisation-bourguignon'], ['saumon-gravlax-maison-aneth-citron','securite-gravlax']]) {
   const html = fs.readFileSync('recettes/' + slug + '.html', 'utf8');
   assert.ok(html.includes(marker), 'Section éditoriale manquante : ' + slug);

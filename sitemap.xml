@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://latablemijote.fr/</loc><lastmod>2026-09-20</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://latablemijote.fr/toutes-les-recettes.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://latablemijote.fr/</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://latablemijote.fr/toutes-les-recettes.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://latablemijote.fr/guides.html</loc><lastmod>2026-09-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://latablemijote.fr/outils.html</loc><lastmod>2026-09-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://latablemijote.fr/a-propos.html</loc><lastmod>2026-09-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
@@ -27,4 +27,7 @@
   <url><loc>https://latablemijote.fr/recettes/pate-a-crepes-recette-de-base.html</loc><lastmod>2026-09-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://latablemijote.fr/recettes/cake-citron-moelleux-facile-rapide.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://latablemijote.fr/recettes/daurade-royale-four-citron-fenouil.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://latablemijote.fr/recettes/roules-cannelle-moelleux.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://latablemijote.fr/recettes/poulet-epices-douces-legumes-automne.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://latablemijote.fr/recettes/carottes-roties-cannelle-miel.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
