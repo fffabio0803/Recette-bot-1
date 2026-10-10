@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 const read = file => fs.readFileSync(file, 'utf8');
 const plain = text => text.replace(/<[^>]+>/g, '').replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16))).replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n)).replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&nbsp;', ' ').trim();
-const slugs = ['gratin-dauphinois-cremeux-facile', 'daurade-royale-four-citron-fenouil', 'cake-citron-moelleux-facile-rapide', 'tiramisu-recette-italienne-originale', 'quiche-lorraine-recette-authentique'];
+const slugs = ['gratin-dauphinois-cremeux-facile', 'daurade-royale-four-citron-fenouil', 'cake-citron-moelleux-facile-rapide', 'tiramisu-recette-italienne-originale', 'quiche-lorraine-recette-authentique', 'boeuf-bourguignon-recette-traditionnelle'];
 const catalogue = JSON.parse(read('recettes.json')).recettes;
 for (const slug of slugs) {
   const file = `recettes/${slug}.html`;
@@ -39,4 +39,7 @@ assert.ok(!/sans risque sanitaire|remplacez les jaunes par une creme anglaise/i.
 const guide = read('guides/pate-brisee-maison-pour-quiche.html');
 for (const marker of ['1 heure', '30 minutes', '15 minutes', '5 minutes', '20 minutes de précuisson', '180 °C']) assert.ok(guide.includes(marker), marker);
 assert.ok(!guide.includes('cuisson à blanc de 10 minutes'));
-console.log('Révision éditoriale : 5 recettes synchronisées, proportions et contradictions contrôlées.');
+const bourguignon = read('recettes/boeuf-bourguignon-recette-traditionnelle.html');
+assert.ok(!bourguignon.includes('carottes carottes') && !bourguignon.includes('Colorez sur toutes faces 8 minutes'));
+assert.ok(bourguignon.includes('chaque fournée') && bourguignon.includes('Gratin de pommes de terre au comté'));
+console.log('Révision éditoriale : 6 recettes synchronisées, proportions et contradictions contrôlées.');
