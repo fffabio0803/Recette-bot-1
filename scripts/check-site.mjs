@@ -6,6 +6,7 @@ import './check-recipe-times.mjs';
 import './check-recipe-yields.mjs';
 import './check-editorial-consistency.mjs';
 import './check-autumn-recipes.mjs';
+import './check-recipe-step-links.mjs';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const timing = require('../assets/recipe-time.js');
