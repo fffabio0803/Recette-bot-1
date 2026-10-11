@@ -1251,12 +1251,13 @@
 
   <main class="page-shell" id="main-content">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-visual" id="hero-visual">
+      <div class="hero-visual has-photo" id="hero-visual">
         <img
           class="hero-photo"
           id="hero-photo"
-          src=""
-          alt=""
+          src="/assets/images/recipes/roules-cannelle-moelleux.jpg"
+          alt="Illustration de roulés à la cannelle avec glaçage léger"
+          width="1536" height="1024" fetchpriority="high"
         >
 
         <div class="hero-badge">
@@ -1276,22 +1277,18 @@
 
       <div class="hero-content" id="hero-content">
         <p class="eyebrow">
-          Une sélection éditoriale approfondie
+          Petit-déjeuner
         </p>
 
         <h1 class="hero-title" id="hero-title">
-          Recettes simples, cuisine maison
+          <a href="/recettes/roules-cannelle-moelleux.html">Roulés à la cannelle moelleux, glaçage léger</a>
         </h1>
 
         <p class="hero-description">
-          Chargement de la dernière recette…
+          Neuf roulés à la cannelle : pâte levée, garniture au beurre et glaçage léger. Prévoyez les deux levées avant de commencer.
         </p>
 
-        <div class="loading-state" style="padding: 20px;">
-          <span class="loading-dot"></span>
-          <span class="loading-dot"></span>
-          <span class="loading-dot"></span>
-        </div>
+        <a class="primary-button" href="/recettes/roules-cannelle-moelleux.html">Voir la recette →</a>
       </div>
     </section>
 
@@ -1301,14 +1298,7 @@
       aria-label="Catégories de recettes"
     >
       <div class="category-scroller" id="category-scroller">
-        <button
-          class="category-button is-active"
-          type="button"
-          data-category="Toutes"
-        >
-          <span class="category-name">Toutes</span>
-          <span class="category-count">Chargement</span>
-        </button>
+        <a class="category-button is-active" href="/toutes-les-recettes.html"><span class="category-name">Toutes les recettes</span><span class="category-count">Voir la sélection</span></a>
       </div>
     </section>
 
@@ -1353,11 +1343,10 @@
       </div>
 
       <div class="featured-grid" id="featured-grid">
-        <div class="loading-state">
-          <span class="loading-dot"></span>
-          <span class="loading-dot"></span>
-          <span class="loading-dot"></span>
-        </div>
+<article class="recipe-card"><a href="/recettes/quiche-lorraine-recette-authentique.html"><div class="card-content"><p class="card-category">Tartes</p><h3 class="card-title">Quiche lorraine aux lardons et migaine crémeuse</h3><p>Une quiche lorraine aux lardons avec une pâte croustillante et une migaine crémeuse, accompagnée de conseils pour éviter un fond détrempé.</p></div></a></article>
+<article class="recipe-card"><a href="/recettes/baba-au-rhum-recette-traditionnelle.html"><div class="card-content"><p class="card-category">Desserts</p><h3 class="card-title">Baba au rhum, sirop parfumé et crème</h3><p>Un baba au rhum à la pâte légère, imbibé d’un sirop parfumé, avec des conseils pour réussir la levée et répartir le sirop uniformément.</p></div></a></article>
+<article class="recipe-card"><a href="/recettes/gratin-dauphinois-cremeux-facile.html"><div class="card-content"><p class="card-category">Accompagnements</p><h3 class="card-title">Gratin de pommes de terre crémeux au comté</h3><p>Un gratin de pommes de terre au comté, avec infusion au frais, cuisson douce et repères pour un cœur fondant.</p></div></a></article>
+<article class="recipe-card"><a href="/recettes/oeufs-cocotte-creme-fraiche-facile.html"><div class="card-content"><p class="card-category">Œufs</p><h3 class="card-title">Œufs cocotte à la crème fraîche</h3><p>Des œufs cocotte à la crème fraîche avec des repères précis pour obtenir un blanc pris et un jaune coulant au bain-marie.</p></div></a></article>
       </div>
     </section>
 
@@ -1379,11 +1368,9 @@
       </div>
 
       <div class="latest-list" id="latest-list">
-        <div class="loading-state">
-          <span class="loading-dot"></span>
-          <span class="loading-dot"></span>
-          <span class="loading-dot"></span>
-        </div>
+<article class="recipe-card"><a href="/recettes/roules-cannelle-moelleux.html"><div class="card-content"><p class="card-category">Petit-déjeuner</p><h3 class="card-title">Roulés à la cannelle moelleux, glaçage léger</h3><p>Neuf roulés à la cannelle avec pâte levée, garniture au beurre et glaçage léger. Quantités en grammes, taille du moule et repères pour les deux levées.</p></div></a></article>
+<article class="recipe-card"><a href="/recettes/poulet-epices-douces-legumes-automne.html"><div class="card-content"><p class="card-category">Viande</p><h3 class="card-title">Poulet aux épices douces et légumes d’automne</h3><p>Hauts de cuisse de poulet au paprika et au cumin, butternut, carottes et oignons : un plat au four avec découpe précise et contrôle de cuisson à cœur.</p></div></a></article>
+<article class="recipe-card"><a href="/recettes/carottes-roties-cannelle-miel.html"><div class="card-content"><p class="card-category">Accompagnements</p><h3 class="card-title">Carottes rôties à la cannelle et au miel</h3><p>Carottes rôties au four, cannelle et miel : découpe régulière, miel ajouté en fin de cuisson et repères pour des légumes tendres sans brûler.</p></div></a></article>
       </div>
     </section>
   </main>
@@ -2145,43 +2132,7 @@
 
     function showLoadError(error) {
       console.error(error);
-
-      heroContent.innerHTML = `
-        <p class="eyebrow">
-          Erreur de chargement
-        </p>
-
-        <h1 class="hero-title">
-          Les recettes sont momentanément indisponibles
-        </h1>
-
-        <p class="hero-description">
-          Le fichier recettes.json n’a pas pu être chargé.
-          Rechargez la page dans quelques instants.
-        </p>
-
-        <a class="primary-button" href="">
-          Recharger la page
-        </a>
-      `;
-
-      featuredGrid.innerHTML = `
-        <div class="error-state">
-          Impossible de charger les recettes.
-        </div>
-      `;
-
-      latestList.innerHTML = `
-        <div class="error-state">
-          Impossible de charger les dernières recettes.
-        </div>
-      `;
-
-      categoryScroller.innerHTML = `
-        <div class="error-state">
-          Impossible de charger les catégories.
-        </div>
-      `;
+      // Keep the pre-rendered recipes usable when the catalogue cannot load.
     }
 
     async function loadRecipes() {
