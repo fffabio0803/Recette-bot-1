@@ -47,7 +47,7 @@
   }
   function decorateCards() {
     if (!summaries) return;
-    document.querySelectorAll('.recipe-card').forEach(card => {
+    document.querySelectorAll('.recipe-card,.latest-item,#hero-content').forEach(card => {
       const link = card.querySelector('a[href*="recettes/"]');
       if (!link) return;
       const found = new URL(link.href).pathname.match(/\/recettes\/([a-z0-9-]+)\.html$/);
@@ -55,7 +55,7 @@
       let badge = card.querySelector('.ltm-card-rating');
       if (!badge) {
         badge = el('p', '', 'ltm-card-rating');
-        const title = card.querySelector('.card-title,.recipe-title');
+        const title = card.querySelector('.card-title,.recipe-title,.latest-title,#hero-title');
         if (title) title.after(badge); else link.append(badge);
       }
       const text = summaryText(summaries.find(r => r.recipe_slug === found[1]));

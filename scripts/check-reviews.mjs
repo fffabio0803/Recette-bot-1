@@ -11,6 +11,7 @@ assert.ok(js.includes("result==='pending'"),'Submission status validated');
 assert.ok(js.includes('p_receipt:receipt'),'Idempotency receipt sent');
 assert.ok(js.includes('p_consent:consent.checked'),'Consent transmitted');
 assert.ok(!js.includes('aggregateRating'),'No fabricated aggregate rating');
+assert.ok(js.includes('.recipe-card,.latest-item,#hero-content'),'All homepage layouts supported');
 const textFunction=js.slice(js.indexOf('function summaryText('),js.indexOf('function decorateCards('));
 const summary=vm.runInNewContext('('+textFunction.trim()+')');
 assert.equal(summary({review_count:0,average_rating:null}),'Pas encore d’avis');
