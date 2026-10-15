@@ -43,7 +43,7 @@
     if (!count) return 'Pas encore d’avis';
     const average = Number(item.average_rating);
     if (average < 1 || average > 5) return 'Avis indisponibles';
-    return '★ ' + average.toLocaleString('fr-FR', {minimumFractionDigits:1,maximumFractionDigits:1}) + '/5 · ' + count + (count > 1 ? ' avis' : ' avis');
+    return '★ ' + average.toLocaleString('fr-FR', {maximumFractionDigits:1}) + '/5 · ' + count + ' avis';
   }
   function decorateCards() {
     if (!summaries) return;
@@ -211,11 +211,10 @@
   if(slug && document.getElementById('avis')) {
     section=document.getElementById('avis');
     summary=el('p','Chargement des avis…','ltm-rating-summary'); summary.setAttribute('role','status');
-    const info=el('p','La moyenne inclut uniquement les avis publiés après modération. Les avis positifs comme négatifs sont acceptés ; les contributions ne sont pas vérifiées par une preuve d’achat ou d’identité.');
     list=el('div'); list.className='ltm-review-list';
     more=el('button','Charger les avis'); more.type='button'; more.hidden=true;
     more.addEventListener('click',()=>loadReviews());
-    section.append(summary,info,list,more);
+    section.append(summary,list,more);
     addForm(section);
     const top=el('a','Lire les avis ou donner mon avis','ltm-review-jump'); top.href='#avis';
     document.querySelector('h1')?.after(top);

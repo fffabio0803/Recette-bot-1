@@ -17,11 +17,13 @@ const summary=vm.runInNewContext('('+textFunction.trim()+')');
 assert.equal(summary({review_count:0,average_rating:null}),'Pas encore d’avis');
 assert.equal(summary(undefined),'Avis indisponibles');
 assert.equal(summary({review_count:2,average_rating:4.5}),'★ 4,5/5 · 2 avis');
+assert.equal(summary({review_count:1,average_rating:4}),'★ 4/5 · 1 avis');
+assert.ok(!js.includes('La moyenne inclut uniquement'), 'Detailed policy stays in privacy page');
 assert.equal(summary({review_count:1,average_rating:9}),'Avis indisponibles');
 let forms=0;
 for(const file of fs.readdirSync('recettes').filter(f=>f.endsWith('.html'))) {
  const html=fs.readFileSync('recettes/'+file,'utf8');
- assert.equal((html.match(/src="\/assets\/reviews.js\?v=20261015-2"/g)||[]).length,1,file);
+ assert.equal((html.match(/src="\/assets\/reviews.js\?v=20261015-3"/g)||[]).length,1,file);
  if(html.includes('</main>')){
   assert.equal((html.match(/id="avis"/g)||[]).length,1,file);
   assert.ok(html.includes('aria-labelledby="avis-title"'));
