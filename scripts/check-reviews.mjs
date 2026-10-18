@@ -41,7 +41,7 @@ assert.equal(summary({review_count:1,average_rating:9}),'Avis indisponibles');
 let forms=0;
 for(const file of fs.readdirSync('recettes').filter(f=>f.endsWith('.html'))) {
  const html=fs.readFileSync('recettes/'+file,'utf8');
- assert.equal((html.match(/src="\/assets\/reviews.js\?v=20261018-5"/g)||[]).length,1,file);
+ assert.equal((html.match(/src="\/assets\/reviews.js\?v=20261018-6"/g)||[]).length,1,file);
  if(html.includes('</main>')){
   assert.equal((html.match(/id="avis"/g)||[]).length,1,file);
   assert.ok(html.includes('aria-labelledby="avis-title"'));

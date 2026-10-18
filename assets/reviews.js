@@ -95,7 +95,7 @@
     form.className = 'ltm-review-form';
     form.noValidate=true;
     const title = el('h3', 'Vous avez cuisiné cette recette ?');
-    const intro = el('p', 'Partagez votre résultat, les adaptations et les difficultés rencontrées. Certains textes courts reconnus par nos contrôles sont publiés immédiatement, quelle que soit la note. Les photos et les autres avis attendent une relecture.');
+    const intro = el('p', 'Partagez votre résultat, les adaptations et les difficultés rencontrées. Les avis textuels sont publiés automatiquement, quelle que soit la note, sauf si le filtre signale un contenu à vérifier. Les photos attendent une relecture.');
     form.append(title, intro);
     const fieldset = el('fieldset');
     fieldset.append(el('legend', 'Votre note (obligatoire)'));
@@ -217,7 +217,7 @@
         if (!['pending','approved','rejected','withdrawn'].includes(result)) throw new Error('INVALID_RESPONSE');
         if(editing){receipt=targetReceipt;data.receipts[slug]=receipt;stored=persist(data);showReceipt(receipt);code.value=receipt;}
         const messages={
-          pending:'Merci ! Votre avis est enregistré et attend la modération. Il ne compte pas encore dans la moyenne.',
+          pending:photoData || (editing && photoAction.value==='keep')?'Merci ! Votre avis est enregistré. Une photo jointe ou conservée, ou un signal du filtre, nécessite une relecture. Il ne compte pas encore dans la moyenne.':'Merci ! Votre avis est enregistré. Le filtre a signalé un élément à vérifier (texte ou pseudonyme) : il attend une relecture et ne compte pas encore dans la moyenne.',
           approved:'Merci ! Votre avis est publié et compte dans la moyenne. Un nouvel essai avec le même code ne crée pas de doublon.',
           rejected:'Cet envoi a déjà été examiné et n’a pas été publié. Contactez-nous avec sa référence publique si nécessaire.',
           withdrawn:'Cet envoi a déjà été retiré. Rechargez la page avant un nouvel envoi.'
