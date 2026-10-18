@@ -20,6 +20,14 @@ for (const slug of ['quiche-lorraine-recette-authentique', 'boeuf-bourguignon-re
   }
   assert.ok(html.indexOf('href="#ingredients"') < html.indexOf("<figure"));
   assert.ok(html.includes('chaleur statique'));
-  assert.ok(html.includes('"dateModified":"2026-10-11"'));
+  const reviewed = slug.startsWith('quiche-') ? '2026-10-18' : '2026-10-11';
+  assert.ok(html.includes('"dateModified":"' + reviewed + '"'));
+  if (slug.startsWith('quiche-')) {
+    assert.ok(html.includes('id="retour-camille"'));
+    assert.ok(html.includes('"prepTime":"PT35M"'));
+    assert.ok(html.includes('"totalTime":"PT3H15M"'));
+    assert.ok(html.includes('sans photo de cet essai'));
+    assert.ok(html.includes('170 °C pendant 38 minutes'));
+  }
 }
 console.log('Accueil statique, repli sans réseau et raccourcis des deux recettes contrôlés.');

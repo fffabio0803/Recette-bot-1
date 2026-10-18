@@ -81,7 +81,7 @@ for (const [slug, marker] of [['quiche-lorraine-recette-authentique','organisati
   assert.ok(html.includes(marker), 'Section éditoriale manquante : ' + slug);
 }
 const quiche = recipes.find(r => r.slug === 'quiche-lorraine-recette-authentique');
-assert.equal(timing.parseMinutes(quiche.prep_time) + timing.parseMinutes(quiche.cook_time) + timing.parseMinutes(quiche.rest_time), 180);
+assert.equal(timing.parseMinutes(quiche.prep_time) + timing.parseMinutes(quiche.cook_time) + timing.parseMinutes(quiche.rest_time), 195);
 assert.equal(new Set(recipes.map(r => r.slug)).size, recipes.length, 'Slugs dupliqués');
 for (const r of recipes) assert.ok(fs.existsSync(r.url), r.url);
 const caesar = fs.readFileSync('recettes/salade-caesar-poulet-grille-maison.html', 'utf8');
