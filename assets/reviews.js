@@ -152,34 +152,30 @@
     const send=el('button','Envoyer mon avis'); send.type='submit';
     const message=el('p','', 'ltm-review-status'); message.setAttribute('role','status'); message.setAttribute('aria-live','polite');
     const receiptArea=el('div',undefined,'ltm-receipt');
-    const modeLabel=el('label','Que souhaitez-vous faire ?');
-    const mode=el('select');mode.name='review_mode';mode.required=true;
-    for(const [value,text] of [['','Choisissez une action'],['new','Déposer mon premier avis'],['edit','Modifier mon avis existant'],['other','Une autre personne souhaite donner son avis']]){const option=el('option',text);option.value=value;mode.append(option);}modeLabel.append(mode);
+    const mode={value:'other',disabled:false};
+    const editToggle=el('button','Modifier un avis existant');editToggle.type='button';
     const editLabel=el('label','Votre code privé pour modifier cet avis');
     const editCode=el('input');editCode.autocomplete='off';editCode.type='password';editLabel.append(editCode);
     const editHelp=el('p','Saisissez votre code privé, puis votre nouvelle note, votre pseudonyme et le texte complet. Ils remplaceront votre avis, qui sera contrôlé à nouveau. La photo existante est conservée sauf choix contraire.');
     const photoActionLabel=el('label','Photo déjà jointe à mon avis');
     const photoAction=el('select');for(const [v,t] of [['keep','Conserver la photo existante'],['remove','Supprimer la photo existante']]){const o=el('option',t);o.value=v;photoAction.append(o);}photoActionLabel.append(photoAction);
     photoAction.value='keep';
-    const otherLabel=el('label',undefined,'ltm-consent');const otherCheck=el('input');otherCheck.type='checkbox';otherLabel.append(otherCheck,document.createTextNode('Je suis une autre personne ayant réalisé la recette. Le précédent auteur a conservé son code privé avant de me laisser cet appareil.'));
-    const modeHelp=el('p');
+    consentLabel.append(document.createTextNode(' Je dépose un seul avis personnel pour cette recette ; si j’en ai déjà publié un, je le modifie.'));
     message.tabIndex=-1;
     function notify(text){message.textContent=text;message.focus();message.scrollIntoView({block:'center'});}
-    form.append(modeLabel,modeHelp,editLabel,editHelp,otherLabel,fieldset,nameLabel,commentLabel,photoActionLabel,photoLabel,photoHelp,preview,photoStatus,removePhoto,trapLabel,consentLabel,privacy,send,message,receiptArea);
+    form.append(editLabel,editHelp,fieldset,nameLabel,commentLabel,photoActionLabel,photoLabel,photoHelp,preview,photoStatus,removePhoto,trapLabel,consentLabel,privacy,send,message,receiptArea,editToggle);
     section.append(form);
     let receipt = saved().receipts?.[slug];
     let author = saved().author;
     if (!uuid(receipt)) receipt=null;
     let otherAttempt=null,newAttempt=false;
-    mode.value=receipt?'':'new';
     function syncMode(){
-      const editing=mode.value==='edit',other=mode.value==='other';
+      const editing=mode.value==='edit';
       editLabel.hidden=editHelp.hidden=photoActionLabel.hidden=!editing;editCode.required=editing;
-      otherLabel.hidden=!other;otherCheck.required=other;
-      modeHelp.textContent=receipt?'Un envoi existe sur cet appareil. Choisissez de modifier votre avis ou de laisser celui d’une autre personne. Chacun doit conserver son code privé.':'Un avis par personne et par recette. Un appareil peut être partagé ; les identités ne sont pas vérifiées.';
       send.textContent=editing?'Enregistrer les modifications':'Envoyer mon avis';
+      editToggle.textContent=editing?'Revenir au dépôt d’un avis':'Modifier un avis existant';
     }
-    mode.addEventListener('change',syncMode);syncMode();
+    editToggle.addEventListener('click',()=>{if(busy)return;mode.value=mode.value==='edit'?'other':'edit';syncMode();if(mode.value==='edit')editCode.focus();});syncMode();
     function showReceipt(code) {
       receiptArea.replaceChildren();
       const privateDetails=el('details');privateDetails.append(el('summary','Mon code privé de modification et de retrait'));
@@ -188,16 +184,12 @@
     }
     if (receipt) {
       showReceipt(receipt);
-      message.textContent='Un envoi précédent est mémorisé sur ce navigateur. Son statut public dépend de la modération.';
     }
     form.addEventListener('submit',async event => {
       event.preventDefault();
       if(busy)return;
       if(photoPending){notify('Attendez la préparation de la photo.');return;}
-      if(!mode.value){notify('Choisissez une action : premier avis, modification ou avis d’une autre personne.');return;}
-      if(mode.value==='new' && receipt && !newAttempt){notify('Un envoi existe déjà sur cet appareil pour cette recette. Choisissez Modifier mon avis ou Une autre personne.');return;}
       if(mode.value==='edit' && !uuid(editCode.value.trim())){notify('Saisissez le code privé de l’avis à modifier.');return;}
-      if(mode.value==='other' && !otherCheck.checked){notify('Confirmez que cet avis est celui d’une autre personne et que le précédent auteur a conservé son code.');return;}
       if(!stars.querySelector('input:checked')){notify('Choisissez une note de 1 à 5 étoiles.');return;}
       if(name.value.trim().length<2 || name.value.trim().length>40){notify('Le pseudonyme doit contenir de 2 à 40 caractères.');return;}
       if(comment.value.trim().length<20 || comment.value.trim().length>2000){notify('Votre commentaire doit contenir de 20 à 2 000 caractères.');return;}
@@ -231,7 +223,7 @@
           withdrawn:'Cet envoi a déjà été retiré. Rechargez la page avant un nouvel envoi.'
         };
         notify((editing?'Modification : ':'')+messages[result]+(!stored?' Le stockage local est indisponible : copiez votre code de retrait.':''));
-        if(result==='pending'||result==='approved') {name.value='';comment.value='';consent.checked=false;clearPhoto();otherAttempt=null;newAttempt=false;otherCheck.checked=false;editCode.value='';mode.value='';syncMode();}
+        if(result==='pending'||result==='approved') {name.value='';comment.value='';consent.checked=false;clearPhoto();otherAttempt=null;newAttempt=false;editCode.value='';mode.value='other';stars.querySelectorAll('input:checked').forEach(input=>{input.checked=false;});stars.querySelectorAll('label').forEach(label=>label.classList.toggle('ltm-selected',false));choice.textContent='Choisissez de 1 à 5 étoiles.';syncMode();}
         await refreshPage();
       } catch(error) {
         const errors={
@@ -239,7 +231,7 @@
           INVALID_PHOTO:'La photo a été refusée. Choisissez un JPG plus petit ou retirez-la pour envoyer votre texte seul.',
           PHOTO_LIMIT:'Le dépôt de photos est temporairement plein. Retirez la photo pour envoyer votre texte seul.',
           UNKNOWN_RECIPE:'Les avis ne sont pas disponibles pour cette recette.',
-          ALREADY_REVIEWED:'Un avis existe pour cette personne. Choisissez Modifier mon avis, ou Une autre personne si vous partagez cet appareil.',
+          ALREADY_REVIEWED:'Un avis existe pour cet envoi. Utilisez Modifier un avis existant avec votre code privé.',
           INVALID_RECEIPT:'Ce code ne correspond pas à un avis modifiable pour cette recette. Vérifiez le code privé ; un avis retiré ne peut pas être modifié.',
           EDIT_LIMIT:'La limite temporaire de modifications est atteinte (au maximum 3 par avis en 24 heures). Réessayez plus tard.',
           REVIEW_LIMIT:'La limite temporaire d’envoi est atteinte. Réessayez plus tard.'
@@ -265,7 +257,7 @@
         if(ok!==true){status.textContent='Aucun avis associé à ce code.';return;}
         const data=saved();
         if(data.receipts?.[slug]===code.value.trim()){delete data.receipts[slug];persist(data);}
-        if(receipt===code.value.trim()){receipt=null;receiptArea.replaceChildren();mode.value='new';editCode.value='';syncMode();}
+        if(receipt===code.value.trim()){receipt=null;receiptArea.replaceChildren();mode.value='other';editCode.value='';syncMode();}
         status.textContent='Avis retiré. Sa note, son commentaire et sa photo éventuelle ne sont plus publics.';
         await refreshPage();
       }catch{status.textContent='Retrait non confirmé : réessayez plus tard.';}
