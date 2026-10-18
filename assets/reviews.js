@@ -94,7 +94,7 @@
     const form = el('form');
     form.className = 'ltm-review-form';
     const title = el('h3', 'Vous avez cuisiné cette recette ?');
-    const intro = el('p', 'Partagez votre résultat, les adaptations et les difficultés rencontrées. Votre avis sera relu avant publication, quelle que soit sa note.');
+    const intro = el('p', 'Partagez votre résultat, les adaptations et les difficultés rencontrées. Certains textes courts reconnus par nos contrôles sont publiés immédiatement, quelle que soit la note. Les photos et les autres avis attendent une relecture.');
     form.append(title, intro);
     const fieldset = el('fieldset');
     fieldset.append(el('legend', 'Votre note (obligatoire)'));
@@ -184,12 +184,13 @@
         if (!['pending','approved','rejected','withdrawn'].includes(result)) throw new Error('INVALID_RESPONSE');
         const messages={
           pending:'Merci ! Votre avis est enregistré et attend la modération. Il ne compte pas encore dans la moyenne.',
-          approved:'Cet avis a déjà été reçu et publié. Aucun doublon ajouté.',
+          approved:'Merci ! Votre avis est publié et compte dans la moyenne. Un nouvel essai avec le même code ne crée pas de doublon.',
           rejected:'Cet envoi a déjà été examiné et n’a pas été publié. Contactez-nous avec sa référence publique si nécessaire.',
           withdrawn:'Cet envoi a déjà été retiré. Rechargez la page avant un nouvel envoi.'
         };
         message.textContent=messages[result]+(!stored?' Le stockage local est indisponible : copiez votre code de retrait.':'');
         if(result==='pending'||result==='approved') {name.value='';comment.value='';consent.checked=false;clearPhoto();}
+        if(result==='approved') await refreshPage();
       } catch(error) {
         const errors={
           INVALID_REVIEW:'Vérifiez votre note, le pseudonyme, le commentaire et votre accord. Les liens, e-mails et balises ne sont pas acceptés.',

@@ -10,6 +10,9 @@ assert.ok(js.includes('AbortController'),'Network timeout');
 assert.ok(js.includes("result==='pending'"),'Submission status validated');
 assert.ok(js.includes('p_receipt:receipt'),'Idempotency receipt sent');
 assert.ok(js.includes('p_consent:consent.checked'),'Consent transmitted');
+assert.ok(js.includes("if(result==='approved') await refreshPage()"),'Published review refreshes the list');
+const autoSql=fs.readFileSync('supabase/migrations/20261018_review_auto.sql','utf8');
+for(const guard of ['not existed',"p_photo is null",'ltm_review_text_safe',"moderation_reason='auto-text-v1'",'revoke all','pg_advisory_xact_lock'])assert.ok(autoSql.includes(guard),guard);
 assert.ok(!js.includes('aggregateRating'),'No fabricated aggregate rating');
 assert.ok(js.includes('.recipe-card,.latest-item,#hero-content'),'All homepage layouts supported');
 const textFunction=js.slice(js.indexOf('function summaryText('),js.indexOf('function decorateCards('));
@@ -37,7 +40,7 @@ assert.equal(summary({review_count:1,average_rating:9}),'Avis indisponibles');
 let forms=0;
 for(const file of fs.readdirSync('recettes').filter(f=>f.endsWith('.html'))) {
  const html=fs.readFileSync('recettes/'+file,'utf8');
- assert.equal((html.match(/src="\/assets\/reviews.js\?v=20261018-1"/g)||[]).length,1,file);
+ assert.equal((html.match(/src="\/assets\/reviews.js\?v=20261018-2"/g)||[]).length,1,file);
  if(html.includes('</main>')){
   assert.equal((html.match(/id="avis"/g)||[]).length,1,file);
   assert.ok(html.includes('aria-labelledby="avis-title"'));
