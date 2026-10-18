@@ -14,6 +14,20 @@ assert.ok(!js.includes('aggregateRating'),'No fabricated aggregate rating');
 assert.ok(js.includes('.recipe-card,.latest-item,#hero-content'),'All homepage layouts supported');
 const textFunction=js.slice(js.indexOf('function summaryText('),js.indexOf('function decorateCards('));
 const summary=vm.runInNewContext('('+textFunction.trim()+')');
+const photoFunction=js.slice(js.indexOf('async function preparePhoto('),js.indexOf('function summaryText('));
+let closed=0, canvas;
+const prepare=vm.runInNewContext('('+photoFunction.trim()+')',{
+ createImageBitmap:async()=>({width:1920,height:1080,close(){closed++;}}),
+ document:{createElement(){canvas={getContext:()=>({fillRect(){},drawImage(){}}),toDataURL:()=> 'data:image/jpeg;base64,/9j/2Q=='};return canvas;}},
+ atob:s=>Buffer.from(s,'base64').toString('binary')
+});
+assert.equal(await prepare(null),null);
+await assert.rejects(prepare({type:'image/svg+xml',size:100}),/INVALID_PHOTO/);
+await assert.rejects(prepare({type:'image/jpeg',size:9*1024*1024}),/INVALID_PHOTO/);
+assert.equal(await prepare({type:'image/jpeg',size:1000}),'/9j/2Q==');
+assert.equal(canvas.width,960);assert.equal(canvas.height,540);assert.equal(closed,1);
+const photoSql=fs.readFileSync('supabase/migrations/20261018_review_photos.sql','utf8');
+for(const guard of ['102400','20971520','INVALID_PHOTO','PHOTO_LIMIT',"r.status='approved'",'ltm_clear_review_photo'])assert.ok(photoSql.includes(guard),guard);
 assert.equal(summary({review_count:0,average_rating:null}),'Pas encore d’avis');
 assert.equal(summary(undefined),'Avis indisponibles');
 assert.equal(summary({review_count:2,average_rating:4.5}),'★ 4,5/5 · 2 avis');
@@ -23,7 +37,7 @@ assert.equal(summary({review_count:1,average_rating:9}),'Avis indisponibles');
 let forms=0;
 for(const file of fs.readdirSync('recettes').filter(f=>f.endsWith('.html'))) {
  const html=fs.readFileSync('recettes/'+file,'utf8');
- assert.equal((html.match(/src="\/assets\/reviews.js\?v=20261015-3"/g)||[]).length,1,file);
+ assert.equal((html.match(/src="\/assets\/reviews.js\?v=20261018-1"/g)||[]).length,1,file);
  if(html.includes('</main>')){
   assert.equal((html.match(/id="avis"/g)||[]).length,1,file);
   assert.ok(html.includes('aria-labelledby="avis-title"'));

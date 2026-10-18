@@ -37,6 +37,27 @@
       return result;
     } finally { clearTimeout(timer); }
   }
+  async function preparePhoto(file) {
+    if (!file) return null;
+    if (!['image/jpeg','image/png','image/webp'].includes(file.type) || file.size > 8 * 1024 * 1024) throw new Error('INVALID_PHOTO');
+    const bitmap = await createImageBitmap(file);
+    try {
+      if (!bitmap.width || !bitmap.height || bitmap.width * bitmap.height > 48000000) throw new Error('INVALID_PHOTO');
+      const canvas = document.createElement('canvas');
+      const scale = Math.min(1, 960 / Math.max(bitmap.width, bitmap.height));
+      canvas.width = Math.max(1, Math.round(bitmap.width * scale));
+      canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#fff'; ctx.fillRect(0,0,canvas.width,canvas.height);
+      ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);
+      // Re-encoding removes source EXIF (including location) and animation.
+      for (const quality of [0.8,0.65,0.5,0.35]) {
+        const data = canvas.toDataURL('image/jpeg',quality).split(',')[1];
+        if (data && atob(data).length <= 102400) return data;
+      }
+      throw new Error('INVALID_PHOTO');
+    } finally { bitmap.close(); }
+  }
   function summaryText(item) {
     if (!item || !Number.isFinite(Number(item.review_count))) return 'Avis indisponibles';
     const count = Number(item.review_count);
@@ -96,17 +117,41 @@
     const name=el('input'); name.name='nickname'; name.required=true; name.minLength=2; name.maxLength=40; name.autocomplete='off'; nameLabel.append(name);
     const commentLabel=el('label','Votre avis (20 à 2 000 caractères)');
     const comment=el('textarea'); comment.name='comment'; comment.required=true; comment.minLength=20; comment.maxLength=2000; comment.rows=5; commentLabel.append(comment);
+    const photoLabel=el('label','Photo de votre réalisation (facultatif)');
+    const photoInput=el('input'); photoInput.type='file'; photoInput.accept='image/jpeg,image/png,image/webp'; photoInput.name='photo'; photoLabel.append(photoInput);
+    const photoHelp=el('p','Une photo JPG, PNG ou WebP, 8 Mo maximum. Elle sera réduite avant envoi et publiée seulement après modération. Photographiez uniquement votre plat, sans visage, document ni coordonnées.');
+    const preview=el('img'); preview.alt='Aperçu de votre photo avant envoi'; preview.hidden=true; preview.style.cssText='max-width:100%;max-height:240px;object-fit:contain';
+    const photoStatus=el('p'); photoStatus.setAttribute('role','status');
+    const removePhoto=el('button','Retirer la photo'); removePhoto.type='button'; removePhoto.hidden=true;
+    let photoData=null, photoPending=false, photoSequence=0;
+    function clearPhoto(){photoSequence++;photoInput.value='';photoData=null;photoPending=false;preview.removeAttribute('src');preview.hidden=true;removePhoto.hidden=true;photoStatus.textContent='';photoInput.setCustomValidity('');}
+    removePhoto.addEventListener('click',clearPhoto);
+    photoInput.addEventListener('change',async()=>{
+      const sequence=++photoSequence; photoPending=true;photoData=null;preview.hidden=true;photoInput.setCustomValidity('');removePhoto.hidden=false;
+      photoStatus.textContent='Préparation de la photo…';
+      try {
+        const data=await preparePhoto(photoInput.files[0]);
+        if(sequence!==photoSequence)return;
+        photoData=data;
+        if(data){preview.src='data:image/jpeg;base64,'+data;preview.hidden=false;photoStatus.textContent='Photo prête. Vérifiez l’aperçu avant d’envoyer.';}
+        else clearPhoto();
+      } catch {
+        if(sequence!==photoSequence)return;
+        photoInput.setCustomValidity('Choisissez une autre photo ou retirez-la.');
+        photoStatus.textContent='Photo non prise en charge ou trop grande. Essayez un JPG plus petit, ou retirez la photo pour envoyer le texte seul.';
+      } finally {if(sequence===photoSequence)photoPending=false;}
+    });
     const trapLabel=el('label','Laissez ce champ vide','ltm-trap');
     trapLabel.setAttribute('aria-hidden','true');
     const trap=el('input'); trap.name='website'; trap.tabIndex=-1; trap.autocomplete='off'; trapLabel.append(trap);
     const consentLabel=el('label',undefined,'ltm-consent');
     const consent=el('input'); consent.type='checkbox'; consent.required=true; consent.name='consent';
-    consentLabel.append(consent,document.createTextNode('J’ai réalisé cette recette et j’accepte la publication de mon pseudonyme, de ma note et de mon commentaire. Aucun e-mail, lien ou renseignement personnel dans mon avis.'));
+    consentLabel.append(consent,document.createTextNode('J’ai réalisé cette recette et j’accepte la publication de mon pseudonyme, de ma note, de mon commentaire et de ma photo éventuelle. Je suis l’auteur de la photo et j’autorise son affichage avec mon avis. Aucun e-mail, lien ou renseignement personnel dans mon avis ou ma photo.'));
     const privacy=el('a','Confidentialité et retrait de mon avis'); privacy.href='/confidentialite.html#avis';
     const send=el('button','Envoyer mon avis'); send.type='submit';
     const message=el('p','', 'ltm-review-status'); message.setAttribute('role','status'); message.setAttribute('aria-live','polite');
     const receiptArea=el('div',undefined,'ltm-receipt');
-    form.append(fieldset,nameLabel,commentLabel,trapLabel,consentLabel,privacy,send,message,receiptArea);
+    form.append(fieldset,nameLabel,commentLabel,photoLabel,photoHelp,preview,photoStatus,removePhoto,trapLabel,consentLabel,privacy,send,message,receiptArea);
     section.append(form);
     let receipt = saved().receipts?.[slug];
     let author = saved().author;
@@ -122,6 +167,7 @@
     }
     form.addEventListener('submit',async event => {
       event.preventDefault();
+      if (photoPending) {message.textContent='Attendez la préparation de la photo.';return;}
       if (busy || !form.reportValidity()) return;
       busy=true; send.disabled=true; message.textContent='Envoi en cours…';
       try {
@@ -130,10 +176,10 @@
         const data=saved(); data.author=author; data.receipts={...data.receipts,[slug]:receipt};
         const stored=persist(data);
         showReceipt(receipt);
-        const result=await rpc('ltm_submit_review',{
+        const result=await rpc('ltm_submit_review_photo',{
           p_slug:slug,p_rating:Number(new FormData(form).get('rating')),
           p_nickname:name.value.trim(),p_comment:comment.value.trim(),
-          p_author:author,p_receipt:receipt,p_consent:consent.checked,p_website:trap.value
+          p_author:author,p_receipt:receipt,p_consent:consent.checked,p_website:trap.value,p_photo:photoData
         });
         if (!['pending','approved','rejected','withdrawn'].includes(result)) throw new Error('INVALID_RESPONSE');
         const messages={
@@ -143,10 +189,12 @@
           withdrawn:'Cet envoi a déjà été retiré. Rechargez la page avant un nouvel envoi.'
         };
         message.textContent=messages[result]+(!stored?' Le stockage local est indisponible : copiez votre code de retrait.':'');
-        if(result==='pending'||result==='approved') {name.value='';comment.value='';consent.checked=false;}
+        if(result==='pending'||result==='approved') {name.value='';comment.value='';consent.checked=false;clearPhoto();}
       } catch(error) {
         const errors={
           INVALID_REVIEW:'Vérifiez votre note, le pseudonyme, le commentaire et votre accord. Les liens, e-mails et balises ne sont pas acceptés.',
+          INVALID_PHOTO:'La photo a été refusée. Choisissez un JPG plus petit ou retirez-la pour envoyer votre texte seul.',
+          PHOTO_LIMIT:'Le dépôt de photos est temporairement plein. Retirez la photo pour envoyer votre texte seul.',
           UNKNOWN_RECIPE:'Les avis ne sont pas disponibles pour cette recette.',
           ALREADY_REVIEWED:'Un avis de ce navigateur existe déjà pour cette recette. Retirez-le avant d’en envoyer un autre.',
           REVIEW_LIMIT:'La limite temporaire d’envoi est atteinte. Réessayez plus tard.'
@@ -158,7 +206,7 @@
     const withdrawal=el('form'); const label=el('label','Code de retrait privé');
     const code=el('input'); code.required=true; code.autocomplete='off'; code.value=receipt||''; label.append(code);
     const agree=el('label',undefined,'ltm-consent'); const check=el('input'); check.type='checkbox'; check.required=true;
-    agree.append(check,document.createTextNode('Je confirme le retrait de ma note et de mon commentaire.'));
+    agree.append(check,document.createTextNode('Je confirme le retrait de ma note, de mon commentaire et de ma photo éventuelle.'));
     const button=el('button','Retirer cet avis'); button.type='submit';
     const status=el('p'); status.setAttribute('role','status');
     withdrawal.append(label,agree,button,status); details.append(withdrawal); section.append(details);
@@ -173,7 +221,7 @@
         const data=saved();
         if(data.receipts?.[slug]===code.value.trim()){delete data.receipts[slug];persist(data);}
         if(receipt===code.value.trim()){receipt=null;receiptArea.replaceChildren();}
-        status.textContent='Avis retiré. Sa note et son commentaire ne sont plus publics.';
+        status.textContent='Avis retiré. Sa note, son commentaire et sa photo éventuelle ne sont plus publics.';
         await refreshPage();
       }catch{status.textContent='Retrait non confirmé : réessayez plus tard.';}
       finally{button.disabled=false;}
@@ -185,12 +233,15 @@
     if(reset){offset=0;list.replaceChildren();}
     more.disabled=true;
     try {
-      const rows=await rpc('ltm_reviews',{p_slug:slug,p_offset:offset});
+      const rows=await rpc('ltm_reviews_with_photos',{p_slug:slug,p_offset:offset});
       if(!Array.isArray(rows))throw new Error('INVALID_RESPONSE');
       rows.forEach(row=>{
         const article=el('article',undefined,'ltm-review');
         const when=new Date(row.created_at).toLocaleDateString('fr-FR');
         article.append(el('h3',row.nickname+' · '+row.rating+'/5'),el('p','Avis déposé le '+when),el('p',row.comment,'ltm-review-comment'));
+        if(typeof row.photo==='string' && row.photo.length<=136536 && /^[A-Za-z0-9+/]+={0,2}$/.test(row.photo)) {
+          const photo=el('img');photo.src='data:image/jpeg;base64,'+row.photo;photo.alt='Réalisation partagée par '+row.nickname;photo.loading='lazy';photo.style.cssText='display:block;max-width:100%;max-height:480px;object-fit:contain';article.append(photo);
+        }
         list.append(article);
       });
       offset+=rows.length; more.hidden=rows.length<10;
