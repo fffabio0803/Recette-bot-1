@@ -31,8 +31,15 @@ for (const slug of slugs) {
   assert.ok(fs.existsSync(image));
   assert.ok(fs.statSync(image).size < 500000, 'Image trop lourde : ' + image);
   images.add(image);
-  assert.ok(html.includes('Aucun essai en cuisine documenté'));
-  assert.ok(html.includes('Illustration générée'));
+  if (slug === 'roules-cannelle-moelleux') {
+    assert.ok(html.includes('Retour de cuisine du 16 octobre 2026'));
+    assert.ok(html.includes('Arrière-plan retouché'));
+    assert.ok(html.includes('16 pièces dans un grand moule en verre'));
+    assert.ok(!html.includes('Aucun essai en cuisine documenté'));
+  } else {
+    assert.ok(html.includes('Aucun essai en cuisine documenté'));
+    assert.ok(html.includes('Illustration générée'));
+  }
   assert.ok(read('sitemap.xml').includes('https://latablemijote.fr/' + r.url));
   for (const file of ['index.html', 'toutes-les-recettes.html']) {
     const page = read(file);

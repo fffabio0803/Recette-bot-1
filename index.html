@@ -1257,8 +1257,8 @@
         <img
           class="hero-photo"
           id="hero-photo"
-          src="/assets/images/recipes/roules-cannelle-moelleux.jpg"
-          alt="Illustration de roulés à la cannelle avec glaçage léger"
+          src="/assets/images/recipes/roules-cannelle-essai-2026-10-16.jpg"
+          alt="Photo des roulés maison à la cannelle ; arrière-plan retouché"
           width="1536" height="1024" fetchpriority="high"
         >
 
@@ -1552,7 +1552,7 @@
     const RECIPE_IMAGES = {
       "carottes-roties-cannelle-miel":"assets/images/recipes/carottes-cannelle-miel.jpg",
       "poulet-epices-douces-legumes-automne":"assets/images/recipes/poulet-epices-legumes-automne.jpg",
-      "roules-cannelle-moelleux":"assets/images/recipes/roules-cannelle-moelleux.jpg",
+      "roules-cannelle-moelleux":"assets/images/recipes/roules-cannelle-essai-2026-10-16.jpg",
       "boeuf-bourguignon-recette-traditionnelle":"assets/images/recipes/boeuf-bourguignon.jpg",
       "tarte-tatin-pommes-caramel-facile":"assets/images/recipes/tarte-tatin.jpg",
       "carbonara-authentique-recette-romaine":"assets/images/recipes/carbonara-romaine.jpg",
@@ -1732,7 +1732,7 @@
 
       if (image) {
         heroPhoto.src = image;
-        heroPhoto.alt = "Illustration : " + (recipe.title || "la recette du jour");
+        heroPhoto.alt = (recipe.slug === "roules-cannelle-moelleux" ? "Photo, fond retouché : " : "Illustration : ") + (recipe.title || "la recette du jour");
       } else {
         heroPhoto.removeAttribute("src");
         heroPhoto.alt = "";
@@ -1902,7 +1902,7 @@
                 <img
                   class="card-photo"
                   src="${escapeHtml(image)}"
-                  alt="Illustration : ${escapeHtml(recipe.title || "la recette")}" 
+                  alt="${recipe.slug === "roules-cannelle-moelleux" ? "Photo, fond retouché" : "Illustration"} : ${escapeHtml(recipe.title || "la recette") }"
                   loading="lazy"
                 >
               ` : ""}
@@ -1960,7 +1960,7 @@
               <img
                 class="latest-photo"
                 src="${escapeHtml(image)}"
-                alt="Illustration : ${escapeHtml(recipe.title || "la recette")}" 
+                alt="${recipe.slug === "roules-cannelle-moelleux" ? "Photo, fond retouché" : "Illustration"} : ${escapeHtml(recipe.title || "la recette") }"
                 loading="lazy"
               >
             ` : ""}
