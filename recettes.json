@@ -166,15 +166,15 @@
       "meta_description": "Un bœuf bourguignon mijoté avec vin rouge, carottes et petits oignons, avec des conseils précis pour obtenir une viande fondante et une sauce liée.",
       "category": "Viande",
       "emoji": "🥩",
-      "cook_time": "4h",
-      "prep_time": "30 min",
+      "cook_time": "4h15",
+      "prep_time": "50 min",
       "servings": 6,
       "date_iso": "2026-05-03",
       "date_display": "3 mai 2026",
       "url": "recettes/boeuf-bourguignon-recette-traditionnelle.html",
       "rest_time": "24h10",
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-10-11"
+      "date_reviewed": "2026-10-18"
     },
     {
       "slug": "tiramisu-recette-italienne-originale",
