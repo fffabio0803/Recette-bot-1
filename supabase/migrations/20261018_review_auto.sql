@@ -1,16 +1,17 @@
 -- Conservative automatic publication, no paid AI and no retroactive approval.
 begin;
-create function public.ltm_review_text_safe(n text, c text) returns boolean
+create or replace function public.ltm_review_text_safe(n text, c text) returns boolean
 language plpgsql immutable set search_path = '' as $$
 declare words text[]; w text;
 begin
  if n is null or c is null or char_length(c)>600
- or n !~ '^[A-Za-zÀ-ÖØ-öø-ÿ]{2,24}$'
+ or n !~ '^[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ0-9]{1,23}$'
+ or char_length(regexp_replace(n,'[^0-9]','','g'))>4
  or lower(n) ~ '(merde|connard|connasse|putain|salope|fuck|nazi|hitler|pute|conne|cul|bite|sex)'
  or c !~ '^[A-Za-zÀ-ÖØ-öø-ÿœŒ .,!?;:''’\n\r-]+$' then return false; end if;
  words:=regexp_split_to_array(lower(c),'[^a-zà-öø-ÿœ]+');
  foreach w in array words loop
-   if w<>'' and not(w=any(string_to_array('a à ai aime aimé aimée aimé avons avec au aux aussi assez aucun aucune beaucoup bien bon bonne bonnes bons beurre cannelle ce ces cette chocolat cuisson cuit cuite cuits cuites crème dans de des du délicieux délicieuse délicieuses déçue déçu dense difficile dosage dosé dosée doux eau elle en encore est et été facile faciles farine fait faite faites faits faut ferme four goût garniture gâteau glaçage goût goûteux goûteuse huile il ils j je la lait le les leur levée levure léger légère mais mal manque manquait me merci mes miel minutes moins moelleux moelleuse mon moule mousse ne ni non nos nous oeufs œufs on ou oui pain par pas pâte peu plus pour préparation préparé préparée première plutôt qu que quel quelle recette recommande résultat repos réussi réussie roulés sans sec sèche sèches secs seconde sel si simple sont souple sous sucre sucré sucrée super texture temps très trop un une utilisé utilisée va vraiment votre vos y c était n l d s bien doré dorée croustillant croustillante raté ratée fade fades amer amère dur dure épais épaisse liquide longue long rapide lent lente chaud chaude froid froide collante collant levé levés gonflé gonflés pas assez tout tout simplement excellent excellente parfait parfaite mangé mangée famille refaire referai aimé adoré adorée proportion proportions ingrédients moitié fourchette fournée régal pâteux pâteuse salé salée froids tiède centre dessus dessous goût goûtées goûté goûtée juteux juteuse brûlé brûlée',' '))) then return false; end if;
+   if w<>'' and w<>'préparer' and not(w=any(string_to_array('a à ai aime aimé aimée aimé avons avec au aux aussi assez aucun aucune beaucoup bien bon bonne bonnes bons beurre cannelle ce ces cette chocolat cuisson cuit cuite cuits cuites crème dans de des du délicieux délicieuse délicieuses déçue déçu dense difficile dosage dosé dosée doux eau elle en encore est et été facile faciles farine fait faite faites faits faut ferme four goût garniture gâteau glaçage goût goûteux goûteuse huile il ils j je la lait le les leur levée levure léger légère mais mal manque manquait me merci mes miel minutes moins moelleux moelleuse mon moule mousse ne ni non nos nous oeufs œufs on ou oui pain par pas pâte peu plus pour préparation préparé préparée première plutôt qu que quel quelle recette recommande résultat repos réussi réussie roulés sans sec sèche sèches secs seconde sel si simple sont souple sous sucre sucré sucrée super texture temps très trop un une utilisé utilisée va vraiment votre vos y c était n l d s bien doré dorée croustillant croustillante raté ratée fade fades amer amère dur dure épais épaisse liquide longue long rapide lent lente chaud chaude froid froide collante collant levé levés gonflé gonflés pas assez tout tout simplement excellent excellente parfait parfaite mangé mangée famille refaire referai aimé adoré adorée proportion proportions ingrédients moitié fourchette fournée régal pâteux pâteuse salé salée froids tiède centre dessus dessous goût goûtées goûté goûtée juteux juteuse brûlé brûlée',' '))) then return false; end if;
  end loop;
  return true;
 end;
