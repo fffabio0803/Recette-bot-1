@@ -8,9 +8,10 @@ assert.ok(!/sb_secret_|service_role/.test(js),'No privileged key in client');
 assert.ok(js.includes('sb_publishable_'),'Public key configured');
 assert.ok(js.includes('AbortController'),'Network timeout');
 assert.ok(js.includes("result==='pending'"),'Submission status validated');
-assert.ok(js.includes('p_receipt:receipt'),'Idempotency receipt sent');
+assert.ok(js.includes('p_receipt:targetReceipt'),'Idempotency receipt sent');
 assert.ok(js.includes('p_consent:consent.checked'),'Consent transmitted');
-assert.ok(js.includes("if(result==='approved') await refreshPage()"),'Published review refreshes the list');
+assert.ok(js.includes('await refreshPage()'),'Review updates refresh the list');
+for(const text of ['form.noValidate=true',"mode.value==='other'",'ltm_edit_review','!form.checkValidity()','comment.value.trim().length<20','message.focus()'])assert.ok(js.includes(text),text);
 const autoSql=fs.readFileSync('supabase/migrations/20261018_review_auto.sql','utf8');
 for(const guard of ['not existed',"p_photo is null",'ltm_review_text_safe',"moderation_reason='auto-text-v1'",'revoke all','pg_advisory_xact_lock'])assert.ok(autoSql.includes(guard),guard);
 assert.ok(!js.includes('aggregateRating'),'No fabricated aggregate rating');
@@ -40,7 +41,7 @@ assert.equal(summary({review_count:1,average_rating:9}),'Avis indisponibles');
 let forms=0;
 for(const file of fs.readdirSync('recettes').filter(f=>f.endsWith('.html'))) {
  const html=fs.readFileSync('recettes/'+file,'utf8');
- assert.equal((html.match(/src="\/assets\/reviews.js\?v=20261018-2"/g)||[]).length,1,file);
+ assert.equal((html.match(/src="\/assets\/reviews.js\?v=20261018-3"/g)||[]).length,1,file);
  if(html.includes('</main>')){
   assert.equal((html.match(/id="avis"/g)||[]).length,1,file);
   assert.ok(html.includes('aria-labelledby="avis-title"'));
@@ -58,4 +59,5 @@ assert.ok(sql.includes('pg_advisory_xact_lock'));
 assert.ok(sql.includes('REVIEW_LIMIT'));
 assert.ok(fs.readFileSync('confidentialite.html','utf8').includes('id="avis"'));
 console.log('Avis : 63 formulaires, cartes, affichage sans faux chiffres, protections et clé publique contrôlés.');
+await import('./check-review-flow.mjs');
 

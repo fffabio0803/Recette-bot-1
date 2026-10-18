@@ -93,6 +93,7 @@
   function addForm(section) {
     const form = el('form');
     form.className = 'ltm-review-form';
+    form.noValidate=true;
     const title = el('h3', 'Vous avez cuisiné cette recette ?');
     const intro = el('p', 'Partagez votre résultat, les adaptations et les difficultés rencontrées. Certains textes courts reconnus par nos contrôles sont publiés immédiatement, quelle que soit la note. Les photos et les autres avis attendent une relecture.');
     form.append(title, intro);
@@ -151,15 +152,39 @@
     const send=el('button','Envoyer mon avis'); send.type='submit';
     const message=el('p','', 'ltm-review-status'); message.setAttribute('role','status'); message.setAttribute('aria-live','polite');
     const receiptArea=el('div',undefined,'ltm-receipt');
-    form.append(fieldset,nameLabel,commentLabel,photoLabel,photoHelp,preview,photoStatus,removePhoto,trapLabel,consentLabel,privacy,send,message,receiptArea);
+    const modeLabel=el('label','Que souhaitez-vous faire ?');
+    const mode=el('select');mode.name='review_mode';mode.required=true;
+    for(const [value,text] of [['','Choisissez une action'],['new','Déposer mon premier avis'],['edit','Modifier mon avis existant'],['other','Une autre personne souhaite donner son avis']]){const option=el('option',text);option.value=value;mode.append(option);}modeLabel.append(mode);
+    const editLabel=el('label','Votre code privé pour modifier cet avis');
+    const editCode=el('input');editCode.autocomplete='off';editCode.type='password';editLabel.append(editCode);
+    const editHelp=el('p','Saisissez votre code privé, puis votre nouvelle note, votre pseudonyme et le texte complet. Ils remplaceront votre avis, qui sera contrôlé à nouveau. La photo existante est conservée sauf choix contraire.');
+    const photoActionLabel=el('label','Photo déjà jointe à mon avis');
+    const photoAction=el('select');for(const [v,t] of [['keep','Conserver la photo existante'],['remove','Supprimer la photo existante']]){const o=el('option',t);o.value=v;photoAction.append(o);}photoActionLabel.append(photoAction);
+    photoAction.value='keep';
+    const otherLabel=el('label',undefined,'ltm-consent');const otherCheck=el('input');otherCheck.type='checkbox';otherLabel.append(otherCheck,document.createTextNode('Je suis une autre personne ayant réalisé la recette. Le précédent auteur a conservé son code privé avant de me laisser cet appareil.'));
+    const modeHelp=el('p');
+    message.tabIndex=-1;
+    function notify(text){message.textContent=text;message.focus();message.scrollIntoView({block:'center'});}
+    form.append(modeLabel,modeHelp,editLabel,editHelp,otherLabel,fieldset,nameLabel,commentLabel,photoActionLabel,photoLabel,photoHelp,preview,photoStatus,removePhoto,trapLabel,consentLabel,privacy,send,message,receiptArea);
     section.append(form);
     let receipt = saved().receipts?.[slug];
     let author = saved().author;
     if (!uuid(receipt)) receipt=null;
+    let otherAttempt=null,newAttempt=false;
+    mode.value=receipt?'':'new';
+    function syncMode(){
+      const editing=mode.value==='edit',other=mode.value==='other';
+      editLabel.hidden=editHelp.hidden=photoActionLabel.hidden=!editing;editCode.required=editing;
+      otherLabel.hidden=!other;otherCheck.required=other;
+      modeHelp.textContent=receipt?'Un envoi existe sur cet appareil. Choisissez de modifier votre avis ou de laisser celui d’une autre personne. Chacun doit conserver son code privé.':'Un avis par personne et par recette. Un appareil peut être partagé ; les identités ne sont pas vérifiées.';
+      send.textContent=editing?'Enregistrer les modifications':'Envoyer mon avis';
+    }
+    mode.addEventListener('change',syncMode);syncMode();
     function showReceipt(code) {
       receiptArea.replaceChildren();
-      receiptArea.append(el('p','Code de retrait privé : conservez-le, notamment si votre navigateur efface ses données. Ne le publiez pas.'));
-      const output=el('input'); output.readOnly=true; output.value=code; output.setAttribute('aria-label','Code de retrait privé'); receiptArea.append(output);
+      const privateDetails=el('details');privateDetails.append(el('summary','Mon code privé de modification et de retrait'));
+      privateDetails.append(el('p','Conservez votre code avant de partager cet appareil. Aucun historique des codes des autres personnes n’est affiché. Ne le publiez pas.'));
+      const output=el('input'); output.readOnly=true; output.value=code; output.setAttribute('aria-label','Code de retrait privé'); privateDetails.append(output);receiptArea.append(privateDetails);
     }
     if (receipt) {
       showReceipt(receipt);
@@ -167,41 +192,60 @@
     }
     form.addEventListener('submit',async event => {
       event.preventDefault();
-      if (photoPending) {message.textContent='Attendez la préparation de la photo.';return;}
-      if (busy || !form.reportValidity()) return;
-      busy=true; send.disabled=true; message.textContent='Envoi en cours…';
+      if(busy)return;
+      if(photoPending){notify('Attendez la préparation de la photo.');return;}
+      if(!mode.value){notify('Choisissez une action : premier avis, modification ou avis d’une autre personne.');return;}
+      if(mode.value==='new' && receipt && !newAttempt){notify('Un envoi existe déjà sur cet appareil pour cette recette. Choisissez Modifier mon avis ou Une autre personne.');return;}
+      if(mode.value==='edit' && !uuid(editCode.value.trim())){notify('Saisissez le code privé de l’avis à modifier.');return;}
+      if(mode.value==='other' && !otherCheck.checked){notify('Confirmez que cet avis est celui d’une autre personne et que le précédent auteur a conservé son code.');return;}
+      if(!stars.querySelector('input:checked')){notify('Choisissez une note de 1 à 5 étoiles.');return;}
+      if(name.value.trim().length<2 || name.value.trim().length>40){notify('Le pseudonyme doit contenir de 2 à 40 caractères.');return;}
+      if(comment.value.trim().length<20 || comment.value.trim().length>2000){notify('Votre commentaire doit contenir de 20 à 2 000 caractères.');return;}
+      if(!consent.checked){notify('Cochez votre accord pour publier cet avis.');return;}
+      if(!form.checkValidity()){notify('Vérifiez les champs du formulaire, notamment la photo choisie.');return;}
+      const editing=mode.value==='edit';
+      busy=true; send.disabled=true;mode.disabled=true;notify('Envoi en cours…');
       try {
         if (!uuid(author)) author=crypto.randomUUID();
-        if (!receipt) receipt=crypto.randomUUID();
+        if(!editing && mode.value==='other'){
+          if(!otherAttempt)otherAttempt={author:crypto.randomUUID(),receipt:crypto.randomUUID()};
+          author=otherAttempt.author;receipt=otherAttempt.receipt;
+        }else if (!editing && !receipt) {receipt=crypto.randomUUID();newAttempt=true;}
+        const targetReceipt=editing?editCode.value.trim():receipt;
         const data=saved(); data.author=author; data.receipts={...data.receipts,[slug]:receipt};
-        const stored=persist(data);
-        showReceipt(receipt);
-        const result=await rpc('ltm_submit_review_photo',{
+        let stored=editing?true:persist(data);
+        if(!editing){showReceipt(receipt);code.value=receipt;}
+        const payload={
           p_slug:slug,p_rating:Number(new FormData(form).get('rating')),
           p_nickname:name.value.trim(),p_comment:comment.value.trim(),
-          p_author:author,p_receipt:receipt,p_consent:consent.checked,p_website:trap.value,p_photo:photoData
-        });
+          p_receipt:targetReceipt,p_consent:consent.checked,p_website:trap.value,p_photo:photoData
+        };
+        if(editing)payload.p_photo_mode=photoData?'replace':photoAction.value;else payload.p_author=author;
+        const result=await rpc(editing?'ltm_edit_review':'ltm_submit_review_photo',payload);
         if (!['pending','approved','rejected','withdrawn'].includes(result)) throw new Error('INVALID_RESPONSE');
+        if(editing){receipt=targetReceipt;data.receipts[slug]=receipt;stored=persist(data);showReceipt(receipt);code.value=receipt;}
         const messages={
           pending:'Merci ! Votre avis est enregistré et attend la modération. Il ne compte pas encore dans la moyenne.',
           approved:'Merci ! Votre avis est publié et compte dans la moyenne. Un nouvel essai avec le même code ne crée pas de doublon.',
           rejected:'Cet envoi a déjà été examiné et n’a pas été publié. Contactez-nous avec sa référence publique si nécessaire.',
           withdrawn:'Cet envoi a déjà été retiré. Rechargez la page avant un nouvel envoi.'
         };
-        message.textContent=messages[result]+(!stored?' Le stockage local est indisponible : copiez votre code de retrait.':'');
-        if(result==='pending'||result==='approved') {name.value='';comment.value='';consent.checked=false;clearPhoto();}
-        if(result==='approved') await refreshPage();
+        notify((editing?'Modification : ':'')+messages[result]+(!stored?' Le stockage local est indisponible : copiez votre code de retrait.':''));
+        if(result==='pending'||result==='approved') {name.value='';comment.value='';consent.checked=false;clearPhoto();otherAttempt=null;newAttempt=false;otherCheck.checked=false;editCode.value='';mode.value='';syncMode();}
+        await refreshPage();
       } catch(error) {
         const errors={
           INVALID_REVIEW:'Vérifiez votre note, le pseudonyme, le commentaire et votre accord. Les liens, e-mails et balises ne sont pas acceptés.',
           INVALID_PHOTO:'La photo a été refusée. Choisissez un JPG plus petit ou retirez-la pour envoyer votre texte seul.',
           PHOTO_LIMIT:'Le dépôt de photos est temporairement plein. Retirez la photo pour envoyer votre texte seul.',
           UNKNOWN_RECIPE:'Les avis ne sont pas disponibles pour cette recette.',
-          ALREADY_REVIEWED:'Un avis de ce navigateur existe déjà pour cette recette. Retirez-le avant d’en envoyer un autre.',
+          ALREADY_REVIEWED:'Un avis existe pour cette personne. Choisissez Modifier mon avis, ou Une autre personne si vous partagez cet appareil.',
+          INVALID_RECEIPT:'Ce code ne correspond pas à un avis modifiable pour cette recette. Vérifiez le code privé ; un avis retiré ne peut pas être modifié.',
+          EDIT_LIMIT:'La limite temporaire de modifications est atteinte (au maximum 3 par avis en 24 heures). Réessayez plus tard.',
           REVIEW_LIMIT:'La limite temporaire d’envoi est atteinte. Réessayez plus tard.'
         };
-        message.textContent=errors[error.message]||'Envoi non confirmé. Votre texte reste ici : réessayez sans fermer la page. Un nouvel essai ne créera pas de doublon.';
-      } finally {busy=false;send.disabled=false;}
+        notify(errors[error.message]||'Envoi non confirmé. Votre texte reste ici : réessayez sans fermer la page. Un nouvel essai ne créera pas de doublon.');
+      } finally {busy=false;send.disabled=false;mode.disabled=false;}
     });
     const details=el('details'); details.append(el('summary','Retirer mon avis'));
     const withdrawal=el('form'); const label=el('label','Code de retrait privé');
@@ -221,7 +265,7 @@
         if(ok!==true){status.textContent='Aucun avis associé à ce code.';return;}
         const data=saved();
         if(data.receipts?.[slug]===code.value.trim()){delete data.receipts[slug];persist(data);}
-        if(receipt===code.value.trim()){receipt=null;receiptArea.replaceChildren();}
+        if(receipt===code.value.trim()){receipt=null;receiptArea.replaceChildren();mode.value='new';editCode.value='';syncMode();}
         status.textContent='Avis retiré. Sa note, son commentaire et sa photo éventuelle ne sont plus publics.';
         await refreshPage();
       }catch{status.textContent='Retrait non confirmé : réessayez plus tard.';}
