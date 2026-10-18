@@ -4,7 +4,7 @@ import vm from 'node:vm';
 const home = fs.readFileSync('index.html', 'utf8');
 const staticHome = home.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
 const catalogueHtml = fs.readFileSync('toutes-les-recettes.html', 'utf8');
-const quicheCard = catalogueHtml.match(/<article\b[^>]*>[\s\S]*?<\/article>/g)
+const quicheCard = catalogueHtml.match(/<article class="recipe-card">[\s\S]*?<\/article>/g)
   .find(card => card.includes('href="recettes/quiche-lorraine-recette-authentique.html"'));
 assert.ok(quicheCard?.includes('Préparation : 35 min'), 'Carte statique quiche : préparation synchronisée');
 assert.ok(!staticHome.includes('Chargement'), 'Accueil sans attente JavaScript');
