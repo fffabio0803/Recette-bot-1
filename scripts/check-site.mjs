@@ -10,6 +10,7 @@ import './check-recipe-step-links.mjs';
 import './check-guide-calculators.mjs';
 import './check-progressive-content.mjs';
 import './check-reviews.mjs';
+import './check-contact.mjs';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const timing = require('../assets/recipe-time.js');

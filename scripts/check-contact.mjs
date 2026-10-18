@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const contact = fs.readFileSync('contact.html', 'utf8');
+assert.ok(contact.includes('action="https://formspree.io/f/xgaoqlly" method="post"'));
+assert.ok(!contact.includes('gmail.com') && !contact.includes('mailto:'));
+assert.ok(contact.includes('name="email" type="email" autocomplete="email" maxlength="254" required'));
+assert.ok(contact.includes('name="message" minlength="20" maxlength="5000" required'));
+assert.ok(contact.includes('name="_gotcha"'));
+assert.ok(contact.includes('/confidentialite.html#contact'));
+assert.ok(fs.readFileSync('confidentialite.html', 'utf8').includes('id="contact"'));
+console.log('Contact : destinataire masqué, champs requis, antispam et information privée contrôlés.');
