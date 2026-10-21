@@ -21,6 +21,25 @@
       "topic": "automne"
     },
     {
+      "slug": "banana-bread-quatre-epices",
+      "title": "Banana bread aux quatre-épices et graines de courge",
+      "meta_description": "Banana bread moelleux aux quatre-épices, huile de pépins de raisin et graines de courge : retour de cuisine, photos réelles et repères de cuisson.",
+      "category": "Gâteaux",
+      "emoji": "Gâteaux",
+      "prep_time": "Non mesurée",
+      "cook_time": "35 min",
+      "rest_time": "Refroidissement à prévoir",
+      "servings": null,
+      "yield_label": "1 cake",
+      "date_iso": "2026-10-21",
+      "date_display": "21 octobre 2026",
+      "date_reviewed": "2026-10-21",
+      "url": "recettes/banana-bread-quatre-epices.html",
+      "time_uncertain": true,
+      "time_note": "Cuisson observée : 35 min à 180 °C en chaleur tournante. Préparation et refroidissement non mesurés ; taille du moule inconnue.",
+      "editorial_status": "retour de cuisine documenté"
+    },
+    {
       "slug": "poulet-epices-douces-legumes-automne",
       "title": "Poulet aux épices douces et légumes d’automne",
       "meta_description": "Hauts de cuisse de poulet au paprika et au cumin, butternut, carottes et oignons : un plat au four avec découpe précise et contrôle de cuisson à cœur.",
@@ -266,5 +285,6 @@
       "editorial_status": "sélection éditoriale",
       "date_reviewed": "2026-10-02"
     }
-  ]
+  ],
+  "last_updated": "21 octobre 2026"
 }

@@ -48,7 +48,7 @@ for(const file of fs.readdirSync('recettes').filter(f=>f.endsWith('.html'))) {
   forms++;
  }
 }
-assert.equal(forms,63,'63 recipe documents; one legacy redirect');
+assert.equal(forms,64,'64 recipe documents; one legacy redirect');
 for(const file of ['index.html','toutes-les-recettes.html'])assert.ok(fs.readFileSync(file,'utf8').includes('/assets/reviews.js'));
 const sql=fs.readFileSync('supabase/migrations/20261015_reviews.sql','utf8');
 assert.equal((sql.match(/security definer set search_path = ''/g)||[]).length,4);
@@ -58,6 +58,6 @@ assert.ok(sql.includes("r.status='approved'"));
 assert.ok(sql.includes('pg_advisory_xact_lock'));
 assert.ok(sql.includes('REVIEW_LIMIT'));
 assert.ok(fs.readFileSync('confidentialite.html','utf8').includes('id="avis"'));
-console.log('Avis : 63 formulaires, cartes, affichage sans faux chiffres, protections et clé publique contrôlés.');
+console.log('Avis : 64 formulaires, cartes, affichage sans faux chiffres, protections et clé publique contrôlés.');
 await import('./check-review-flow.mjs');
 

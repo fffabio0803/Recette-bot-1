@@ -1345,6 +1345,7 @@
       </div>
 
       <div class="featured-grid" id="featured-grid">
+<article class="recipe-card"><a href="recettes/banana-bread-quatre-epices.html"><div class="card-content"><p class="card-category">Gâteaux</p><h3 class="card-title">Banana bread aux quatre-épices et graines de courge</h3><p>Banana bread moelleux aux quatre-épices, huile de pépins de raisin et graines de courge : retour de cuisine, photos réelles et repères de cuisson.</p></div></a></article>
 <article class="recipe-card"><a href="/recettes/quiche-lorraine-recette-authentique.html"><div class="card-content"><p class="card-category">Tartes</p><h3 class="card-title">Quiche lorraine aux lardons et migaine crémeuse</h3><p>Une quiche lorraine aux lardons avec une pâte croustillante et une migaine crémeuse, accompagnée de conseils pour éviter un fond détrempé.</p></div></a></article>
 <article class="recipe-card"><a href="/recettes/baba-au-rhum-recette-traditionnelle.html"><div class="card-content"><p class="card-category">Desserts</p><h3 class="card-title">Baba au rhum, sirop parfumé et crème</h3><p>Un baba au rhum à la pâte légère, imbibé d’un sirop parfumé, avec des conseils pour réussir la levée et répartir le sirop uniformément.</p></div></a></article>
 <article class="recipe-card"><a href="/recettes/gratin-dauphinois-cremeux-facile.html"><div class="card-content"><p class="card-category">Accompagnements</p><h3 class="card-title">Gratin de pommes de terre crémeux au comté</h3><p>Un gratin de pommes de terre au comté, avec infusion au frais, cuisson douce et repères pour un cœur fondant.</p></div></a></article>
@@ -1552,6 +1553,7 @@
     const RECIPE_IMAGES = {
       "carottes-roties-cannelle-miel":"assets/images/recipes/carottes-cannelle-miel.jpg",
       "poulet-epices-douces-legumes-automne":"assets/images/recipes/poulet-epices-legumes-automne.jpg",
+      "banana-bread-quatre-epices":"assets/images/recipes/banana-bread-tranche.jpg",
       "roules-cannelle-moelleux":"assets/images/recipes/roules-cannelle-essai-2026-10-16.jpg",
       "boeuf-bourguignon-recette-traditionnelle":"assets/images/recipes/boeuf-bourguignon.jpg",
       "tarte-tatin-pommes-caramel-facile":"assets/images/recipes/tarte-tatin.jpg",
@@ -1732,7 +1734,7 @@
 
       if (image) {
         heroPhoto.src = image;
-        heroPhoto.alt = (recipe.slug === "roules-cannelle-moelleux" ? "Photo, fond retouché : " : "Illustration : ") + (recipe.title || "la recette du jour");
+        heroPhoto.alt = (recipe.slug === "banana-bread-quatre-epices" ? "Photo de réalisation" : recipe.slug === "roules-cannelle-moelleux" ? "Photo, fond retouché : " : "Illustration : ") + (recipe.title || "la recette du jour");
       } else {
         heroPhoto.removeAttribute("src");
         heroPhoto.alt = "";
@@ -1902,7 +1904,7 @@
                 <img
                   class="card-photo"
                   src="${escapeHtml(image)}"
-                  alt="${recipe.slug === "roules-cannelle-moelleux" ? "Photo, fond retouché" : "Illustration"} : ${escapeHtml(recipe.title || "la recette") }"
+                  alt="${recipe.slug === "banana-bread-quatre-epices" ? "Photo de réalisation" : recipe.slug === "roules-cannelle-moelleux" ? "Photo, fond retouché" : "Illustration"} : ${escapeHtml(recipe.title || "la recette") }"
                   loading="lazy"
                 >
               ` : ""}
@@ -1960,7 +1962,7 @@
               <img
                 class="latest-photo"
                 src="${escapeHtml(image)}"
-                alt="${recipe.slug === "roules-cannelle-moelleux" ? "Photo, fond retouché" : "Illustration"} : ${escapeHtml(recipe.title || "la recette") }"
+                alt="${recipe.slug === "banana-bread-quatre-epices" ? "Photo de réalisation" : recipe.slug === "roules-cannelle-moelleux" ? "Photo, fond retouché" : "Illustration"} : ${escapeHtml(recipe.title || "la recette") }"
                 loading="lazy"
               >
             ` : ""}
