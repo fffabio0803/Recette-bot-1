@@ -4,6 +4,14 @@ import vm from 'node:vm';
 const home = fs.readFileSync('index.html', 'utf8');
 const staticHome = home.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
 const catalogueHtml = fs.readFileSync('toutes-les-recettes.html', 'utf8');
+const everydayHub = catalogueHtml.match(/<article class="category-hub" id="salades">[\s\S]*?<\/article>/)?.[0];
+assert.ok(everydayHub?.includes('<h2>Recettes du quotidien</h2>'), 'Sélection sans promesse de rapidité trompeuse');
+assert.ok(everydayHub.includes('environ 40 min'), 'César : préparation, cuisson et repos affichés');
+assert.ok(everydayHub.includes('au moins 1 h de repos'), 'Crêpes : repos visible avant la cuisson');
+assert.ok(everydayHub.includes('2 min de cuisson par crêpe'), 'Crêpes : durée par pièce et non durée totale');
+const savouryHub = catalogueHtml.match(/<article class="category-hub" id="plats-sales">[\s\S]*?<\/article>/)?.[0];
+assert.ok(savouryHub?.includes('>Gratin de pommes de terre au comté</a>'), 'Nom du gratin cohérent avec sa fiche');
+assert.ok(!catalogueHtml.includes('>Gratin dauphinois</a>'));
 const quicheCard = catalogueHtml.match(/<article class="recipe-card">[\s\S]*?<\/article>/g)
   .find(card => card.includes('href="recettes/quiche-lorraine-recette-authentique.html"'));
 assert.ok(quicheCard?.includes('Préparation : 35 min'), 'Carte statique quiche : préparation synchronisée');
