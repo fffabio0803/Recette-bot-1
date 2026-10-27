@@ -7,7 +7,7 @@ const urls = [...fs.readFileSync('sitemap.xml', 'utf8').matchAll(/<loc>(.*?)<\/l
 for (const [, url] of urls) {
   const file = new URL(url).pathname.slice(1) || 'index.html';
   const html = fs.readFileSync(file, 'utf8');
-  assert.equal((html.match(/src="\/assets\/advertising-consent.js\?v=20261027-1"/g) || []).length, 1, file);
+  assert.equal((html.match(/src="\/assets\/advertising-consent.js\?v=20261027-2"/g) || []).length, 1, file);
   assert.ok(html.indexOf('/assets/analytics-consent.js') < html.indexOf('/assets/advertising-consent.js'), file);
   assert.ok(html.indexOf('/assets/advertising-consent.js') < html.indexOf('</head>'), 'Loader outside head: ' + file);
 }
