@@ -32,17 +32,18 @@
       status.hidden = false;
       return;
     }
+    status.textContent = 'Ouverture demandée à Google. Si aucun panneau ne s’affiche, le message n’est pas disponible pour cette visite. Aucune annonce n’est activée sur le site.';
+    status.hidden = false;
     window.googlefc.callbackQueue.push(function () {
       window.googlefc.showRevocationMessage();
     });
   });
 
-  if (!document.querySelector('script[data-ltm-adsense]')) {
+  if (!document.querySelector('script[src*="pagead/js/adsbygoogle.js"]')) {
     var script = document.createElement('script');
     script.async = true;
     script.crossOrigin = 'anonymous';
     script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4732923807982186';
-    script.dataset.ltmAdsense = 'true';
     document.head.appendChild(script);
   }
 })();

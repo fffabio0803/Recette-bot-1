@@ -27,7 +27,7 @@ const footer = element('footer'), head = element('head');
 const document = {
   head, body: element('body'), createElement: element,
   getElementById: id => nodes.find(e => e.id === id),
-  querySelector: s => s === 'footer' ? footer : nodes.find(e => e.dataset.ltmAdsense)
+  querySelector: s => s === 'footer' ? footer : nodes.find(e => e.src?.includes('pagead/js/adsbygoogle.js'))
 };
 const window = {};
 vm.runInNewContext(source, {window, document});
@@ -44,6 +44,7 @@ window.googlefc.callbackQueue[0].CONSENT_API_READY();
 assert.equal(status.hidden, true);
 button.handlers.click();
 assert.equal(revoked, 0, 'Use the official callback queue');
+assert.equal(status.hidden, false, 'A request without a visible CMP must not be silent');
 window.googlefc.callbackQueue[1]();
 assert.equal(revoked, 1);
 vm.runInNewContext(source, {window, document});
