@@ -12,6 +12,7 @@ import './check-progressive-content.mjs';
 import './check-reviews.mjs';
 import './check-contact.mjs';
 import './check-banana-bread.mjs';
+import './check-advertising-consent.mjs';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const timing = require('../assets/recipe-time.js');
