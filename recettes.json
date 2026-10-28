@@ -146,7 +146,7 @@
     {
       "slug": "saumon-gravlax-maison-aneth-citron",
       "title": "Saumon gravlax maison à l’aneth et au citron",
-      "meta_description": "Un saumon gravlax maison à l’aneth et au citron, avec des repères de salage, de durée, de texture et de sécurité pour le poisson cru.",
+      "meta_description": "Gravlax de saumon à l’aneth et au citron : préparation, salage au froid, finition et précautions indispensables avant de servir du poisson cru.",
       "category": "Poisson",
       "emoji": "Poisson",
       "cook_time": "0 min",
@@ -159,15 +159,15 @@
       "time_note": "Il n’y a pas de cuisson : le poisson marine 24 à 48 h au réfrigérateur. Les éventuels traitements préalables et la décongélation selon le fournisseur sont à anticiper ; voir les précautions pour le poisson cru.",
       "time_uncertain": true,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-09-20"
+      "date_reviewed": "2026-10-28"
     },
     {
       "slug": "pavlova-fruits-rouges-meringue",
       "title": "Pavlova aux fruits rouges : meringue croustifondante",
-      "meta_description": "Recette de pavlova meringuée aux fruits rouges et chantilly mascarpone. Croustillante à l'extérieur, moelleuse à cœur, un dessert spectaculaire et facile.",
+      "meta_description": "Pavlova aux fruits rouges et crème mascarpone : cuisson de référence de 1 h 25, refroidissement complet et repères pour monter la meringue et la garnir.",
       "category": "Desserts",
       "emoji": "Desserts",
-      "cook_time": "1h30",
+      "cook_time": "1h25",
       "prep_time": "20 min",
       "servings": 8,
       "date_iso": "2026-08-04",
@@ -177,7 +177,7 @@
       "time_note": "La meringue cuit environ 1 h 25, puis refroidit au moins 2 h dans le four éteint. Ne garnir qu’une fois froide.",
       "time_uncertain": false,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-09-20"
+      "date_reviewed": "2026-10-28"
     },
     {
       "slug": "boeuf-bourguignon-recette-traditionnelle",
@@ -216,7 +216,7 @@
     {
       "slug": "salade-caesar-poulet-grille-maison",
       "title": "Salade César au poulet grillé et croûtons",
-      "meta_description": "Une salade César au poulet grillé avec sauce maison, croûtons et parmesan, accompagnée de repères de cuisson et de conseils pour garder le croquant.",
+      "meta_description": "Salade César au poulet, croûtons à la poêle et sauce maison : quantités réparties, cuisson à cœur, montage et alternative sans jaunes crus.",
       "category": "Salades",
       "emoji": "Salades",
       "cook_time": "15 min",
@@ -229,7 +229,7 @@
       "time_note": "Laisser reposer le poulet 5 min avant de le couper. Préparer la sauce et les croûtons pendant les autres étapes.",
       "time_uncertain": false,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-09-20"
+      "date_reviewed": "2026-10-28"
     },
     {
       "slug": "pate-a-crepes-recette-de-base",

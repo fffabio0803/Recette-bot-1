@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 const read = name => fs.readFileSync(new URL('../' + name, import.meta.url), 'utf8');
 const decode = value => value.replace(/&#x27;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
-const slugs = ['pate-a-crepes-recette-de-base', 'baba-au-rhum-recette-traditionnelle', 'oeufs-cocotte-creme-fraiche-facile'];
+const slugs = ['pate-a-crepes-recette-de-base', 'baba-au-rhum-recette-traditionnelle', 'oeufs-cocotte-creme-fraiche-facile', 'salade-caesar-poulet-grille-maison', 'saumon-gravlax-maison-aneth-citron', 'pavlova-fruits-rouges-meringue'];
 const catalogue = JSON.parse(read('recettes.json')).recettes;
 const sitemap = read('sitemap.xml');
 const pages = {};
@@ -62,3 +62,28 @@ assert.ok(home.includes('Dernière mise à jour du catalogue'));
 assert.ok(home.includes('id="latest-list"'), 'conserver le branchement du contenu progressif');
 assert.ok(sitemap.includes('<loc>https://latablemijote.fr/</loc><lastmod>2026-10-28</lastmod>'));
 console.log('Corrections éditoriales octobre : étapes, FAQ, ingrédients, dates et accueil cohérents.');
+
+const caesar = pages[slugs[3]];
+assert.ok(caesar.includes('150 ml') && caesar.includes('huile d’olive pour les croûtons'));
+assert.ok(caesar.includes('40 g à râper') && caesar.includes('40 g en copeaux'));
+assert.ok(caesar.includes('Remplacez toute la sauce maison'));
+assert.ok(!/utilisez 2 cuillères à soupe de mayonnaise|Evitez le four/.test(caesar));
+const gravlax = pages[slugs[4]];
+assert.ok(gravlax.includes('7 jours') && gravlax.includes('−18 °C'));
+assert.ok(gravlax.includes('4 °C maximum') && gravlax.includes('délai de conservation'));
+assert.ok(!/18 heures|36 heures|au moins 1 kg|Ne rincez jamais|Goûtez une fine tranche/.test(gravlax));
+assert.ok(gravlax.includes('ne désinfecte pas'));
+const pavlova = pages[slugs[5]];
+assert.ok(pavlova.includes('"cookTime":"PT85M"') && pavlova.includes('<strong>1h25</strong>'));
+assert.ok(pavlova.includes('chaleur statique') && pavlova.includes('Préchauffez'));
+assert.ok(!/s’effondrer instantanément|48h avant|version régionale française|vieillis de 24h|PT90M/.test(pavlova));
+assert.ok(pavlova.includes('coque complètement froide'));
+console.log('César, gravlax, pavlova : répartition, précautions et durée vérifiées.');
+
+for (const slug of slugs.slice(3)) {
+  assert.ok(pages[slug].includes('.recipe-hero img{display:block;width:100%;max-width:100%;height:auto;'));
+  const item = catalogue.find(r => r.slug === slug);
+  const card = [...read('toutes-les-recettes.html').matchAll(/<article class="recipe-card">[\s\S]*?<\/article>/g)].find(m => m[0].includes(slug + '.html'))?.[0];
+  assert.ok(card?.includes(item.meta_description), slug + ': résumé de carte synchronisé');
+}
+assert.ok(!pavlova.includes("<img class='recipe-photo'"), 'pavlova : pas de seconde image de tête');
