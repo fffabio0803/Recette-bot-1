@@ -53,4 +53,26 @@ for (const invalid of ['', '0', '-1', '31', '1.5', 'abc']) {
   assert.ok(s.text('info').includes('nombre entier de 1 à 30'));
 }
 s.change('nombre', '6'); assert.equal(s.text('eau'), '500 ml');
-console.log('Guides et calculateurs : 5 moules, dosages du sirop, variante sans alcool et entrées invalides contrôlés.');
+const guideGraph = JSON.parse(migaineGuide.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
+const article = guideGraph.find(node => node['@type'] === 'Article');
+assert.equal(article.dateModified, '2026-10-28');
+assert.equal(article.headline, plain(migaineGuide.match(/<h1>(.*?)<\/h1>/)[1]));
+assert.ok(read('sitemap.xml').includes('<loc>https://latablemijote.fr/guides/migaine-pour-quiche-proportions.html</loc><lastmod>2026-10-28</lastmod>'));
+const guideFAQ = guideGraph.find(node => node['@type'] === 'FAQPage').mainEntity;
+const visibleFAQ = [...migaineGuide.match(/<section class="faq">([\s\S]*?)<\/section>/)[1].matchAll(/<div><h3>(.*?)<\/h3><p>(.*?)<\/p><\/div>/g)];
+assert.equal(visibleFAQ.length, 4);
+assert.equal(guideFAQ.length, visibleFAQ.length);
+visibleFAQ.forEach((match, index) => {
+  assert.equal(guideFAQ[index].name, plain(match[1]));
+  assert.equal(guideFAQ[index].acceptedAnswer.text, plain(match[2]));
+});
+for (const marker of ['10 octobre 2026', 'sans photo', '38 minutes à 170 °C', 'environ une cuillère à soupe', 'ni cinq formats testés']) {
+  // The guide explicitly distinguishes a reported trial from rounded conversion entries.
+  assert.ok(migaineGuide.includes(marker), marker);
+}
+for (const id of ['proportions-moule', 'comprendre-le-volume', 'cas-camille', 'controle-cuisson']) {
+  assert.ok(migaineGuide.includes(`href="#${id}"`) && migaineGuide.includes(`id="${id}"`), 'Sommaire : ' + id);
+}
+assert.ok(migaineGuide.includes('/recettes/quiche-lorraine-recette-authentique.html#retour-camille'));
+assert.ok(!guideGraph.some(node => node['@type'] === 'Review' || node.aggregateRating), 'Ne pas transformer le retour en avis étoilé');
+console.log('Guides et calculateurs : 5 moules, retour Camille, FAQ/dates, dosages du sirop et entrées invalides contrôlés.');
