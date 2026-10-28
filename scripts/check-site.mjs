@@ -10,6 +10,7 @@ import './check-recipe-step-links.mjs';
 import './check-guide-calculators.mjs';
 import './check-progressive-content.mjs';
 import './check-editorial-october28.mjs';
+import './check-editorial-followup.mjs';
 import './check-reviews.mjs';
 import './check-contact.mjs';
 import './check-banana-bread.mjs';

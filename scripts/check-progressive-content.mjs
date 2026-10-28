@@ -32,7 +32,7 @@ for (const slug of ['quiche-lorraine-recette-authentique', 'boeuf-bourguignon-re
   }
   assert.ok(html.indexOf('href="#ingredients"') < html.indexOf("<figure"));
   assert.ok(html.includes('chaleur statique'));
-  const reviewed = '2026-10-18';
+  const reviewed = JSON.parse(fs.readFileSync('recettes.json', 'utf8')).recettes.find(recipe => recipe.slug === slug).date_reviewed;
   assert.ok(html.includes('"dateModified":"' + reviewed + '"'));
   if (slug.startsWith('boeuf-')) {
     assert.ok(html.includes('id="retour-camille"'));

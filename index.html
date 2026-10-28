@@ -1164,6 +1164,20 @@
         transition-duration: 0.01ms !important;
       }
     }
+
+    .kitchen-report-card .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .kitchen-reports{padding:32px 0 18px;scroll-margin-top:100px}
+    .kitchen-reports h2{font-size:clamp(26px,4vw,38px);line-height:1.2;margin-bottom:14px}
+    .kitchen-reports-intro{max-width:760px;color:var(--muted);margin-bottom:24px;line-height:1.7}
+    .kitchen-reports-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .kitchen-report-card{padding:24px;border:1px solid var(--line);border-radius:20px;background:#fffdf8}
+    .kitchen-report-card h3{font-size:22px;margin:9px 0}
+    .kitchen-report-card p{line-height:1.7}
+    .kitchen-report-meta{color:#6c5945;font-size:13px}
+    .kitchen-report-card a{display:inline-block;margin-top:16px;font-weight:700;text-underline-offset:4px}
+    .kitchen-report-card a:focus-visible{outline:3px solid #8b451f;outline-offset:4px}
+    @media(max-width:640px){.kitchen-reports-grid{grid-template-columns:1fr}.kitchen-report-card{padding:20px}}
+
   </style>
   <link rel="stylesheet" href="/assets/analytics-consent.css">
   <script defer src="/assets/analytics-consent.js"></script><script defer src="/assets/advertising-consent.js?v=20261027-2"></script>
@@ -1326,6 +1340,17 @@
       </div>
     </section>
 <section class="category-shortcuts" aria-labelledby="outils-pratiques-title"><p class="category-shortcuts-title" id="outils-pratiques-title">Calculateurs pratiques</p><div class="category-shortcuts-links"><a href="outils/calculateur-migaine.html">Adapter une migaine</a><a href="outils/calculateur-sirop-baba.html">Calculer un sirop de baba</a><a href="outils/convertisseur-portions-moules.html">Convertir portions et moules</a></div></section>
+
+    <section class="kitchen-reports" id="retours-cuisine" aria-labelledby="retours-title">
+      <h2 id="retours-title">Vos retours de cuisine</h2>
+      <p class="kitchen-reports-intro">Des réalisations partagées, avec le matériel, les ajustements et le résultat observé. Chaque retour décrit un essai, pas une validation de toutes les variantes.</p>
+      <div class="kitchen-reports-grid">
+        <article class="kitchen-report-card"><p class="kitchen-report-meta">Camille · 10 octobre 2026 · sans photo</p><h3>Quiche lorraine</h3><p>Moule en acier de 28 cm, cuisson garnie de 38 minutes à 170 °C : dessous croustillant et garniture crémeuse dans cet essai.</p><a href="/recettes/quiche-lorraine-recette-authentique.html#retour-camille">Lire le retour de cuisine<span class="sr-only"> : Quiche lorraine</span> →</a></article>
+        <article class="kitchen-report-card"><p class="kitchen-report-meta">Camille · 11 octobre 2026 · sans photo</p><h3>Bœuf bourguignon</h3><p>Cocotte de 5,5 L, température abaissée en cours de cuisson et sauce réduite 15 minutes après retrait de la viande.</p><a href="/recettes/boeuf-bourguignon-recette-traditionnelle.html#retour-camille">Lire le retour de cuisine<span class="sr-only"> : Bœuf bourguignon</span> →</a></article>
+        <article class="kitchen-report-card"><p class="kitchen-report-meta">Essai du 16 octobre 2026 · photo du résultat</p><h3>Roulés à la cannelle</h3><p>Des roulés décrits comme moelleux. La réalisation en 16 pièces et chaleur tournante est distinguée de la fiche de base en 9 pièces.</p><a href="/recettes/roules-cannelle-moelleux.html#essai-cuisine">Lire le retour de cuisine<span class="sr-only"> : Roulés à la cannelle</span> →</a></article>
+        <article class="kitchen-report-card"><p class="kitchen-report-meta">Retour accompagné de photos</p><h3>Banana bread aux quatre-épices</h3><p>Résultat décrit comme moelleux après 35 minutes à 180 °C en chaleur tournante. Dimensions du moule et poids de levure encore à préciser.</p><a href="/recettes/banana-bread-quatre-epices.html#retour-cuisine">Lire le retour de cuisine<span class="sr-only"> : Banana bread aux quatre-épices</span> →</a></article>
+      </div>
+    </section>
 
     <section class="section" id="decouvrir">
       <div class="section-header">

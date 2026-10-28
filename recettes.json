@@ -17,7 +17,7 @@
       "time_note": "Prévoir environ 2 h 45 à 3 h 50 : 35 min de travail actif, 1 h à 1 h 30 de première levée, 30 à 60 min de seconde levée, 25 à 30 min au four et 15 min avant glaçage. Le repos affiché de 2 h 45 correspond au haut de cette fourchette ; une cuisine froide peut l’allonger.",
       "time_uncertain": true,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-10-18",
+      "date_reviewed": "2026-10-28",
       "topic": "automne"
     },
     {
@@ -90,7 +90,7 @@
       "url": "recettes/quiche-lorraine-recette-authentique.html",
       "rest_time": "1h40",
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-10-18"
+      "date_reviewed": "2026-10-28"
     },
     {
       "slug": "baba-au-rhum-recette-traditionnelle",
@@ -126,7 +126,7 @@
       "time_note": "Prévoir 1 h d’infusion au réfrigérateur, 15 min de préparation, environ 1 h 05 au four et 10 min de repos, soit environ 2 h 30. Les pommes de terre doivent être tendres avant de servir ; prolonger si nécessaire.",
       "time_uncertain": true,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-10-02"
+      "date_reviewed": "2026-10-28"
     },
     {
       "slug": "oeufs-cocotte-creme-fraiche-facile",
@@ -193,7 +193,7 @@
       "url": "recettes/boeuf-bourguignon-recette-traditionnelle.html",
       "rest_time": "24h10",
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-10-18"
+      "date_reviewed": "2026-10-28"
     },
     {
       "slug": "tiramisu-recette-italienne-originale",
@@ -211,7 +211,7 @@
       "time_note": "Prévoir au moins 6 h au réfrigérateur après le montage et du café refroidi pour les biscuits. Le repos ne remplace pas la limite de conservation de 24 h indiquée pour les œufs crus.",
       "time_uncertain": true,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-10-02"
+      "date_reviewed": "2026-10-28"
     },
     {
       "slug": "salade-caesar-poulet-grille-maison",
@@ -265,7 +265,7 @@
       "time_note": "Prévoir 10 min avant démoulage, le refroidissement complet sur grille, puis 15 min de prise du glaçage.",
       "time_uncertain": true,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-10-02"
+      "date_reviewed": "2026-10-28"
     },
     {
       "slug": "daurade-royale-four-citron-fenouil",
@@ -283,7 +283,7 @@
       "time_note": "Compter 10 à 12 min pour le fenouil et la réduction, environ 30 min au four à 200 °C chaleur tournante pour le poisson de 1,2 kg, puis 5 min de repos. Vérifier dès 25 min et prolonger si nécessaire.",
       "time_uncertain": false,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-10-02"
+      "date_reviewed": "2026-10-28"
     }
   ],
   "last_updated": "28 octobre 2026"
