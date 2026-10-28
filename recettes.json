@@ -108,7 +108,7 @@
       "time_note": "Prévoir deux levées (1 h 30 puis 45 à 60 min) et 10 min d’infusion du sirop. Une partie du sirop peut être préparée pendant la levée ; ajouter le refroidissement et l’imbibage.",
       "time_uncertain": true,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-09-20"
+      "date_reviewed": "2026-10-28"
     },
     {
       "slug": "gratin-dauphinois-cremeux-facile",
@@ -141,7 +141,7 @@
       "date_display": "17/08/2026",
       "url": "recettes/oeufs-cocotte-creme-fraiche-facile.html",
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-09-20"
+      "date_reviewed": "2026-10-28"
     },
     {
       "slug": "saumon-gravlax-maison-aneth-citron",
@@ -247,7 +247,7 @@
       "time_note": "La pâte repose au moins 1 h au réfrigérateur. Compter environ 1 min de chaque côté ; la cuisson totale dépend du nombre de crêpes et de poêles utilisées.",
       "time_uncertain": true,
       "editorial_status": "sélection éditoriale",
-      "date_reviewed": "2026-09-20"
+      "date_reviewed": "2026-10-28"
     },
     {
       "slug": "cake-citron-moelleux-facile-rapide",
@@ -286,5 +286,5 @@
       "date_reviewed": "2026-10-02"
     }
   ],
-  "last_updated": "21 octobre 2026"
+  "last_updated": "28 octobre 2026"
 }
