@@ -92,6 +92,12 @@
   display: none;
 }
 
+@media print {
+  .ltm-cookie-banner, .ltm-cookie-settings, #ltm-advertising-settings {
+    display: none !important;
+  }
+}
+
 @media (max-width: 720px) {
   .ltm-cookie-banner {
     left: 10px;
