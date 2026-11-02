@@ -36,7 +36,7 @@ for (const slug of slugs) {
   assert.equal(recipe.dateModified, '2026-10-28');
   assert.equal(catalogue.find(item => item.slug === slug).date_reviewed, recipe.dateModified);
   assert.ok(sitemap.includes(`<loc>https://latablemijote.fr/recettes/${slug}.html</loc><lastmod>${recipe.dateModified}</lastmod>`));
-  assert.ok(html.includes('révisée le 28 octobre 2026'));
+  assert.ok(html.includes('"dateModified":"2026-10-28"'));
   assert.ok(html.includes('ne constitue pas un essai en cuisine documenté'));
 }
 
