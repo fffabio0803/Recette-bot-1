@@ -1184,86 +1184,14 @@
 <script src="/assets/recipe-yield.js?v=20260906"></script>
 <link rel="stylesheet" href="/assets/reviews.css?v=20261018-4">
 <script defer src="/assets/reviews.js?v=20261018-6"></script>
-</head>
+<link rel="stylesheet" href="/navigation-commune.css"></head>
 
 <body>
   <a class="skip-link" href="#main-content">
     Aller au contenu
   </a>
 
-  <header class="site-header">
-    <div class="page-shell">
-      <div class="header-inner">
-        <a
-          class="brand"
-          href="./"
-          aria-label="La Table Mijote, accueil"
-        >
-          La Table Mijote
-        </a>
-
-        <nav class="desktop-nav" aria-label="Navigation principale">
-          <a href="./" aria-current="page">
-            Accueil
-          </a>
-
-          <a href="toutes-les-recettes.html">
-            Toutes les recettes
-          </a>
-
-          <a href="#categories">
-            Catégories
-          </a>
-
-          <a href="#decouvrir">
-            À découvrir
-          </a>
-
-          <a href="guides.html">Guides</a><a href="outils.html">Outils</a>
-        </nav>
-
-        <div class="header-actions">
-          <button
-            class="icon-button"
-            id="open-search"
-            type="button"
-            aria-label="Rechercher une recette"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="11" cy="11" r="7"></circle>
-              <path d="m20 20-3.4-3.4"></path>
-            </svg>
-          </button>
-
-          <button
-            class="icon-button menu-button"
-            id="menu-button"
-            type="button"
-            aria-label="Ouvrir le menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4 7h16"></path>
-              <path d="M4 12h16"></path>
-              <path d="M4 17h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <nav
-        class="mobile-menu"
-        id="mobile-menu"
-        aria-label="Navigation mobile"
-      >
-        <a href="./">Accueil</a>
-        <a href="toutes-les-recettes.html">Recettes sélectionnées</a>
-        <a href="#categories">Catégories</a>
-        <a href="#decouvrir">À découvrir</a>
-      </nav>
-    </div>
-  </header>
+  <header id="ltm-top"><div class="barre"><a class="marque" href="/">La Table Mijote</a><nav class="liens" aria-label="Navigation principale"><a href="/" aria-current="page">Accueil</a><a href="/toutes-les-recettes.html">Toutes les recettes</a><a href="./index.html#categories">Catégories</a><a href="./index.html#decouvrir">À découvrir</a><a href="/guides.html">Guides</a><a href="/outils.html">Outils</a></nav><details><summary>Menu</summary><nav aria-label="Navigation mobile"><a href="/" aria-current="page">Accueil</a><a href="/toutes-les-recettes.html">Toutes les recettes</a><a href="./index.html#categories">Catégories</a><a href="./index.html#decouvrir">À découvrir</a><a href="/guides.html">Guides</a><a href="/outils.html">Outils</a></nav></details><a class="cherche" id="open-search" href="./toutes-les-recettes.html#search-input" aria-label="Rechercher une recette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg></a></div></header>
 
   <main class="page-shell" id="main-content">
     <section class="hero" aria-labelledby="hero-title">
@@ -2221,35 +2149,6 @@
 
     /* MENU MOBILE */
 
-    const menuButton =
-      document.getElementById("menu-button");
-
-    const mobileMenu =
-      document.getElementById("mobile-menu");
-
-    menuButton.addEventListener("click", () => {
-      const isOpen =
-        mobileMenu.classList.toggle("is-open");
-
-      menuButton.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-      );
-    });
-
-    mobileMenu
-      .querySelectorAll("a")
-      .forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.remove("is-open");
-
-          menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-        });
-      });
-
     /* RECHERCHE */
 
     function openSearch() {
@@ -2271,7 +2170,7 @@
 
     document
       .getElementById("open-search")
-      .addEventListener("click", openSearch);
+      .addEventListener("click", event => {event.preventDefault(); openSearch();});
 
     document
       .getElementById("search-close")
