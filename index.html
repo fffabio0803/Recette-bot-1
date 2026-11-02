@@ -1178,7 +1178,7 @@
     .kitchen-report-card a:focus-visible{outline:3px solid #8b451f;outline-offset:4px}
     @media(max-width:640px){.kitchen-reports-grid{grid-template-columns:1fr}.kitchen-report-card{padding:20px}}
 
-  </style>
+  body:has(#categories:target) #ltm-top nav a,body:has(#decouvrir:target) #ltm-top nav a{text-decoration:none}body:has(#categories:target) #ltm-top nav a[href="#categories"],body:has(#decouvrir:target) #ltm-top nav a[href="#decouvrir"]{text-decoration:underline;text-underline-offset:5px}</style>
   <link rel="stylesheet" href="/assets/analytics-consent.css">
   <script defer src="/assets/analytics-consent.js"></script><script defer src="/assets/advertising-consent.js?v=20261027-2"></script>
 <script src="/assets/recipe-yield.js?v=20260906"></script>
@@ -1191,7 +1191,7 @@
     Aller au contenu
   </a>
 
-  <header id="ltm-top"><div class="barre"><a class="marque" href="/">La Table Mijote</a><nav class="liens" aria-label="Navigation principale"><a href="/" aria-current="page">Accueil</a><a href="/toutes-les-recettes.html">Toutes les recettes</a><a href="./index.html#categories">Catégories</a><a href="./index.html#decouvrir">À découvrir</a><a href="/guides.html">Guides</a><a href="/outils.html">Outils</a></nav><details><summary>Menu</summary><nav aria-label="Navigation mobile"><a href="/" aria-current="page">Accueil</a><a href="/toutes-les-recettes.html">Toutes les recettes</a><a href="./index.html#categories">Catégories</a><a href="./index.html#decouvrir">À découvrir</a><a href="/guides.html">Guides</a><a href="/outils.html">Outils</a></nav></details><a class="cherche" id="open-search" href="./toutes-les-recettes.html#search-input" aria-label="Rechercher une recette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg></a></div></header><script>
+  <header id="ltm-top"><div class="barre"><a class="marque" href="/">La Table Mijote</a><nav class="liens" aria-label="Navigation principale"><a href="/" aria-current="page">Accueil</a><a href="/toutes-les-recettes.html">Toutes les recettes</a><a href="#categories">Catégories</a><a href="#decouvrir">À découvrir</a><a href="/guides.html">Guides</a><a href="/outils.html">Outils</a></nav><details><summary>Menu</summary><nav aria-label="Navigation mobile"><a href="/" aria-current="page">Accueil</a><a href="/toutes-les-recettes.html">Toutes les recettes</a><a href="#categories">Catégories</a><a href="#decouvrir">À découvrir</a><a href="/guides.html">Guides</a><a href="/outils.html">Outils</a></nav></details><a class="cherche" id="open-search" href="./toutes-les-recettes.html#search-input" aria-label="Rechercher une recette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg></a></div></header><script>
 (() => {
  const header=document.getElementById('ltm-top');
  function mark(){

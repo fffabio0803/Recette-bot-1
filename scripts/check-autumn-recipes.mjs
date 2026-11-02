@@ -33,7 +33,7 @@ for (const slug of slugs) {
   images.add(image);
   if (slug === 'roules-cannelle-moelleux') {
     assert.ok(html.includes('Retour de cuisine du 16 octobre 2026'));
-    assert.ok(html.includes('Arrière-plan retouché'));
+    assert.ok(!html.includes('<figcaption>Photo maison · Arrière-plan retouché.</figcaption>'));
     assert.ok(html.includes('16 pièces dans un grand moule en verre'));
     assert.ok(!html.includes('Aucun essai en cuisine documenté'));
   } else {
