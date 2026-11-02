@@ -147,7 +147,7 @@
     const trap=el('input'); trap.name='website'; trap.tabIndex=-1; trap.autocomplete='off'; trapLabel.append(trap);
     const consentLabel=el('label',undefined,'ltm-consent');
     const consent=el('input'); consent.type='checkbox'; consent.required=true; consent.name='consent';
-    consentLabel.append(consent,document.createTextNode('J’ai réalisé cette recette et j’accepte la publication de mon pseudonyme, de ma note, de mon commentaire et de ma photo éventuelle. Je suis l’auteur de la photo et j’autorise son affichage avec mon avis. Aucun e-mail, lien ou renseignement personnel dans mon avis ou ma photo.'));
+    consentLabel.append(consent,document.createTextNode('J’ai cuisiné cette recette et j’accepte de publier mon avis sous mon pseudo, avec ma photo si j’en ajoute une.'));
     const privacy=el('a','Confidentialité et retrait de mon avis'); privacy.href='/confidentialite.html#avis';
     const send=el('button','Envoyer mon avis'); send.type='submit';
     const message=el('p','', 'ltm-review-status'); message.setAttribute('role','status'); message.setAttribute('aria-live','polite');
@@ -160,7 +160,6 @@
     const photoActionLabel=el('label','Photo déjà jointe à mon avis');
     const photoAction=el('select');for(const [v,t] of [['keep','Conserver la photo existante'],['remove','Supprimer la photo existante']]){const o=el('option',t);o.value=v;photoAction.append(o);}photoActionLabel.append(photoAction);
     photoAction.value='keep';
-    consentLabel.append(document.createTextNode(' Je dépose un seul avis personnel pour cette recette ; si j’en ai déjà publié un, je le modifie.'));
     message.tabIndex=-1;
     function notify(text){message.textContent=text;message.focus();message.scrollIntoView({block:'center'});}
     form.append(editLabel,editHelp,fieldset,nameLabel,commentLabel,photoActionLabel,photoLabel,photoHelp,preview,photoStatus,removePhoto,trapLabel,consentLabel,privacy,send,message,receiptArea,editToggle);
@@ -292,7 +291,7 @@
       const item=await refreshSummaries();
       if(summary)summary.textContent=summaryText(item);
       const jump=document.querySelector('.ltm-review-jump');
-      if(jump)jump.textContent=summaryText(item)+' · Donner mon avis';
+      if(jump)jump.textContent='Donner mon avis';
       await loadReviews(true);
     }catch{if(summary)summary.textContent='Avis momentanément indisponibles — aucune note affichée.';}
   }
