@@ -47,7 +47,7 @@ for (const file of pages) {
   }
 }
 const recipes = JSON.parse(fs.readFileSync('recettes.json', 'utf8')).recettes;
-assert.equal(recipes.length, 16, 'Le catalogue public doit contenir 16 recettes sélectionnées');
+assert.equal(recipes.length, 19, 'Le catalogue public doit contenir 19 recettes sélectionnées');
 const activeSlugs = new Set(recipes.map(r => r.slug));
 for (const file of fs.readdirSync('recettes').filter(f => f.endsWith('.html'))) {
   const html = fs.readFileSync(path.join('recettes', file), 'utf8');
@@ -82,7 +82,7 @@ for (const file of publicPages) {
 for (const file of ['outils.html', 'outils/calculateur-migaine.html', 'outils/calculateur-sirop-baba.html', 'outils/convertisseur-portions-moules.html']) {
   assert.ok(fs.existsSync(file), 'Outil manquant : ' + file);
 }
-assert.equal((fs.readFileSync('sitemap.xml', 'utf8').match(/<loc>/g) || []).length, 31, 'Le sitemap doit contenir 31 URL utiles');
+assert.equal((fs.readFileSync('sitemap.xml', 'utf8').match(/<loc>/g) || []).length, 34, 'Le sitemap doit contenir 34 URL utiles');
 for (const [slug, marker] of [['quiche-lorraine-recette-authentique','organisation-quiche'], ['boeuf-bourguignon-recette-traditionnelle','organisation-bourguignon'], ['saumon-gravlax-maison-aneth-citron','securite-gravlax']]) {
   const html = fs.readFileSync('recettes/' + slug + '.html', 'utf8');
   assert.ok(html.includes(marker), 'Section éditoriale manquante : ' + slug);

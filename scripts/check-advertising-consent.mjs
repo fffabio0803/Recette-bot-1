@@ -49,4 +49,4 @@ window.googlefc.callbackQueue[1]();
 assert.equal(revoked, 1);
 vm.runInNewContext(source, {window, document});
 assert.equal(head.children.length, 1, 'No duplicate tag or controls');
-console.log('Consentement publicitaire : 31 pages, chargement unique, retrait et indisponibilité testés.');
+console.log('Consentement publicitaire : 34 pages, chargement unique, retrait et indisponibilité testés.');
