@@ -12,3 +12,5 @@ html{scrollbar-gutter:stable}#ltm-top,#ltm-top *{all:revert;box-sizing:border-bo
  #categories,#decouvrir,#search-input{scroll-margin-top:90px}
  @media(max-width:1000px){#ltm-top .liens{display:none}#ltm-top details{display:block;position:relative;justify-self:end}#ltm-top details nav{position:absolute;z-index:100;right:0;min-width:190px;background:white;border:1px solid #ddd}#ltm-top details a{display:block;padding:10px 16px}}
 }
+
+#ltm-top .marque{display:inline-flex;align-items:center;gap:10px}#ltm-top .marque::after{content:"";display:block;width:42px;height:42px;flex:0 0 42px;background:url('/favicon.svg') center/contain no-repeat}@media(max-width:600px){#ltm-top .marque{font-size:clamp(19px,5.6vw,27px);gap:6px}#ltm-top .marque::after{width:30px;height:30px;flex-basis:30px}#ltm-top .barre{padding-inline:10px;gap:5px}}
