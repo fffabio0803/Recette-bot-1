@@ -24,6 +24,10 @@ assert.deepEqual(rank(recipes,[]),[]);
 assert.deepEqual(rank(recipes,['inconnu']),[]);
 assert.equal(rank(recipes,['pâte','pâtes','crème'])[0].percent,100);
 assert.ok(html.includes('pantry-thumb'));
+assert.ok(html.includes("track.setAttribute('role','meter')"));
+assert.ok(html.includes("track.setAttribute('aria-valuenow',String(percent))"));
+assert.ok(html.includes("fill.style.width=percent+'%'"));
+assert.ok(html.includes('placard-ui.css?v=5'));
 const photos=JSON.parse(html.match(/const photos=(.*);/)[1]);
 assert.equal(Object.keys(photos).length,19);
 for(const r of recipes){assert.ok(photos[r.url]);assert.ok(fs.existsSync(new URL('..'+photos[r.url],import.meta.url)));}
