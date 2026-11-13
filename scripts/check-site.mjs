@@ -16,6 +16,7 @@ import './check-contact.mjs';
 import './check-banana-bread.mjs';
 import './check-advertising-consent.mjs';
 import './check-catalogue.mjs';
+import './check-placard-match.mjs';
 import './check-guide-october29.mjs';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
