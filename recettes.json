@@ -339,7 +339,26 @@
       "time_note": "Plat pour 4 · Préparation : 10 min · Cuisson : environ 20 min · Compter 30 à 35 min. Grande poêle et casserole.",
       "editorial_status": "sélection éditoriale",
       "topic": "automne"
+    },
+    {
+      "slug": "cookies-moelleux-chocolat",
+      "title": "Cookies moelleux au chocolat blanc ou noir",
+      "meta_description": "Cookies au beurre doux et chocolat pâtissier : environ 10 pièces, 8 minutes de cuisson observées à 180 °C en chaleur tournante, avec les photos de notre essai.",
+      "category": "Desserts",
+      "emoji": "Desserts",
+      "prep_time": "Non mesurée",
+      "cook_time": "8 min",
+      "rest_time": "10 min au frais si nécessaire + refroidissement",
+      "servings": null,
+      "yield_label": "Environ 10 cookies",
+      "date_iso": "2026-11-13",
+      "date_reviewed": "2026-11-13",
+      "date_display": "13 novembre 2026",
+      "url": "recettes/cookies-moelleux-chocolat.html",
+      "time_uncertain": true,
+      "time_note": "8 minutes observées à 180 °C en chaleur tournante. Préparation et refroidissement non mesurés ; 10 min au frais si la pâte est trop molle.",
+      "editorial_status": "retour de cuisine documenté"
     }
   ],
-  "last_updated": "28 octobre 2026"
+  "last_updated": "13 novembre 2026"
 }
