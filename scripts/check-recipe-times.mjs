@@ -28,7 +28,11 @@ for (const r of recipes) {
   assert.equal(entities.length, 1, r.slug);
   const cook = timing.parseMinutes(r.cook_time);
   assert.equal(entities[0].cookTime, cook === 99999 ? undefined : `PT${cook}M`, r.slug + ': données Google');
-  assert.equal(entities[0].totalTime, undefined, r.slug + ': pas de faux total');
+  if (r.total_time) {
+    const total = timing.parseMinutes(r.prep_time) + cook + (r.rest_time ? timing.parseMinutes(r.rest_time) : 0);
+    assert.equal(timing.parseMinutes(r.total_time), total, r.slug + ': somme des durées');
+    assert.equal(entities[0].totalTime, `PT${total}M`, r.slug + ': total documenté');
+  } else assert.equal(entities[0].totalTime, undefined, r.slug + ': pas de faux total');
   if (r.time_uncertain) assert.equal(timing.isQuickRecipe(r), false, r.slug + ': attente variable exclue du filtre rapide');
 }
 assert.equal(audited, recipes.filter(r => r.time_note).length);

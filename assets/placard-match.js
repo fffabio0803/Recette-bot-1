@@ -5,6 +5,7 @@
   const canonical = s => {
     const n = norm(s);
     if(pasta.includes(n) || n==='pate alimentaire') return 'pates alimentaires';
+    if(['marron','chataigne'].includes(n)) return 'chataigne';
     if(['oeuf','oeufs'].includes(n)) return 'oeuf';
     if(['patate','pomme de terre'].includes(n)) return 'pomme de terre';
     return n;
@@ -12,6 +13,7 @@
   function matches(item, term) {
     const n = ' '+norm(String(item).replace(/pas de[^)]*/gi,''))+' ', t = canonical(term);
     if(t === 'pates alimentaires') return /\b(tagliatelle|spaghetti|penne|coquillette|macaroni|fusilli)\b/.test(n) || /\bpate(?: alimentaire| seche| cuite| fraiche)\b/.test(n) || norm(item)==='pate';
+    if(t === 'chataigne') return /\b(chataigne|marron)\b/.test(n);
     if(t === 'oeuf') return /\boeufs?\b/.test(n);
     return n.includes(' '+t+' ');
   }

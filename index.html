@@ -1269,7 +1269,7 @@
       </div>
     </section>
 
-    <section class="category-shortcuts" aria-labelledby="automne-title" id="recettes-automne"><p class="category-shortcuts-title" id="automne-title">À cuisiner cet automne</p><div class="category-shortcuts-links"><a href="recettes/crumble-poires-cannelle-noisettes.html">Crumble de poires à la cannelle et aux noisettes</a><a href="recettes/lentilles-potiron-roti-moutarde.html">Lentilles vertes au potiron rôti et à la moutarde</a><a href="recettes/tagliatelles-champignons-marrons.html">Tagliatelles aux champignons et aux marrons</a><a href="recettes/roules-cannelle-moelleux.html">Roulés à la cannelle moelleux, glaçage léger</a><a href="recettes/poulet-epices-douces-legumes-automne.html">Poulet aux épices douces et légumes d’automne</a><a href="recettes/carottes-roties-cannelle-miel.html">Carottes rôties à la cannelle et au miel</a></div></section>
+    <section class="category-shortcuts" aria-labelledby="automne-title" id="recettes-automne"><p class="category-shortcuts-title" id="automne-title">À cuisiner cet automne</p><div class="category-shortcuts-links"><a href="recettes/veloute-potimarron-chataignes.html">Velouté de potimarron aux châtaignes</a><a href="recettes/gratin-poireaux-pommes-de-terre.html">Gratin de poireaux et pommes de terre</a><a href="recettes/pommes-four-cannelle-noisettes.html">Pommes au four à la cannelle et aux noisettes</a><a href="recettes/crumble-poires-cannelle-noisettes.html">Crumble de poires à la cannelle et aux noisettes</a><a href="recettes/lentilles-potiron-roti-moutarde.html">Lentilles vertes au potiron rôti et à la moutarde</a><a href="recettes/tagliatelles-champignons-marrons.html">Tagliatelles aux champignons et aux marrons</a><a href="recettes/roules-cannelle-moelleux.html">Roulés à la cannelle moelleux, glaçage léger</a><a href="recettes/poulet-epices-douces-legumes-automne.html">Poulet aux épices douces et légumes d’automne</a><a href="recettes/carottes-roties-cannelle-miel.html">Carottes rôties à la cannelle et au miel</a></div></section>
 <section class="category-shortcuts" aria-label="Explorer les univers de recettes">
       <p class="category-shortcuts-title">Explorer par univers</p>
       <div class="category-shortcuts-links">
@@ -1529,6 +1529,9 @@
     };
 
     const RECIPE_IMAGES = {
+"veloute-potimarron-chataignes":"assets/images/recipes/veloute-potimarron-chataignes.jpg",
+"gratin-poireaux-pommes-de-terre":"assets/images/recipes/gratin-poireaux-pommes-de-terre.jpg",
+"pommes-four-cannelle-noisettes":"assets/images/recipes/pommes-four-cannelle-noisettes.jpg",
 "cookies-moelleux-chocolat":"assets/images/recipes/cookies-chocolat-1.jpg",
       "carottes-roties-cannelle-miel":"assets/images/recipes/carottes-cannelle-miel.jpg",
       "poulet-epices-douces-legumes-automne":"assets/images/recipes/poulet-epices-legumes-automne.jpg",
@@ -2020,7 +2023,7 @@
         const priority = ['cookies-moelleux-chocolat', 'banana-bread-quatre-epices', 'quiche-lorraine-recette-authentique', 'boeuf-bourguignon-recette-traditionnelle'];
         featuredRecipes = priority.map(slug => filteredRecipes.find(r => r.slug === slug)).filter(Boolean);
         const selected = new Set([allRecipes[0].slug, ...featuredRecipes.map(r => r.slug)]);
-        latestRecipes = filteredRecipes.filter(r => !selected.has(r.slug)).slice(0, 8);
+        latestRecipes = filteredRecipes.filter(r => !selected.has(r.slug)).sort((a,b) => b.date_iso.localeCompare(a.date_iso)).slice(0, 8);
       } else {
         featuredRecipes =
           filteredRecipes.slice(0, 4);

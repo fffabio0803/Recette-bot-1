@@ -8,7 +8,7 @@ const scripts=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].ma
 const source=scripts.find(s=>s.includes('function placard(recipes)'));
 new vm.Script(source);
 const recipes=JSON.parse(source.slice(source.lastIndexOf('})([')+3).replace(/\);\s*$/,''));
-assert.equal(recipes.length,20);
+assert.equal(recipes.length,23);
 assert.equal(canonical(canonical('pâtes')),canonical('pâtes'));
 assert.ok(matches('320 g de tagliatelles sèches','pâte'));
 assert.ok(!matches('farine pour la pâte','pâtes'));
@@ -29,7 +29,7 @@ assert.ok(html.includes("track.setAttribute('aria-valuenow',String(percent))"));
 assert.ok(html.includes("fill.style.width=percent+'%'"));
 assert.ok(html.includes('placard-ui.css?v=5'));
 const photos=JSON.parse(html.match(/const photos=(.*);/)[1]);
-assert.equal(Object.keys(photos).length,20);
+assert.equal(Object.keys(photos).length,23);
 for(const r of recipes){assert.ok(photos[r.url]);assert.ok(fs.existsSync(new URL('..'+photos[r.url],import.meta.url)));}
 assert.ok(html.includes('Pâtes à la crème et au parmesan'));
 console.log('Mon placard : pâtes ≠ pâte à gâteau, synonymes, tri, pourcentages et miniatures contrôlés.');
