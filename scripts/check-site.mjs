@@ -18,6 +18,7 @@ import './check-advertising-consent.mjs';
 import './check-catalogue.mjs';
 import './check-placard-match.mjs';
 import './check-guide-october29.mjs';
+import './check-useful-events.mjs';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const timing = require('../assets/recipe-time.js');

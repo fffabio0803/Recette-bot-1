@@ -33,7 +33,8 @@ for (const slug of slugs) {
 const home = read('index.html');
 const section = home.match(/<section class="kitchen-reports"[\s\S]*?<\/section>/)?.[0];
 assert.ok(section);
-assert.equal((section.match(/<article /g) || []).length, 4);
+assert.equal((section.match(/<article /g) || []).length, 5);
+assert.ok(section.includes('/recettes/cookies-moelleux-chocolat.html'));
 for (const target of ["/recettes/quiche-lorraine-recette-authentique.html#retour-camille","/recettes/boeuf-bourguignon-recette-traditionnelle.html#retour-camille","/recettes/roules-cannelle-moelleux.html#essai-cuisine","/recettes/banana-bread-quatre-epices.html#retour-cuisine"]) {
   assert.ok(section.includes('href="' + target + '"'));
   assert.ok(read('a-propos.html').includes('href="' + target + '"'));

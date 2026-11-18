@@ -28,6 +28,7 @@
  const allRecipes=[...recipes,...ideas.map(([title,ingredients,method])=>({title,ingredients,method}))];
  form.addEventListener('submit',e=>{e.preventDefault();results.replaceChildren();const terms=[...new Set(field.value.split(/[,;\n]/).map(norm).filter(Boolean))];if(!terms.length){results.textContent='Indiquez au moins un ingrédient.';return}
  const matches=rank(allRecipes,terms);
+ if(window.ltmTrack) window.ltmTrack('placard_search',{ingredient_count:terms.length,result_count:matches.length});
  const msg=document.createElement('p');msg.textContent=matches.length?(matches.length===1?'1 idée trouvée.':matches.length+' idées trouvées.')+' Le pourcentage indique la part de vos ingrédients sélectionnés utilisée, pas si vous avez tout pour cuisiner.':'Aucune fiche du site ne correspond à cette saisie.';results.append(msg);
  for(const {r,found,percent} of matches){
    const remaining=r.ingredients.filter(i=>!found.some(t=>hasIngredient(i,t)));

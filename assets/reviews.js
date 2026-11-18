@@ -214,6 +214,7 @@
         if(editing)payload.p_photo_mode=photoData?'replace':photoAction.value;else payload.p_author=author;
         const result=await rpc(editing?'ltm_edit_review':'ltm_submit_review_photo',payload);
         if (!['pending','approved','rejected','withdrawn'].includes(result)) throw new Error('INVALID_RESPONSE');
+        if (!editing && (result === 'pending' || result === 'approved') && window.ltmTrack) window.ltmTrack('recipe_review_saved', {recipe_slug: slug});
         if(editing){receipt=targetReceipt;data.receipts[slug]=receipt;stored=persist(data);showReceipt(receipt);code.value=receipt;}
         const messages={
           pending:photoData || (editing && photoAction.value==='keep')?'Merci ! Votre avis est enregistré. Une photo jointe ou conservée, ou un signal du filtre, nécessite une relecture. Il ne compte pas encore dans la moyenne.':'Merci ! Votre avis est enregistré. Le filtre a signalé un élément à vérifier (texte ou pseudonyme) : il attend une relecture et ne compte pas encore dans la moyenne.',

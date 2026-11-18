@@ -6,6 +6,31 @@
   var DISABLE_KEY = 'ga-disable-' + MEASUREMENT_ID;
   window[DISABLE_KEY] = true;
 
+  // Only allow fixed event names and non-personal counts. Never queue before consent.
+  window.ltmTrack = function (name, values) {
+    if (window[DISABLE_KEY] !== false) return;
+    var allowed = {
+      placard_search: ['ingredient_count', 'result_count'],
+      placard_recipe_open: ['recipe_slug'],
+      recipe_review_saved: ['recipe_slug']
+    };
+    if (!Object.prototype.hasOwnProperty.call(allowed, name)) return;
+    var clean = { transport_type: 'beacon' };
+    allowed[name].forEach(function (key) {
+      var value = (values || {})[key];
+      if (key === 'recipe_slug' && typeof value === 'string' && /^[a-z0-9-]{1,120}$/.test(value)) clean[key] = value;
+      else if (key !== 'recipe_slug' && Number.isInteger(value) && value >= 0 && value <= 1000) clean[key] = value;
+    });
+    window.gtag('event', name, clean);
+  };
+
+  window.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a.pantry-recipe-link');
+    if (!link) return;
+    var match = link.pathname.match(/^\/recettes\/([a-z0-9-]+)\.html$/);
+    if (match) window.ltmTrack('placard_recipe_open', { recipe_slug: match[1] });
+  });
+
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () {
     window.dataLayer.push(arguments);

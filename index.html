@@ -267,7 +267,7 @@
       overflow: hidden;
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-      min-height: 560px;
+      min-height: 420px;
       border: 1px solid var(--line);
       border-radius: var(--radius-large);
       background: var(--surface);
@@ -276,7 +276,7 @@
 
     .hero-visual {
       position: relative;
-      min-height: 560px;
+      min-height: 420px;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -388,7 +388,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: clamp(40px, 6vw, 78px);
+      padding: clamp(24px, 3vw, 44px);
     }
 
     .eyebrow {
@@ -404,7 +404,7 @@
       max-width: 620px;
       margin-bottom: 22px;
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(46px, 5.7vw, 78px);
+      font-size: clamp(36px, 4vw, 56px);
       font-weight: 600;
       letter-spacing: -0.035em;
       line-height: 0.97;
@@ -1056,7 +1056,7 @@
       }
 
       .hero-visual {
-        min-height: 330px;
+        min-height: 220px;
       }
 
       .hero-badge {
@@ -1065,12 +1065,18 @@
       }
 
       .hero-content {
-        padding: 34px 24px 38px;
+        padding: 20px 22px 24px;
       }
 
       .hero-title {
-        font-size: clamp(42px, 13vw, 62px);
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.05;
+        margin-bottom: 12px;
       }
+
+      .hero-content .eyebrow { margin-bottom: 8px; }
+      .hero-description { margin-bottom: 14px; line-height: 1.45; }
+      .hero-content .recipe-meta { margin-bottom: 16px; font-size: 13px; }
 
       .categories {
         padding-top: 20px;
@@ -1116,7 +1122,7 @@
 
     @media (max-width: 460px) {
       .hero-visual {
-        min-height: 280px;
+        min-height: 180px;
       }
 
       .hero-plate {
@@ -1183,7 +1189,7 @@
   <script defer src="/assets/analytics-consent.js"></script><script defer src="/assets/advertising-consent.js?v=20261027-2"></script>
 <script src="/assets/recipe-yield.js?v=20260906"></script>
 <link rel="stylesheet" href="/assets/reviews.css?v=20261018-4">
-<script defer src="/assets/reviews.js?v=20261018-6"></script>
+<script defer src="/assets/reviews.js?v=20261118-1"></script>
 <link rel="stylesheet" href="/navigation-commune.css?v=3"></head>
 
 <body>
@@ -1207,6 +1213,10 @@
 </script>
 
   <main class="page-shell" id="main-content">
+    <nav class="category-shortcuts-links" aria-label="Accès rapide" style="margin-bottom:18px">
+      <a href="/outils.html#placard">Quoi cuisiner avec mes ingrédients ? →</a>
+      <a href="/toutes-les-recettes.html">Toutes les recettes →</a>
+    </nav>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-visual has-photo" id="hero-visual">
         <img
@@ -1268,7 +1278,7 @@
         <a href="toutes-les-recettes.html#poisson">Poisson et fruits de mer</a>
         <a href="guides.html" class="category-feature-card"><span>Guides pratiques</span></a>
         <a href="toutes-les-recettes.html#salades">Salades et recettes légères</a>
-        <a href="outils.html" class="category-feature-card"><span>Calculateurs culinaires</span></a>
+        <a href="outils.html#placard" class="category-feature-card"><span>Mon placard : idées de repas</span></a>
       </div>
     </section>
 
@@ -1280,12 +1290,13 @@
         <a href="guides/sirop-baba-au-rhum-dosage.html">Sirop pour baba au rhum : dosage et imbibage</a>
       </div>
     </section>
-<section class="category-shortcuts" aria-labelledby="outils-pratiques-title"><p class="category-shortcuts-title" id="outils-pratiques-title">Calculateurs pratiques</p><div class="category-shortcuts-links"><a href="outils/calculateur-migaine.html">Adapter une migaine</a><a href="outils/calculateur-sirop-baba.html">Calculer un sirop de baba</a><a href="outils/convertisseur-portions-moules.html">Convertir portions et moules</a></div></section>
+<section class="category-shortcuts" aria-labelledby="cuisson-lente-title"><p class="category-shortcuts-title" id="cuisson-lente-title">Un plat à laisser mijoter</p><div class="category-shortcuts-links"><a href="recettes/boeuf-bourguignon-recette-traditionnelle.html">Bœuf bourguignon : cuisson lente au four et viande fondante</a></div></section>
 
     <section class="kitchen-reports" id="retours-cuisine" aria-labelledby="retours-title">
       <h2 id="retours-title">Vos retours de cuisine</h2>
       <p class="kitchen-reports-intro">Des réalisations partagées, avec le matériel, les ajustements et le résultat observé. Chaque retour décrit un essai, pas une validation de toutes les variantes.</p>
       <div class="kitchen-reports-grid">
+        <article class="kitchen-report-card"><p class="kitchen-report-meta">Essai du 13 novembre 2026 · photos du résultat</p><h3>Cookies au chocolat</h3><p>Beurre doux, chocolat blanc et four tournant à 180 °C : 8 minutes observées pour cette réalisation. Les bords colorent avant le dessus ; la taille des cookies compte.</p><a href="/recettes/cookies-moelleux-chocolat.html">Voir les cookies et les repères de cuisson →</a></article>
         <article class="kitchen-report-card"><p class="kitchen-report-meta">Camille · 10 octobre 2026 · sans photo</p><h3>Quiche lorraine</h3><p>Moule en acier de 28 cm, cuisson garnie de 38 minutes à 170 °C : dessous croustillant et garniture crémeuse dans cet essai.</p><a href="/recettes/quiche-lorraine-recette-authentique.html#retour-camille">Lire le retour de cuisine<span class="sr-only"> : Quiche lorraine</span> →</a></article>
         <article class="kitchen-report-card"><p class="kitchen-report-meta">Camille · 11 octobre 2026 · sans photo</p><h3>Bœuf bourguignon</h3><p>Cocotte de 5,5 L, température abaissée en cours de cuisson et sauce réduite 15 minutes après retrait de la viande.</p><a href="/recettes/boeuf-bourguignon-recette-traditionnelle.html#retour-camille">Lire le retour de cuisine<span class="sr-only"> : Bœuf bourguignon</span> →</a></article>
         <article class="kitchen-report-card"><p class="kitchen-report-meta">Essai du 16 octobre 2026 · photo du résultat</p><h3>Roulés à la cannelle</h3><p>Des roulés décrits comme moelleux. La réalisation en 16 pièces et chaleur tournante est distinguée de la fiche de base en 9 pièces.</p><a href="/recettes/roules-cannelle-moelleux.html#essai-cuisine">Lire le retour de cuisine<span class="sr-only"> : Roulés à la cannelle</span> →</a></article>
@@ -2005,11 +2016,11 @@
       let latestRecipes;
 
       if (currentCategory === "Toutes") {
-        featuredRecipes =
-          filteredRecipes.slice(1, 5);
-
-        latestRecipes =
-          filteredRecipes.slice(5, 13);
+        // Keep recent documented cooking visible, independently of catalogue order.
+        const priority = ['cookies-moelleux-chocolat', 'banana-bread-quatre-epices', 'quiche-lorraine-recette-authentique', 'boeuf-bourguignon-recette-traditionnelle'];
+        featuredRecipes = priority.map(slug => filteredRecipes.find(r => r.slug === slug)).filter(Boolean);
+        const selected = new Set([allRecipes[0].slug, ...featuredRecipes.map(r => r.slug)]);
+        latestRecipes = filteredRecipes.filter(r => !selected.has(r.slug)).slice(0, 8);
       } else {
         featuredRecipes =
           filteredRecipes.slice(0, 4);

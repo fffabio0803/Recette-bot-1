@@ -23,7 +23,9 @@ const section=new Element('section'),main=new Element('main'),heading=new Elemen
 const oldReceipt=randomUUID(),oldAuthor=randomUUID(),slug='roules-cannelle-moelleux';
 let storage=JSON.stringify({author:oldAuthor,receipts:{[slug]:oldReceipt}}),fail=false;
 const requests=[];
+const tracked=[];
 const context={
+ window:{ltmTrack:(...args)=>tracked.push(args)},
  document:{createElement:t=>new Element(t),createTextNode:t=>t,getElementById:id=>id==='avis'?section:null,querySelector:s=>s==='h1'?heading:s==='main'?main:nodes.find(n=>n.className===s.slice(1)),querySelectorAll:()=>[],body:main},
  location:{pathname:'/recettes/'+slug+'.html'},localStorage:{getItem:()=>storage,setItem:(k,v)=>{storage=v;}},
  crypto:{randomUUID},MutationObserver:class{observe(){}},requestAnimationFrame(){},URL,AbortController,setTimeout,clearTimeout,
@@ -42,13 +44,16 @@ nodes.find(n=>n.name==='rating'&&n.value==='4').checked=true;await submit();asse
 name.value='jeanne';comment.value='Court';await submit();assert.match(message.textContent,/20 à 2 000/);
 comment.value='Je recommande cette recette';await submit();assert.match(message.textContent,/Cochez votre accord/);
 consent.checked=true;fail=true;await submit();const attempt=requests.at(-1);assert.match(message.textContent,/Envoi non confirmé/);
+assert.equal(tracked.length,0);
 fail=false;await submit();assert.equal(requests.at(-1).data.p_receipt,attempt.data.p_receipt);assert.equal(requests.at(-1).data.p_author,attempt.data.p_author);
 assert.notEqual(attempt.data.p_receipt,oldReceipt);assert.notEqual(attempt.data.p_author,oldAuthor);
 assert.equal(attempt.data.p_nickname,'jeanne');assert.equal(attempt.data.p_comment,'Je recommande cette recette');assert.match(message.textContent,/Votre avis est publié/);
+assert.equal(tracked.length,1);assert.equal(tracked[0][0],'recipe_review_saved');assert.equal(tracked[0][1].recipe_slug,slug);
 editToggle.events.click();await submit();assert.match(message.textContent,/code privé/);
 nodes.find(n=>n.name==='rating'&&n.value==='4').checked=true;
 editCode.value=oldReceipt;name.value='Testeur';comment.value='Recette difficile, résultat trop sec.';consent.checked=true;
 await submit();assert.match(requests.at(-1).url,/ltm_edit_review$/);assert.equal(requests.at(-1).data.p_receipt,oldReceipt);assert.equal(requests.at(-1).data.p_photo_mode,'keep');
 assert.equal(requests.at(-1).data.p_author,undefined);assert.equal(editCode.value,'');
 assert.equal(JSON.parse(storage).history,undefined);
+assert.equal(tracked.length,1,'Modifier un avis ne compte pas comme un nouvel avis');
 console.log('Parcours avis : erreurs visibles, autre personne, reprise réseau sans doublon, modification par code privé.');
