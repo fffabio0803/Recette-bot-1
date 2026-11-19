@@ -10,7 +10,8 @@ const read = slug => fs.readFileSync(`recettes/${slug}.html`, 'utf8');
 for (const r of recipes.filter(r => r.yield_label)) {
   const html = read(r.slug);
   assert.ok(html.includes(`<strong>${r.yield_label}</strong>`), r.slug);
-  assert.ok(html.includes(`"recipeYield": "${r.yield_label}"`), r.slug);
+  const structured = [...html.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/g)].flatMap(m => { const j=JSON.parse(m[1]); return j['@graph'] || [j]; });
+  assert.equal(structured.find(j=>j['@type']==='Recipe')?.recipeYield, r.yield_label, r.slug);
   assert.equal((html.match(/id="reperes-portions"/g) || []).length, 1);
   const card = [...listing.matchAll(/<article class="recipe-card">[\s\S]*?<\/article>/g)].find(m => m[0].includes('href="' + r.url + '"'))[0];
   assert.ok(card.includes(r.yield_label));

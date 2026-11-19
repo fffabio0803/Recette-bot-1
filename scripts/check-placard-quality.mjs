@@ -4,6 +4,8 @@ import vm from 'node:vm';
 await import('../assets/placard-match.js');
 const {canonical,matches,rank}=globalThis.LTMPlacard;
 const cases=[
+ ['200 ml de lait de coco','lait',false],['200 ml de lait de coco','lait de coco',true],
+ ['125 ml de lait entier','lait',true],
  ['600 g de poireaux','poireau',true],['600 g de poireaux','poireaux',true],
  ['800 g de pommes de terre','pomme',false],['4 pommes Golden','pomme',true],
  ['800 g de pommes de terre','patates',true],['patate douce','pommes de terre',false],
@@ -30,6 +32,8 @@ const ideaCode=source.slice(source.indexOf('const ideas='),source.indexOf('const
 const ideas=vm.runInNewContext('(function(){'+ideaCode+';return ideas;})()');
 const all=[...recipes,...ideas.map(([title,ingredients,method])=>({title,ingredients,method}))];
 assert.equal(rank(all,['pâtes','crème'])[0].r.title,'Pâtes à la crème et au parmesan');
+assert.equal(all.filter(r=>r.title==='Pâtes à la crème et au parmesan').length,1,'La fiche complète remplace son idée express');
+assert.equal(rank([{title:'Fiche',url:'/fiche',ingredients:['pâtes']},{title:'Idée',ingredients:['pâtes','crème']}],['pâtes','crème'])[0].r.title,'Idée','La couverture prime sur le format');
 assert.ok(!rank(all,['pomme']).some(x=>/gratin|terre/i.test(x.r.title)));
 assert.ok(rank(all,['poireau']).some(x=>/Gratin de poireaux/.test(x.r.title)));
 assert.ok(!rank(all,['café']).some(x=>/Cookies|Banana|Pavlova/.test(x.r.title)));

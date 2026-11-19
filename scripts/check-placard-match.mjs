@@ -8,7 +8,7 @@ const scripts=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].ma
 const source=scripts.find(s=>s.includes('function placard(recipes)'));
 new vm.Script(source);
 const recipes=JSON.parse(source.slice(source.lastIndexOf('})([')+3).replace(/\);\s*$/,''));
-assert.equal(recipes.length,23);
+assert.equal(recipes.length,27);
 assert.equal(canonical(canonical('pâtes')),canonical('pâtes'));
 assert.ok(matches('320 g de tagliatelles sèches','pâte'));
 assert.ok(!matches('farine pour la pâte','pâtes'));
@@ -16,7 +16,7 @@ assert.ok(!matches('pâte brisée','pâtes'));
 assert.ok(!matches('160 g de marrons cuits (pas de crème de marrons)','crème'));
 assert.ok(matches('4 œufs','oeufs'));
 const ranked=rank(recipes,['pâtes','crème']);
-assert.ok(ranked[0].r.title.startsWith('Tagliatelles'));
+assert.equal(ranked[0].r.title,'Pâtes à la crème et au parmesan');
 assert.equal(ranked[0].percent,100);
 assert.ok(!ranked.some(x=>x.r.title.startsWith('Cake')));
 assert.equal(rank([{title:'Test',ingredients:['lait','oeuf','farine']}],['lait','œufs','farine','sucre'])[0].percent,75);
@@ -29,7 +29,7 @@ assert.ok(html.includes("track.setAttribute('aria-valuenow',String(percent))"));
 assert.ok(html.includes("fill.style.width=percent+'%'"));
 assert.ok(html.includes('placard-ui.css?v=5'));
 const photos=JSON.parse(html.match(/const photos=(.*);/)[1]);
-assert.equal(Object.keys(photos).length,23);
+assert.equal(Object.keys(photos).length,27);
 for(const r of recipes){assert.ok(photos[r.url]);assert.ok(fs.existsSync(new URL('..'+photos[r.url],import.meta.url)));}
 assert.ok(html.includes('Pâtes à la crème et au parmesan'));
 console.log('Mon placard : pâtes ≠ pâte à gâteau, synonymes, tri, pourcentages et miniatures contrôlés.');

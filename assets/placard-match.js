@@ -22,6 +22,7 @@
     if(t === 'pates alimentaires') return /\b(tagliatelle|spaghetti|penne|coquillette|macaroni|fusilli)\b/.test(n) || /\bpate(?: alimentaire| seche| cuite| fraiche)\b/.test(n) || norm(item)==='pate';
     if(t === 'chataigne') return /\b(chataigne|marron)\b/.test(n);
     if(t === 'oeuf') return /\boeufs?\b/.test(n);
+    if(t === 'lait') return /\blait\b/.test(n.replace(/\blait de coco\b/g,''));
     if(t === 'pomme') return /\bpomme\b/.test(n.replace(/\bpomme de terre\b/g,''));
     if(t === 'pomme de terre') return /\bpomme de terre\b/.test(n) || /\bpatate\b/.test(n.replace(/\bpatate douce\b/g,''));
     if(t === 'noix') return /\bnoix\b/.test(n.replace(/\bnoix de (?:muscade|coco)\b/g,''));
@@ -41,7 +42,8 @@
       const missing=r.ingredients.filter(i=>!terms.some(t=>matches(i,t)));
       return {r,found,missing,percent:Math.round(100*found.length/terms.length)};
     }).filter(x=>x.found.length && (!anchors.length || anchors.some(t=>x.found.includes(t))))
-      .sort((a,b)=>b.found.length-a.found.length || a.missing.length-b.missing.length || a.r.title.localeCompare(b.r.title,'fr'));
+      // At equal coverage, prefer a complete recipe to a short, unquantified idea.
+      .sort((a,b)=>b.found.length-a.found.length || Number(Boolean(b.r.url))-Number(Boolean(a.r.url)) || a.missing.length-b.missing.length || a.r.title.localeCompare(b.r.title,'fr'));
   }
   root.LTMPlacard={norm,canonical,matches,rank};
 })(globalThis);
