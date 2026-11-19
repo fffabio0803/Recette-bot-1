@@ -23,6 +23,7 @@ import './check-guide-october29.mjs';
 import './check-useful-events.mjs';
 import './check-november-recipes.mjs';
 import './check-four-recipes.mjs';
+import './check-kitchen.mjs';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const timing = require('../assets/recipe-time.js');
