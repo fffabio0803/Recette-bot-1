@@ -26,9 +26,10 @@ for (const slug of slugs) {
       assert.equal(faq.mainEntity[i].acceptedAnswer.text, decode(m[2]));
     });
   }
-  assert.equal(recipe.dateModified, '2026-10-28');
+  const revised = slug === 'quiche-lorraine-recette-authentique' ? '2026-11-19' : '2026-10-28';
+  assert.equal(recipe.dateModified, revised);
   assert.equal(catalogue.find(r => r.slug === slug).date_reviewed, recipe.dateModified);
-  assert.ok(sitemap.includes('<loc>https://latablemijote.fr/recettes/' + slug + '.html</loc><lastmod>2026-10-28</lastmod>'));
+  assert.ok(sitemap.includes('<loc>https://latablemijote.fr/recettes/' + slug + '.html</loc><lastmod>' + revised + '</lastmod>'));
 }
 const home = read('index.html');
 const section = home.match(/<section class="kitchen-reports"[\s\S]*?<\/section>/)?.[0];

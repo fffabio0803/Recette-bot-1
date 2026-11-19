@@ -33,10 +33,11 @@ for (const slug of slugs) {
   });
   const ingredients = [...html.matchAll(/<li><span class='ing-amount'>(.*?)<\/span> (.*?)<\/li>/g)].map(match => decode(`${match[1]} ${match[2]}`));
   assert.deepEqual(recipe.recipeIngredient, ingredients, `${slug}: ingrédients synchronisés`);
-  assert.equal(recipe.dateModified, '2026-10-28');
+  const revised = slug === 'baba-au-rhum-recette-traditionnelle' ? '2026-11-19' : '2026-10-28';
+  assert.equal(recipe.dateModified, revised);
   assert.equal(catalogue.find(item => item.slug === slug).date_reviewed, recipe.dateModified);
   assert.ok(sitemap.includes(`<loc>https://latablemijote.fr/recettes/${slug}.html</loc><lastmod>${recipe.dateModified}</lastmod>`));
-  assert.ok(html.includes('"dateModified":"2026-10-28"'));
+  assert.ok(html.includes('"dateModified":"' + revised + '"'));
   assert.ok(html.includes('ne constitue pas un essai en cuisine documenté'));
 }
 

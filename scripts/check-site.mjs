@@ -17,6 +17,8 @@ import './check-banana-bread.mjs';
 import './check-advertising-consent.mjs';
 import './check-catalogue.mjs';
 import './check-placard-match.mjs';
+import './check-placard-quality.mjs';
+import './check-placard-ui.mjs';
 import './check-guide-october29.mjs';
 import './check-useful-events.mjs';
 import './check-november-recipes.mjs';

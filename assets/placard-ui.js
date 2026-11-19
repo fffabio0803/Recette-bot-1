@@ -12,6 +12,7 @@
   const notice = document.querySelector('#stock-status');
   const submit = document.querySelector('#find-recipes');
   const normalize = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replaceAll('œ', 'oe').trim();
+  const identity = s => window.LTMPlacard.canonical(s);
   const foods = ['Œufs','Farine','Lait','Beurre','Crème','Sucre','Riz','Pâtes','Pommes de terre','Carottes','Courgettes','Poireaux','Épinards','Champignons','Potiron','Potimarron','Butternut','Patate douce','Oignon','Échalote','Ail','Tomates','Poivron','Chou','Petits pois','Pois chiches','Lentilles','Haricots rouges','Haricots blancs','Maïs','Semoule','Boulgour','Pain','Poulet','Bœuf','Lardons','Jambon','Thon','Saumon','Daurade','Fromage de chèvre','Gruyère','Comté','Parmesan','Mascarpone','Yaourt','Banane','Pomme','Poire','Citron','Orange','Fraises','Framboises','Myrtilles','Marrons','Châtaignes','Noisettes','Cannelle','Moutarde','Huile','Huile d’olive','Miel','Chocolat','Cacao','Café','Vanille','Levure chimique','Levure boulangère','Sel','Poivre','Cumin','Paprika','Muscade','Thym','Persil','Ciboulette','Aneth','Laurier','Romarin','Fenouil','Concombre','Olives','Anchois','Rhum','Vin rouge','Vin blanc','Vinaigre','Cassonade','Sucre glace','Graines de chia','Graines de courge'];
   const stock = [];
   function screen() {
@@ -38,13 +39,13 @@
     const food = value.trim().slice(0, 50);
     if (!food) return;
     if (stock.length >= 20) { notice.textContent = '20 ingrédients maximum par recherche.'; return; }
-    if (!stock.some(x => normalize(x) === normalize(food))) stock.push(food);
+    if (!stock.some(x => identity(x) === identity(food))) stock.push(food);
     input.value = ''; renderStock(); clearResults(); suggest(); input.focus();
   }
   function suggest() {
     choices.replaceChildren();
     const term = normalize(input.value);
-    const list = foods.filter(food => !stock.includes(food) && (!term || normalize(food).includes(term))).slice(0, 8);
+    const list = foods.filter(food => !stock.some(x => identity(x) === identity(food)) && (!term || normalize(food).includes(term) || identity(food) === identity(term))).slice(0, 8);
     for (const food of list) {
       const button = document.createElement('button'); button.type = 'button';
       button.textContent = '+ ' + food; button.addEventListener('click', () => add(food)); choices.append(button);
@@ -66,7 +67,11 @@
       event.preventDefault(); choices.querySelector('button')?.focus();
     } else if (event.key === 'Escape') { input.value = ''; suggest(); }
   });
-  form.addEventListener('submit', () => { input.value = ''; suggest(); });
+  // Include a final typed ingredient before the recipe search reads the stock.
+  form.addEventListener('submit', () => {
+    if (input.value.trim()) add(input.value);
+    suggest();
+  }, true);
   document.querySelector('#empty-stock').addEventListener('click', () => {
     stock.length = 0; input.value = ''; renderStock(); clearResults(); suggest(); input.focus();
   });
