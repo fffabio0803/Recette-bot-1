@@ -4,7 +4,9 @@ const read=f=>fs.readFileSync(f,'utf8');
 const disclosure='En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.';
 const map={'quiche-lorraine-recette-authentique':'B00F2GU4YE','cookies-moelleux-chocolat':'B06XFLT6YN','banana-bread-quatre-epices':'B00F2GUAT8'};
 const hub=read('materiel.html');
-assert.equal((hub.match(/rel="sponsored nofollow"/g)||[]).length,3);
+assert.equal((hub.match(/rel="sponsored nofollow"/g)||[]).length,5);
+for(const asin of ['B0DFM1JHJS','B0021BH3SS']) assert.ok(hub.includes(`/dp/${asin}/ref=nosim?tag=latablemijote-21`));
+assert.equal((hub.match(/class="equipment-affiliate">Lien affilié/g)||[]).length,5);
 for(const [slug,asin] of Object.entries(map)){
  const html=read(`recettes/${slug}.html`);
  for(const text of [html,hub]){assert.ok(text.includes(`/dp/${asin}/ref=nosim?tag=latablemijote-21`));assert.ok(text.includes(disclosure));assert.ok(text.includes('class="equipment-affiliate">Lien affilié'));}
@@ -19,4 +21,4 @@ assert.ok(hub.includes('<h1>Boutique</h1>'));
 assert.ok(!hub.includes('Comment choisir sans se tromper'));
 assert.ok(hub.indexOf('equipment-grid')<hub.indexOf('equipment-disclosure'));
 assert.ok(!/<iframe|amazon-adsystem|m\.media-amazon|aggregateRating/.test(hub));
-console.log('Matériel : trois références, affiliation, transparence et navigation vérifiées.');
+console.log('Boutique : cinq références, affiliation, transparence et navigation vérifiées.');
